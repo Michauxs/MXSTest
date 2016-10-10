@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "705B4A131D643701006273E7"
-               BuildableName = "MXSTest.app"
-               BlueprintName = "MXSTest"
-               ReferencedContainer = "container:MXSTest.xcodeproj">
+               BlueprintIdentifier = "70F57E6B1D86D108003D493E"
+               BuildableName = "tableViewCellHeightAnimation.app"
+               BlueprintName = "tableViewCellHeightAnimation"
+               ReferencedContainer = "container:tableViewCellHeightAnimation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "705B4A131D643701006273E7"
-            BuildableName = "MXSTest.app"
-            BlueprintName = "MXSTest"
-            ReferencedContainer = "container:MXSTest.xcodeproj">
+            BlueprintIdentifier = "70F57E6B1D86D108003D493E"
+            BuildableName = "tableViewCellHeightAnimation.app"
+            BlueprintName = "tableViewCellHeightAnimation"
+            ReferencedContainer = "container:tableViewCellHeightAnimation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "705B4A131D643701006273E7"
-            BuildableName = "MXSTest.app"
-            BlueprintName = "MXSTest"
-            ReferencedContainer = "container:MXSTest.xcodeproj">
+            BlueprintIdentifier = "70F57E6B1D86D108003D493E"
+            BuildableName = "tableViewCellHeightAnimation.app"
+            BlueprintName = "tableViewCellHeightAnimation"
+            ReferencedContainer = "container:tableViewCellHeightAnimation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "705B4A131D643701006273E7"
-            BuildableName = "MXSTest.app"
-            BlueprintName = "MXSTest"
-            ReferencedContainer = "container:MXSTest.xcodeproj">
+            BlueprintIdentifier = "70F57E6B1D86D108003D493E"
+            BuildableName = "tableViewCellHeightAnimation.app"
+            BlueprintName = "tableViewCellHeightAnimation"
+            ReferencedContainer = "container:tableViewCellHeightAnimation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
