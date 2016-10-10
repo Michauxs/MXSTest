@@ -7,24 +7,96 @@
 //
 
 #import "ViewController.h"
+#import "Masonry.h"
+#import "Tools.h"
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    UIImageView *showImageView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    showImageView = [[UIImageView alloc]init];
+    showImageView.contentMode = UIViewContentModeTopLeft;
+    [self.view addSubview:showImageView];
+    [showImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(self.view);
+//        make.size.mas_equalTo(CGSizeMake(200, 120));
+        make.size.equalTo(self.view);
+    }];
+    
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self demo7];
+    [self drawNewImage2];
+    
+}
+
+- (void)drawNewImage2 {
+    
+    UIImage * image = [UIImage imageNamed:@"theme"];
+    NSData * imageData = UIImageJPEGRepresentation(image,1);
+    NSLog(@"%lu", imageData.length);
+    
+    // 开始上下文，下面不使用时一定要关闭，从上下文栈中移除
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(image.size.width * 0.5, image.size.height * 0.5), YES , 0);
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    //裁切
+    CGRect rect = CGRectMake(0, 0, image.size.width * 0.5, image.size.height * 0.5);
+//    CGContextAddEllipseInRect(context, rect);
+//    CGContextClip(context);
+    
+    // 在圆区内画出image原图
+    [image drawInRect:rect];
+    
+    // 围绕当前路径画一条线，镶边线,注意在调用strokePath之前必须先添加线，fillPath也一样要先添加线才可操作
+//    CGContextAddEllipseInRect(context, rect);
+    
+    //从上下文环境中获取切好的图片
+    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+    
+    
+    NSData * imageData2 = UIImageJPEGRepresentation(newImg,1);
+    NSLog(@"%lu", imageData2.length);
+    // 使用了beginImgacontext需要关闭上下文 并从上下文栈中移除
+    UIGraphicsEndImageContext();
+    
+    showImageView.image = newImg;
 }
 
 - (void)drawNewImage {
+    
+    UIImage * image = [UIImage imageNamed:@"lol"];
+    NSData * imageData = UIImageJPEGRepresentation(image,1);
+    NSLog(@"%lu", imageData.length);
+    
+    //    转化为位图
+    CGImageRef temImg = image.CGImage;
+    
+    //根据范围截图
+//    CGRect rect = CGRectMake(0, 0, 100, 100);
+    
+    CGRect rect2 = CGRectMake(0, 0, image.size.width * 2, image.size.height * 2);
+    temImg = CGImageCreateWithImageInRect(temImg, rect2);
+    
+    //得到新的图片
+    UIImage *newImage = [UIImage imageWithCGImage:temImg];
+    NSData * newImageData = UIImageJPEGRepresentation(newImage,1);
+    NSLog(@"%lu", newImageData.length);
+    //释放位图对象
+    CGImageRelease(temImg);
+    
+    showImageView.image = nil;
+    showImageView.image = newImage;
     
 }
 
