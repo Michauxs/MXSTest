@@ -16,9 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.view.backgroundColor = [Tools randomColor];
 	
 	
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+	
+	MXSViewController *actVC = [self.tabBarController.viewControllers objectAtIndex:1];
+	actVC.tabBarItem.badgeValue = @"2";
 }
 
 - (void)didReceiveMemoryWarning {
