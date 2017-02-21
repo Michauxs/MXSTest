@@ -35,8 +35,9 @@
     
 }
 
+#pragma mark -- start
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self drawNewImage2];
+    [self demo1];
     
 }
 
@@ -184,9 +185,7 @@
 }
 -(void)demo1{
     
-    NSString *str = @"ss我是生世地方说";
-    str = [str substringToIndex:6];
-    NSLog(@"%@",str);
+    NSLog(@"%d",INT_MAX);
     return;
 }
 @end

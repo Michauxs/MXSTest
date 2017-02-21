@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MXSTabBarController.h"
+#import "MXSHomeVC.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+	
+	self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+	[self.window makeKeyAndVisible];
+	
+	MXSTabBarController *tabVC = [[MXSTabBarController alloc]init];
+	self.window.rootViewController = tabVC;
+	
+//	MXSHomeVC *home = [[MXSHomeVC alloc]init];
+//	self.window.rootViewController = home;
+	
     return YES;
 }
 

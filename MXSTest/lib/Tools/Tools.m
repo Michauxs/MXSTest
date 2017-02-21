@@ -405,6 +405,9 @@
     }
 }
 
++ (UIColor *)randomColor {
+	return [Tools colorWithRED:(arc4random()%255) GREEN:(arc4random()%255) BLUE:(arc4random()%255) ALPHA:1.f];
+}
 
 + (UIColor*)themeColor {
     return [UIColor colorWithRed:78.0/255.0 green:219.0/255.0 blue:202.0/255.0 alpha:1.0];

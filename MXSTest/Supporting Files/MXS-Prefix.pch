@@ -1,0 +1,16 @@
+//
+//  MXS-Prefix.pch
+//  MXSTest
+//
+//  Created by Alfred Yang on 21/2/17.
+//  Copyright © 2017年 Alfred Yang. All rights reserved.
+//
+
+#ifndef MXS_Prefix_pch
+#define MXS_Prefix_pch
+
+#define IMGRESOURE(NAME)					[UIImage imageNamed:NAME]
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MXS_Prefix_pch */
