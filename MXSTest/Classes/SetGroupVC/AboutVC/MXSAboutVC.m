@@ -1,37 +1,28 @@
 //
-//  MXSSettingVC.m
+//  MXSAboutVC.m
 //  MXSTest
 //
-//  Created by Alfred Yang on 21/2/17.
+//  Created by Alfred Yang on 21/3/17.
 //  Copyright © 2017年 Alfred Yang. All rights reserved.
 //
 
-#import "MXSSettingVC.h"
 #import "MXSAboutVC.h"
 
-@interface MXSSettingVC () <UIWebViewDelegate>
-
-@end
-
-@implementation MXSSettingVC {
-	
+@implementation MXSAboutVC {
 	UIWebView *DZWebView;
 	UIButton *getElementBtn;
-	
 }
 
 - (void)viewDidLoad {
-	[super viewDidLoad];
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
 	
 	DZWebView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	DZWebView.delegate = self;
 	[self.view addSubview:DZWebView];
 	
-	NSString *urlStr;
-	urlStr = @"https://www.dianping.com/search/category/2/70/g188";
-//	urlStr = @"https://www.dianping.com/shop/76974050";
-//	urlStr = @"http://www.youku.com/";
-	NSURL *url = [NSURL URLWithString:urlStr];
+	
+	NSURL *url = [_push_args objectForKey:@"url"];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	[DZWebView loadRequest:request];
 	
@@ -44,7 +35,20 @@
 	}];
 	getElementBtn.hidden = YES;
 	[getElementBtn addTarget:self action:@selector(didGetEBtn) forControlEvents:UIControlEventTouchUpInside];
+
+	UIButton *popBtn = [Tools creatUIButtonWithTitle:@"🔙返回" andTitleColor:[Tools whiteColor] andFontSize:313.f andBackgroundColor:[UIColor redColor]];
+	[self.view addSubview:popBtn];
+	[popBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.left.equalTo(self.view).offset(20);
+		make.bottom.equalTo(self.view).offset(-30-49);
+		make.size.mas_equalTo(CGSizeMake(120, 40));
+	}];
+	[popBtn addTarget:self action:@selector(didPopBtnClick) forControlEvents:UIControlEventTouchUpInside];
 	
+}
+
+- (void)didPopBtnClick {
+	[self.navigationController popViewControllerAnimated:NO];
 }
 
 - (void)didGetEBtn {
@@ -52,12 +56,7 @@
 	//	获取所有html:
 	NSString *js_html = @"document.documentElement.innerHTML";
 	NSString *htmlStr = [DZWebView stringByEvaluatingJavaScriptFromString:js_html];
-//	NSLog(@"%@", htmlStr);
-	
-//	获取网页title:
-	NSString *js_title = @"document.title";
-	NSString *titleStr = [DZWebView stringByEvaluatingJavaScriptFromString:js_title];
-	NSLog(@"%@", titleStr);
+	//	NSLog(@"%@", htmlStr);
 	
 	NSError *error = nil;
 	HTMLParser *parser = [[HTMLParser alloc] initWithString:htmlStr error:&error];
@@ -69,18 +68,11 @@
 	
 	HTMLNode *bodyNode = [parser body];
 	
-//	NSArray *inputNodes = [bodyNode findChildTags:@"input"];
-//	for (HTMLNode *inputNode in inputNodes) {
-//		if ([[inputNode getAttributeNamed:@"name"] isEqualToString:@"input2"]) {
-//			NSLog(@"%@", [inputNode getAttributeNamed:@"value"]);
-//		}
-//	}
-	
 	NSArray *liNodes = [bodyNode findChildTags:@"div"];
 	for (HTMLNode *liNode in liNodes) {
 		
 		if ([[liNode getAttributeNamed:@"class"] isEqualToString:@"info baby-info"]) {
-//			NSLog(@"%@", [liNode rawContents]);
+			//			NSLog(@"%@", [liNode rawContents]);
 			
 			NSArray *nameNodes = [liNode findChildTags:@"a"];
 			for (HTMLNode *nameNode in nameNodes) {
@@ -125,25 +117,16 @@
 //	//判断是否是单击
 //	if (navigationType == UIWebViewNavigationTypeLinkClicked) {
 //		
+//		MXSAboutVC *aboutVC = [[MXSAboutVC alloc] init];
 //		
-////		[DZWebView loadRequest:request];
-////		[DZWebView reload];
+//		NSMutableDictionary *dic_push_args = [[NSMutableDictionary alloc] init];
+//		[dic_push_args setValue:[request URL] forKey:@"url"];
+//		aboutVC.push_args = nil;
+//		[self.navigationController pushViewController:aboutVC animated:NO];
 //		
-////		MXSAboutVC *aboutVC = [[MXSAboutVC alloc] init];
-////		
-////		NSMutableDictionary *dic_push_args = [[NSMutableDictionary alloc] init];
-////		[dic_push_args setValue:[request URL] forKey:@"url"];
-////		aboutVC.push_args = [dic_push_args copy];
-////		[self.navigationController pushViewController:aboutVC animated:YES];
-//		
-////		iPhone自带Safari
-////		if([[UIApplication sharedApplication]canOpenURL:url]) {
-////			[[UIApplication sharedApplication]openURL:url];
-////		}
-////		return NO;
-//	}
-//	
-//	return YES;
+//		return NO;
+//	} else
+//		return YES;
 //}
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
@@ -154,43 +137,6 @@
 	getElementBtn.hidden = NO;
 	[self didGetEBtn];
 }
-
-
-/*-----------------------------------------------------------------------------------------------------------*/
-//
-//- (void)requestDataWithNameAndPsw {
-//	
-//	NSString *userName = @"mymadeupuser";
-//	NSString *password = @"1234";
-//	NSString *url = @"https://www.dianping.com/search/category/2/70/g188p1";
-//	
-//	NSString *postString = [[NSString alloc] initWithFormat:@"bor_id=%@&bor_verification=%@&url=%@",userName, password, url];
-//	NSLog (@"NSString postString = %@\n\n", postString);
-//	
-//	// Create the URL request
-//	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString:@"https://mywebsite.com/somthing/"]];
-//	NSLog (@"NSString NSMutableURLRequest = %@\n\n", request);
-//	
-//	NSData *requestData = [postString dataUsingEncoding:NSASCIIStringEncoding];
-//	[request setHTTPBody: requestData];  // apply the post data to be sent
-//	NSLog (@"NSData requestData = %@\n\n", requestData);
-//	
-//	NSURLResponse *response;  // holds the response from the server
-//	NSLog (@"NSURLResponse response = %@\n\n", response);
-//	
-//	NSError *error;   // holds any errors
-//	NSLog (@"NSError error = %@\n\n", error);
-//	
-//	NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&error];  // call the URL
-////	NSData *returnData = [NSURLSession ]
-//	NSLog (@"NSData returnedData = %@\n\n", returnData);
-//	
-//	NSString *dataReturned = [[NSString alloc] initWithData:returnData encoding:NSASCIIStringEncoding];
-//	NSLog(@"returned htmlASCII is:  %@\n\n", dataReturned);
-//	
-//	NSString *dataReturned2 = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-//	NSLog(@"returned htmlUTF8 is:  %@\n\n", dataReturned2);
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
