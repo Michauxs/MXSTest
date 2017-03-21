@@ -506,25 +506,25 @@
 }
 
 + (UIButton*)creatUIButtonWithTitle:(NSString*)title andTitleColor:(UIColor*)TitleColor andFontSize:(CGFloat)font andBackgroundColor:(UIColor*)backgroundColor {
-    
-    UIButton *btn = [UIButton new];
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:TitleColor forState:UIControlStateNormal];
-    
-    if (font < 0) {
-        btn.titleLabel.font = [UIFont systemFontOfSize:-font];
-    } else if (font > 100.f) {
-        btn.titleLabel.font = [UIFont boldSystemFontOfSize:(font - 100)];
-    } else {
-        btn.titleLabel.font = kAYFontLight(font);
-    }
-    
-    if (backgroundColor) {
-        btn.backgroundColor = backgroundColor;
-    } else
-        btn.backgroundColor = [UIColor clearColor];
-    
-    return btn;
+	
+	UIButton *btn = [UIButton new];
+	[btn setTitle:title forState:UIControlStateNormal];
+	[btn setTitleColor:TitleColor forState:UIControlStateNormal];
+	
+	if (font > 600) {
+		btn.titleLabel.font = [UIFont boldSystemFontOfSize:(font - 600)];
+	} else if (font < 600.f && font > 300.f) {
+		btn.titleLabel.font = [UIFont systemFontOfSize:-font];
+	} else {
+		btn.titleLabel.font = kAYFontLight(font);
+	}
+	
+	if (backgroundColor) {
+		btn.backgroundColor = backgroundColor;
+	} else
+		btn.backgroundColor = [UIColor clearColor];
+	
+	return btn;
 }
 
 #pragma mark -- NSTime

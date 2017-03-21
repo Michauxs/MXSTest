@@ -31,11 +31,6 @@
 	readView.bounds = CGRectMake(0, 0, 120, 120);
 	readView.center = [touch locationInView:self.view];
 	
-//	[readView mas_makeConstraints:^(MASConstraintMaker *make) {
-//		make.center.mas_equalTo([touch locationInView:self.view]);
-//		make.size.mas_equalTo(CGSizeMake(120, 120));
-//	}];
-	
 	CASpringAnimation * ani = [CASpringAnimation animationWithKeyPath:@"bounds"];
 	ani.mass = 10.0; //质量，影响图层运动时的弹簧惯性，质量越大，弹簧拉伸和压缩的幅度越大
 	ani.stiffness = 5000; //刚度系数(劲度系数/弹性系数)，刚度系数越大，形变产生的力就越大，运动越快

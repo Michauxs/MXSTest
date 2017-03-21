@@ -39,8 +39,12 @@
 	view_con.tabBarItem.badgeColor = [UIColor redColor];
 	
 	self.viewControllers = @[nav_home, nav_con, nav_set];
-	
+	self.selectedIndex = 2;
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

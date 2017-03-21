@@ -28,11 +28,11 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
+	[self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-	[self.navigationController setNavigationBarHidden:YES animated:NO];
     // Dispose of any resources that can be recreated.
 }
 

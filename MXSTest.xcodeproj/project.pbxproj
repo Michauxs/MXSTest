@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702D25211E8114F90068F025 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 702D251D1E810BFC0068F025 /* libxml2.tbd */; };
+		702D25261E8118430068F025 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25231E8118430068F025 /* HTMLNode.m */; };
+		702D25271E8118430068F025 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25251E8118430068F025 /* HTMLParser.m */; };
 		7042C8AB1E5BEE8900B41BA4 /* MXSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8AA1E5BEE8900B41BA4 /* MXSTabBarController.m */; };
 		7042C8B21E5BEFA500B41BA4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7042C8B11E5BEFA500B41BA4 /* Info.plist */; };
 		7042C8BC1E5BEFF700B41BA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8B81E5BEFF700B41BA4 /* AppDelegate.m */; };
@@ -84,6 +87,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701F5FAE1E77C5D1006FBB0F /* MXSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MXSTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		702D251D1E810BFC0068F025 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		702D251F1E8111410068F025 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		702D25221E8118430068F025 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		702D25231E8118430068F025 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		702D25241E8118430068F025 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		702D25251E8118430068F025 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
 		7042C8A91E5BEE8900B41BA4 /* MXSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTabBarController.h; sourceTree = "<group>"; };
 		7042C8AA1E5BEE8900B41BA4 /* MXSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSTabBarController.m; sourceTree = "<group>"; };
 		7042C8B11E5BEFA500B41BA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -245,12 +255,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702D25211E8114F90068F025 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		701F5FA91E77C415006FBB0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				701F5FAA1E77C415006FBB0F /* BrowHistory */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		701F5FAA1E77C415006FBB0F /* BrowHistory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BrowHistory;
+			sourceTree = "<group>";
+		};
+		702D25151E8106B20068F025 /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				702D25221E8118430068F025 /* HTMLNode.h */,
+				702D25231E8118430068F025 /* HTMLNode.m */,
+				702D25241E8118430068F025 /* HTMLParser.h */,
+				702D25251E8118430068F025 /* HTMLParser.m */,
+			);
+			path = HTMLParser;
+			sourceTree = "<group>";
+		};
+		702D251C1E810BFC0068F025 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				702D251F1E8111410068F025 /* libxml2.2.tbd */,
+				702D251D1E810BFC0068F025 /* libxml2.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7042C8A61E5BEE0A00B41BA4 /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +393,7 @@
 		70510EE41DAB3B9D0097E093 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				702D25151E8106B20068F025 /* HTMLParser */,
 				70510EE51DAB3B9D0097E093 /* Masonry */,
 				70510F001DAB3B9D0097E093 /* MBProgressHUD */,
 				70510F031DAB3B9D0097E093 /* MJRefresh */,
@@ -603,6 +650,8 @@
 			children = (
 				705B4A161D643701006273E7 /* MXSTest */,
 				705B4A151D643701006273E7 /* Products */,
+				701F5FAE1E77C5D1006FBB0F /* MXSTest-Bridging-Header.h */,
+				702D251C1E810BFC0068F025 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -618,6 +667,7 @@
 			isa = PBXGroup;
 			children = (
 				70510EE41DAB3B9D0097E093 /* lib */,
+				701F5FA91E77C415006FBB0F /* Model */,
 				7042C8AC1E5BEEF300B41BA4 /* Classes */,
 				7042C8A61E5BEE0A00B41BA4 /* BaseController */,
 				7042C8B61E5BEFF700B41BA4 /* main */,
@@ -659,6 +709,7 @@
 					705B4A131D643701006273E7 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 45E5AAUFA8;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -717,6 +768,7 @@
 				70510F7E1DAB3B9D0097E093 /* MASLayoutConstraint.m in Sources */,
 				70510F991DAB3B9D0097E093 /* UIScrollView+MJRefresh.m in Sources */,
 				70510F8D1DAB3B9D0097E093 /* MJRefreshAutoStateFooter.m in Sources */,
+				702D25261E8118430068F025 /* HTMLNode.m in Sources */,
 				70510F811DAB3B9D0097E093 /* NSArray+MASAdditions.m in Sources */,
 				70510FA91DAB3B9D0097E093 /* SDWebImageManager.m in Sources */,
 				70510F9B1DAB3B9D0097E093 /* TAAbstractDotView.m in Sources */,
@@ -747,6 +799,7 @@
 				70510FAD1DAB3B9D0097E093 /* UIImage+MultiFormat.m in Sources */,
 				70510FAC1DAB3B9D0097E093 /* UIImage+GIF.m in Sources */,
 				70510F891DAB3B9D0097E093 /* MJRefreshFooter.m in Sources */,
+				702D25271E8118430068F025 /* HTMLParser.m in Sources */,
 				7042C8BC1E5BEFF700B41BA4 /* AppDelegate.m in Sources */,
 				70510F931DAB3B9D0097E093 /* MJRefreshGifHeader.m in Sources */,
 				70510F971DAB3B9D0097E093 /* MJRefreshConst.m in Sources */,
@@ -862,14 +915,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 45E5AAUFA8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MXSTest/Supporting Files/MXS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "$(SRCROOT)/MXSTest/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = MXSTest.MXSTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MXSTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -879,6 +938,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 45E5AAUFA8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MXSTest/Supporting Files/MXS-Prefix.pch";
@@ -887,6 +947,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MXSTest.MXSTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MXSTest-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
