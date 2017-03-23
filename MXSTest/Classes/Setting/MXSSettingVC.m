@@ -25,24 +25,31 @@
 	
 	DZWebView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	DZWebView.delegate = self;
+	DZWebView.allowsLinkPreview = YES;
+	DZWebView.scalesPageToFit = YES;
 	[self.view addSubview:DZWebView];
 	
 	NSString *urlStr;
-	urlStr = @"https://www.dianping.com/search/category/2/70/g188";
+	urlStr = @"https://www.dianping.com/search/category/2/70/g188";	//教育
+	
+//托班	http://www.dianping.com/search/category/2/70/g20009
+//才艺	http://www.dianping.com/search/category/2/70/g27763
+	
 //	urlStr = @"https://www.dianping.com/shop/76974050";
-//	urlStr = @"http://www.youku.com/";
+//	urlStr = @"http://m.dianping.com/shop/76974050";
+//	urlStr = @"https://www.baidu.com";
 	NSURL *url = [NSURL URLWithString:urlStr];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	[DZWebView loadRequest:request];
 	
-	getElementBtn = [Tools creatUIButtonWithTitle:@"放爬虫！" andTitleColor:[Tools whiteColor] andFontSize:313.f andBackgroundColor:[UIColor redColor]];
+	getElementBtn = [Tools creatUIButtonWithTitle:@"Go Parsering!" andTitleColor:[Tools whiteColor] andFontSize:313.f andBackgroundColor:[UIColor redColor]];
 	[self.view addSubview:getElementBtn];
 	[getElementBtn mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.right.equalTo(self.view).offset(-20);
 		make.bottom.equalTo(self.view).offset(-30-49);
 		make.size.mas_equalTo(CGSizeMake(120, 40));
 	}];
-	getElementBtn.hidden = YES;
+//	getElementBtn.hidden = YES;
 	[getElementBtn addTarget:self action:@selector(didGetEBtn) forControlEvents:UIControlEventTouchUpInside];
 	
 }
@@ -57,7 +64,7 @@
 //	获取网页title:
 	NSString *js_title = @"document.title";
 	NSString *titleStr = [DZWebView stringByEvaluatingJavaScriptFromString:js_title];
-	NSLog(@"%@", titleStr);
+	NSLog(@"michauxs:%@", titleStr);
 	
 	NSError *error = nil;
 	HTMLParser *parser = [[HTMLParser alloc] initWithString:htmlStr error:&error];
@@ -85,18 +92,19 @@
 			NSArray *nameNodes = [liNode findChildTags:@"a"];
 			for (HTMLNode *nameNode in nameNodes) {
 				if ([[nameNode getAttributeNamed:@"class"] isEqualToString:@"shopname"]) {
-					NSString *nameStr = [nameNode rawContents];
-					NSString *realName = [self extractionStringFromString:nameStr];
+					NSString *href = [nameNode getAttributeNamed:@"href"];
+					href = [@"https://www.dianping.com" stringByAppendingString:href];
+					NSLog(@"href:%@", href);
 					
-					NSLog(@"name:%@\n", realName);
+					NSString *nameStr = [nameNode getAttributeNamed:@"title"];
+					NSLog(@"name:%@\n", nameStr);
 				}
 			}
-			
 			
 			NSArray *addrNodes = [liNode findChildTags:@"span"];
 			for (HTMLNode *addrNode in addrNodes) {
 				if ([[addrNode getAttributeNamed:@"class"] isEqualToString:@"key-list"]) {
-					NSString *realAddr = [self extractionStringFromString:[addrNode rawContents]];
+					NSString *realAddr = [NodeHandle extractionStringFromString:[addrNode rawContents]];
 					realAddr = [realAddr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 					realAddr = [realAddr stringByReplacingOccurrencesOfString:@" " withString:@""];
 					NSLog(@"addr:%@\n", realAddr);
@@ -107,104 +115,50 @@
 	}
 }
 
-- (NSString*)extractionStringFromString:(NSString*)string {
-	
-	NSArray *subArrH = [string componentsSeparatedByString:@">"];
-	NSArray *subArrE = [string componentsSeparatedByString:@"<"];
-	NSInteger index_f = [subArrH.firstObject length];
-	NSInteger index_l = string.length - [subArrE.lastObject length];
-	
-	NSRange realRang = NSMakeRange(index_f + 1, index_l - index_f - 2);
-	NSString *extraction = [string substringWithRange:realRang];
-	return extraction;
-}
 
 #pragma mark -- UIWebdelegate
-//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-//	
-//	//判断是否是单击
-//	if (navigationType == UIWebViewNavigationTypeLinkClicked) {
-//		
-//		
-////		[DZWebView loadRequest:request];
-////		[DZWebView reload];
-//		
-////		MXSAboutVC *aboutVC = [[MXSAboutVC alloc] init];
-////		
-////		NSMutableDictionary *dic_push_args = [[NSMutableDictionary alloc] init];
-////		[dic_push_args setValue:[request URL] forKey:@"url"];
-////		aboutVC.push_args = [dic_push_args copy];
-////		[self.navigationController pushViewController:aboutVC animated:YES];
-//		
-////		iPhone自带Safari
-////		if([[UIApplication sharedApplication]canOpenURL:url]) {
-////			[[UIApplication sharedApplication]openURL:url];
-////		}
-////		return NO;
-//	}
-//	
-//	return YES;
-//}
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+	
+	//判断是否是单击
+	if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+		
+		NSLog(@"%@", [[request URL] absoluteString]);
+		
+		if ([[[request URL] absoluteString] hasPrefix:@"https://www.dianping.com/shop/"]) {
+			
+			MXSAboutVC *aboutVC = [[MXSAboutVC alloc] init];
+			aboutVC.hidesBottomBarWhenPushed = YES;
+			
+			NSMutableDictionary *dic_push_args = [[NSMutableDictionary alloc] init];
+			[dic_push_args setValue:[request URL] forKey:@"url"];
+			aboutVC.push_args = [dic_push_args copy];
+			[self.navigationController pushViewController:aboutVC animated:YES];
+			
+			return NO;
+			
+		} else {
+			return YES;
+		}
+		
+//		iPhone自带Safari
+//		if([[UIApplication sharedApplication]canOpenURL:url]) {
+//			[[UIApplication sharedApplication]openURL:url];
+//		}
+	} else
+		return YES;
+}
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-	getElementBtn.hidden = YES;
+//	getElementBtn.hidden = YES;
+	
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-	getElementBtn.hidden = NO;
+	
 	[self didGetEBtn];
 }
 
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error { }
 
-/*-----------------------------------------------------------------------------------------------------------*/
-//
-//- (void)requestDataWithNameAndPsw {
-//	
-//	NSString *userName = @"mymadeupuser";
-//	NSString *password = @"1234";
-//	NSString *url = @"https://www.dianping.com/search/category/2/70/g188p1";
-//	
-//	NSString *postString = [[NSString alloc] initWithFormat:@"bor_id=%@&bor_verification=%@&url=%@",userName, password, url];
-//	NSLog (@"NSString postString = %@\n\n", postString);
-//	
-//	// Create the URL request
-//	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString:@"https://mywebsite.com/somthing/"]];
-//	NSLog (@"NSString NSMutableURLRequest = %@\n\n", request);
-//	
-//	NSData *requestData = [postString dataUsingEncoding:NSASCIIStringEncoding];
-//	[request setHTTPBody: requestData];  // apply the post data to be sent
-//	NSLog (@"NSData requestData = %@\n\n", requestData);
-//	
-//	NSURLResponse *response;  // holds the response from the server
-//	NSLog (@"NSURLResponse response = %@\n\n", response);
-//	
-//	NSError *error;   // holds any errors
-//	NSLog (@"NSError error = %@\n\n", error);
-//	
-//	NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&error];  // call the URL
-////	NSData *returnData = [NSURLSession ]
-//	NSLog (@"NSData returnedData = %@\n\n", returnData);
-//	
-//	NSString *dataReturned = [[NSString alloc] initWithData:returnData encoding:NSASCIIStringEncoding];
-//	NSLog(@"returned htmlASCII is:  %@\n\n", dataReturned);
-//	
-//	NSString *dataReturned2 = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-//	NSLog(@"returned htmlUTF8 is:  %@\n\n", dataReturned2);
-//}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "MXSViewController.h"
+#import "NodeHandle.h"
 
 @interface MXSAboutVC : MXSViewController <UIWebViewDelegate>
 

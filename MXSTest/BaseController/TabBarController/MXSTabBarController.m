@@ -39,8 +39,7 @@
 	view_con.tabBarItem.badgeColor = [UIColor redColor];
 	
 	self.viewControllers = @[nav_home, nav_con, nav_set];
-	self.hidesBottomBarWhenPushed = YES;
-	self.selectedIndex = 2;
+	//	self.selectedIndex = 2;
 }
 
 

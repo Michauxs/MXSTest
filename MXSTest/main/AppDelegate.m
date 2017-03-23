@@ -21,6 +21,7 @@
     // Override point for customization after application launch.
 	
 //	[NSThread sleepForTimeInterval:2.0];
+	NSLog(@"项目路径 ======= %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
 	
 	self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
 	[self.window makeKeyAndVisible];

@@ -8,6 +8,7 @@
 
 #import "Tools.h"
 #define kAYFontLight(FONTSIZE)                      [UIFont fontWithName:@"STHeitiSC-Light" size:FONTSIZE]
+
 @implementation Tools
 
 + (NSString *)subStringWithByte:(NSInteger)byte str:(NSString *)str{
@@ -124,7 +125,7 @@
     return resultArray3;
 }
 
-+ (NSString *)ToPinYinWith:(NSString *)hanziText dic:(NSMutableDictionary *)dic{
++ (NSString *)ToPinYinWith:(NSString *)hanziText dic:(NSMutableDictionary *)dic {
     if ([hanziText length]) {
         NSMutableString *ms = [[NSMutableString alloc] initWithString:hanziText];
         if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformMandarinLatin, NO)) {
@@ -438,41 +439,23 @@
 /**
  *  设置label的 text color fontSize(正常数值为细体,大于100为粗体,-负数为正常粗细) background align
 */
-+ (UILabel*)setLabelWith:(UILabel*)label andText:(NSString*)text andTextColor:(UIColor*)color andFontSize:(CGFloat)font andBackgroundColor:(UIColor*)backgroundColor andTextAlignment:(NSTextAlignment)align {
-    
-    label.text = text;
-    label.textColor = color;
-    label.textAlignment = align;
-    
-    if (font < 0) {
-        label.font = [UIFont systemFontOfSize:-font];
-    } else if (font > 100.f) {
-        label.font = [UIFont boldSystemFontOfSize:(font - 100)];
-    } else {
-        label.font = kAYFontLight(font);
-    }
-    
-    if (backgroundColor) {
-        label.backgroundColor = backgroundColor;
-    } else label.backgroundColor = [UIColor clearColor];
-    
-    return label;
-}
-
 + (UILabel*)creatUILabelWithText:(NSString*)text andTextColor:(UIColor*)color andFontSize:(CGFloat)font andBackgroundColor:(UIColor*)backgroundColor andTextAlignment:(NSTextAlignment)align {
     
     UILabel *label = [UILabel new];
     label.text = text;
     label.textColor = color;
     label.textAlignment = align;
-    
-    if (font < 0) {
-        label.font = [UIFont systemFontOfSize:-font];
-    } else if (font > 100.f) {
-        label.font = [UIFont boldSystemFontOfSize:(font - 100)];
-    } else {
-        label.font = kAYFontLight(font);
-    }
+	label.numberOfLines = 0;
+	
+	UIFont *fontSize;
+	if (font > 600) {
+		fontSize = [UIFont boldSystemFontOfSize:(font - 600)];
+	} else if (font < 600.f && font > 300.f) {
+		fontSize = [UIFont systemFontOfSize:-font];
+	} else {
+		fontSize = kAYFontLight(font);
+	}
+	label.font = fontSize;
     
     if (backgroundColor) {
         label.backgroundColor = backgroundColor;
@@ -484,40 +467,21 @@
 /**
  *  设置btn的 title color fontSize(正常数值为细体,大于100为粗体,-负数为正常粗细) background align
  */
-+ (UIButton*)setButton:(UIButton*)btn withTitle:(NSString*)title andTitleColor:(UIColor*)TitleColor andFontSize:(CGFloat)font andBackgroundColor:(UIColor*)backgroundColor {
-    
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:TitleColor forState:UIControlStateNormal];
-    
-    if (font < 0) {
-        btn.titleLabel.font = [UIFont systemFontOfSize:-font];
-    } else if (font > 100.f) {
-        btn.titleLabel.font = [UIFont boldSystemFontOfSize:(font - 100)];
-    } else {
-        btn.titleLabel.font = kAYFontLight(font);
-    }
-    
-    if (backgroundColor) {
-        btn.backgroundColor = backgroundColor;
-    } else
-        btn.backgroundColor = [UIColor clearColor];
-    
-    return btn;
-}
-
 + (UIButton*)creatUIButtonWithTitle:(NSString*)title andTitleColor:(UIColor*)TitleColor andFontSize:(CGFloat)font andBackgroundColor:(UIColor*)backgroundColor {
 	
 	UIButton *btn = [UIButton new];
 	[btn setTitle:title forState:UIControlStateNormal];
 	[btn setTitleColor:TitleColor forState:UIControlStateNormal];
 	
+	UIFont *fontSize;
 	if (font > 600) {
-		btn.titleLabel.font = [UIFont boldSystemFontOfSize:(font - 600)];
+		fontSize = [UIFont boldSystemFontOfSize:(font - 600)];
 	} else if (font < 600.f && font > 300.f) {
-		btn.titleLabel.font = [UIFont systemFontOfSize:-font];
+		fontSize = [UIFont systemFontOfSize:-font];
 	} else {
-		btn.titleLabel.font = kAYFontLight(font);
+		fontSize = kAYFontLight(font);
 	}
+	btn.titleLabel.font = fontSize;
 	
 	if (backgroundColor) {
 		btn.backgroundColor = backgroundColor;
