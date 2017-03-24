@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	NSString *urlstring = @"http://www.dianping.com/shop/66526819";
+	NSDictionary *dic = [NodeHandle handNodeWithServiceUrl:urlstring];
+	
+	[NodeHandle writeToPlistFile:dic withFileName:@"oneNursery"];
+	
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

@@ -10,6 +10,7 @@
 #import "MXSHomeVC.h"
 #import "MXSContentVC.h"
 #import "MXSSettingVC.h"
+#import "MXSProfileVC.h"
 
 @interface MXSTabBarController ()
 
@@ -23,23 +24,28 @@
 	UINavigationController *nav_home = [[UINavigationController alloc]init];
 	UINavigationController *nav_con = [[UINavigationController alloc]init];
 	UINavigationController *nav_set = [[UINavigationController alloc]init];
+	UINavigationController *nav_profile = [[UINavigationController alloc]init];
 	
-	MXSHomeVC *view_home = [[MXSHomeVC alloc]init];
-	MXSContentVC *view_con = [[MXSContentVC alloc]init];
-	MXSSettingVC *view_set = [[MXSSettingVC alloc]init];
+	MXSHomeVC *vc_home = [[MXSHomeVC alloc]init];
+	MXSContentVC *vc_con = [[MXSContentVC alloc]init];
+	MXSSettingVC *vc_set = [[MXSSettingVC alloc]init];
+	MXSProfileVC *vc_profile = [[MXSProfileVC alloc] init];
 	
-	[nav_home pushViewController:view_home animated:NO];
-	[nav_con pushViewController:view_con animated:NO];
-	[nav_set pushViewController:view_set animated:NO];
+	[nav_home pushViewController:vc_home animated:NO];
+	[nav_con pushViewController:vc_con animated:NO];
+	[nav_set pushViewController:vc_set animated:NO];
+	[nav_profile pushViewController:vc_profile animated:NO];
 	
-	view_home.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"HOME" image:IMGRESOURE(@"tab_home") selectedImage:IMGRESOURE(@"tab_home_selected")];
-	view_con.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"CONT" image:IMGRESOURE(@"tab_found") selectedImage:[UIImage imageNamed:@"tab_found_selected"]];
-	view_set.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"CENT" image:IMGRESOURE(@"tab_friends") selectedImage:[UIImage imageNamed:@"tab_friends_selected"]];
+	vc_home.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"HOME" image:IMGRESOURE(@"tab_home") selectedImage:IMGRESOURE(@"tab_home_selected")];
+	vc_con.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"CONT" image:IMGRESOURE(@"tab_found") selectedImage:[UIImage imageNamed:@"tab_found_selected"]];
+	vc_set.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"CENT" image:IMGRESOURE(@"tab_friends") selectedImage:[UIImage imageNamed:@"tab_friends_selected"]];
+	vc_profile.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"PROF" image:IMGRESOURE(@"tab_friends") selectedImage:IMGRESOURE(@"tab_friends_selected")];
 	
-	view_con.tabBarItem.badgeColor = [UIColor redColor];
+	vc_con.tabBarItem.badgeColor = [UIColor redColor];
 	
-	self.viewControllers = @[nav_home, nav_con, nav_set];
-	//	self.selectedIndex = 2;
+	self.viewControllers = @[nav_home, nav_con, nav_set, nav_profile];
+	self.selectedIndex = 1;
+	
 }
 
 

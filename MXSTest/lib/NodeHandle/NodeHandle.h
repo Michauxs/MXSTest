@@ -13,12 +13,14 @@
 @interface NodeHandle : NSObject
 
 + (NSDictionary *)handNodeWithServiceUrl:(NSString*)urlStr;
++ (NSDictionary *)handNodeWithNurseryUrl:(NSString*)urlStr;
+
 + (NSDictionary *)handNodeWithPromoteUrl:(NSString*)urlStr;
++ (NSArray *)handUrlListFromCategoryUrl:(NSString*)url;
 
-
-+ (NSArray *)getUrlListFromCategoryUrl:(NSString*)url;
-
++ (NSString *)replacingOccurrencesString:(NSString*)string;
 + (NSString*)extractionStringFromString:(NSString*)string;
 + (NSString*)requestHtmlStringWith:(NSString*)url;
 
++ (void)writeToPlistFile:(id)info withFileName:(NSString*)fileName ;
 @end

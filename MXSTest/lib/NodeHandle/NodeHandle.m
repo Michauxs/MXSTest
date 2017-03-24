@@ -27,6 +27,17 @@
 	NSArray *divNodes = [bodyNode findChildTags:@"div"];
 	for (HTMLNode *divNode in divNodes) {
 		
+		
+		if ([[divNode getAttributeNamed:@"class"] isEqualToString:@"block_right "]) {
+			
+			HTMLNode *intruNode = [divNode findChildTag:@"span"];
+			NSString *intru = [NodeHandle extractionStringFromString:[intruNode rawContents]];
+			intru = [NodeHandle replacingOccurrencesString:intru];
+			NSLog(@"intru:%@\n", intru);
+			[dic_service setValue:intru forKey:@"intru"];
+			
+		} //end: class = block_right
+		
 		if ([[divNode getAttributeNamed:@"id"] isEqualToString:@"J_boxDetail"]) {
 			
 			NSArray *nameNodes = [divNode findChildTags:@"h1"];
@@ -90,10 +101,10 @@
 				HTMLNode *aNode = [liNode findChildTag:@"a"];
 				NSString *href = [aNode getAttributeNamed:@"href"];
 				href = [@"https://www.dianping.com" stringByAppendingString:href];
-				NSLog(@"promote_href:%@", href);
+				NSLog(@"promote_href__:%@", href);
 				
 				NSString *title = [aNode getAttributeNamed:@"title"];
-				NSLog(@"promote_course:%@", href);
+				NSLog(@"promote_course:%@", title);
 				
 				NSMutableDictionary *dic_prom = [[NSMutableDictionary alloc] init];
 				[dic_prom setValue:href forKey:@"promote_href"];
@@ -121,9 +132,7 @@
 				if ([[contNode getAttributeNamed:@"class"] isEqualToString:@"J_brief-cont"]) {
 					NSString *comment = [contNode rawContents];
 					comment = [NodeHandle extractionStringFromString:comment];
-					comment = [comment stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-					comment = [comment stringByReplacingOccurrencesOfString:@"\t" withString:@""];
-					comment = [comment stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+					comment = [NodeHandle replacingOccurrencesString:comment];
 					NSLog(@"comm:%@", comment);
 					[dic_comm setValue:comment forKey:@"context"];
 				}
@@ -152,6 +161,91 @@
 	return dic_service;
 }
 
++ (NSDictionary *)handNodeWithNurseryUrl:(NSString*)urlStr {
+	
+	NSString *htmlStr = [self requestHtmlStringWith:urlStr];
+	//	NSLog(@"%@", htmlStr);
+	
+	NSError *error = nil;
+	HTMLParser *parser = [[HTMLParser alloc] initWithString:htmlStr error:&error];
+	if (error) {
+		NSLog(@"Error: %@", error);
+		return nil;
+	}
+	
+	//dic Nursery
+	NSMutableDictionary *dic_nursery = [[NSMutableDictionary alloc] init];
+	
+	HTMLNode *bodyNode = [parser body];
+	
+	NSMutableArray *commentsArr = [NSMutableArray array];
+	NSArray *liNodes = [bodyNode findChildTags:@"li"];
+	for (HTMLNode *liNode in liNodes) {
+		NSMutableDictionary *dic_comm = [[NSMutableDictionary alloc] init];
+		
+		if ([[liNode getAttributeNamed:@"class"] isEqualToString:@"comment-list-item"]) {
+			NSArray *aNodes = [liNode findChildTags:@"a"];
+			for (HTMLNode *aNode in aNodes) {
+				if ([[aNode getAttributeNamed:@"class"] isEqualToString:@"J_card"]) {
+					NSString *user = [NodeHandle extractionStringFromString:[aNode rawContents]];
+					NSLog(@"user:%@", user);
+					[dic_comm setValue:user forKey:@"comment_user"];
+				}
+			}
+			
+			
+			NSArray *commentNodes = [liNode findChildTags:@"div"];
+			for (HTMLNode *commentNode in commentNodes) {
+				if ([[commentNode getAttributeNamed:@"class"] isEqualToString:@"comment-entry"]) {
+					
+					HTMLNode *comtextNode = [commentNode findChildTag:@"div"];
+					NSString *comtext = [NodeHandle extractionStringFromString:[comtextNode rawContents]];
+					NSLog(@"comm:%@", comtext);
+					[dic_comm setValue:comtext forKey:@"comment_cont"];
+					
+				}
+			}
+			
+			[commentsArr addObject:dic_comm];
+			
+		}
+	}
+	[dic_nursery setValue:commentsArr forKey:@"comments"];
+	
+	NSArray *divNodes = [bodyNode findChildTags:@"div"];
+	for (HTMLNode *divNode in divNodes) {
+		
+		if ([[divNode getAttributeNamed:@"class"] isEqualToString:@"shop-name"]) {
+			HTMLNode *hNode = [divNode findChildTag:@"h1"];
+			NSString *name = [self extractionStringFromString:[hNode rawContents]];
+			NSLog(@"name:%@", name);
+			[dic_nursery setValue:name forKey:@"name"];
+		}
+		
+		NSArray *spanNodes = [divNode findChildTags:@"span"];
+		for (HTMLNode *spanNode in spanNodes) {
+			if ([[spanNode getAttributeNamed:@"itemprop"] isEqualToString:@"street-address"]) {
+				NSString *addr = [self extractionStringFromString:[spanNode rawContents]];
+				NSLog(@"addr:%@", addr);
+				[dic_nursery setValue:addr forKey:@"address"];
+			}
+		}
+		
+		
+		NSArray *ddNodes = [divNode findChildTags:@"strong"];
+		for (HTMLNode *ddNode in ddNodes) {
+			if ([[ddNode getAttributeNamed:@"itemprop"] isEqualToString:@"tel"]) {
+				NSString *phone = [self extractionStringFromString:[ddNode rawContents]];
+				NSLog(@"phon:%@", phone);
+				[dic_nursery setValue:phone forKey:@"phone"];
+			}
+		}
+		
+	}
+	
+	return [dic_nursery copy];
+}
+
 + (NSDictionary *)handNodeWithPromoteUrl:(NSString*)urlStr {
 	
 	NSString *htmlStr = [self requestHtmlStringWith:urlStr];
@@ -164,12 +258,8 @@
 		return nil;
 	}
 	
-	//创建一个dic
+	//dic 推荐课
 	NSMutableDictionary *dic_promote = [[NSMutableDictionary alloc] init];
-	
-	//读文件
-	//	NSDictionary* dic2 = [NSDictionary dictionaryWithContentsOfFile:filename];
-	//	NSLog(@"dic is:%@",dic2);
 	
 	HTMLNode *bodyNode = [parser body];
 	NSArray *divNodes = [bodyNode findChildTags:@"div"];
@@ -195,34 +285,71 @@
 			
 		} //end: id = J_box
 		
+		NSMutableDictionary *dic_property = [[NSMutableDictionary alloc] init];
 		if ([[divNode getAttributeNamed:@"id"] isEqualToString:@"J_boxAgraph"]) {
-			NSArray *contDivNodes = [divNode findChildTags:@"div"];
-			NSMutableArray *propertyArr = [NSMutableArray array];
-			for (HTMLNode *contDivNode in contDivNodes) {
-				if ([[contDivNode getAttributeNamed:@"class"] isEqualToString:@"cont"]) {
-					NSString *property = [NodeHandle extractionStringFromString:[contDivNode rawContents]];
-					NSLog(@"property:%@", property);
+			NSArray *tdNodes = [divNode findChildTags:@"td"];
+			
+			if (tdNodes.count != 0) {
+				for (int i = 0; i < tdNodes.count ; ++i) {
 					
-					if (property) {
-						[propertyArr addObject:property];
-					}
-				}
-			}
-			[dic_promote setValue:propertyArr forKey:@"properties"];
+					NSArray *contDivNodes = [[tdNodes objectAtIndex:i] findChildTags:@"div"];
+					
+					if (contDivNodes.count != 0) {
+						for (HTMLNode *contDivNode in contDivNodes) {
+							if ([[contDivNode getAttributeNamed:@"class"] isEqualToString:@"cont"]) {
+								NSString *property = [NodeHandle extractionStringFromString:[contDivNode rawContents]];
+								NSLog(@"property:%@", property);
+								if (property) {
+									NSString *key_value ;
+									if (i == 0) {
+										key_value = @"course_cat";
+									} else if (i == 1) {
+										key_value = @"boundary";
+									} else if (i == 2) {
+										key_value = @"work_type";
+									} else if (i == 3) {
+										key_value = @"ishas_tesing";
+									} else if (i == 4) {
+										key_value = @"course_numb";
+									} else if (i == 5) {
+										key_value = @"course_length";
+									} else if (i == 6) {
+										key_value = @"area";
+									} else if (i == 7) {
+										key_value = @"course_intru";
+									} else if (i == 8) {
+										key_value = @"techer_info";
+									}
+									[dic_property setValue:property forKey:key_value];
+									//							[propertyArr addObject:property];
+								}
+							}
+						}
+					} //end  ? contDivs.cont == 0
+					
+				}	//end for(i++)
+				
+			}	//end .count ? == 0
+			
 			
 			NSArray *liNodes = [divNode findChildTags:@"li"];
 			NSMutableArray *imgSrcArr = [NSMutableArray array];
-			for (HTMLNode *liNode in liNodes) {
-				HTMLNode *imgNode = [liNode findChildTag:@"img"];
-				NSString *img_src = [imgNode getAttributeNamed:@"data-lazyload"];
-				img_src = [@"https:" stringByAppendingString:img_src];
-				NSLog(@"%@", img_src);
-				
-				if (img_src) {
-					[imgSrcArr addObject:img_src];
+			if (liNodes.count != 0) {
+				for (HTMLNode *liNode in liNodes) {
+					HTMLNode *imgNode = [liNode findChildTag:@"img"];
+					NSString *img_src = [imgNode getAttributeNamed:@"data-lazyload"];
+					img_src = [@"https:" stringByAppendingString:img_src];
+					NSLog(@"%@", img_src);
+					
+					if (img_src) {
+						[imgSrcArr addObject:img_src];
+					}
 				}
-			}
-			[dic_promote setValue:imgSrcArr forKey:@"imgs_src"];
+				
+			} //end .count ? == 0
+			
+			[dic_property setValue:imgSrcArr forKey:@"imgs_src"];
+			[dic_promote setValue:dic_property forKey:@"properties"];
 			
 		}
 		
@@ -237,43 +364,7 @@
 	return dic_promote;
 }
 
-#pragma mark -- methed
-+ (NSString*)extractionStringFromString:(NSString*)string {
-	
-	NSArray *subArrH = [string componentsSeparatedByString:@">"];
-	NSArray *subArrE = [string componentsSeparatedByString:@"<"];
-	if (subArrH.count == 0 || subArrE.count ==0) {
-		return string;
-	}
-	
-	NSInteger index_f = [subArrH.firstObject length];
-	NSInteger index_l = string.length - [subArrE.lastObject length];
-	
-	NSRange realRang = NSMakeRange(index_f + 1, index_l - index_f - 2);
-	NSString *extraction = [string substringWithRange:realRang];
-	return extraction;
-}
-
-+ (NSString*)requestHtmlStringWith:(NSString*)urlStr {
-	
-	NSURL *url = [NSURL URLWithString:urlStr];
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-	
-	// 设置请求方法（默认就是GET请求）
-	request.HTTPMethod = @"GET";
-	NSURLResponse *response;  // holds the response from the server
-	NSError *error;   // holds any errors
-	NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&error];  // call the URL
-	
-	//	NSString *dataReturned = [[NSString alloc] initWithData:returnData encoding:NSASCIIStringEncoding];
-	//	NSLog(@"returned htmlASCII is:  %@\n\n", dataReturned);
-	
-	NSString *dataReturned2 = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-	return dataReturned2;
-}
-
-
-+ (NSArray *)getUrlListFromCategoryUrl:(NSString*)url {
++ (NSArray *)handUrlListFromCategoryUrl:(NSString*)url {
 	
 	NSString *htmlStr = [NodeHandle requestHtmlStringWith:url];
 	NSError *error = nil;
@@ -313,8 +404,7 @@
 			for (HTMLNode *addrNode in addrNodes) {
 				if ([[addrNode getAttributeNamed:@"class"] isEqualToString:@"key-list"]) {
 					NSString *realAddr = [NodeHandle extractionStringFromString:[addrNode rawContents]];
-					realAddr = [realAddr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-					realAddr = [realAddr stringByReplacingOccurrencesOfString:@" " withString:@""];
+					realAddr = [NodeHandle replacingOccurrencesString:realAddr];
 					NSLog(@"addr:%@\n", realAddr);
 				}
 			}
@@ -322,6 +412,59 @@
 		}
 	}
 	return listArr;
+}
+
+
+#pragma mark -- methed
++ (NSString *)replacingOccurrencesString:(NSString*)string {
+	string = [string stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+	string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
+	string = [string stringByReplacingOccurrencesOfString:@"\t" withString:@""];
+	string = [string stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+	return string;
+}
+
++ (NSString*)extractionStringFromString:(NSString*)string {
+	
+	NSArray *subArrH = [string componentsSeparatedByString:@">"];
+	NSArray *subArrE = [string componentsSeparatedByString:@"<"];
+	if (subArrH.count == 0 || subArrE.count ==0) {
+		return string;
+	}
+	
+	NSInteger index_f = [subArrH.firstObject length];
+	NSInteger index_l = string.length - [subArrE.lastObject length];
+	
+	NSRange realRang = NSMakeRange(index_f + 1, index_l - index_f - 2);
+	NSString *extraction = [string substringWithRange:realRang];
+	return extraction;
+}
+
++ (NSString*)requestHtmlStringWith:(NSString*)urlStr {
+	
+	NSURL *url = [NSURL URLWithString:urlStr];
+	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+	
+	// 设置请求方法（默认就是GET请求）
+	request.HTTPMethod = @"GET";
+	NSURLResponse *response;  // holds the response from the server
+	NSError *error;   // holds any errors
+	NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&error];  // call the URL
+	
+	//	NSString *dataReturned = [[NSString alloc] initWithData:returnData encoding:NSASCIIStringEncoding];
+	//	NSLog(@"returned htmlASCII is:  %@\n\n", dataReturned);
+	
+	NSString *dataReturned2 = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+	return dataReturned2;
+}
+
++ (void)writeToPlistFile:(id)info withFileName:(NSString*)fileName {
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+	NSString *path = [paths objectAtIndex:0];
+	NSString *filename = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist", fileName]];
+	[info writeToFile:filename atomically:YES];
+	
 }
 
 @end

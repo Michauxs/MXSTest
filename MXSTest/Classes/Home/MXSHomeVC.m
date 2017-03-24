@@ -16,92 +16,65 @@
     [super viewDidLoad];
 	
 	NSString *urlStr;
-	urlStr = @"https://www.dianping.com/shop/38050801/wedding/product/1406471";
-	NSURL *url = [NSURL URLWithString:urlStr];
-	NSString *htmlStr = [self requestHtmlStringWith:url];
-	NSLog(@"%@", htmlStr);
 	
-	NSError *error = nil;
-	HTMLParser *parser = [[HTMLParser alloc] initWithString:htmlStr error:&error];
-	if (error) {
-		NSLog(@"Error: %@", error);
-		return;
+	//教育
+//	NSString *categaryUrlStr = @"https://www.dianping.com/search/category/2/70/g188";
+//	NSString *fileName = @"urlList_education";
+	
+	//	//托班
+	NSString *categaryUrlStr = @"http://www.dianping.com/search/category/2/70/g20009";
+	NSString *fileName = @"urlList_nursery";
+	fileName = @"urlList_nap";
+	
+	//才艺
+//	NSString *categaryUrlStr = @"http://www.dianping.com/search/category/2/70/g27763";
+//	NSString *fileName = @"urlList_art";
+	
+	NSMutableArray *courseList = [NSMutableArray array];
+	for (int i = 1; i < 11; ++i) {
+		urlStr = [NSString stringWithFormat:@"%@p%d", categaryUrlStr, i];
+		NSArray *subServArr_p = [NodeHandle handUrlListFromCategoryUrl:urlStr];
+		[courseList addObjectsFromArray:subServArr_p];
 	}
 	
-	//创建一个dic
-	NSMutableDictionary *dic_promote = [[NSMutableDictionary alloc] init];
+	[self writeToPlistFile:courseList withFileName:fileName];
 	
-	//读文件
-	//	NSDictionary* dic2 = [NSDictionary dictionaryWithContentsOfFile:filename];
-	//	NSLog(@"dic is:%@",dic2);
+	//待存入课程 arr
+	NSMutableArray *coursesArr = [NSMutableArray array];
 	
-	HTMLNode *bodyNode = [parser body];
-	NSArray *divNodes = [bodyNode findChildTags:@"div"];
-	for (HTMLNode *divNode in divNodes) {
+	for (NSDictionary *course in courseList) {
+		NSString *course_href = [course valueForKey:@"href"];
 		
-		if ([[divNode getAttributeNamed:@"class"] isEqualToString:@"textshow"]) {
-			
-			HTMLNode *nameNode = [divNode findChildTag:@"h3"];
-			NSString *nameStr = [nameNode rawContents];
-			nameStr = [NodeHandle extractionStringFromString:nameStr];
-			NSLog(@"name:%@\n", nameStr);
-			[dic_promote setValue:nameStr forKey:@"name"];
-			
-			NSArray *spanNodes = [divNode findChildTags:@"span"];
-			for (HTMLNode *spanNode in spanNodes) {
-				if ([[spanNode getAttributeNamed:@"class"] isEqualToString:@"priceDisplay"]) {
-					NSString *price = [NodeHandle extractionStringFromString:[spanNode rawContents]];
-					price = [[price componentsSeparatedByString:@">"] lastObject];
-					NSLog(@"%@", price);
-					[dic_promote setValue:price forKey:@"price"];
-				}
-			}
-			
-		} //end: id = J_box
+		//课程参数 ：需mutable 追加参数
+		NSMutableDictionary *course_args = [[NodeHandle handNodeWithServiceUrl:course_href] mutableCopy];
+		NSArray *promoteArr = [course_args objectForKey:@"promotes"];
 		
-		if ([[divNode getAttributeNamed:@"id"] isEqualToString:@"J_boxAgraph"]) {
-			NSArray *contDivNodes = [divNode findChildTags:@"div"];
-			NSMutableArray *propertyArr = [NSMutableArray array];
-			for (HTMLNode *contDivNode in contDivNodes) {
-				if ([[contDivNode getAttributeNamed:@"class"] isEqualToString:@"cont"]) {
-					NSString *property = [NodeHandle extractionStringFromString:[contDivNode rawContents]];
-					NSLog(@"property:%@", property);
-						
-					if (property) {
-						[propertyArr addObject:property];
-					}
-				}
-			}
-			[dic_promote setValue:propertyArr forKey:@"properties"];
+		if (promoteArr.count != 0) {	//没/有推荐课
 			
-			NSArray *liNodes = [divNode findChildTags:@"li"];
-			NSMutableArray *imgSrcArr = [NSMutableArray array];
-			for (HTMLNode *liNode in liNodes) {
-				HTMLNode *imgNode = [liNode findChildTag:@"img"];
-				NSString *img_src = [imgNode getAttributeNamed:@"data-lazyload"];
-				img_src = [@"https:" stringByAppendingString:img_src];
-				NSLog(@"%@", img_src);
-					
-				if (img_src) {
-					[imgSrcArr addObject:img_src];
-				}
+			NSMutableArray *promoteCourseArgsArr = [NSMutableArray array];
+			for (NSDictionary *promote in promoteArr) {
+				NSString *promote_href = [promote objectForKey:@"promote_href"];
+				NSDictionary *promote_course_args = [NodeHandle handNodeWithPromoteUrl:promote_href];
+				[promoteCourseArgsArr addObject:promote_course_args];
 			}
-			[dic_promote setValue:imgSrcArr forKey:@"imgs_src"];
 			
-		}
+			[course_args setValue:promoteCourseArgsArr forKey:@"promotes_args"];
+		} // end .count == 0 ?
+		
+		[coursesArr addObject:[course_args copy]];
 		
 	}
 	
-	
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-	NSString *path = [paths objectAtIndex:0];
-	NSString *filename = [path stringByAppendingPathComponent:@"promote.plist"];
-	//	写到plist文件里
-	[dic_promote writeToFile:filename atomically:YES];
+	[self writeToPlistFile:[coursesArr copy] withFileName:[NSString stringWithFormat:@"courses_%@", [[fileName componentsSeparatedByString:@"_"] lastObject]]];
 	
 }
 
-- (void)didGetEBtnClick {
+- (void)writeToPlistFile:(id)info withFileName:(NSString*)fileName {
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+	NSString *path = [paths objectAtIndex:0];
+	NSString *filename = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist", fileName]];
+	[info writeToFile:filename atomically:YES];
 	
 }
 
@@ -138,23 +111,5 @@
 //	MXSViewController *actVC = [self.tabBarController.viewControllers objectAtIndex:1];
 //	actVC.tabBarItem.badgeValue = @"2";
 //}
-
-- (NSString*)requestHtmlStringWith:(NSURL*)url {
-	
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-	
-	// 设置请求方法（默认就是GET请求）
-	request.HTTPMethod = @"GET";
-	NSURLResponse *response;  // holds the response from the server
-	NSError *error;   // holds any errors
-	NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&error];  // call the URL
-	
-	//	NSString *dataReturned = [[NSString alloc] initWithData:returnData encoding:NSASCIIStringEncoding];
-	//	NSLog(@"returned htmlASCII is:  %@\n\n", dataReturned);
-	
-	NSString *dataReturned2 = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-	//	NSLog(@"returned htmlUTF8 is:  %@\n\n", dataReturned2);
-	return dataReturned2;
-}
 
 @end

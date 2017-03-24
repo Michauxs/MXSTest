@@ -15,6 +15,7 @@
 		702D25311E81384F0068F025 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D252E1E81384F0068F025 /* XPathQuery.m */; };
 		702D25361E8156300068F025 /* MXSAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25351E8156300068F025 /* MXSAboutVC.m */; };
 		703932221E83F46400FAFF17 /* NodeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 703932211E83F46400FAFF17 /* NodeHandle.m */; };
+		703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703CC96F1E85229A005099D6 /* MXSProfileVC.m */; };
 		7042C8AB1E5BEE8900B41BA4 /* MXSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8AA1E5BEE8900B41BA4 /* MXSTabBarController.m */; };
 		7042C8B21E5BEFA500B41BA4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7042C8B11E5BEFA500B41BA4 /* Info.plist */; };
 		7042C8BC1E5BEFF700B41BA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8B81E5BEFF700B41BA4 /* AppDelegate.m */; };
@@ -104,6 +105,8 @@
 		702D25351E8156300068F025 /* MXSAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSAboutVC.m; sourceTree = "<group>"; };
 		703932201E83F46400FAFF17 /* NodeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeHandle.h; sourceTree = "<group>"; };
 		703932211E83F46400FAFF17 /* NodeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeHandle.m; sourceTree = "<group>"; };
+		703CC96E1E85229A005099D6 /* MXSProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSProfileVC.h; sourceTree = "<group>"; };
+		703CC96F1E85229A005099D6 /* MXSProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSProfileVC.m; sourceTree = "<group>"; };
 		7042C8A91E5BEE8900B41BA4 /* MXSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTabBarController.h; sourceTree = "<group>"; };
 		7042C8AA1E5BEE8900B41BA4 /* MXSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSTabBarController.m; sourceTree = "<group>"; };
 		7042C8B11E5BEFA500B41BA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -335,6 +338,15 @@
 			path = NodeHandle;
 			sourceTree = "<group>";
 		};
+		703CC96D1E852267005099D6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				703CC96E1E85229A005099D6 /* MXSProfileVC.h */,
+				703CC96F1E85229A005099D6 /* MXSProfileVC.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		7042C8A61E5BEE0A00B41BA4 /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,9 +376,10 @@
 		7042C8AC1E5BEEF300B41BA4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				703CC96D1E852267005099D6 /* Profile */,
+				702D25321E8155DC0068F025 /* SetGroupVC */,
 				7042C8AE1E5BEEF300B41BA4 /* Home */,
 				7042C8AD1E5BEEF300B41BA4 /* Content */,
-				702D25321E8155DC0068F025 /* SetGroupVC */,
 				7042C8AF1E5BEEF300B41BA4 /* Setting */,
 			);
 			path = Classes;
@@ -803,6 +816,7 @@
 				7042C8D11E5BF23800B41BA4 /* MXSSettingVC.m in Sources */,
 				70510F851DAB3B9D0097E093 /* MBProgressHUD.m in Sources */,
 				7042C8CE1E5BF21A00B41BA4 /* MXSContentVC.m in Sources */,
+				703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */,
 				7042C8C21E5BF09000B41BA4 /* MXSViewController.m in Sources */,
 				70510FAA1DAB3B9D0097E093 /* SDWebImagePrefetcher.m in Sources */,
 				703932221E83F46400FAFF17 /* NodeHandle.m in Sources */,
