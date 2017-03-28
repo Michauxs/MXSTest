@@ -15,7 +15,8 @@
 @implementation MXSViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
+	self.automaticallyAdjustsScrollViewInsets = NO;
 	self.view.backgroundColor = [Tools garyBackgroundColor];
 	
     // Do any additional setup after loading the view.

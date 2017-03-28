@@ -17,12 +17,47 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	NSString *urlstring = @"http://www.dianping.com/shop/66526819";
-	NSDictionary *dic = [NodeHandle handNodeWithServiceUrl:urlstring];
+//	NSString *fullpath=[[NSBundle mainBundle] pathForResource:@"courses_art.plist" ofType:nil];
+//	NSArray *array01=[NSArray arrayWithContentsOfFile:fullpath];
+//	[NodeHandle writeToJsonFile:array01 withFileName:@"courses_art"];
+//	
+//	fullpath=[[NSBundle mainBundle]pathForResource:@"courses_education.plist" ofType:nil];
+//	NSArray *array02=[NSArray arrayWithContentsOfFile:fullpath];
+//	[NodeHandle writeToJsonFile:array02 withFileName:@"courses_edu"];
+//	
+//	fullpath=[[NSBundle mainBundle]pathForResource:@"courses_nursery.plist" ofType:nil];
+//	NSArray *array03=[NSArray arrayWithContentsOfFile:fullpath];
+//	[NodeHandle writeToJsonFile:array03 withFileName:@"courses_nur"];
 	
-	[NodeHandle writeToPlistFile:dic withFileName:@"oneNursery"];
+//	NSString *urlstring = @"http://www.dianping.com/shop/66526819";
+//	NSDictionary *dic = [NodeHandle handNodeWithServiceUrl:urlstring];
+//	
+//	[NodeHandle writeToPlistFile:dic withFileName:@"oneNursery"];
+	
+	
+	//1.1首先获取路径
+	NSString *path = [[NSBundle mainBundle]pathForResource:@"city58.json" ofType:nil];
+	//.读取文件内容
+	NSData *data = [NSData dataWithContentsOfFile:path];
+	//对其解析
+	NSArray *array =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+	
+	for (NSDictionary *dic in array) {
+		
+		NSArray *arr = [dic valueForKey:@"arr"];
+		
+		for (NSMutableDictionary *dic_course in arr) {
+			NSString *desc = [dic_course valueForKey:@"desc"];
+			desc = [NodeHandle delHTMLTag:desc];
+			desc = [desc stringByReplacingOccurrencesOfString:@"\n\n" withString:@"\n"];
+			[dic_course setValue:desc forKey:@"desc"];
+		}
+	}
+	
+	[NodeHandle writeToJsonFile:array withFileName:@"city58_v2"];
 	
 }
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 	

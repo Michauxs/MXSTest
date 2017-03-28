@@ -435,9 +435,35 @@
 	NSInteger index_f = [subArrH.firstObject length];
 	NSInteger index_l = string.length - [subArrE.lastObject length];
 	
-	NSRange realRang = NSMakeRange(index_f + 1, index_l - index_f - 2);
+	NSInteger length = index_l - index_f - 2;
+	if (length <= 0) {
+		length = string.length - index_f - 1;
+	}
+	
+	NSRange realRang = NSMakeRange(index_f + 1, length);
 	NSString *extraction = [string substringWithRange:realRang];
 	return extraction;
+}
+
++ (NSString *)delHTMLTag:(NSString *)html {
+	
+	NSScanner *theScanner;
+	NSString *text = nil;
+	
+	theScanner = [NSScanner scannerWithString:html];
+	
+	while ([theScanner isAtEnd] == NO) {
+		// find start of tag
+		[theScanner scanUpToString:@"<" intoString:NULL];
+		// find end of tag
+		[theScanner scanUpToString:@">" intoString:&text];
+		// replace the found tag with a space
+		
+		html = [html stringByReplacingOccurrencesOfString: [NSString stringWithFormat:@"%@>", text] withString:@""];
+	}
+	
+	NSLog(@"===\n%@",html);
+	return html;
 }
 
 + (NSString*)requestHtmlStringWith:(NSString*)urlStr {
@@ -464,6 +490,16 @@
 	NSString *path = [paths objectAtIndex:0];
 	NSString *filename = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist", fileName]];
 	[info writeToFile:filename atomically:YES];
+	
+}
+
++ (void)writeToJsonFile:(id)info withFileName:(NSString*)fileName {
+	
+	NSData *data = [NSJSONSerialization dataWithJSONObject:info options:NSJSONWritingPrettyPrinted error:nil];
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+	NSString *path = [paths objectAtIndex:0];
+	NSString *filename = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.json", fileName]];
+	[data writeToFile:filename atomically:YES];
 	
 }
 

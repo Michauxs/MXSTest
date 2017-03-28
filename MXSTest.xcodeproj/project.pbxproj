@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701A91AA1E88B9E3008EC8E8 /* MXSCity58Handle.m in Sources */ = {isa = PBXBuildFile; fileRef = 701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */; };
 		702D25211E8114F90068F025 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 702D251D1E810BFC0068F025 /* libxml2.tbd */; };
 		702D25261E8118430068F025 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25231E8118430068F025 /* HTMLNode.m */; };
 		702D25271E8118430068F025 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25251E8118430068F025 /* HTMLParser.m */; };
@@ -88,6 +89,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701A91A81E88B9E3008EC8E8 /* MXSCity58Handle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSCity58Handle.h; sourceTree = "<group>"; };
+		701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSCity58Handle.m; sourceTree = "<group>"; };
 		701F5FAE1E77C5D1006FBB0F /* MXSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MXSTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		702D251D1E810BFC0068F025 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		702D251F1E8111410068F025 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
@@ -334,6 +337,8 @@
 			children = (
 				703932201E83F46400FAFF17 /* NodeHandle.h */,
 				703932211E83F46400FAFF17 /* NodeHandle.m */,
+				701A91A81E88B9E3008EC8E8 /* MXSCity58Handle.h */,
+				701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */,
 			);
 			path = NodeHandle;
 			sourceTree = "<group>";
@@ -377,9 +382,9 @@
 			isa = PBXGroup;
 			children = (
 				703CC96D1E852267005099D6 /* Profile */,
-				702D25321E8155DC0068F025 /* SetGroupVC */,
 				7042C8AE1E5BEEF300B41BA4 /* Home */,
 				7042C8AD1E5BEEF300B41BA4 /* Content */,
+				702D25321E8155DC0068F025 /* SetGroupVC */,
 				7042C8AF1E5BEEF300B41BA4 /* Setting */,
 			);
 			path = Classes;
@@ -827,6 +832,7 @@
 				70510FB31DAB3B9D0097E093 /* UIImage+fixOrientation.m in Sources */,
 				7042C8BE1E5BEFF700B41BA4 /* ViewController.m in Sources */,
 				70510F7F1DAB3B9D0097E093 /* MASViewAttribute.m in Sources */,
+				701A91AA1E88B9E3008EC8E8 /* MXSCity58Handle.m in Sources */,
 				70510F8C1DAB3B9D0097E093 /* MJRefreshAutoNormalFooter.m in Sources */,
 				70510F831DAB3B9D0097E093 /* View+MASAdditions.m in Sources */,
 				70510FAE1DAB3B9D0097E093 /* UIImage+WebP.m in Sources */,

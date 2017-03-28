@@ -44,7 +44,7 @@
 	vc_con.tabBarItem.badgeColor = [UIColor redColor];
 	
 	self.viewControllers = @[nav_home, nav_con, nav_set, nav_profile];
-	self.selectedIndex = 1;
+	self.selectedIndex = 3;
 	
 }
 

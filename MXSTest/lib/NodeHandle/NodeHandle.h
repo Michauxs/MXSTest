@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
+#import "MXSCity58Handle.h"
 
 @interface NodeHandle : NSObject
 
@@ -21,6 +21,8 @@
 + (NSString *)replacingOccurrencesString:(NSString*)string;
 + (NSString*)extractionStringFromString:(NSString*)string;
 + (NSString*)requestHtmlStringWith:(NSString*)url;
++ (NSString *)delHTMLTag:(NSString *)html;
 
 + (void)writeToPlistFile:(id)info withFileName:(NSString*)fileName ;
++ (void)writeToJsonFile:(id)info withFileName:(NSString*)fileName ;
 @end
