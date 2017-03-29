@@ -7,33 +7,110 @@
 //
 
 #import "MXSContentVC.h"
+#import <objc/runtime.h>
 
-@interface MXSContentVC ()
-
-@end
-
-@implementation MXSContentVC
+@implementation MXSContentVC {
+	UITableView *FuncTableView;
+	NSArray *titleArr;
+}
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	self.view.backgroundColor = [Tools whiteColor];
+	
+	titleArr = @[@"demo01", @"WebVictory", @"Nuomi", @"WebPekingPeople", @"WebCityAround", @"WebScoialDragon", @"WebScoialPeking", @"TogetherBar", @"DoArt"];
+	
+	FuncTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 49 - 20) style:UITableViewStylePlain];
+	[self.view addSubview:FuncTableView];
+	FuncTableView.delegate = self;
+	FuncTableView.dataSource = self;
+	
+}
+
+
+- (id)demo01 {
+	NSString *urlstring = @"http://www.dianping.com/shop/66526819";
+	
+	NSString *htmlStr;
+	htmlStr = [NodeHandle requestHtmlStringWith:urlstring];
+	
+	NSError *error = nil;
+	HTMLParser *parser = [[HTMLParser alloc] initWithString:htmlStr error:&error];
+	if (error) {
+		NSLog(@"Error: %@", error);
+		return nil;
+	}
+	
+	HTMLNode *bodyNode = [parser body];
+	
+	NSArray *arrayNode = [bodyNode findChildrenOfClass:@"shop-title"];
+	
+	NSString *name = [[arrayNode firstObject] rawContents];
+	name = [NodeHandle delHTMLTag:name];
+	return nil;
+}
+
+- (void)didSelectedFunc:(NSString*)funcName {
+	
+	SEL sel = NSSelectorFromString(funcName);
+	Method m = class_getInstanceMethod([self class], sel);
+	if (m) {
+		IMP imp = method_getImplementation(m);
+		id (*func)(id, SEL, ...) = (id (*)(id, SEL, ...))imp;
+		func(self, sel);
+	}
+	
+}
+
+#pragma mark -- UItableViewDelagate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return titleArr.count;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	static NSString *cellID = @"funcCell";
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+	if (!cell) {
+	 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+	}
+	
+	cell.textLabel.text = [titleArr objectAtIndex:indexPath.row];
+	return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	return 50.f;
+	
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	[self didSelectedFunc:[titleArr objectAtIndex:indexPath.row]];
+	
+}
+
+
+- (void)transPlistToJsonWith:(NSString*)fileName {
+	
 //	NSString *fullpath=[[NSBundle mainBundle] pathForResource:@"courses_art.plist" ofType:nil];
 //	NSArray *array01=[NSArray arrayWithContentsOfFile:fullpath];
 //	[NodeHandle writeToJsonFile:array01 withFileName:@"courses_art"];
-//	
+//
 //	fullpath=[[NSBundle mainBundle]pathForResource:@"courses_education.plist" ofType:nil];
 //	NSArray *array02=[NSArray arrayWithContentsOfFile:fullpath];
 //	[NodeHandle writeToJsonFile:array02 withFileName:@"courses_edu"];
-//	
+//
 //	fullpath=[[NSBundle mainBundle]pathForResource:@"courses_nursery.plist" ofType:nil];
 //	NSArray *array03=[NSArray arrayWithContentsOfFile:fullpath];
 //	[NodeHandle writeToJsonFile:array03 withFileName:@"courses_nur"];
-	
+
 //	NSString *urlstring = @"http://www.dianping.com/shop/66526819";
 //	NSDictionary *dic = [NodeHandle handNodeWithServiceUrl:urlstring];
-//	
+//
 //	[NodeHandle writeToPlistFile:dic withFileName:@"oneNursery"];
-	
 	
 	//1.1首先获取路径
 	NSString *path = [[NSBundle mainBundle]pathForResource:@"city58.json" ofType:nil];
@@ -55,9 +132,7 @@
 	}
 	
 	[NodeHandle writeToJsonFile:array withFileName:@"city58_v2"];
-	
 }
-
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 	

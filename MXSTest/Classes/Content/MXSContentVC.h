@@ -9,6 +9,6 @@
 #import "MXSViewController.h"
 #import "NodeHandle.h"
 
-@interface MXSContentVC : MXSViewController
+@interface MXSContentVC : MXSViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

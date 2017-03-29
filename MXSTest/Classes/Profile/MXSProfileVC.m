@@ -77,14 +77,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-		return 50.f;
-	
+	return 50.f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	[self didSelectedWeb:[titleArr objectAtIndex:indexPath.row]];
-	
 }
 
 @end

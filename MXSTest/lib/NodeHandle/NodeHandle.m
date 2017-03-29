@@ -462,7 +462,7 @@
 		html = [html stringByReplacingOccurrencesOfString: [NSString stringWithFormat:@"%@>", text] withString:@""];
 	}
 	
-	NSLog(@"===\n%@",html);
+	NSLog(@"HTML-Contents:%@\n",html);
 	return html;
 }
 
