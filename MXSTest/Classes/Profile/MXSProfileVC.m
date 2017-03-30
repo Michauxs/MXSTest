@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
 	self.view.backgroundColor = [Tools whiteColor];
 	
 	titleArr = @[@"City58", @"WebVictory", @"Nuomi", @"WebPekingPeople", @"WebCityAround", @"WebScoialDragon", @"WebScoialPeking", @"TogetherBar", @"DoArt"];

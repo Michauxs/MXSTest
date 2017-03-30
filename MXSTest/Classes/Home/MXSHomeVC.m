@@ -9,91 +9,87 @@
 #import "MXSHomeVC.h"
 
 @implementation MXSHomeVC {
-	
+	UITableView *FuncTableView;
+	NSArray *titleArr;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	NSString *urlStr;
+	self.view.backgroundColor = [Tools whiteColor];
 	
-	//教育
-//	NSString *categaryUrlStr = @"https://www.dianping.com/search/category/2/70/g188";
-//	NSString *fileName = @"urlList_education";
+	titleArr = @[@"demo01", @"WebVictory", @"Nuomi", @"WebPekingPeople", @"WebCityAround", @"WebScoialDragon", @"WebScoialPeking", @"TogetherBar", @"DoArt"];
 	
-	//	//托班
-	NSString *categaryUrlStr = @"http://www.dianping.com/search/category/2/70/g20009";
-	NSString *fileName = @"urlList_nursery";
-	fileName = @"urlList_nap";
-	
-	//才艺
-//	NSString *categaryUrlStr = @"http://www.dianping.com/search/category/2/70/g27763";
-//	NSString *fileName = @"urlList_art";
-	
-	NSMutableArray *courseList = [NSMutableArray array];
-	for (int i = 1; i < 11; ++i) {
-		urlStr = [NSString stringWithFormat:@"%@p%d", categaryUrlStr, i];
-		NSArray *subServArr_p = [NodeHandle handUrlListFromCategoryUrl:urlStr];
-		[courseList addObjectsFromArray:subServArr_p];
-	}
-	
-	[self writeToPlistFile:courseList withFileName:fileName];
-	
-	//待存入课程 arr
-	NSMutableArray *coursesArr = [NSMutableArray array];
-	
-	for (NSDictionary *course in courseList) {
-		NSString *course_href = [course valueForKey:@"href"];
-		
-		//课程参数 ：需mutable 追加参数
-		NSMutableDictionary *course_args = [[NodeHandle handNodeWithServiceUrl:course_href] mutableCopy];
-		NSArray *promoteArr = [course_args objectForKey:@"promotes"];
-		
-		if (promoteArr.count != 0) {	//没/有推荐课
-			
-			NSMutableArray *promoteCourseArgsArr = [NSMutableArray array];
-			for (NSDictionary *promote in promoteArr) {
-				NSString *promote_href = [promote objectForKey:@"promote_href"];
-				NSDictionary *promote_course_args = [NodeHandle handNodeWithPromoteUrl:promote_href];
-				[promoteCourseArgsArr addObject:promote_course_args];
-			}
-			
-			[course_args setValue:promoteCourseArgsArr forKey:@"promotes_args"];
-		} // end .count == 0 ?
-		
-		[coursesArr addObject:[course_args copy]];
-		
-	}
-	
-	[self writeToPlistFile:[coursesArr copy] withFileName:[NSString stringWithFormat:@"courses_%@", [[fileName componentsSeparatedByString:@"_"] lastObject]]];
+	FuncTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 49 - 20) style:UITableViewStylePlain];
+	[self.view addSubview:FuncTableView];
+	FuncTableView.delegate = self;
+	FuncTableView.dataSource = self;
 	
 }
 
-- (void)writeToPlistFile:(id)info withFileName:(NSString*)fileName {
+- (id)demo01 {
+	NSString *urlstring = @"http://www.dianping.com/shop/66526819";
 	
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-	NSString *path = [paths objectAtIndex:0];
-	NSString *filename = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist", fileName]];
-	[info writeToFile:filename atomically:YES];
+	NSString *htmlStr;
+	htmlStr = [NodeHandle requestHtmlStringWith:urlstring];
+	
+	NSError *error = nil;
+	HTMLParser *parser = [[HTMLParser alloc] initWithString:htmlStr error:&error];
+	if (error) {
+		NSLog(@"Error: %@", error);
+		return nil;
+	}
+	
+	HTMLNode *bodyNode = [parser body];
+	
+	NSArray *arrayNode = [bodyNode findChildrenOfClass:@"shop-title"];
+	
+	NSString *name = [[arrayNode firstObject] rawContents];
+	name = [NodeHandle delHTMLTag:name];
+	return nil;
+}
+
+- (void)didSelectedFunc:(NSString*)funcName {
+	
+	SEL sel = NSSelectorFromString(funcName);
+	Method m = class_getInstanceMethod([self class], sel);
+	if (m) {
+		IMP imp = method_getImplementation(m);
+		id (*func)(id, SEL, ...) = (id (*)(id, SEL, ...))imp;
+		func(self, sel);
+	}
 	
 }
 
-/// 2 页面开始加载
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+#pragma mark -- UItableViewDelagate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return titleArr.count;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	static NSString *cellID = @"funcCell";
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+	if (!cell) {
+	 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+	}
+	
+	cell.textLabel.text = [titleArr objectAtIndex:indexPath.row];
+	return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	return 50.f;
 	
 }
-/// 4 开始获取到网页内容时返回
-- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	[self didSelectedFunc:[titleArr objectAtIndex:indexPath.row]];
 	
 }
-/// 5 页面加载完成之后调用
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-	
-}
-/// 页面加载失败时调用
-- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation {
-	
-}
+
 
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //	

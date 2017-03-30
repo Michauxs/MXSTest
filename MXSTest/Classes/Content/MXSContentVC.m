@@ -10,128 +10,84 @@
 #import <objc/runtime.h>
 
 @implementation MXSContentVC {
-	UITableView *FuncTableView;
-	NSArray *titleArr;
+	
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.view.backgroundColor = [Tools whiteColor];
+	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"GO!" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools themeColor]];
+	ComeOnBtn.layer.cornerRadius = 20.f;
+	ComeOnBtn.clipsToBounds = YES;
+	[self.view addSubview:ComeOnBtn];
+	[ComeOnBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.center.equalTo(self.view);
+		make.size.mas_equalTo(CGSizeMake(80, 40));
+	}];
+	[ComeOnBtn addTarget:self action:@selector(didComeOnBtnClick) forControlEvents:UIControlEventTouchUpInside];
 	
-	titleArr = @[@"demo01", @"WebVictory", @"Nuomi", @"WebPekingPeople", @"WebCityAround", @"WebScoialDragon", @"WebScoialPeking", @"TogetherBar", @"DoArt"];
 	
-	FuncTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 49 - 20) style:UITableViewStylePlain];
-	[self.view addSubview:FuncTableView];
-	FuncTableView.delegate = self;
-	FuncTableView.dataSource = self;
+}
+	
+- (void)didComeOnBtnClick {
+	
+	[MXSFileHandle transPlistToJsonWithPlistFile:@"courses_nursery" andJsonFile:@"courses_nursery"];
 	
 }
 
-
-- (id)demo01 {
-	NSString *urlstring = @"http://www.dianping.com/shop/66526819";
+- (void)getWebDZNode {
 	
-	NSString *htmlStr;
-	htmlStr = [NodeHandle requestHtmlStringWith:urlstring];
+	NSString *urlStr;
+	//教育
+	//	NSString *categaryUrlStr = @"https://www.dianping.com/search/category/2/70/g188";
+	//	NSString *fileName = @"urlList_education";
 	
-	NSError *error = nil;
-	HTMLParser *parser = [[HTMLParser alloc] initWithString:htmlStr error:&error];
-	if (error) {
-		NSLog(@"Error: %@", error);
-		return nil;
+	//	//托班
+	NSString *categaryUrlStr = @"http://www.dianping.com/search/category/2/70/g20009";
+	NSString *fileName = @"urlList_nursery";
+	fileName = @"urlList_nap";
+	
+	//才艺
+	//	NSString *categaryUrlStr = @"http://www.dianping.com/search/category/2/70/g27763";
+	//	NSString *fileName = @"urlList_art";
+	
+	NSMutableArray *courseList = [NSMutableArray array];
+	for (int i = 1; i < 11; ++i) {
+		urlStr = [NSString stringWithFormat:@"%@p%d", categaryUrlStr, i];
+		NSArray *subServArr_p = [NodeHandle handUrlListFromCategoryUrl:urlStr];
+		[courseList addObjectsFromArray:subServArr_p];
 	}
 	
-	HTMLNode *bodyNode = [parser body];
+	[MXSFileHandle writeToPlistFile:courseList withFileName:fileName];
 	
-	NSArray *arrayNode = [bodyNode findChildrenOfClass:@"shop-title"];
+	//待存入课程 arr
+	NSMutableArray *coursesArr = [NSMutableArray array];
 	
-	NSString *name = [[arrayNode firstObject] rawContents];
-	name = [NodeHandle delHTMLTag:name];
-	return nil;
-}
-
-- (void)didSelectedFunc:(NSString*)funcName {
-	
-	SEL sel = NSSelectorFromString(funcName);
-	Method m = class_getInstanceMethod([self class], sel);
-	if (m) {
-		IMP imp = method_getImplementation(m);
-		id (*func)(id, SEL, ...) = (id (*)(id, SEL, ...))imp;
-		func(self, sel);
-	}
-	
-}
-
-#pragma mark -- UItableViewDelagate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return titleArr.count;
-}
-
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	static NSString *cellID = @"funcCell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-	if (!cell) {
-	 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-	}
-	
-	cell.textLabel.text = [titleArr objectAtIndex:indexPath.row];
-	return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	return 50.f;
-	
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	[self didSelectedFunc:[titleArr objectAtIndex:indexPath.row]];
-	
-}
-
-
-- (void)transPlistToJsonWith:(NSString*)fileName {
-	
-//	NSString *fullpath=[[NSBundle mainBundle] pathForResource:@"courses_art.plist" ofType:nil];
-//	NSArray *array01=[NSArray arrayWithContentsOfFile:fullpath];
-//	[NodeHandle writeToJsonFile:array01 withFileName:@"courses_art"];
-//
-//	fullpath=[[NSBundle mainBundle]pathForResource:@"courses_education.plist" ofType:nil];
-//	NSArray *array02=[NSArray arrayWithContentsOfFile:fullpath];
-//	[NodeHandle writeToJsonFile:array02 withFileName:@"courses_edu"];
-//
-//	fullpath=[[NSBundle mainBundle]pathForResource:@"courses_nursery.plist" ofType:nil];
-//	NSArray *array03=[NSArray arrayWithContentsOfFile:fullpath];
-//	[NodeHandle writeToJsonFile:array03 withFileName:@"courses_nur"];
-
-//	NSString *urlstring = @"http://www.dianping.com/shop/66526819";
-//	NSDictionary *dic = [NodeHandle handNodeWithServiceUrl:urlstring];
-//
-//	[NodeHandle writeToPlistFile:dic withFileName:@"oneNursery"];
-	
-	//1.1首先获取路径
-	NSString *path = [[NSBundle mainBundle]pathForResource:@"city58.json" ofType:nil];
-	//.读取文件内容
-	NSData *data = [NSData dataWithContentsOfFile:path];
-	//对其解析
-	NSArray *array =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-	
-	for (NSDictionary *dic in array) {
+	for (NSDictionary *course in courseList) {
+		NSString *course_href = [course valueForKey:@"href"];
 		
-		NSArray *arr = [dic valueForKey:@"arr"];
+		//课程参数 ：需mutable 追加参数
+		NSMutableDictionary *course_args = [[NodeHandle handNodeWithServiceUrl:course_href] mutableCopy];
+		NSArray *promoteArr = [course_args objectForKey:@"promotes"];
 		
-		for (NSMutableDictionary *dic_course in arr) {
-			NSString *desc = [dic_course valueForKey:@"desc"];
-			desc = [NodeHandle delHTMLTag:desc];
-			desc = [desc stringByReplacingOccurrencesOfString:@"\n\n" withString:@"\n"];
-			[dic_course setValue:desc forKey:@"desc"];
-		}
+		if (promoteArr.count != 0) {	//没/有推荐课
+			
+			NSMutableArray *promoteCourseArgsArr = [NSMutableArray array];
+			for (NSDictionary *promote in promoteArr) {
+				NSString *promote_href = [promote objectForKey:@"promote_href"];
+				NSDictionary *promote_course_args = [NodeHandle handNodeWithPromoteUrl:promote_href];
+				[promoteCourseArgsArr addObject:promote_course_args];
+			}
+			
+			[course_args setValue:promoteCourseArgsArr forKey:@"promotes_args"];
+		} // end .count == 0 ?
+		
+		[coursesArr addObject:[course_args copy]];
+		
 	}
 	
-	[NodeHandle writeToJsonFile:array withFileName:@"city58_v2"];
+	[MXSFileHandle writeToPlistFile:[coursesArr copy] withFileName:[NSString stringWithFormat:@"courses_%@", [[fileName componentsSeparatedByString:@"_"] lastObject]]];
+	
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

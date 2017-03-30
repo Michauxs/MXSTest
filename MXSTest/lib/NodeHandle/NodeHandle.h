@@ -23,6 +23,5 @@
 + (NSString*)requestHtmlStringWith:(NSString*)url;
 + (NSString *)delHTMLTag:(NSString *)html;
 
-+ (void)writeToPlistFile:(id)info withFileName:(NSString*)fileName ;
-+ (void)writeToJsonFile:(id)info withFileName:(NSString*)fileName ;
+
 @end

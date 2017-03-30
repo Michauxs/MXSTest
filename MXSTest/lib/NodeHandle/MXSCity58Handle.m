@@ -114,8 +114,8 @@
 //	NSMutableDictionary *dic_hrefs = [[NSMutableDictionary alloc] init];
 //	[dic_hrefs setValue:hrefsArr_pinban forKey:@"pinban"];
 //	[dic_hrefs setValue:hrefsArr_youer forKey:@"youer"];
-//	[NodeHandle writeToJsonFile:dic_hrefs withFileName:@"hrefs_58city"];
-	[NodeHandle writeToJsonFile:[courses copy] withFileName:@"city58"];
+//	[MXSFileHandle writeToJsonFile:dic_hrefs withFileName:@"hrefs_58city"];
+	[MXSFileHandle writeToJsonFile:[courses copy] withFileName:@"city58"];
 	return nil;
 }
 

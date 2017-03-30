@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MXSTest/Classes/Home/MXSHomeVC.m"
-            timestampString = "512039788.301069"
+            timestampString = "512473028.507033"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "@implementation MXSHomeVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -144,22 +144,6 @@
             startingLineNumber = "88"
             endingLineNumber = "88"
             landmarkName = "-getElementWithString:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MXSTest/Classes/Home/MXSHomeVC.m"
-            timestampString = "512039788.301069"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -742,16 +726,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MXSTest/Classes/Content/MXSContentVC.m"
-            timestampString = "512466348.537133"
+            filePath = "MXSTest/lib/MXSFileHandle/MXSFileHandle.m"
+            timestampString = "512537295.743099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-demo01"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "+transPlistToJsonWithPlistFile:andJsonFile:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

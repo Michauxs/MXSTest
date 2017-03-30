@@ -484,23 +484,4 @@
 	return dataReturned2;
 }
 
-+ (void)writeToPlistFile:(id)info withFileName:(NSString*)fileName {
-	
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-	NSString *path = [paths objectAtIndex:0];
-	NSString *filename = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist", fileName]];
-	[info writeToFile:filename atomically:YES];
-	
-}
-
-+ (void)writeToJsonFile:(id)info withFileName:(NSString*)fileName {
-	
-	NSData *data = [NSJSONSerialization dataWithJSONObject:info options:NSJSONWritingPrettyPrinted error:nil];
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-	NSString *path = [paths objectAtIndex:0];
-	NSString *filename = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.json", fileName]];
-	[data writeToFile:filename atomically:YES];
-	
-}
-
 @end
