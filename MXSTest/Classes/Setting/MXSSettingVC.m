@@ -20,6 +20,22 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	
+	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"GO!" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools themeColor]];
+	ComeOnBtn.layer.cornerRadius = 20.f;
+	ComeOnBtn.clipsToBounds = YES;
+	[self.view addSubview:ComeOnBtn];
+	[ComeOnBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.center.equalTo(self.view);
+		make.size.mas_equalTo(CGSizeMake(80, 40));
+	}];
+	[ComeOnBtn addTarget:self action:@selector(didComeOnBtnClick) forControlEvents:UIControlEventTouchUpInside];
+	
+}
+
+
+- (void)didComeOnBtnClick {
+	
 	NSString *urlStr;
 	
 	//	//托班
@@ -33,7 +49,7 @@
 		[courseList addObjectsFromArray:subServArr_p];
 	}
 	
-	[self writeToPlistFile:courseList withFileName:fileName];
+	[MXSFileHandle writeToJsonFile:courseList withFileName:fileName];
 	
 	//待存入课程 arr
 	NSMutableArray *nurseryArr = [NSMutableArray array];
@@ -47,16 +63,7 @@
 		
 	}
 	
-	[self writeToPlistFile:[nurseryArr copy] withFileName:[NSString stringWithFormat:@"courses_%@", [[fileName componentsSeparatedByString:@"_"] lastObject]]];
-	
-}
-
-- (void)writeToPlistFile:(id)info withFileName:(NSString*)fileName {
-	
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-	NSString *path = [paths objectAtIndex:0];
-	NSString *filename = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist", fileName]];
-	[info writeToFile:filename atomically:YES];
+	[MXSFileHandle writeToPlistFile:[nurseryArr copy] withFileName:[NSString stringWithFormat:@"courses_%@", [[fileName componentsSeparatedByString:@"_"] lastObject]]];
 	
 }
 

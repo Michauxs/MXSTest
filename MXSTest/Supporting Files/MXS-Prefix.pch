@@ -17,12 +17,12 @@
 #import "SDWebImageManager.h"
 #import "MBProgressHUD.h"
 
-#import "HTMLParser.h"
+#import "HTMLNode.h"
 #import "MXSFileHandle.h"
 
-#define IMGRESOURE(NAME)					[UIImage imageNamed:NAME]
-#define SCREEN_WIDTH                                    [UIScreen mainScreen].bounds.size.width
-#define SCREEN_HEIGHT                                   [UIScreen mainScreen].bounds.size.height
-#define UIScreenScale											[UIScreen mainScreen].scale
+#define IMGRESOURE(NAME) 					[UIImage imageNamed:NAME]
+#define SCREEN_WIDTH 					[UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT 					[UIScreen mainScreen].bounds.size.height
+#define UIScreenScale 					[UIScreen mainScreen].scale
 
 #endif /* MXS_Prefix_pch */
