@@ -78,6 +78,7 @@
 		70510FB31DAB3B9D0097E093 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F6B1DAB3B9D0097E093 /* UIImage+fixOrientation.m */; };
 		70510FB41DAB3B9D0097E093 /* UINavigationController+Retro.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F6D1DAB3B9D0097E093 /* UINavigationController+Retro.m */; };
 		705B4A271D643701006273E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705B4A261D643701006273E7 /* Assets.xcassets */; };
+		70DCB3431E8F904500E4B0D0 /* MXSNuomiHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DCB3421E8F904500E4B0D0 /* MXSNuomiHandle.m */; };
 		70F229B71E8CA7D100065B5F /* MXSFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F229B61E8CA7D100065B5F /* MXSFileHandle.m */; };
 /* End PBXBuildFile section */
 
@@ -232,6 +233,9 @@
 		70510F6D1DAB3B9D0097E093 /* UINavigationController+Retro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Retro.m"; sourceTree = "<group>"; };
 		705B4A141D643701006273E7 /* MXSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705B4A261D643701006273E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70DCB3411E8F904500E4B0D0 /* MXSNuomiHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSNuomiHandle.h; sourceTree = "<group>"; };
+		70DCB3421E8F904500E4B0D0 /* MXSNuomiHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSNuomiHandle.m; sourceTree = "<group>"; };
+		70DCB3441E8F9EDD00E4B0D0 /* NodeAttrArgsDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeAttrArgsDefines.h; sourceTree = "<group>"; };
 		70F229B51E8CA7D100065B5F /* MXSFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSFileHandle.h; sourceTree = "<group>"; };
 		70F229B61E8CA7D100065B5F /* MXSFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSFileHandle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -320,6 +324,8 @@
 				703932211E83F46400FAFF17 /* NodeHandle.m */,
 				701A91A81E88B9E3008EC8E8 /* MXSCity58Handle.h */,
 				701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */,
+				70DCB3411E8F904500E4B0D0 /* MXSNuomiHandle.h */,
+				70DCB3421E8F904500E4B0D0 /* MXSNuomiHandle.m */,
 			);
 			path = NodeHandle;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				7042C8B81E5BEFF700B41BA4 /* AppDelegate.m */,
 				7042C8BA1E5BEFF700B41BA4 /* ViewController.h */,
 				7042C8BB1E5BEFF700B41BA4 /* ViewController.m */,
+				70DCB3441E8F9EDD00E4B0D0 /* NodeAttrArgsDefines.h */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -810,6 +817,7 @@
 				70510FB21DAB3B9D0097E093 /* Tools.m in Sources */,
 				70510F7B1DAB3B9D0097E093 /* MASCompositeConstraint.m in Sources */,
 				70510FA81DAB3B9D0097E093 /* SDWebImageDownloaderOperation.m in Sources */,
+				70DCB3431E8F904500E4B0D0 /* MXSNuomiHandle.m in Sources */,
 				70510F861DAB3B9D0097E093 /* MJRefreshAutoFooter.m in Sources */,
 				70510FA71DAB3B9D0097E093 /* SDWebImageDownloader.m in Sources */,
 				70510F821DAB3B9D0097E093 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

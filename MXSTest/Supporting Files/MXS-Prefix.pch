@@ -25,4 +25,7 @@
 #define SCREEN_HEIGHT 					[UIScreen mainScreen].bounds.size.height
 #define UIScreenScale 					[UIScreen mainScreen].scale
 
+
+#import "NodeAttrArgsDefines.h"
+
 #endif /* MXS_Prefix_pch */

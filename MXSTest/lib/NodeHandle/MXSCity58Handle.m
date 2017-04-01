@@ -7,7 +7,6 @@
 //
 
 #import "MXSCity58Handle.h"
-#import "NodeHandle.h"
 
 @implementation MXSCity58Handle
 
