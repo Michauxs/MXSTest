@@ -8,6 +8,7 @@
 
 #import "MXSContentVC.h"
 #import <objc/runtime.h>
+#import "MXSWebDianpingHandle.h"
 
 @implementation MXSContentVC {
 	
@@ -54,7 +55,7 @@
 	NSMutableArray *courseList = [NSMutableArray array];
 	for (int i = 1; i < 11; ++i) {
 		urlStr = [NSString stringWithFormat:@"%@p%d", categaryUrlStr, i];
-		NSArray *subServArr_p = [NodeHandle handUrlListFromCategoryUrl:urlStr];
+		NSArray *subServArr_p = [MXSWebDianpingHandle handUrlListFromCategoryUrl:urlStr];
 		[courseList addObjectsFromArray:subServArr_p];
 	}
 	
@@ -67,7 +68,7 @@
 		NSString *course_href = [course valueForKey:@"href"];
 		
 		//课程参数 ：需mutable 追加参数
-		NSMutableDictionary *course_args = [[NodeHandle handNodeWithServiceUrl:course_href] mutableCopy];
+		NSMutableDictionary *course_args = [[MXSWebDianpingHandle handNodeWithServiceUrl:course_href] mutableCopy];
 		NSArray *promoteArr = [course_args objectForKey:@"promotes"];
 		
 		if (promoteArr.count != 0) {	//没/有推荐课
@@ -75,7 +76,7 @@
 			NSMutableArray *promoteCourseArgsArr = [NSMutableArray array];
 			for (NSDictionary *promote in promoteArr) {
 				NSString *promote_href = [promote objectForKey:@"promote_href"];
-				NSDictionary *promote_course_args = [NodeHandle handNodeWithPromoteUrl:promote_href];
+				NSDictionary *promote_course_args = [MXSWebDianpingHandle handNodeWithPromoteUrl:promote_href];
 				[promoteCourseArgsArr addObject:promote_course_args];
 			}
 			

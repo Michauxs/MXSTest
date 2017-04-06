@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70140CF81E94A5120051DB18 /* MXSWebDianpingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70140CF71E94A5120051DB18 /* MXSWebDianpingHandle.m */; };
 		701A91AA1E88B9E3008EC8E8 /* MXSCity58Handle.m in Sources */ = {isa = PBXBuildFile; fileRef = 701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */; };
 		702D25211E8114F90068F025 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 702D251D1E810BFC0068F025 /* libxml2.tbd */; };
 		702D25261E8118430068F025 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25231E8118430068F025 /* HTMLNode.m */; };
@@ -79,10 +80,14 @@
 		70510FB41DAB3B9D0097E093 /* UINavigationController+Retro.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F6D1DAB3B9D0097E093 /* UINavigationController+Retro.m */; };
 		705B4A271D643701006273E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705B4A261D643701006273E7 /* Assets.xcassets */; };
 		70DCB3431E8F904500E4B0D0 /* MXSNuomiHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DCB3421E8F904500E4B0D0 /* MXSNuomiHandle.m */; };
+		70E1FB411E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1FB401E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m */; };
+		70E1FB441E95E637003D86BE /* MXSBaseHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1FB431E95E637003D86BE /* MXSBaseHandle.m */; };
 		70F229B71E8CA7D100065B5F /* MXSFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F229B61E8CA7D100065B5F /* MXSFileHandle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70140CF61E94A5120051DB18 /* MXSWebDianpingHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSWebDianpingHandle.h; sourceTree = "<group>"; };
+		70140CF71E94A5120051DB18 /* MXSWebDianpingHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSWebDianpingHandle.m; sourceTree = "<group>"; };
 		701A91A81E88B9E3008EC8E8 /* MXSCity58Handle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSCity58Handle.h; sourceTree = "<group>"; };
 		701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSCity58Handle.m; sourceTree = "<group>"; };
 		701F5FAE1E77C5D1006FBB0F /* MXSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MXSTest-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -236,6 +241,10 @@
 		70DCB3411E8F904500E4B0D0 /* MXSNuomiHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSNuomiHandle.h; sourceTree = "<group>"; };
 		70DCB3421E8F904500E4B0D0 /* MXSNuomiHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSNuomiHandle.m; sourceTree = "<group>"; };
 		70DCB3441E8F9EDD00E4B0D0 /* NodeAttrArgsDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeAttrArgsDefines.h; sourceTree = "<group>"; };
+		70E1FB3F1E95E5D7003D86BE /* MXSWebPekingPeopleHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSWebPekingPeopleHandle.h; sourceTree = "<group>"; };
+		70E1FB401E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSWebPekingPeopleHandle.m; sourceTree = "<group>"; };
+		70E1FB421E95E637003D86BE /* MXSBaseHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSBaseHandle.h; sourceTree = "<group>"; };
+		70E1FB431E95E637003D86BE /* MXSBaseHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSBaseHandle.m; sourceTree = "<group>"; };
 		70F229B51E8CA7D100065B5F /* MXSFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSFileHandle.h; sourceTree = "<group>"; };
 		70F229B61E8CA7D100065B5F /* MXSFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSFileHandle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -322,10 +331,16 @@
 			children = (
 				703932201E83F46400FAFF17 /* NodeHandle.h */,
 				703932211E83F46400FAFF17 /* NodeHandle.m */,
+				70E1FB421E95E637003D86BE /* MXSBaseHandle.h */,
+				70E1FB431E95E637003D86BE /* MXSBaseHandle.m */,
 				701A91A81E88B9E3008EC8E8 /* MXSCity58Handle.h */,
 				701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */,
+				70140CF61E94A5120051DB18 /* MXSWebDianpingHandle.h */,
+				70140CF71E94A5120051DB18 /* MXSWebDianpingHandle.m */,
 				70DCB3411E8F904500E4B0D0 /* MXSNuomiHandle.h */,
 				70DCB3421E8F904500E4B0D0 /* MXSNuomiHandle.m */,
+				70E1FB3F1E95E5D7003D86BE /* MXSWebPekingPeopleHandle.h */,
+				70E1FB401E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m */,
 			);
 			path = NodeHandle;
 			sourceTree = "<group>";
@@ -774,6 +789,7 @@
 				70510F8D1DAB3B9D0097E093 /* MJRefreshAutoStateFooter.m in Sources */,
 				702D25261E8118430068F025 /* HTMLNode.m in Sources */,
 				702D252F1E81384F0068F025 /* TFHpple.m in Sources */,
+				70140CF81E94A5120051DB18 /* MXSWebDianpingHandle.m in Sources */,
 				70510F811DAB3B9D0097E093 /* NSArray+MASAdditions.m in Sources */,
 				70510FA91DAB3B9D0097E093 /* SDWebImageManager.m in Sources */,
 				70510FA21DAB3B9D0097E093 /* MKAnnotationView+WebCache.m in Sources */,
@@ -796,6 +812,7 @@
 				70510FB01DAB3B9D0097E093 /* UIImageView+WebCache.m in Sources */,
 				70510FB31DAB3B9D0097E093 /* UIImage+fixOrientation.m in Sources */,
 				7042C8BE1E5BEFF700B41BA4 /* ViewController.m in Sources */,
+				70E1FB411E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m in Sources */,
 				70510F7F1DAB3B9D0097E093 /* MASViewAttribute.m in Sources */,
 				701A91AA1E88B9E3008EC8E8 /* MXSCity58Handle.m in Sources */,
 				70510F8C1DAB3B9D0097E093 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -820,6 +837,7 @@
 				70DCB3431E8F904500E4B0D0 /* MXSNuomiHandle.m in Sources */,
 				70510F861DAB3B9D0097E093 /* MJRefreshAutoFooter.m in Sources */,
 				70510FA71DAB3B9D0097E093 /* SDWebImageDownloader.m in Sources */,
+				70E1FB441E95E637003D86BE /* MXSBaseHandle.m in Sources */,
 				70510F821DAB3B9D0097E093 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				70510F9A1DAB3B9D0097E093 /* UIView+MJExtension.m in Sources */,
 				70510F981DAB3B9D0097E093 /* UIScrollView+MJExtension.m in Sources */,

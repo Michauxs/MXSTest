@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MXSBaseHandle.h"
 
-@interface MXSCity58Handle : NSObject
+@interface MXSCity58Handle : MXSBaseHandle
 
-+ (NSArray*)handNodeWithSimple;
 
 @end

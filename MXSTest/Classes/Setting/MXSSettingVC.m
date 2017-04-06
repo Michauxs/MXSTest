@@ -8,6 +8,7 @@
 
 #import "MXSSettingVC.h"
 #import "MXSAboutVC.h"
+#import "MXSWebDianpingHandle.h"
 
 @interface MXSSettingVC () <UIWebViewDelegate>
 
@@ -45,7 +46,7 @@
 	NSMutableArray *courseList = [NSMutableArray array];
 	for (int i = 1; i < 11; ++i) {
 		urlStr = [NSString stringWithFormat:@"%@p%d", categaryUrlStr, i];
-		NSArray *subServArr_p = [NodeHandle handUrlListFromCategoryUrl:urlStr];
+		NSArray *subServArr_p = [MXSWebDianpingHandle handUrlListFromCategoryUrl:urlStr];
 		[courseList addObjectsFromArray:subServArr_p];
 	}
 	
@@ -58,7 +59,7 @@
 		NSString *course_href = [course valueForKey:@"href"];
 		
 		//课程参数 ：需mutable 追加参数
-		NSMutableDictionary *course_args = [[NodeHandle handNodeWithNurseryUrl:course_href] mutableCopy];
+		NSMutableDictionary *course_args = [[MXSWebDianpingHandle handNodeWithNurseryUrl:course_href] mutableCopy];
 		[nurseryArr addObject:[course_args copy]];
 		
 	}

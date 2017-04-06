@@ -25,7 +25,7 @@
 	
 	self.view.backgroundColor = [Tools whiteColor];
 	
-	titleArr = @[@"City58", @"WebVictory", @"Nuomi", @"WebPekingPeople", @"WebCityAround", @"WebScoialDragon", @"WebScoialPeking", @"TogetherBar", @"DoArt", @"DZDianping"];
+	titleArr = @[@"City58", @"WebVictory", @"Nuomi", @"WebPekingPeople", @"WebCityAround", @"WebScoialDragon", @"WebScoialPeking", @"TogetherBar", @"DoArt", @"WebDianping"];
 	
 	ListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 49 - 20) style:UITableViewStylePlain];
 	[self.view addSubview:ListTableView];

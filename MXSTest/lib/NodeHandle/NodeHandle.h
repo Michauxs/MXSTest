@@ -12,11 +12,14 @@
 
 @interface NodeHandle : NSObject
 
-+ (NSDictionary *)handNodeWithServiceUrl:(NSString*)urlStr;
-+ (NSDictionary *)handNodeWithNurseryUrl:(NSString*)urlStr;
 
-+ (NSDictionary *)handNodeWithPromoteUrl:(NSString*)urlStr;
-+ (NSArray *)handUrlListFromCategoryUrl:(NSString*)url;
+#pragma mark -- common
+
++ (HTMLParser*)getHTMLParserWithHTMLString:(NSString*)htmlStr;
+
++ (NSString *)searchContentWithSuperNode:(HTMLNode*)superNode andPathArray:(NSArray*)array ;
++ (HTMLNode*)searchNodeWithSuperNode:(HTMLNode*)superNode andPathArray:(NSArray*)array ;
+
 
 + (NSString *)replacingOccurrencesString:(NSString*)string;
 + (NSString*)extractionStringFromString:(NSString*)string;
