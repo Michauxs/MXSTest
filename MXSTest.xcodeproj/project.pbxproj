@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		70140CF81E94A5120051DB18 /* MXSWebDianpingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70140CF71E94A5120051DB18 /* MXSWebDianpingHandle.m */; };
 		701A91AA1E88B9E3008EC8E8 /* MXSCity58Handle.m in Sources */ = {isa = PBXBuildFile; fileRef = 701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */; };
+		701FC39D1E973C9100B863E0 /* MXSWebCityAroundHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 701FC39C1E973C9100B863E0 /* MXSWebCityAroundHandle.m */; };
+		701FC39F1E974A3000B863E0 /* nuoni.json in Resources */ = {isa = PBXBuildFile; fileRef = 701FC39E1E974A3000B863E0 /* nuoni.json */; };
 		702D25211E8114F90068F025 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 702D251D1E810BFC0068F025 /* libxml2.tbd */; };
 		702D25261E8118430068F025 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25231E8118430068F025 /* HTMLNode.m */; };
 		702D25271E8118430068F025 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25251E8118430068F025 /* HTMLParser.m */; };
@@ -91,6 +93,9 @@
 		701A91A81E88B9E3008EC8E8 /* MXSCity58Handle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSCity58Handle.h; sourceTree = "<group>"; };
 		701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSCity58Handle.m; sourceTree = "<group>"; };
 		701F5FAE1E77C5D1006FBB0F /* MXSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MXSTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		701FC39B1E973C9100B863E0 /* MXSWebCityAroundHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSWebCityAroundHandle.h; sourceTree = "<group>"; };
+		701FC39C1E973C9100B863E0 /* MXSWebCityAroundHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSWebCityAroundHandle.m; sourceTree = "<group>"; };
+		701FC39E1E974A3000B863E0 /* nuoni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nuoni.json; sourceTree = "<group>"; };
 		702D251D1E810BFC0068F025 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		702D251F1E8111410068F025 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		702D25221E8118430068F025 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
@@ -341,6 +346,8 @@
 				70DCB3421E8F904500E4B0D0 /* MXSNuomiHandle.m */,
 				70E1FB3F1E95E5D7003D86BE /* MXSWebPekingPeopleHandle.h */,
 				70E1FB401E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m */,
+				701FC39B1E973C9100B863E0 /* MXSWebCityAroundHandle.h */,
+				701FC39C1E973C9100B863E0 /* MXSWebCityAroundHandle.m */,
 			);
 			path = NodeHandle;
 			sourceTree = "<group>";
@@ -422,6 +429,7 @@
 		7042C8B01E5BEFA500B41BA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				701FC39E1E974A3000B863E0 /* nuoni.json */,
 				7042C8B11E5BEFA500B41BA4 /* Info.plist */,
 				7042C8D21E5C2A9900B41BA4 /* MXS-Prefix.pch */,
 			);
@@ -762,6 +770,7 @@
 				70510F7A1DAB3B9D0097E093 /* Info.plist in Resources */,
 				705B4A271D643701006273E7 /* Assets.xcassets in Resources */,
 				70510F961DAB3B9D0097E093 /* MJRefresh.bundle in Resources */,
+				701FC39F1E974A3000B863E0 /* nuoni.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,6 +829,7 @@
 				70510FAE1DAB3B9D0097E093 /* UIImage+WebP.m in Sources */,
 				70510F871DAB3B9D0097E093 /* MJRefreshBackFooter.m in Sources */,
 				70510FAD1DAB3B9D0097E093 /* UIImage+MultiFormat.m in Sources */,
+				701FC39D1E973C9100B863E0 /* MXSWebCityAroundHandle.m in Sources */,
 				70510FAC1DAB3B9D0097E093 /* UIImage+GIF.m in Sources */,
 				70510F891DAB3B9D0097E093 /* MJRefreshFooter.m in Sources */,
 				702D25271E8118430068F025 /* HTMLParser.m in Sources */,

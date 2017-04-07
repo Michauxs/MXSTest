@@ -25,20 +25,23 @@
 	NSMutableArray *devoArr = [NSMutableArray array];
 	for (NSDictionary *dic_href in listArr) {
 		NSDictionary *shopArgs =[MXSNuomiHandle getShopArgsWithUrlString:[dic_href valueForKey:@"href"]];
+		NSMutableArray *courses = [NSMutableArray array];
+		
 		NSMutableDictionary *extend_args = [[NSMutableDictionary alloc] initWithDictionary:shopArgs];
 		[extend_args setValue:[dic_href valueForKey:@"price_real"] forKey:@"price_real"];
+		[extend_args removeObjectForKey:@"others"];
+		[courses addObject:extend_args];
 		
-		NSMutableArray *others = [NSMutableArray array];
 		NSArray *otherProds = [shopArgs valueForKey:@"others"];
 		for (NSDictionary *otherhref in otherProds) {
 			NSDictionary *dic_another = [MXSNuomiHandle getOtherArgsWithUrlArgs:otherhref];
-			[others addObject:dic_another];
+			[courses addObject:dic_another];
 		}
-		[extend_args setValue:others forKey:@"others"];
-		[devoArr addObject:extend_args];
+		
+		[devoArr addObject:[courses copy]];
 	}
 	
-	[MXSFileHandle writeToJsonFile:devoArr withFileName:@"nuoni"];
+	[MXSFileHandle writeToJsonFile:devoArr withFileName:@"nuomi"];
 	
 //	NSDictionary *aaa;
 //	aaa = [MXSNuomiHandle getShopArgsWithUrlString:@"https://www.nuomi.com/deal/s00pvisj8.html"];
@@ -149,11 +152,11 @@
 		if (key && value) {
 			if ([key containsString:@"效"]) {
 				key = @"tips_date";
-			} else if ([key containsString:@"用"]) {
+			} else if ([key containsString:@"可"]) {
 				key = @"tips_avliabletime";
 			} else if ([key containsString:@"预"]) {
 				key = @"tips_book";
-			} else if ([key containsString:@"使"]) {
+			} else if ([key containsString:@"规"]) {
 				key = @"tips_userule";
 			} else if ([key containsString:@"温"]) {
 				key = @"tips_other";

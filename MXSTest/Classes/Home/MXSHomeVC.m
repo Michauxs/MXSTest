@@ -18,7 +18,7 @@
 	
 	self.view.backgroundColor = [Tools whiteColor];
 	
-	titleArr = @[@"demo01", @"WebVictoryTest", @"Nuomi", @"WebPekingPeople", @"WebCityAround", @"WebScoialDragon", @"WebScoialPeking", @"TogetherBar", @"DoArt"];
+	titleArr = @[@"demo01", @"WebVictoryTest", @"NuomiTest", @"WebPekingPeople", @"WebCityAround", @"WebScoialDragon", @"WebScoialPeking", @"TogetherBar", @"DoArt"];
 	
 	FuncTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 49 - 20) style:UITableViewStylePlain];
 	[self.view addSubview:FuncTableView];
@@ -27,20 +27,24 @@
 	
 }
 
+- (id)NuomiTest {
+	
+//	NSString *path = [[NSBundle mainBundle]pathForResource:@"nuoni.json" ofType:nil];
+//	NSData *data = [NSData dataWithContentsOfFile:path];
+//	NSArray *array =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+//	
+//	for (NSDictionary *dic in array) {
+//		
+//		NSArray *others = [dic valueForKey:@"others"];
+//		
+//	}
+//	
+//	[MXSFileHandle writeToJsonFile:array withFileName:@"nuomi_v2"];
+	return nil;
+}
+
 - (id)WebVictoryTest {
 	
-	NSString *urlstring = @"http://bj.juesheng.com/shop/586840.html";
-	NSString *htmlStr;
-	htmlStr = [NodeHandle requestHtmlStringWith:urlstring];
-	NSError *error = nil;
-	HTMLParser *parser = [[HTMLParser alloc] initWithString:htmlStr error:&error];
-	if (error) {
-		NSLog(@"Error: %@", error);
-		return nil;
-	}
-	
-	HTMLNode *bodyNode = [parser body];
-	HTMLNode *listNode = [bodyNode findChildWithAttribute:@"id" matchingName:@"list" allowPartial:NO];
 	
 	return nil;
 }
