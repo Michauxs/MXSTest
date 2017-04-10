@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700FB0581E9B403C00FAB5DA /* MXSHuiLongGuanHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 700FB0571E9B403C00FAB5DA /* MXSHuiLongGuanHandle.m */; };
+		700FB05B1E9B8E0F00FAB5DA /* MXSTogetherBarHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 700FB05A1E9B8E0F00FAB5DA /* MXSTogetherBarHandle.m */; };
 		70140CF81E94A5120051DB18 /* MXSWebDianpingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70140CF71E94A5120051DB18 /* MXSWebDianpingHandle.m */; };
 		701A91AA1E88B9E3008EC8E8 /* MXSCity58Handle.m in Sources */ = {isa = PBXBuildFile; fileRef = 701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */; };
 		701FC39D1E973C9100B863E0 /* MXSWebCityAroundHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 701FC39C1E973C9100B863E0 /* MXSWebCityAroundHandle.m */; };
@@ -88,6 +90,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		700FB0561E9B403C00FAB5DA /* MXSHuiLongGuanHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSHuiLongGuanHandle.h; sourceTree = "<group>"; };
+		700FB0571E9B403C00FAB5DA /* MXSHuiLongGuanHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSHuiLongGuanHandle.m; sourceTree = "<group>"; };
+		700FB0591E9B8E0F00FAB5DA /* MXSTogetherBarHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTogetherBarHandle.h; sourceTree = "<group>"; };
+		700FB05A1E9B8E0F00FAB5DA /* MXSTogetherBarHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSTogetherBarHandle.m; sourceTree = "<group>"; };
 		70140CF61E94A5120051DB18 /* MXSWebDianpingHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSWebDianpingHandle.h; sourceTree = "<group>"; };
 		70140CF71E94A5120051DB18 /* MXSWebDianpingHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSWebDianpingHandle.m; sourceTree = "<group>"; };
 		701A91A81E88B9E3008EC8E8 /* MXSCity58Handle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSCity58Handle.h; sourceTree = "<group>"; };
@@ -348,6 +354,10 @@
 				70E1FB401E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m */,
 				701FC39B1E973C9100B863E0 /* MXSWebCityAroundHandle.h */,
 				701FC39C1E973C9100B863E0 /* MXSWebCityAroundHandle.m */,
+				700FB0561E9B403C00FAB5DA /* MXSHuiLongGuanHandle.h */,
+				700FB0571E9B403C00FAB5DA /* MXSHuiLongGuanHandle.m */,
+				700FB0591E9B8E0F00FAB5DA /* MXSTogetherBarHandle.h */,
+				700FB05A1E9B8E0F00FAB5DA /* MXSTogetherBarHandle.m */,
 			);
 			path = NodeHandle;
 			sourceTree = "<group>";
@@ -794,6 +804,7 @@
 				70510FA31DAB3B9D0097E093 /* NSData+ImageContentType.m in Sources */,
 				70510FA61DAB3B9D0097E093 /* SDWebImageDecoder.m in Sources */,
 				70510F7E1DAB3B9D0097E093 /* MASLayoutConstraint.m in Sources */,
+				700FB05B1E9B8E0F00FAB5DA /* MXSTogetherBarHandle.m in Sources */,
 				70510F991DAB3B9D0097E093 /* UIScrollView+MJRefresh.m in Sources */,
 				70510F8D1DAB3B9D0097E093 /* MJRefreshAutoStateFooter.m in Sources */,
 				702D25261E8118430068F025 /* HTMLNode.m in Sources */,
@@ -815,6 +826,7 @@
 				70510FAA1DAB3B9D0097E093 /* SDWebImagePrefetcher.m in Sources */,
 				703932221E83F46400FAFF17 /* NodeHandle.m in Sources */,
 				70510FAF1DAB3B9D0097E093 /* UIImageView+HighlightedWebCache.m in Sources */,
+				700FB0581E9B403C00FAB5DA /* MXSHuiLongGuanHandle.m in Sources */,
 				70510F801DAB3B9D0097E093 /* MASViewConstraint.m in Sources */,
 				70F229B71E8CA7D100065B5F /* MXSFileHandle.m in Sources */,
 				70510F921DAB3B9D0097E093 /* BSRefreshAnimationHeader.m in Sources */,

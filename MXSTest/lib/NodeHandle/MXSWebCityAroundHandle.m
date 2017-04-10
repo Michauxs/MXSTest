@@ -19,15 +19,46 @@
 	
 	NSArray *predArr = @[@"摩登舞",	@"拉丁舞", @"广场舞", @"街舞", @"爵士舞", @"现代舞", @"芭蕾舞", @"民族舞", @"古典舞", @"中国舞", @"肚皮舞", @"钢管舞", @"交谊舞", @"莎莎舞", @"踢踏舞", @"散打", @"少林", @"武当", @"长拳", @"南拳", @"太极", @"形意", @"八卦", @"咏春", @"空手道", @"柔道", @"跆拳道", @"泰拳", @"自由搏击", @"拳击", @"摔跤", @"击剑", @"足球", @"篮球", @"排球", @"乒乓球", @"网球", @"羽毛球", @"高尔夫", @"保龄球", @"冰球", @"曲棍球", @"水球", @"桌球", @"壁球", @"棒球", @"垒球", @"板球", @"跑步", @"游泳", @"跳水", @"轮滑", @"滑冰", @"骑行", @"骑马", @"射箭", @"滑雪", @"潜水", @"徒步", @"登山", @"攀岩", @"跳伞", @"热气球", @"飘流", @"探险", @"冲浪", @"风帆", @"滑板", @"蹦极", @"极限运动", @"声乐", @"钢琴", @"口琴", @"吉他", @"小提琴", @"中提琴", @"大提琴", @"手风琴", @"电子琴", @"小号", @"圆号", @"长号", @"长笛", @"单簧管", @"双簧管", @"萨克斯", @"二胡", @"琵琶", @"笛箫", @"古筝", @"扬琴", @"唢呐", @"葫芦丝", @"听音乐", @"打击乐", @"硬笔书法", @"书法", @"篆刻", @"国画", @"油画", @"素描", @"版画", @"水彩画", @"水墨画", @"水粉画", @"漫画", @"连环画", @"沙画", @"卡通画"];
 	
-	NSString *urlStr = @"http://www.weichengs.com/Cities/SearchGroupTag.aspx?page=1&CityID=1&TagID=0";
-	NSArray *arr = [MXSWebCityAroundHandle getGroupListWithUrlString:urlStr];
 	
-	NSDictionary *dic = [MXSWebCityAroundHandle getGroupArgsWithUrlString:[arr firstObject]];
+	NSMutableArray *g_list = [NSMutableArray array];
+	for (int i = 0; i <= 69; ++i) {
+		NSString *urlStr = [NSString stringWithFormat:@"http://www.weichengs.com/Cities/SearchGroupTag.aspx?page=%d&CityID=1&TagID=0", i];
+		NSArray *arr = [MXSWebCityAroundHandle getGroupListWithUrlString:urlStr];
+		if (arr) {
+			[g_list addObjectsFromArray:arr];
+		}
+	}
 	
-	urlStr = @"http://www.weichengs.com/Cities/SearchTeacher.aspx?page=3&CityID=1";
-	NSArray *arr_t = [MXSWebCityAroundHandle getTeacherListWithUrlString:urlStr andPreArray:predArr];
+	NSMutableArray *groupArr = [NSMutableArray array];
+	for (NSString *href in g_list) {
+		NSDictionary *dic = [MXSWebCityAroundHandle getGroupArgsWithUrlString:href];
+		if (dic) {
+			[groupArr addObject:dic];
+		}
+	}
 	
-	NSDictionary *dic_t = [MXSWebCityAroundHandle getTeacherArgsWithUrlString:arr_t.firstObject];
+	[MXSFileHandle writeToJsonFile:groupArr withFileName:@"weicheng_g"];
+	[groupArr removeAllObjects];
+	
+	NSMutableArray *t_list = [NSMutableArray array];
+	for (int i = 0; i <= 290; ++i) {
+		NSString *urlStr = [NSString stringWithFormat:@"http://www.weichengs.com/Cities/SearchTeacher.aspx?page=%d&CityID=1", i];
+		NSArray *arr_t = [MXSWebCityAroundHandle getTeacherListWithUrlString:urlStr andPreArray:predArr];
+		if (arr_t) {
+			[t_list addObjectsFromArray:arr_t];
+		}
+	}
+	
+	NSMutableArray *teacherArr = [NSMutableArray array];
+	for (NSString *href in t_list) {
+		NSDictionary *dic = [MXSWebCityAroundHandle getTeacherArgsWithUrlString:href];
+		if (dic) {
+			[teacherArr addObject:dic];
+		}
+	}
+	
+	[MXSFileHandle writeToJsonFile:teacherArr withFileName:@"weicheng_t"];
+	[teacherArr removeAllObjects];
 	
 	return nil;
 	
@@ -162,7 +193,7 @@
 	NSString *bookNo = [NodeHandle searchContentWithSuperNode:infoNode andPathArray:@[@"collect-share", @"bn-flat"]];
 	[dic_args setValue:bookNo forKey:@"book_count"];
 	
-	HTMLNode *intruNode = [[infoNode findChildWithAttribute:@"id" matchingName:@"broadcast" allowPartial:NO] findChildOfClass:@"aboutme"];
+	HTMLNode *intruNode = [[bodyNode findChildWithAttribute:@"id" matchingName:@"broadcast" allowPartial:NO] findChildOfClass:@"aboutme"];
 	NSString *intru = [NodeHandle delHTMLTag:[intruNode rawContents]];
 	[dic_args setValue:intru forKey:@"intru"];
 	
@@ -176,6 +207,7 @@
 	
 	HTMLNode *preNode = [[bodyNode findChildWithAttribute:@"id" matchingName:@"courseDiv" allowPartial:NO] findChildWithAttribute:@"style" matchingName:@"width:840px;overflow:hidden;font-size:large" allowPartial:NO];
 	NSString *content = [NodeHandle delHTMLTag:[preNode rawContents]];
+//	NSString *ttt = [preNode allContents];
 	[dic_args setValue:content forKey:@"content"];
 	
 	NSArray *imgsSrc = [preNode findChildTags:@"img"];
@@ -190,8 +222,21 @@
 		[dic_args setValue:srcs forKey:@"imgs_src"];
 	}
 	
-	HTMLNode *phoneNode = [bodyNode findChildWithAttribute:@"style" matchingName:@"float: left; margin-top: -2px; margin-left: 10px; font-size: 15px; font-weight: bold;\ncolor: Orange" allowPartial:NO];
+	HTMLNode *phoneNode = [bodyNode findChildWithAttribute:@"style" matchingName:@"float: left; margin-top: -2px; margin-left: 10px; font-size: 15px; font-weight: bold;" allowPartial:YES];
 	NSString *phone = [NodeHandle delHTMLTag:[phoneNode rawContents]];
+	[dic_args setValue:phone forKey:@"phone"];
+	
+	HTMLNode *commentNode = [NodeHandle searchNodeWithSuperNode:bodyNode andPathArray:@[@"article", @"related_info"]];
+	NSArray *cNodeArr = [commentNode findChildrenOfClass:@"status-item"];
+	
+	NSMutableArray *comments = [NSMutableArray array];
+	for (HTMLNode *cNode in cNodeArr) {
+		NSString *name = [NodeHandle searchContentWithSuperNode:cNode andPathArray:@[@"hd", @"text"]];
+		NSString *com_text = [NodeHandle searchContentWithSuperNode:cNode andPathArray:@[@"bd", @"content"]];
+		NSDictionary *dic_comment = @{ @"name":name, @"com_text":com_text};
+		[comments addObject:dic_comment];
+	}
+	[dic_args setValue:comments forKey:@"comments"];
 	
 	return [dic_args copy];
 }

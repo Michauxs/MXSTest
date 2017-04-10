@@ -49,7 +49,7 @@
 
 #pragma mark -- methed
 + (NSString *)replacingOccurrencesString:(NSString*)string {
-	string = [string stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+	string = [string stringByReplacingOccurrencesOfString:@"\n\n" withString:@"\n"];
 	string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
 	string = [string stringByReplacingOccurrencesOfString:@"\t" withString:@""];
 	string = [string stringByReplacingOccurrencesOfString:@"\r" withString:@""];
