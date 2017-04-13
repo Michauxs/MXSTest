@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "MXSCity58Handle.h"
+#import "TFHpple.h"
 
 @interface NodeHandle : NSObject
 
@@ -26,5 +27,6 @@
 + (NSString*)requestHtmlStringWith:(NSString*)url;
 + (NSString *)delHTMLTag:(NSString *)html;
 
++ (TFHppleElement*)searchElemWithSuperElem:(TFHppleElement*)superElem andPathArray:(NSArray*)array;
 
 @end

@@ -47,9 +47,22 @@
 	return subNode;
 }
 
++ (TFHppleElement*)searchElemWithSuperElem:(TFHppleElement*)superElem andPathArray:(NSArray*)array {
+	
+	TFHppleElement *subElem;
+	
+	for (NSString *className in array) {
+		subElem = [superElem firstChildWithClassName:className];
+		superElem = subElem;
+	}
+	
+	return subElem;
+}
+
 #pragma mark -- methed
 + (NSString *)replacingOccurrencesString:(NSString*)string {
 	string = [string stringByReplacingOccurrencesOfString:@"\n\n" withString:@"\n"];
+	string = [string stringByReplacingOccurrencesOfString:@"\n \n" withString:@"\n"];
 	string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
 	string = [string stringByReplacingOccurrencesOfString:@"\t" withString:@""];
 	string = [string stringByReplacingOccurrencesOfString:@"\r" withString:@""];
@@ -109,11 +122,19 @@
 	NSError *error;   // holds any errors
 	NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&error];  // call the URL
 	
-	//	NSString *dataReturned = [[NSString alloc] initWithData:returnData encoding:NSASCIIStringEncoding];
-	//	NSLog(@"returned htmlASCII is:  %@\n\n", dataReturned);
+//	NSString *dataReturned1 = [[NSString alloc] initWithData:returnData encoding:NSASCIIStringEncoding];
+//	NSLog(@"returned htmlASCII is:  %@\n\n", dataReturned);
+//	return dataReturned1;
 	
-	NSString *dataReturned2 = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-	return dataReturned2;
+//	kCFStringEncodingGB_18030_2000
+//	NSUTF8StringEncoding
+
+	NSString *dataReturned4 = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+	
+//	NSStringEncoding gbkEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+//	NSString *dataReturned4 = [[NSString alloc] initWithData:returnData encoding:gbkEncoding];
+	
+	return dataReturned4;
 }
 
 @end

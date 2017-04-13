@@ -560,4 +560,9 @@
     NSLog(@"%lu", imageData.length);
 }
 
+
++ (id)creatMutableArray {
+	return [NSMutableArray array];
+}
+
 @end

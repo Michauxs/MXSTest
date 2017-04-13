@@ -7,6 +7,7 @@
 //
 
 #import "MXSBaseHandle.h"
+#import "TFHpple.h"
 
 @interface MXSTogetherBarHandle : MXSBaseHandle
 

@@ -130,17 +130,7 @@ static NSString *const baseUrlStr	=	@"http://baby.hlgnet.com";
 	}
 	
 	HTMLNode *bodyNode = [parser body];
-	
 	NSString *args = [NodeHandle searchContentWithSuperNode:bodyNode andPathArray:@[@"nrr_c", @"nrrc_js"]];
-//	if ([urlStr hasSuffix:@"about/"]) {
-//		args = [NodeHandle searchContentWithSuperNode:bodyNode andPathArray:@[@"nrr_c", @"nrrc_js"]];
-//	} else if ([urlStr hasSuffix:@"tese/"]) {
-//		args = [NodeHandle searchContentWithSuperNode:bodyNode andPathArray:@[@"nrr_c", @"nrrc_js"]];
-//	} else if ([urlStr hasSuffix:@"curriculum/"]) {
-//		
-//	} else if ([urlStr hasSuffix:@"contact/"]) {
-//		
-//	}
 	
 	return args;
 }
