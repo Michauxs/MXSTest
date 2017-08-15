@@ -27,13 +27,13 @@
 	}];
 	[ComeOnBtn addTarget:self action:@selector(didComeOnBtnClick) forControlEvents:UIControlEventTouchUpInside];
 	
-	
 }
 	
 - (void)didComeOnBtnClick {
 	
-	[MXSFileHandle transPlistToJsonWithPlistFile:@"courses_nursery" andJsonFile:@"courses_nursery"];
 	
+	
+//	[MXSFileHandle transPlistToJsonWithPlistFile:@"courses_nursery" andJsonFile:@"courses_nursery"];
 }
 
 - (void)getWebDZNode {
