@@ -16,35 +16,43 @@
 
 @end
 
-@implementation MXSTabBarController
+@implementation MXSTabBarController {
+	NSArray *NAVArr;
+	NSArray *VCArr;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	UINavigationController *nav_home = [[UINavigationController alloc]init];
-	UINavigationController *nav_con = [[UINavigationController alloc]init];
-	UINavigationController *nav_set = [[UINavigationController alloc]init];
-	UINavigationController *nav_profile = [[UINavigationController alloc]init];
+	VCArr = @[[[MXSHomeVC alloc]init], [[MXSContentVC alloc]init], [[MXSSettingVC alloc]init], [[MXSProfileVC alloc]init]];
+	NSMutableArray *nav_temp_arr = [NSMutableArray array];
+	for (MXSViewController *vc in VCArr) {
+		UINavigationController *nav = [[UINavigationController alloc]init];
+		[nav pushViewController:vc animated:NO];
+		[nav_temp_arr addObject:nav];
+	}
+	NAVArr = [nav_temp_arr copy];
 	
-	MXSHomeVC *vc_home = [[MXSHomeVC alloc]init];
-	MXSContentVC *vc_con = [[MXSContentVC alloc]init];
-	MXSSettingVC *vc_set = [[MXSSettingVC alloc]init];
-	MXSProfileVC *vc_profile = [[MXSProfileVC alloc] init];
+	self.viewControllers = NAVArr;
 	
-	[nav_home pushViewController:vc_home animated:NO];
-	[nav_con pushViewController:vc_con animated:NO];
-	[nav_set pushViewController:vc_set animated:NO];
-	[nav_profile pushViewController:vc_profile animated:NO];
+	NSArray *titleArr = @[@"HOME", @"CON", @"SET", @"PROF"];
 	
-	vc_home.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"HOME" image:IMGRESOURE(@"tab_home") selectedImage:IMGRESOURE(@"tab_home_selected")];
-	vc_con.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"CONT" image:IMGRESOURE(@"tab_found") selectedImage:[UIImage imageNamed:@"tab_found_selected"]];
-	vc_set.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"CENT" image:IMGRESOURE(@"tab_friends") selectedImage:[UIImage imageNamed:@"tab_friends_selected"]];
-	vc_profile.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"PROF" image:IMGRESOURE(@"tab_friends") selectedImage:IMGRESOURE(@"tab_friends_selected")];
+	for (int i = 0; i < NAVArr.count; ++i) {
+		UINavigationController *nav = [NAVArr objectAtIndex:i];
+		[self controller:nav Title:titleArr[i] tabBarItemImageName:[NSString stringWithFormat:@"tab_icon_%d", i]];
+		nav.tabBarItem.badgeColor = [UIColor redColor];
+	}
 	
-	vc_con.tabBarItem.badgeColor = [UIColor redColor];
+
+//	vc_home.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"HOME" image:IMGRESOURE(@"tab_icon_0") selectedImage:IMGRESOURE(@"tab_icon_0_select")];
+//	vc_con.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"CON" image:IMGRESOURE(@"tab_icon_1") selectedImage:[UIImage imageNamed:@"tab_icon_1_select"]];
+//	vc_set.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"SET" image:IMGRESOURE(@"tab_icon_2") selectedImage:[UIImage imageNamed:@"tab_icon_2_select"]];
+//	vc_profile.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"PROF" image:IMGRESOURE(@"tab_icon_2") selectedImage:IMGRESOURE(@"tab_icon_2_select")];
+//
+//	vc_con.tabBarItem.badgeColor = [UIColor redColor];
+//	[vc_con.tabBarItem setBadgeValue:@"1"];
 	
-	self.viewControllers = @[nav_home, nav_con, nav_set, nav_profile];
-	self.selectedIndex = 3;
+//	self.selectedIndex = 3;
 	
 }
 
@@ -57,14 +65,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)controller:(UIViewController *)controller Title:(NSString *)title tabBarItemImageName:(NSString *)imageName {
+	controller.tabBarItem = [[UITabBarItem alloc] init];
+	
+	[controller.tabBarItem setTitle:title];
+	NSDictionary *attr_color_normal = @{NSFontAttributeName:[UIFont systemFontOfSize:10.f], NSForegroundColorAttributeName:[Tools garyColor]};
+	[controller.tabBarItem setTitleTextAttributes:attr_color_normal forState:UIControlStateNormal];
+	
+	NSDictionary *attr_color_select = @{NSFontAttributeName:[UIFont systemFontOfSize:10.f], NSForegroundColorAttributeName:[Tools themeColor]};
+	[controller.tabBarItem setTitleTextAttributes:attr_color_select forState:UIControlStateSelected];
+	
+	UIImage *image = [UIImage imageNamed:imageName];
+	image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+	[controller.tabBarItem setImage:image];
+	
+	UIImage *selectedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_select", imageName]];
+	selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+	[controller.tabBarItem setSelectedImage:selectedImage];
+	
 }
-*/
 
 @end

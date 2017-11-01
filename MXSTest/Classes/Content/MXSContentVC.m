@@ -20,6 +20,7 @@
 	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"GO!" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools themeColor]];
 	ComeOnBtn.layer.cornerRadius = 20.f;
 	ComeOnBtn.clipsToBounds = YES;
+	
 	[self.view addSubview:ComeOnBtn];
 	[ComeOnBtn mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.center.equalTo(self.view);
@@ -27,67 +28,13 @@
 	}];
 	[ComeOnBtn addTarget:self action:@selector(didComeOnBtnClick) forControlEvents:UIControlEventTouchUpInside];
 	
+	ComeOnBtn.hidden = YES;
+	
+	
+	
 }
 	
 - (void)didComeOnBtnClick {
-	
-	
-	
-//	[MXSFileHandle transPlistToJsonWithPlistFile:@"courses_nursery" andJsonFile:@"courses_nursery"];
-}
-
-- (void)getWebDZNode {
-	
-	NSString *urlStr;
-	//教育
-	//	NSString *categaryUrlStr = @"https://www.dianping.com/search/category/2/70/g188";
-	//	NSString *fileName = @"urlList_education";
-	
-	//	//托班
-	NSString *categaryUrlStr = @"http://www.dianping.com/search/category/2/70/g20009";
-	NSString *fileName = @"urlList_nursery";
-	fileName = @"urlList_nap";
-	
-	//才艺
-	//	NSString *categaryUrlStr = @"http://www.dianping.com/search/category/2/70/g27763";
-	//	NSString *fileName = @"urlList_art";
-	
-	NSMutableArray *courseList = [NSMutableArray array];
-	for (int i = 1; i < 11; ++i) {
-		urlStr = [NSString stringWithFormat:@"%@p%d", categaryUrlStr, i];
-		NSArray *subServArr_p = [MXSWebDianpingHandle handUrlListFromCategoryUrl:urlStr];
-		[courseList addObjectsFromArray:subServArr_p];
-	}
-	
-	[MXSFileHandle writeToPlistFile:courseList withFileName:fileName];
-	
-	//待存入课程 arr
-	NSMutableArray *coursesArr = [NSMutableArray array];
-	
-	for (NSDictionary *course in courseList) {
-		NSString *course_href = [course valueForKey:@"href"];
-		
-		//课程参数 ：需mutable 追加参数
-		NSMutableDictionary *course_args = [[MXSWebDianpingHandle handNodeWithServiceUrl:course_href] mutableCopy];
-		NSArray *promoteArr = [course_args objectForKey:@"promotes"];
-		
-		if (promoteArr.count != 0) {	//没/有推荐课
-			
-			NSMutableArray *promoteCourseArgsArr = [NSMutableArray array];
-			for (NSDictionary *promote in promoteArr) {
-				NSString *promote_href = [promote objectForKey:@"promote_href"];
-				NSDictionary *promote_course_args = [MXSWebDianpingHandle handNodeWithPromoteUrl:promote_href];
-				[promoteCourseArgsArr addObject:promote_course_args];
-			}
-			
-			[course_args setValue:promoteCourseArgsArr forKey:@"promotes_args"];
-		} // end .count == 0 ?
-		
-		[coursesArr addObject:[course_args copy]];
-		
-	}
-	
-	[MXSFileHandle writeToPlistFile:[coursesArr copy] withFileName:[NSString stringWithFormat:@"courses_%@", [[fileName componentsSeparatedByString:@"_"] lastObject]]];
 	
 }
 

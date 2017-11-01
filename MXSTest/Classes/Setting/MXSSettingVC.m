@@ -15,56 +15,58 @@
 @end
 
 @implementation MXSSettingVC {
-	
+	UIView *animtDisplay;
+	CAShapeLayer *animtLayer;
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	animtDisplay = [[UIView alloc] initWithFrame:CGRectMake(0, 80, SCREEN_WIDTH, SCREEN_WIDTH)];
+	[self.view addSubview:animtDisplay];
+//	[animtDisplay mas_makeConstraints:^(MASConstraintMaker *make) {
+//		make.center.equalTo(self.view);
+//		make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH));
+//	}];
 	
-	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"GO!" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools themeColor]];
-	ComeOnBtn.layer.cornerRadius = 20.f;
-	ComeOnBtn.clipsToBounds = YES;
+	UIBezierPath *path = [[UIBezierPath alloc] init];
+	[path moveToPoint:CGPointMake(SCREEN_WIDTH*0.2, SCREEN_WIDTH*0.2)];
+	[path addLineToPoint:CGPointMake(SCREEN_WIDTH*0.2, SCREEN_WIDTH*0.8)];
+	
+	animtLayer = [CAShapeLayer layer];
+	animtLayer.path = path.CGPath;
+	animtLayer.fillColor = [UIColor clearColor].CGColor;
+	animtLayer.strokeColor = [Tools themeColor].CGColor;
+	animtLayer.lineWidth = 2.f;
+	animtLayer.lineCap = kCALineCapRound;
+	animtLayer.lineJoin = kCALineJoinRound;
+	[animtDisplay.layer addSublayer:animtLayer];
+	
+	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"ATK" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools themeColor]];
 	[self.view addSubview:ComeOnBtn];
 	[ComeOnBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-		make.center.equalTo(self.view);
-		make.size.mas_equalTo(CGSizeMake(80, 40));
+		make.bottom.equalTo(self.view);
+		make.right.equalTo(self.view);
+		make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH*0.5, 40));
 	}];
 	[ComeOnBtn addTarget:self action:@selector(didComeOnBtnClick) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIButton *otherBtn = [Tools creatUIButtonWithTitle:@"BAC" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools darkBackgroundColor]];
+	[self.view addSubview:otherBtn];
+	[otherBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.bottom.equalTo(self.view);
+		make.left.equalTo(self.view);
+		make.size.equalTo(ComeOnBtn);
+	}];
+	[otherBtn addTarget:self action:@selector(didOtherBtnBtnClick) forControlEvents:UIControlEventTouchUpInside];
 	
 }
 
 
 - (void)didComeOnBtnClick {
 	
-	NSString *urlStr;
-	
-	//	//托班
-	NSString *categaryUrlStr = @"http://www.dianping.com/search/category/2/70/g20009";
-	NSString *fileName = @"urlList_nursery";
-	
-	NSMutableArray *courseList = [NSMutableArray array];
-	for (int i = 1; i < 11; ++i) {
-		urlStr = [NSString stringWithFormat:@"%@p%d", categaryUrlStr, i];
-		NSArray *subServArr_p = [MXSWebDianpingHandle handUrlListFromCategoryUrl:urlStr];
-		[courseList addObjectsFromArray:subServArr_p];
-	}
-	
-	[MXSFileHandle writeToJsonFile:courseList withFileName:fileName];
-	
-	//待存入课程 arr
-	NSMutableArray *nurseryArr = [NSMutableArray array];
-	
-	for (NSDictionary *course in courseList) {
-		NSString *course_href = [course valueForKey:@"href"];
-		
-		//课程参数 ：需mutable 追加参数
-		NSMutableDictionary *course_args = [[MXSWebDianpingHandle handNodeWithNurseryUrl:course_href] mutableCopy];
-		[nurseryArr addObject:[course_args copy]];
-		
-	}
-	
-	[MXSFileHandle writeToPlistFile:[nurseryArr copy] withFileName:[NSString stringWithFormat:@"courses_%@", [[fileName componentsSeparatedByString:@"_"] lastObject]]];
+}
+- (void)didOtherBtnBtnClick {
 	
 }
 

@@ -13,13 +13,13 @@
 		701A91AA1E88B9E3008EC8E8 /* MXSCity58Handle.m in Sources */ = {isa = PBXBuildFile; fileRef = 701A91A91E88B9E3008EC8E8 /* MXSCity58Handle.m */; };
 		701FC39D1E973C9100B863E0 /* MXSWebCityAroundHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 701FC39C1E973C9100B863E0 /* MXSWebCityAroundHandle.m */; };
 		701FC39F1E974A3000B863E0 /* nuoni.json in Resources */ = {isa = PBXBuildFile; fileRef = 701FC39E1E974A3000B863E0 /* nuoni.json */; };
+		702B5E041FA870B800CFC3D0 /* MXSAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 702B5E031FA870B800CFC3D0 /* MXSAboutVC.m */; };
 		702D25211E8114F90068F025 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 702D251D1E810BFC0068F025 /* libxml2.tbd */; };
 		702D25261E8118430068F025 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25231E8118430068F025 /* HTMLNode.m */; };
 		702D25271E8118430068F025 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25251E8118430068F025 /* HTMLParser.m */; };
 		702D252F1E81384F0068F025 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D252A1E81384F0068F025 /* TFHpple.m */; };
 		702D25301E81384F0068F025 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D252C1E81384F0068F025 /* TFHppleElement.m */; };
 		702D25311E81384F0068F025 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D252E1E81384F0068F025 /* XPathQuery.m */; };
-		702D25361E8156300068F025 /* MXSAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D25351E8156300068F025 /* MXSAboutVC.m */; };
 		703932221E83F46400FAFF17 /* NodeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 703932211E83F46400FAFF17 /* NodeHandle.m */; };
 		703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703CC96F1E85229A005099D6 /* MXSProfileVC.m */; };
 		7042C8AB1E5BEE8900B41BA4 /* MXSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8AA1E5BEE8900B41BA4 /* MXSTabBarController.m */; };
@@ -102,6 +102,8 @@
 		701FC39B1E973C9100B863E0 /* MXSWebCityAroundHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSWebCityAroundHandle.h; sourceTree = "<group>"; };
 		701FC39C1E973C9100B863E0 /* MXSWebCityAroundHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSWebCityAroundHandle.m; sourceTree = "<group>"; };
 		701FC39E1E974A3000B863E0 /* nuoni.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nuoni.json; sourceTree = "<group>"; };
+		702B5E021FA870B800CFC3D0 /* MXSAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSAboutVC.h; sourceTree = "<group>"; };
+		702B5E031FA870B800CFC3D0 /* MXSAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSAboutVC.m; sourceTree = "<group>"; };
 		702D251D1E810BFC0068F025 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		702D251F1E8111410068F025 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		702D25221E8118430068F025 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
@@ -114,8 +116,6 @@
 		702D252C1E81384F0068F025 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		702D252D1E81384F0068F025 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		702D252E1E81384F0068F025 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
-		702D25341E8156300068F025 /* MXSAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSAboutVC.h; sourceTree = "<group>"; };
-		702D25351E8156300068F025 /* MXSAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSAboutVC.m; sourceTree = "<group>"; };
 		703932201E83F46400FAFF17 /* NodeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeHandle.h; sourceTree = "<group>"; };
 		703932211E83F46400FAFF17 /* NodeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeHandle.m; sourceTree = "<group>"; };
 		703CC96E1E85229A005099D6 /* MXSProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSProfileVC.h; sourceTree = "<group>"; };
@@ -287,6 +287,15 @@
 			path = BrowHistory;
 			sourceTree = "<group>";
 		};
+		702B5E011FA870B800CFC3D0 /* AboutVC */ = {
+			isa = PBXGroup;
+			children = (
+				702B5E021FA870B800CFC3D0 /* MXSAboutVC.h */,
+				702B5E031FA870B800CFC3D0 /* MXSAboutVC.m */,
+			);
+			path = AboutVC;
+			sourceTree = "<group>";
+		};
 		702D25151E8106B20068F025 /* HTMLParser */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,23 +327,6 @@
 				702D252E1E81384F0068F025 /* XPathQuery.m */,
 			);
 			path = Hpple;
-			sourceTree = "<group>";
-		};
-		702D25321E8155DC0068F025 /* SetGroupVC */ = {
-			isa = PBXGroup;
-			children = (
-				702D25331E8155DC0068F025 /* AboutVC */,
-			);
-			path = SetGroupVC;
-			sourceTree = "<group>";
-		};
-		702D25331E8155DC0068F025 /* AboutVC */ = {
-			isa = PBXGroup;
-			children = (
-				702D25341E8156300068F025 /* MXSAboutVC.h */,
-				702D25351E8156300068F025 /* MXSAboutVC.m */,
-			);
-			path = AboutVC;
 			sourceTree = "<group>";
 		};
 		7039321F1E83F44500FAFF17 /* NodeHandle */ = {
@@ -400,11 +392,11 @@
 		7042C8AC1E5BEEF300B41BA4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				703CC96D1E852267005099D6 /* Profile */,
+				702B5E011FA870B800CFC3D0 /* AboutVC */,
 				7042C8AE1E5BEEF300B41BA4 /* Home */,
 				7042C8AD1E5BEEF300B41BA4 /* Content */,
-				702D25321E8155DC0068F025 /* SetGroupVC */,
 				7042C8AF1E5BEEF300B41BA4 /* Setting */,
+				703CC96D1E852267005099D6 /* Profile */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -824,6 +816,7 @@
 				703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */,
 				7042C8C21E5BF09000B41BA4 /* MXSViewController.m in Sources */,
 				70510FAA1DAB3B9D0097E093 /* SDWebImagePrefetcher.m in Sources */,
+				702B5E041FA870B800CFC3D0 /* MXSAboutVC.m in Sources */,
 				703932221E83F46400FAFF17 /* NodeHandle.m in Sources */,
 				70510FAF1DAB3B9D0097E093 /* UIImageView+HighlightedWebCache.m in Sources */,
 				700FB0581E9B403C00FAB5DA /* MXSHuiLongGuanHandle.m in Sources */,
@@ -852,7 +845,6 @@
 				70510F8A1DAB3B9D0097E093 /* MJRefreshHeader.m in Sources */,
 				7042C8AB1E5BEE8900B41BA4 /* MXSTabBarController.m in Sources */,
 				70510F881DAB3B9D0097E093 /* MJRefreshComponent.m in Sources */,
-				702D25361E8156300068F025 /* MXSAboutVC.m in Sources */,
 				70510FB21DAB3B9D0097E093 /* Tools.m in Sources */,
 				70510F7B1DAB3B9D0097E093 /* MASCompositeConstraint.m in Sources */,
 				70510FA81DAB3B9D0097E093 /* SDWebImageDownloaderOperation.m in Sources */,
