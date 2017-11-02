@@ -90,10 +90,22 @@ static MXSVCExchangeCmd *_instance;
 
 #pragma mark - Module
 - (void)fromVC:(id)f_vc moduleVC:(id)t_vc withArgs:(id)args {
+	t_vc = [self getClassFromClassName:t_vc];
+	if (args) {
+		[self vc:t_vc performSelector:ReceiveArgsTypeAction args:args];
+	}
 	
+	[(MXSViewController*)f_vc presentViewController:t_vc animated:YES completion:^{
+		
+	}];
 }
 - (void)fromVC:(id)f_vc dismissWithArgs:(id)args {
-	
+	[(MXSViewController*)f_vc dismissViewControllerAnimated:YES completion:^{
+		if (args) {
+			MXSViewController* act_vc = (MXSViewController*)[Tools activityViewController];
+			[self vc:act_vc performSelector:ReceiveArgsTypeBack args:args];
+		}
+	}];
 }
 
 @end
