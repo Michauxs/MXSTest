@@ -20,6 +20,9 @@
 #import "HTMLNode.h"
 #import "MXSFileHandle.h"
 
+#import "MXSTableView.h"
+#import "MXSVCExchangeCmd.h"
+
 #define IMGRESOURE(NAME)				[UIImage imageNamed:NAME]
 #define SCREEN_WIDTH 					[UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT 					[UIScreen mainScreen].bounds.size.height

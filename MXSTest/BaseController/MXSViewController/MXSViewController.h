@@ -11,4 +11,7 @@
 
 @interface MXSViewController : UIViewController
 
+- (void)receiveActionArgs:(id)args;
+- (void)receiveBackArgs:(id)args;
+
 @end

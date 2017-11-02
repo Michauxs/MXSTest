@@ -451,7 +451,7 @@
 	if (font > 600) {
 		fontSize = [UIFont boldSystemFontOfSize:(font - 600)];
 	} else if (font < 600.f && font > 300.f) {
-		fontSize = [UIFont systemFontOfSize:-font];
+		fontSize = [UIFont systemFontOfSize:font-300];
 	} else {
 		fontSize = kAYFontLight(font);
 	}

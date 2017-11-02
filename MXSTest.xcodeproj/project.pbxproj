@@ -22,6 +22,12 @@
 		702D25311E81384F0068F025 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D252E1E81384F0068F025 /* XPathQuery.m */; };
 		703932221E83F46400FAFF17 /* NodeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 703932211E83F46400FAFF17 /* NodeHandle.m */; };
 		703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703CC96F1E85229A005099D6 /* MXSProfileVC.m */; };
+		703FF0751FAAF801007F2115 /* MXSDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF06F1FAAF801007F2115 /* MXSDelegateBase.m */; };
+		703FF0761FAAF801007F2115 /* MXSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0721FAAF801007F2115 /* MXSTableView.m */; };
+		703FF0771FAAF801007F2115 /* MXSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0741FAAF801007F2115 /* MXSTableViewCell.m */; };
+		703FF0891FAB0397007F2115 /* MXSVCExchangeCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0881FAB0397007F2115 /* MXSVCExchangeCmd.m */; };
+		703FF08A1FAB160B007F2115 /* MXSVCExchangeCmd.h in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0871FAB0397007F2115 /* MXSVCExchangeCmd.h */; };
+		703FF08D1FAB171B007F2115 /* MXSAnimetionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF08C1FAB171B007F2115 /* MXSAnimetionVC.m */; };
 		7042C8AB1E5BEE8900B41BA4 /* MXSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8AA1E5BEE8900B41BA4 /* MXSTabBarController.m */; };
 		7042C8BC1E5BEFF700B41BA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8B81E5BEFF700B41BA4 /* AppDelegate.m */; };
 		7042C8BD1E5BEFF700B41BA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8B91E5BEFF700B41BA4 /* main.m */; };
@@ -120,6 +126,16 @@
 		703932211E83F46400FAFF17 /* NodeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeHandle.m; sourceTree = "<group>"; };
 		703CC96E1E85229A005099D6 /* MXSProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSProfileVC.h; sourceTree = "<group>"; };
 		703CC96F1E85229A005099D6 /* MXSProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSProfileVC.m; sourceTree = "<group>"; };
+		703FF06E1FAAF801007F2115 /* MXSDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSDelegateBase.h; sourceTree = "<group>"; };
+		703FF06F1FAAF801007F2115 /* MXSDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSDelegateBase.m; sourceTree = "<group>"; };
+		703FF0711FAAF801007F2115 /* MXSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTableView.h; sourceTree = "<group>"; };
+		703FF0721FAAF801007F2115 /* MXSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSTableView.m; sourceTree = "<group>"; };
+		703FF0731FAAF801007F2115 /* MXSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTableViewCell.h; sourceTree = "<group>"; };
+		703FF0741FAAF801007F2115 /* MXSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSTableViewCell.m; sourceTree = "<group>"; };
+		703FF0871FAB0397007F2115 /* MXSVCExchangeCmd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSVCExchangeCmd.h; sourceTree = "<group>"; };
+		703FF0881FAB0397007F2115 /* MXSVCExchangeCmd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSVCExchangeCmd.m; sourceTree = "<group>"; };
+		703FF08B1FAB171B007F2115 /* MXSAnimetionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSAnimetionVC.h; sourceTree = "<group>"; };
+		703FF08C1FAB171B007F2115 /* MXSAnimetionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSAnimetionVC.m; sourceTree = "<group>"; };
 		7042C8A91E5BEE8900B41BA4 /* MXSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTabBarController.h; sourceTree = "<group>"; };
 		7042C8AA1E5BEE8900B41BA4 /* MXSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSTabBarController.m; sourceTree = "<group>"; };
 		7042C8B11E5BEFA500B41BA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -363,6 +379,52 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		703FF06C1FAAF801007F2115 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				703FF06D1FAAF801007F2115 /* CommonDelegate */,
+				703FF0701FAAF801007F2115 /* CommonViews */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		703FF06D1FAAF801007F2115 /* CommonDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				703FF06E1FAAF801007F2115 /* MXSDelegateBase.h */,
+				703FF06F1FAAF801007F2115 /* MXSDelegateBase.m */,
+			);
+			path = CommonDelegate;
+			sourceTree = "<group>";
+		};
+		703FF0701FAAF801007F2115 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				703FF0711FAAF801007F2115 /* MXSTableView.h */,
+				703FF0721FAAF801007F2115 /* MXSTableView.m */,
+				703FF0731FAAF801007F2115 /* MXSTableViewCell.h */,
+				703FF0741FAAF801007F2115 /* MXSTableViewCell.m */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		703FF0851FAB0344007F2115 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				703FF0861FAB0369007F2115 /* VCExchange */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		703FF0861FAB0369007F2115 /* VCExchange */ = {
+			isa = PBXGroup;
+			children = (
+				703FF0871FAB0397007F2115 /* MXSVCExchangeCmd.h */,
+				703FF0881FAB0397007F2115 /* MXSVCExchangeCmd.m */,
+			);
+			path = VCExchange;
+			sourceTree = "<group>";
+		};
 		7042C8A61E5BEE0A00B41BA4 /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +486,8 @@
 			children = (
 				7042C8CF1E5BF23800B41BA4 /* MXSSettingVC.h */,
 				7042C8D01E5BF23800B41BA4 /* MXSSettingVC.m */,
+				703FF08B1FAB171B007F2115 /* MXSAnimetionVC.h */,
+				703FF08C1FAB171B007F2115 /* MXSAnimetionVC.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -690,6 +754,8 @@
 		705B4A161D643701006273E7 /* MXSTest */ = {
 			isa = PBXGroup;
 			children = (
+				703FF0851FAB0344007F2115 /* Command */,
+				703FF06C1FAAF801007F2115 /* Common */,
 				70510EE41DAB3B9D0097E093 /* lib */,
 				701F5FA91E77C415006FBB0F /* Model */,
 				7042C8AC1E5BEEF300B41BA4 /* Classes */,
@@ -783,6 +849,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				703FF08A1FAB160B007F2115 /* MXSVCExchangeCmd.h in Sources */,
 				7042C8CB1E5BF16000B41BA4 /* MXSHomeVC.m in Sources */,
 				70510F8E1DAB3B9D0097E093 /* BSRefreshAnimationFooter.m in Sources */,
 				70510F7D1DAB3B9D0097E093 /* MASConstraintMaker.m in Sources */,
@@ -793,7 +860,9 @@
 				70510F7C1DAB3B9D0097E093 /* MASConstraint.m in Sources */,
 				70510FAB1DAB3B9D0097E093 /* UIButton+WebCache.m in Sources */,
 				70510F841DAB3B9D0097E093 /* ViewController+MASAdditions.m in Sources */,
+				703FF0751FAAF801007F2115 /* MXSDelegateBase.m in Sources */,
 				70510FA31DAB3B9D0097E093 /* NSData+ImageContentType.m in Sources */,
+				703FF08D1FAB171B007F2115 /* MXSAnimetionVC.m in Sources */,
 				70510FA61DAB3B9D0097E093 /* SDWebImageDecoder.m in Sources */,
 				70510F7E1DAB3B9D0097E093 /* MASLayoutConstraint.m in Sources */,
 				700FB05B1E9B8E0F00FAB5DA /* MXSTogetherBarHandle.m in Sources */,
@@ -808,6 +877,7 @@
 				702D25301E81384F0068F025 /* TFHppleElement.m in Sources */,
 				7042C8BD1E5BEFF700B41BA4 /* main.m in Sources */,
 				70510F901DAB3B9D0097E093 /* MJRefreshBackNormalFooter.m in Sources */,
+				703FF0771FAAF801007F2115 /* MXSTableViewCell.m in Sources */,
 				70510FA51DAB3B9D0097E093 /* SDWebImageCompat.m in Sources */,
 				70510FA41DAB3B9D0097E093 /* SDImageCache.m in Sources */,
 				7042C8D11E5BF23800B41BA4 /* MXSSettingVC.m in Sources */,
@@ -831,6 +901,7 @@
 				701A91AA1E88B9E3008EC8E8 /* MXSCity58Handle.m in Sources */,
 				70510F8C1DAB3B9D0097E093 /* MJRefreshAutoNormalFooter.m in Sources */,
 				70510F831DAB3B9D0097E093 /* View+MASAdditions.m in Sources */,
+				703FF0761FAAF801007F2115 /* MXSTableView.m in Sources */,
 				70510FAE1DAB3B9D0097E093 /* UIImage+WebP.m in Sources */,
 				70510F871DAB3B9D0097E093 /* MJRefreshBackFooter.m in Sources */,
 				70510FAD1DAB3B9D0097E093 /* UIImage+MultiFormat.m in Sources */,
@@ -840,6 +911,7 @@
 				702D25271E8118430068F025 /* HTMLParser.m in Sources */,
 				702D25311E81384F0068F025 /* XPathQuery.m in Sources */,
 				7042C8BC1E5BEFF700B41BA4 /* AppDelegate.m in Sources */,
+				703FF0891FAB0397007F2115 /* MXSVCExchangeCmd.m in Sources */,
 				70510F931DAB3B9D0097E093 /* MJRefreshGifHeader.m in Sources */,
 				70510F971DAB3B9D0097E093 /* MJRefreshConst.m in Sources */,
 				70510F8A1DAB3B9D0097E093 /* MJRefreshHeader.m in Sources */,
