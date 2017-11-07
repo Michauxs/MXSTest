@@ -10,8 +10,8 @@
 #import "MXSViewController.h"
 #import <objc/runtime.h>
 
-static NSString *const ReceiveArgsTypeAction =		@"receiveActionArgs:";
-static NSString *const ReceiveArgsTypeBack =		@"receiveBackArgs:";
+static NSString *const MethodReceiveArgsTypePost =		@"ReceiveCmdArgsActionPost:";
+static NSString *const MethodReceiveArgsTypeBack =		@"ReceiveCmdArgsActionBack:";
 
 @interface MXSVCExchangeCmd : NSObject
 

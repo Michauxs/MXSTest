@@ -34,14 +34,17 @@ static MXSVCExchangeCmd *_instance;
 	IMP imp = method_getImplementation(m);
 	id (*func)(id, SEL, id) = (id (*)(id, SEL, id))imp;
 	func(vc, sel, args);
+	
+//	NSString* factoryName = @"";
+//	Class c = NSClassFromString(factoryName);
+//	Method m = class_getClassMethod(c, @selector(factoryInstance));//获取类方法
+//	IMP im = method_getImplementation(m);
+//	fac = im(c, @selector(factoryInstance));
 }
 
 - (id)getClassFromClassName:(NSString*)c_name {
 	Class c = NSClassFromString(c_name);
 	return [[c alloc] init];
-//	Method m = class_getClassMethod(c, @selector(factoryInstance));//获取类方法
-//	IMP im = method_getImplementation(m);
-//	return im(c, @selector(factoryInstance));
 }
 
 #pragma mark - Action Method
@@ -49,7 +52,7 @@ static MXSVCExchangeCmd *_instance;
 - (void)fromVC:(id)f_vc pushVC:(id)t_vc withArgs:(id)args {
 	t_vc = [self getClassFromClassName:t_vc];
 	if (args) {
-		[self vc:t_vc performSelector:ReceiveArgsTypeAction args:args];
+		[self vc:t_vc performSelector:MethodReceiveArgsTypePost args:args];
 	}
 	((MXSViewController*)t_vc).hidesBottomBarWhenPushed = YES;
 	[[(MXSViewController*)f_vc navigationController] pushViewController:t_vc animated:YES];
@@ -62,7 +65,7 @@ static MXSVCExchangeCmd *_instance;
 	MXSViewController* recev = ((MXSViewController*)f_vc).navigationController.viewControllers.lastObject;
 	
 	if (args) {
-		[self vc:recev performSelector:ReceiveArgsTypeBack args:args];
+		[self vc:recev performSelector:MethodReceiveArgsTypeBack args:args];
 	}
 }
 - (void)fromVC:(id)f_vc popToDestVC:(id)d_vc withArgs:(id)args {
@@ -76,7 +79,7 @@ static MXSVCExchangeCmd *_instance;
 	}
 	[[(MXSViewController*)f_vc navigationController] popToViewController:des animated:YES];
 	if (args) {
-		[self vc:des performSelector:ReceiveArgsTypeBack args:args];
+		[self vc:des performSelector:MethodReceiveArgsTypeBack args:args];
 	}
 }
 - (void)fromVC:(id)f_vc popToRootWithArgs:(id)args {
@@ -84,7 +87,7 @@ static MXSVCExchangeCmd *_instance;
 	[[(MXSViewController*)f_vc navigationController] popToRootViewControllerAnimated:YES];
 	MXSViewController* recev = ((MXSViewController*)f_vc).navigationController.viewControllers.firstObject;
 	if (args) {
-		[self vc:recev performSelector:ReceiveArgsTypeBack args:args];
+		[self vc:recev performSelector:MethodReceiveArgsTypeBack args:args];
 	}
 }
 
@@ -92,7 +95,7 @@ static MXSVCExchangeCmd *_instance;
 - (void)fromVC:(id)f_vc moduleVC:(id)t_vc withArgs:(id)args {
 	t_vc = [self getClassFromClassName:t_vc];
 	if (args) {
-		[self vc:t_vc performSelector:ReceiveArgsTypeAction args:args];
+		[self vc:t_vc performSelector:MethodReceiveArgsTypePost args:args];
 	}
 	
 	[(MXSViewController*)f_vc presentViewController:t_vc animated:YES completion:^{
@@ -103,7 +106,7 @@ static MXSVCExchangeCmd *_instance;
 	[(MXSViewController*)f_vc dismissViewControllerAnimated:YES completion:^{
 		if (args) {
 			MXSViewController* act_vc = (MXSViewController*)[Tools activityViewController];
-			[self vc:act_vc performSelector:ReceiveArgsTypeBack args:args];
+			[self vc:act_vc performSelector:MethodReceiveArgsTypeBack args:args];
 		}
 	}];
 }

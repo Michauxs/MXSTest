@@ -52,7 +52,7 @@
 //	vc_con.tabBarItem.badgeColor = [UIColor redColor];
 //	[vc_con.tabBarItem setBadgeValue:@"1"];
 	
-//	self.selectedIndex = 3;
+	self.selectedIndex = 2;
 	
 }
 

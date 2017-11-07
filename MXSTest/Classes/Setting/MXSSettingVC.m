@@ -20,7 +20,7 @@
 	NSArray *itemArr;
 }
 
-- (void)receiveBackArgs:(id)args {
+- (void)ReceiveCmdArgsActionBack:(id)args {
 	
 }
 
@@ -38,6 +38,19 @@
 	
 	[tableView registerClsaaWithName:@"MXSTableViewCell" andController:self];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	[self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+
+
 - (id)tableViewDidSelectRowAtIndexPath:(id)args {
 	NSNumber *row = args;
 	NSLog(@"%ld", row.integerValue);

@@ -27,6 +27,16 @@
 	
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	[self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
 - (id)NuomiTest {
 	
 //	NSString *path = [[NSBundle mainBundle]pathForResource:@"nuoni.json" ofType:nil];

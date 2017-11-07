@@ -96,6 +96,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		700D89A81FB196C300FCCF1B /* MXSVCBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSVCBase.h; sourceTree = "<group>"; };
 		700FB0561E9B403C00FAB5DA /* MXSHuiLongGuanHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSHuiLongGuanHandle.h; sourceTree = "<group>"; };
 		700FB0571E9B403C00FAB5DA /* MXSHuiLongGuanHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSHuiLongGuanHandle.m; sourceTree = "<group>"; };
 		700FB0591E9B8E0F00FAB5DA /* MXSTogetherBarHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTogetherBarHandle.h; sourceTree = "<group>"; };
@@ -520,6 +521,7 @@
 			children = (
 				7042C8C01E5BF08F00B41BA4 /* MXSViewController.h */,
 				7042C8C11E5BF09000B41BA4 /* MXSViewController.m */,
+				700D89A81FB196C300FCCF1B /* MXSVCBase.h */,
 			);
 			path = MXSViewController;
 			sourceTree = "<group>";

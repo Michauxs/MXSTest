@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Tools.h"
+#import "MXSVCBase.h"
 
-@interface MXSViewController : UIViewController
+@interface MXSViewController : UIViewController <MXSVCBase>
 
-- (void)receiveActionArgs:(id)args;
-- (void)receiveBackArgs:(id)args;
+
 
 @end

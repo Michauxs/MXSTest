@@ -28,6 +28,12 @@
 #define SCREEN_HEIGHT 					[UIScreen mainScreen].bounds.size.height
 #define SCREEN_SCALE 					[UIScreen mainScreen].scale
 
+#define BAR_STATUS_HEIGHT 				20
+#define BAR_NAV_HEIGHT 					44
+#define STATUS_NAV_HEIGHT 				64
+#define BAR_TAB_HEIGHT 					49
+#define BTM_CONT_HEIGHT 				49
+
 
 #import "NodeAttrArgsDefines.h"
 

@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MXSTest/BaseController/TabBarController/MXSTabBarController.m"
-            timestampString = "531135478.999616"
+            timestampString = "531742480.718831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -57,28 +57,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MXSTest/BaseController/MXSViewController/MXSViewController.m"
-            timestampString = "531308628.11603"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MXSTest/Classes/Home/MXSHomeVC.m"
-            timestampString = "513233175.113668"
+            timestampString = "531742480.718897"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "MXSHomeVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -714,11 +698,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MXSTest/Classes/Home/MXSHomeVC.m"
-            timestampString = "513233175.113668"
+            timestampString = "531742480.72012"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-WebVictoryTest"
             landmarkType = "7">
          </BreakpointContent>
@@ -794,11 +778,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MXSTest/Classes/Home/MXSHomeVC.m"
-            timestampString = "513233175.113668"
+            timestampString = "531742480.720296"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "-didSelectedFunc:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1462,16 +1446,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MXSTest/Classes/Setting/MXSAnimetionVC.m"
-            timestampString = "531308628.118923"
+            timestampString = "531742480.721497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-receiveActionArgs:"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-ReceiveCmdArgsActionPost:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

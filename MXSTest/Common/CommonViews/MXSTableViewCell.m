@@ -16,7 +16,8 @@
 	
 	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
 	if (self) {
-//		self.selectionStyle = UITableViewCellSelectionStyleNone;
+		self.selectionStyle = UITableViewCellSelectionStyleNone;
+		
 		titleLabel = [Tools creatUILabelWithText:@"Title" andTextColor:[Tools blackColor] andFontSize:618.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
 		[self addSubview:titleLabel];
 		[titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -29,7 +30,7 @@
 
 - (void)setCellInfo:(id)cellInfo {
 	_cellInfo = cellInfo;
-	
+	titleLabel.text = cellInfo;
 }
 
 @end
