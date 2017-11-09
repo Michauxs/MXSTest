@@ -56,6 +56,7 @@ static MXSVCExchangeCmd *_instance;
 	}
 	((MXSViewController*)t_vc).hidesBottomBarWhenPushed = YES;
 	[[(MXSViewController*)f_vc navigationController] pushViewController:t_vc animated:YES];
+	
 }
 
 #pragma mark - Pop

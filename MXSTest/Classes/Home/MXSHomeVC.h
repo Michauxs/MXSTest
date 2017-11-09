@@ -10,7 +10,11 @@
 #import <WebKit/WebKit.h>
 #import "NodeHandle.h"
 
-@interface MXSHomeVC : MXSViewController <UITableViewDelegate, UITableViewDataSource>
+#import "MXSModelCmd.h"
+#import "History+ContextOpt.h"
+#import "MXSHistoryModel.h"
+
+@interface MXSHomeVC : MXSViewController
 //<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
 
 @end

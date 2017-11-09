@@ -9,76 +9,90 @@
 #import "MXSHomeVC.h"
 
 @implementation MXSHomeVC {
-	UITableView *FuncTableView;
+	
 	NSArray *titleArr;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.view.backgroundColor = [Tools whiteColor];
+	UIButton *demoBtn = [Tools creatUIButtonWithTitle:@"DEMO" andTitleColor:[Tools whiteColor] andFontSize:316 andBackgroundColor:[Tools blackColor]];
+	[self.view addSubview:demoBtn];
+	demoBtn.frame = CGRectMake(30, 80, 200, 50);
+	[demoBtn addTarget:self action:@selector(demoBtnClick) forControlEvents:UIControlEventTouchUpInside];
 	
-	titleArr = @[@"demo01", @"WebVictoryTest", @"NuomiTest", @"WebPekingPeople", @"WebCityAround", @"WebScoialDragon", @"WebScoialPeking", @"TogetherBar", @"DoArt"];
+	UIButton *appendBtn = [Tools creatUIButtonWithTitle:@"APPEND" andTitleColor:[Tools whiteColor] andFontSize:316 andBackgroundColor:[Tools blackColor]];
+	[self.view addSubview:appendBtn];
+	appendBtn.frame = CGRectMake(30, 180, 200, 50);
+	[appendBtn addTarget:self action:@selector(appendBtnClick) forControlEvents:UIControlEventTouchUpInside];
 	
-	FuncTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 49 - 20) style:UITableViewStylePlain];
-	[self.view addSubview:FuncTableView];
-	FuncTableView.delegate = self;
-	FuncTableView.dataSource = self;
+	UIButton *enumBtn = [Tools creatUIButtonWithTitle:@"ENUM" andTitleColor:[Tools whiteColor] andFontSize:316 andBackgroundColor:[Tools blackColor]];
+	[self.view addSubview:enumBtn];
+	enumBtn.frame = CGRectMake(30, 280, 200, 50);
+	[enumBtn addTarget:self action:@selector(enumBtnClick) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIButton *removeBtn = [Tools creatUIButtonWithTitle:@"REMOVE" andTitleColor:[Tools whiteColor] andFontSize:316 andBackgroundColor:[Tools blackColor]];
+	[self.view addSubview:removeBtn];
+	removeBtn.frame = CGRectMake(30, 380, 200, 50);
+	[removeBtn addTarget:self action:@selector(removeBtnClick) forControlEvents:UIControlEventTouchUpInside];
 	
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	[self.navigationController setNavigationBarHidden:YES animated:NO];
+#pragma mark - actions
+- (void)appendBtnClick {
+	NSDictionary *data = @{kMXSHistoryModelArgsSender:@"zhagsan",
+						   kMXSHistoryModelArgsReceiver:@"lisi",
+						   kMXSHistoryModelArgsMessageText:@"hello,world",
+						   kMXSHistoryModelArgsIsRead:[NSNumber numberWithBool:NO],
+						   kMXSHistoryModelArgsDateSend:[NSNumber numberWithDouble:[NSDate date].timeIntervalSince1970]
+						   };
+	MXSHistoryModel *his = [MXSHistoryModel shared];
+	[History appendDataInContext:his.doc.managedObjectContext withData:data];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-	[self.navigationController setNavigationBarHidden:YES animated:NO];
+- (void)enumBtnClick {
+	MXSHistoryModel *his = [MXSHistoryModel shared];
+	NSArray *arr = [History enumAllDataInContext:his.doc.managedObjectContext];
+	NSLog(@"data : %@", arr);
 }
 
-- (id)NuomiTest {
-	
-//	NSString *path = [[NSBundle mainBundle]pathForResource:@"nuoni.json" ofType:nil];
-//	NSData *data = [NSData dataWithContentsOfFile:path];
-//	NSArray *array =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//	
-//	for (NSDictionary *dic in array) {
-//		
-//		NSArray *others = [dic valueForKey:@"others"];
-//		
-//	}
-//	
-//	[MXSFileHandle writeToJsonFile:array withFileName:@"nuomi_v2"];
-	return nil;
+- (void)removeBtnClick {
+	MXSHistoryModel *his = [MXSHistoryModel shared];
+	[History removeAllDataInContext:his.doc.managedObjectContext];
 }
 
-- (id)WebVictoryTest {
-	
-	
-	return nil;
+- (void)demoBtnClick {
+	UILocalNotification *l_n = [[UILocalNotification alloc] init];
+	l_n.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+	l_n.soundName = UILocalNotificationDefaultSoundName;
+	l_n.alertBody = @"User Local Notification";
+	l_n.alertTitle = @"The Notify";
+	l_n.alertAction = @"Action";
+	l_n.userInfo = @{@"key":@"mxs_notify_demo"};
+	[[UIApplication sharedApplication] scheduleLocalNotification:l_n];
 }
 
-- (id)demo01 {
-	NSString *urlstring = @"http://www.dianping.com/shop/66526819";
-	
-	NSString *htmlStr;
-	htmlStr = [NodeHandle requestHtmlStringWith:urlstring];
-	
-	NSError *error = nil;
-	HTMLParser *parser = [[HTMLParser alloc] initWithString:htmlStr error:&error];
-	if (error) {
-		NSLog(@"Error: %@", error);
-		return nil;
+- (void)cancelTheOneNotify {
+	//取消某一个通知
+	NSArray *notificaitons = [[UIApplication sharedApplication] scheduledLocalNotifications];
+	//获取当前所有的本地通知
+	if (!notificaitons || notificaitons.count <= 0) {
+		return;
+		}
+	for (UILocalNotification *notify in notificaitons) {
+		if ([[notify.userInfo objectForKey:@"key"] isEqualToString:@"mxs_notify_demo"]) {
+			//取消一个特定的通知
+			[[UIApplication sharedApplication] cancelLocalNotification:notify];
+			break;
+		}
 	}
 	
-	HTMLNode *bodyNode = [parser body];
+}
+
+- (void)cancelAllLocalNotifies {
 	
-	NSArray *arrayNode = [bodyNode findChildrenOfClass:@"shop-title"];
-	
-	NSString *name = [[arrayNode firstObject] rawContents];
-	name = [NodeHandle delHTMLTag:name];
-	return nil;
+	//取消所有的本地通知
+	[[UIApplication sharedApplication] cancelAllLocalNotifications];
 }
 
 - (void)didSelectedFunc:(NSString*)funcName {
@@ -90,35 +104,6 @@
 		id (*func)(id, SEL, ...) = (id (*)(id, SEL, ...))imp;
 		func(self, sel);
 	}
-	
-}
-
-#pragma mark -- UItableViewDelagate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return titleArr.count;
-}
-
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	static NSString *cellID = @"funcCell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-	if (!cell) {
-	 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-	}
-	
-	cell.textLabel.text = [titleArr objectAtIndex:indexPath.row];
-	return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	return 50.f;
-	
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	[self didSelectedFunc:[titleArr objectAtIndex:indexPath.row]];
 	
 }
 

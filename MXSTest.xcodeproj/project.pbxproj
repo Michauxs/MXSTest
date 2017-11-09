@@ -36,6 +36,16 @@
 		7042C8CB1E5BF16000B41BA4 /* MXSHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8CA1E5BF16000B41BA4 /* MXSHomeVC.m */; };
 		7042C8CE1E5BF21A00B41BA4 /* MXSContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8CD1E5BF21A00B41BA4 /* MXSContentVC.m */; };
 		7042C8D11E5BF23800B41BA4 /* MXSSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8D01E5BF23800B41BA4 /* MXSSettingVC.m */; };
+		704B25F51FB43E1500A6899B /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 704B25F31FB43E1500A6899B /* HistoryModel.xcdatamodeld */; };
+		704B25FE1FB4472E00A6899B /* History+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B25FB1FB4472E00A6899B /* History+CoreDataClass.m */; };
+		704B26021FB44FEC00A6899B /* MXSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B26011FB44FEC00A6899B /* MXSModel.m */; };
+		704B26051FB4508700A6899B /* MXSHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B26041FB4508700A6899B /* MXSHistoryModel.m */; };
+		704B26081FB45F6E00A6899B /* History+ContextOpt.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B26071FB45F6E00A6899B /* History+ContextOpt.m */; };
+		704B260B1FB462C800A6899B /* MXSModelCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B260A1FB462C800A6899B /* MXSModelCmd.m */; };
+		704B26121FB4703E00A6899B /* History+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B26101FB4703E00A6899B /* History+CoreDataProperties.m */; };
+		704B26131FB4785C00A6899B /* History+CoreDataProperties.h in Sources */ = {isa = PBXBuildFile; fileRef = 704B26111FB4703E00A6899B /* History+CoreDataProperties.h */; };
+		704B26141FB4785C00A6899B /* History+CoreDataClass.h in Sources */ = {isa = PBXBuildFile; fileRef = 704B25FA1FB4472E00A6899B /* History+CoreDataClass.h */; };
+		704B26151FB4785C00A6899B /* History+ContextOpt.h in Sources */ = {isa = PBXBuildFile; fileRef = 704B26061FB45F6E00A6899B /* History+ContextOpt.h */; };
 		70510F7A1DAB3B9D0097E093 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70510EE61DAB3B9D0097E093 /* Info.plist */; };
 		70510F7B1DAB3B9D0097E093 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510EE81DAB3B9D0097E093 /* MASCompositeConstraint.m */; };
 		70510F7C1DAB3B9D0097E093 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510EEB1DAB3B9D0097E093 /* MASConstraint.m */; };
@@ -154,6 +164,20 @@
 		7042C8CF1E5BF23800B41BA4 /* MXSSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSSettingVC.h; sourceTree = "<group>"; };
 		7042C8D01E5BF23800B41BA4 /* MXSSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSSettingVC.m; sourceTree = "<group>"; };
 		7042C8D21E5C2A9900B41BA4 /* MXS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXS-Prefix.pch"; sourceTree = "<group>"; };
+		704B25F41FB43E1500A6899B /* HistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HistoryModel.xcdatamodel; sourceTree = "<group>"; };
+		704B25FA1FB4472E00A6899B /* History+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "History+CoreDataClass.h"; sourceTree = "<group>"; };
+		704B25FB1FB4472E00A6899B /* History+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "History+CoreDataClass.m"; sourceTree = "<group>"; };
+		704B26001FB44FEC00A6899B /* MXSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSModel.h; sourceTree = "<group>"; };
+		704B26011FB44FEC00A6899B /* MXSModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSModel.m; sourceTree = "<group>"; };
+		704B26031FB4508700A6899B /* MXSHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSHistoryModel.h; sourceTree = "<group>"; };
+		704B26041FB4508700A6899B /* MXSHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSHistoryModel.m; sourceTree = "<group>"; };
+		704B26061FB45F6E00A6899B /* History+ContextOpt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "History+ContextOpt.h"; sourceTree = "<group>"; };
+		704B26071FB45F6E00A6899B /* History+ContextOpt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "History+ContextOpt.m"; sourceTree = "<group>"; };
+		704B26091FB462C800A6899B /* MXSModelCmd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSModelCmd.h; sourceTree = "<group>"; };
+		704B260A1FB462C800A6899B /* MXSModelCmd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSModelCmd.m; sourceTree = "<group>"; };
+		704B260C1FB46F7300A6899B /* HistoryModel_1.0.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HistoryModel_1.0.1.xcdatamodel; sourceTree = "<group>"; };
+		704B26101FB4703E00A6899B /* History+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "History+CoreDataProperties.m"; sourceTree = "<group>"; };
+		704B26111FB4703E00A6899B /* History+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "History+CoreDataProperties.h"; sourceTree = "<group>"; };
 		70510EE61DAB3B9D0097E093 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70510EE71DAB3B9D0097E093 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		70510EE81DAB3B9D0097E093 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -293,6 +317,10 @@
 			isa = PBXGroup;
 			children = (
 				701F5FAA1E77C415006FBB0F /* BrowHistory */,
+				704B26001FB44FEC00A6899B /* MXSModel.h */,
+				704B26011FB44FEC00A6899B /* MXSModel.m */,
+				704B26091FB462C800A6899B /* MXSModelCmd.h */,
+				704B260A1FB462C800A6899B /* MXSModelCmd.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,6 +328,9 @@
 		701F5FAA1E77C415006FBB0F /* BrowHistory */ = {
 			isa = PBXGroup;
 			children = (
+				704B25F21FB43DC900A6899B /* CoreData */,
+				704B26031FB4508700A6899B /* MXSHistoryModel.h */,
+				704B26041FB4508700A6899B /* MXSHistoryModel.m */,
 			);
 			path = BrowHistory;
 			sourceTree = "<group>";
@@ -524,6 +555,20 @@
 				700D89A81FB196C300FCCF1B /* MXSVCBase.h */,
 			);
 			path = MXSViewController;
+			sourceTree = "<group>";
+		};
+		704B25F21FB43DC900A6899B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				704B26111FB4703E00A6899B /* History+CoreDataProperties.h */,
+				704B26101FB4703E00A6899B /* History+CoreDataProperties.m */,
+				704B25FA1FB4472E00A6899B /* History+CoreDataClass.h */,
+				704B25FB1FB4472E00A6899B /* History+CoreDataClass.m */,
+				704B25F31FB43E1500A6899B /* HistoryModel.xcdatamodeld */,
+				704B26061FB45F6E00A6899B /* History+ContextOpt.h */,
+				704B26071FB45F6E00A6899B /* History+ContextOpt.m */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		70510EE41DAB3B9D0097E093 /* lib */ = {
@@ -851,6 +896,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704B26131FB4785C00A6899B /* History+CoreDataProperties.h in Sources */,
+				704B26141FB4785C00A6899B /* History+CoreDataClass.h in Sources */,
+				704B26151FB4785C00A6899B /* History+ContextOpt.h in Sources */,
 				703FF08A1FAB160B007F2115 /* MXSVCExchangeCmd.h in Sources */,
 				7042C8CB1E5BF16000B41BA4 /* MXSHomeVC.m in Sources */,
 				70510F8E1DAB3B9D0097E093 /* BSRefreshAnimationFooter.m in Sources */,
@@ -871,10 +919,12 @@
 				70510F991DAB3B9D0097E093 /* UIScrollView+MJRefresh.m in Sources */,
 				70510F8D1DAB3B9D0097E093 /* MJRefreshAutoStateFooter.m in Sources */,
 				702D25261E8118430068F025 /* HTMLNode.m in Sources */,
+				704B26121FB4703E00A6899B /* History+CoreDataProperties.m in Sources */,
 				702D252F1E81384F0068F025 /* TFHpple.m in Sources */,
 				70140CF81E94A5120051DB18 /* MXSWebDianpingHandle.m in Sources */,
 				70510F811DAB3B9D0097E093 /* NSArray+MASAdditions.m in Sources */,
 				70510FA91DAB3B9D0097E093 /* SDWebImageManager.m in Sources */,
+				704B25F51FB43E1500A6899B /* HistoryModel.xcdatamodeld in Sources */,
 				70510FA21DAB3B9D0097E093 /* MKAnnotationView+WebCache.m in Sources */,
 				702D25301E81384F0068F025 /* TFHppleElement.m in Sources */,
 				7042C8BD1E5BEFF700B41BA4 /* main.m in Sources */,
@@ -888,6 +938,7 @@
 				703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */,
 				7042C8C21E5BF09000B41BA4 /* MXSViewController.m in Sources */,
 				70510FAA1DAB3B9D0097E093 /* SDWebImagePrefetcher.m in Sources */,
+				704B26021FB44FEC00A6899B /* MXSModel.m in Sources */,
 				702B5E041FA870B800CFC3D0 /* MXSAboutVC.m in Sources */,
 				703932221E83F46400FAFF17 /* NodeHandle.m in Sources */,
 				70510FAF1DAB3B9D0097E093 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -899,8 +950,10 @@
 				70510FB31DAB3B9D0097E093 /* UIImage+fixOrientation.m in Sources */,
 				7042C8BE1E5BEFF700B41BA4 /* ViewController.m in Sources */,
 				70E1FB411E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m in Sources */,
+				704B26081FB45F6E00A6899B /* History+ContextOpt.m in Sources */,
 				70510F7F1DAB3B9D0097E093 /* MASViewAttribute.m in Sources */,
 				701A91AA1E88B9E3008EC8E8 /* MXSCity58Handle.m in Sources */,
+				704B260B1FB462C800A6899B /* MXSModelCmd.m in Sources */,
 				70510F8C1DAB3B9D0097E093 /* MJRefreshAutoNormalFooter.m in Sources */,
 				70510F831DAB3B9D0097E093 /* View+MASAdditions.m in Sources */,
 				703FF0761FAAF801007F2115 /* MXSTableView.m in Sources */,
@@ -908,11 +961,13 @@
 				70510F871DAB3B9D0097E093 /* MJRefreshBackFooter.m in Sources */,
 				70510FAD1DAB3B9D0097E093 /* UIImage+MultiFormat.m in Sources */,
 				701FC39D1E973C9100B863E0 /* MXSWebCityAroundHandle.m in Sources */,
+				704B26051FB4508700A6899B /* MXSHistoryModel.m in Sources */,
 				70510FAC1DAB3B9D0097E093 /* UIImage+GIF.m in Sources */,
 				70510F891DAB3B9D0097E093 /* MJRefreshFooter.m in Sources */,
 				702D25271E8118430068F025 /* HTMLParser.m in Sources */,
 				702D25311E81384F0068F025 /* XPathQuery.m in Sources */,
 				7042C8BC1E5BEFF700B41BA4 /* AppDelegate.m in Sources */,
+				704B25FE1FB4472E00A6899B /* History+CoreDataClass.m in Sources */,
 				703FF0891FAB0397007F2115 /* MXSVCExchangeCmd.m in Sources */,
 				70510F931DAB3B9D0097E093 /* MJRefreshGifHeader.m in Sources */,
 				70510F971DAB3B9D0097E093 /* MJRefreshConst.m in Sources */,
@@ -1089,6 +1144,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		704B25F31FB43E1500A6899B /* HistoryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				704B260C1FB46F7300A6899B /* HistoryModel_1.0.1.xcdatamodel */,
+				704B25F41FB43E1500A6899B /* HistoryModel.xcdatamodel */,
+			);
+			currentVersion = 704B260C1FB46F7300A6899B /* HistoryModel_1.0.1.xcdatamodel */;
+			path = HistoryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 705B4A0C1D643701006273E7 /* Project object */;
 }

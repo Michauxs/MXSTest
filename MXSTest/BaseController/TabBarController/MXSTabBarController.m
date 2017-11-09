@@ -29,6 +29,7 @@
 	for (MXSViewController *vc in VCArr) {
 		UINavigationController *nav = [[UINavigationController alloc]init];
 		[nav pushViewController:vc animated:NO];
+		[nav setNavigationBarHidden:YES animated:NO];
 		[nav_temp_arr addObject:nav];
 	}
 	NAVArr = [nav_temp_arr copy];
@@ -43,21 +44,12 @@
 		nav.tabBarItem.badgeColor = [UIColor redColor];
 	}
 	
-
-//	vc_home.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"HOME" image:IMGRESOURE(@"tab_icon_0") selectedImage:IMGRESOURE(@"tab_icon_0_select")];
-//	vc_con.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"CON" image:IMGRESOURE(@"tab_icon_1") selectedImage:[UIImage imageNamed:@"tab_icon_1_select"]];
-//	vc_set.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"SET" image:IMGRESOURE(@"tab_icon_2") selectedImage:[UIImage imageNamed:@"tab_icon_2_select"]];
-//	vc_profile.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"PROF" image:IMGRESOURE(@"tab_icon_2") selectedImage:IMGRESOURE(@"tab_icon_2_select")];
-//
 //	vc_con.tabBarItem.badgeColor = [UIColor redColor];
 //	[vc_con.tabBarItem setBadgeValue:@"1"];
 	
 	self.selectedIndex = 2;
 	
 }
-
-
-
 
 
 - (void)didReceiveMemoryWarning {
