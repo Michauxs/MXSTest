@@ -22,10 +22,11 @@
 	return self;
 }
 
-- (void)registerClsaaWithName:(NSString *)class_name andController:(id)controller {
+- (void)registerClsaaWithCellName:(NSString *)class_name RowHeight:(CGFloat)height andController:(id)controller {
 	[self registerClass:NSClassFromString(class_name) forCellReuseIdentifier:class_name];
 	self.dlg.cellName = class_name;
 	self.dlg.controller = controller;
+	self.dlg.rowHeight = height;
 }
 
 @end

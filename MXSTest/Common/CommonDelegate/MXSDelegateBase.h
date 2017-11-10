@@ -14,5 +14,6 @@
 @property (nonatomic, strong) id dlgData;
 @property (nonatomic, weak) id controller;
 @property (nonatomic, strong) NSString *cellName;
+@property (nonatomic, assign) CGFloat rowHeight;
 
 @end

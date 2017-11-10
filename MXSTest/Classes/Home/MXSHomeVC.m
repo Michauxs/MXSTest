@@ -8,38 +8,36 @@
 
 #import "MXSHomeVC.h"
 
+#define TABLE_WIDTH				120
+
 @implementation MXSHomeVC {
-	
+	MXSTableView *actTableView;
 	NSArray *titleArr;
+	
+	MXSTableView *showTableView;
+	MXSDelegateBase *showDlg;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	UIButton *demoBtn = [Tools creatUIButtonWithTitle:@"DEMO" andTitleColor:[Tools whiteColor] andFontSize:316 andBackgroundColor:[Tools blackColor]];
-	[self.view addSubview:demoBtn];
-	demoBtn.frame = CGRectMake(30, 80, 200, 50);
-	[demoBtn addTarget:self action:@selector(demoBtnClick) forControlEvents:UIControlEventTouchUpInside];
+//	UIView *BG = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+//	BG.layer.
+	//	[self.view addSubview:BG];
+	self.view.layer.contents = (id)IMGRESOURE(@"circute").CGImage;
 	
-	UIButton *appendBtn = [Tools creatUIButtonWithTitle:@"APPEND" andTitleColor:[Tools whiteColor] andFontSize:316 andBackgroundColor:[Tools blackColor]];
-	[self.view addSubview:appendBtn];
-	appendBtn.frame = CGRectMake(30, 180, 200, 50);
-	[appendBtn addTarget:self action:@selector(appendBtnClick) forControlEvents:UIControlEventTouchUpInside];
+	titleArr = @[@"NOTIFY", @"APPEND", @"ENUM", @"REMOVE", @"SEARCH"];
 	
-	UIButton *enumBtn = [Tools creatUIButtonWithTitle:@"ENUM" andTitleColor:[Tools whiteColor] andFontSize:316 andBackgroundColor:[Tools blackColor]];
-	[self.view addSubview:enumBtn];
-	enumBtn.frame = CGRectMake(30, 280, 200, 50);
-	[enumBtn addTarget:self action:@selector(enumBtnClick) forControlEvents:UIControlEventTouchUpInside];
-	
-	UIButton *removeBtn = [Tools creatUIButtonWithTitle:@"REMOVE" andTitleColor:[Tools whiteColor] andFontSize:316 andBackgroundColor:[Tools blackColor]];
-	[self.view addSubview:removeBtn];
-	removeBtn.frame = CGRectMake(30, 380, 200, 50);
-	[removeBtn addTarget:self action:@selector(removeBtnClick) forControlEvents:UIControlEventTouchUpInside];
+	actTableView = [[MXSTableView alloc] initWithFrame:CGRectMake(0, 0, TABLE_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain andDelegate:nil];
+	[self.view addSubview:actTableView];
+	[actTableView registerClsaaWithCellName:@"MXSHomeCell" RowHeight:64 andController:self];
+	actTableView.dlg.dlgData = titleArr;
+	actTableView.backgroundColor = [UIColor clearColor];
 	
 }
 
 #pragma mark - actions
-- (void)appendBtnClick {
+- (void)APPENDClick {
 	NSDictionary *data = @{kMXSHistoryModelArgsSender:@"zhagsan",
 						   kMXSHistoryModelArgsReceiver:@"lisi",
 						   kMXSHistoryModelArgsMessageText:@"hello,world",
@@ -50,18 +48,23 @@
 	[History appendDataInContext:his.doc.managedObjectContext withData:data];
 }
 
-- (void)enumBtnClick {
+- (void)ENUMClick {
 	MXSHistoryModel *his = [MXSHistoryModel shared];
 	NSArray *arr = [History enumAllDataInContext:his.doc.managedObjectContext];
 	NSLog(@"data : %@", arr);
 }
 
-- (void)removeBtnClick {
+- (void)REMOVEClick {
 	MXSHistoryModel *his = [MXSHistoryModel shared];
 	[History removeAllDataInContext:his.doc.managedObjectContext];
 }
 
-- (void)demoBtnClick {
+- (void)SEARCHClick {
+	MXSHistoryModel *his = [MXSHistoryModel shared];
+	[History removeAllDataInContext:his.doc.managedObjectContext];
+}
+
+- (void)NOTIFYClick {
 	UILocalNotification *l_n = [[UILocalNotification alloc] init];
 	l_n.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
 	l_n.soundName = UILocalNotificationDefaultSoundName;
@@ -99,14 +102,24 @@
 	
 	SEL sel = NSSelectorFromString(funcName);
 	Method m = class_getInstanceMethod([self class], sel);
-	if (m) {
-		IMP imp = method_getImplementation(m);
-		id (*func)(id, SEL, ...) = (id (*)(id, SEL, ...))imp;
-		func(self, sel);
-	}
-	
+
+	IMP imp = method_getImplementation(m);
+	id (*func)(id, SEL) = (id (*)(id, SEL))imp;
+	func(self, sel);
 }
 
+#pragma mark - dlg notify
+- (id)tableViewDidSelectRowAtIndexPath:(id)args {
+	NSNumber *row = [args objectForKey:@"row"];
+	NSLog(@"%ld", row.integerValue);
+	[self didSelectedFunc:[[titleArr objectAtIndex:row.intValue] stringByAppendingString:@"Click"]];
+	return nil;
+}
+
+- (id)cellDeleteFromTable:(id)args {
+	
+	return nil;
+}
 
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //	

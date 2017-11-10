@@ -29,11 +29,13 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return 64.f;
+	return _rowHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	id args = [NSNumber numberWithInteger:indexPath.row];
+	id args = @{@"row":[NSNumber numberWithInteger:indexPath.row],
+				@"dlg":self
+				};
 	
 	SEL sel = NSSelectorFromString(@"tableViewDidSelectRowAtIndexPath:");
 	Method m = class_getInstanceMethod([_controller class], sel);

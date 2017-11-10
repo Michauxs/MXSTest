@@ -44,10 +44,13 @@
 		nav.tabBarItem.badgeColor = [UIColor redColor];
 	}
 	
+	[[UITabBar appearance] setBarTintColor:[Tools darkBackgroundColor]];
+	[UITabBar appearance].translucent = NO;
+	
 //	vc_con.tabBarItem.badgeColor = [UIColor redColor];
 //	[vc_con.tabBarItem setBadgeValue:@"1"];
 	
-	self.selectedIndex = 2;
+//	self.selectedIndex = 2;
 	
 }
 
@@ -61,7 +64,7 @@
 	controller.tabBarItem = [[UITabBarItem alloc] init];
 	
 	[controller.tabBarItem setTitle:title];
-	NSDictionary *attr_color_normal = @{NSFontAttributeName:[UIFont systemFontOfSize:10.f], NSForegroundColorAttributeName:[Tools garyColor]};
+	NSDictionary *attr_color_normal = @{NSFontAttributeName:[UIFont systemFontOfSize:10.f], NSForegroundColorAttributeName:[Tools garyLineColor]};
 	[controller.tabBarItem setTitleTextAttributes:attr_color_normal forState:UIControlStateNormal];
 	
 	NSDictionary *attr_color_select = @{NSFontAttributeName:[UIFont systemFontOfSize:10.f], NSForegroundColorAttributeName:[Tools themeColor]};

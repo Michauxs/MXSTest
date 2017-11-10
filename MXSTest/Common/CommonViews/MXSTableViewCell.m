@@ -18,19 +18,20 @@
 	if (self) {
 		self.selectionStyle = UITableViewCellSelectionStyleNone;
 		
-		titleLabel = [Tools creatUILabelWithText:@"Title" andTextColor:[Tools blackColor] andFontSize:618.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
-		[self addSubview:titleLabel];
-		[titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.left.equalTo(self).offset(20);
-			make.centerY.equalTo(self);
-		}];
 	}
 	return self;
 }
 
 - (void)setCellInfo:(id)cellInfo {
 	_cellInfo = cellInfo;
-	titleLabel.text = cellInfo;
+	
+	titleLabel = [Tools creatUILabelWithText:cellInfo andTextColor:[Tools blackColor] andFontSize:618.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+	[self addSubview:titleLabel];
+	[titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.left.equalTo(self).offset(20);
+		make.centerY.equalTo(self);
+	}];
+	
 }
 
 @end

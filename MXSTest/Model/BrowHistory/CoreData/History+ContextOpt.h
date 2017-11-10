@@ -13,7 +13,9 @@
 + (void)appendDataInContext:(NSManagedObjectContext*)context withData:(NSDictionary*)args;
 
 + (NSArray*)enumAllDataInContext:(NSManagedObjectContext*)context;
++ (NSArray*)searchDataInContext:(NSManagedObjectContext*)context withSender:(id)sender;
 
 + (void)removeAllDataInContext:(NSManagedObjectContext*)context;
++ (void)removeDataInContext:(NSManagedObjectContext*)context withMate:(id)mate;
 
 @end

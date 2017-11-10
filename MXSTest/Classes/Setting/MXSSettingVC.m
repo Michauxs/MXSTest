@@ -36,7 +36,7 @@
 	itemArr = @[@"Animetion", @"Animetion", @"Animetion"];
 	tableView.dlg.dlgData = itemArr;
 	
-	[tableView registerClsaaWithName:@"MXSTableViewCell" andController:self];
+	[tableView registerClsaaWithCellName:@"MXSTableViewCell" RowHeight:64 andController:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -52,7 +52,7 @@
 
 
 - (id)tableViewDidSelectRowAtIndexPath:(id)args {
-	NSNumber *row = args;
+	NSNumber *row = [args objectForKey:@"row"];
 	NSLog(@"%ld", row.integerValue);
 	[[MXSVCExchangeCmd shared] fromVC:self pushVC:[[@"MXS" stringByAppendingString:[itemArr objectAtIndex:row.intValue]] stringByAppendingString:@"VC"] withArgs:@1];
 	

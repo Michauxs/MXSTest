@@ -414,11 +414,11 @@
     return [UIColor colorWithRed:78.0/255.0 green:219.0/255.0 blue:202.0/255.0 alpha:1.0];
 }
 + (UIColor*)blackColor {
-    return [UIColor colorWithRed:74.0/255.0 green:74.0/255.0 blue:74.0/255.0 alpha:1.0];
+    return [UIColor colorWithWhite:0.1 alpha:1];
 }
 
 + (UIColor*)darkBackgroundColor {
-    return [UIColor colorWithRed:42.0/255.0 green:42.0/255.0 blue:42.0/255.0 alpha:1.0];
+    return [UIColor colorWithWhite:0.3 alpha:1];
 }
 
 + (UIColor*)whiteColor {
@@ -426,7 +426,7 @@
 }
 
 + (UIColor*)garyColor {
-    return [UIColor colorWithRed:155.0/255.0 green:155.0/255.0 blue:155.0/255.0 alpha:1.0];
+    return [UIColor colorWithWhite:0.4 alpha:1];
 }
 + (UIColor*)garyLineColor {
     return [UIColor colorWithWhite:0.75 alpha:1.f];

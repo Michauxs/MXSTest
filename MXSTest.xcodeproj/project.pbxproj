@@ -21,6 +21,8 @@
 		702D25301E81384F0068F025 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D252C1E81384F0068F025 /* TFHppleElement.m */; };
 		702D25311E81384F0068F025 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D252E1E81384F0068F025 /* XPathQuery.m */; };
 		703932221E83F46400FAFF17 /* NodeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 703932211E83F46400FAFF17 /* NodeHandle.m */; };
+		703B63C91FB5566C007A8473 /* MXSHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 703B63C81FB5566C007A8473 /* MXSHomeCell.m */; };
+		703B63CB1FB5B252007A8473 /* 9205.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 703B63CA1FB5B252007A8473 /* 9205.mp3 */; };
 		703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703CC96F1E85229A005099D6 /* MXSProfileVC.m */; };
 		703FF0751FAAF801007F2115 /* MXSDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF06F1FAAF801007F2115 /* MXSDelegateBase.m */; };
 		703FF0761FAAF801007F2115 /* MXSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0721FAAF801007F2115 /* MXSTableView.m */; };
@@ -135,6 +137,9 @@
 		702D252E1E81384F0068F025 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		703932201E83F46400FAFF17 /* NodeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeHandle.h; sourceTree = "<group>"; };
 		703932211E83F46400FAFF17 /* NodeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeHandle.m; sourceTree = "<group>"; };
+		703B63C71FB5566C007A8473 /* MXSHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSHomeCell.h; sourceTree = "<group>"; };
+		703B63C81FB5566C007A8473 /* MXSHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSHomeCell.m; sourceTree = "<group>"; };
+		703B63CA1FB5B252007A8473 /* 9205.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 9205.mp3; sourceTree = "<group>"; };
 		703CC96E1E85229A005099D6 /* MXSProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSProfileVC.h; sourceTree = "<group>"; };
 		703CC96F1E85229A005099D6 /* MXSProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSProfileVC.m; sourceTree = "<group>"; };
 		703FF06E1FAAF801007F2115 /* MXSDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSDelegateBase.h; sourceTree = "<group>"; };
@@ -509,6 +514,8 @@
 			children = (
 				7042C8C91E5BF16000B41BA4 /* MXSHomeVC.h */,
 				7042C8CA1E5BF16000B41BA4 /* MXSHomeVC.m */,
+				703B63C71FB5566C007A8473 /* MXSHomeCell.h */,
+				703B63C81FB5566C007A8473 /* MXSHomeCell.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -527,6 +534,7 @@
 		7042C8B01E5BEFA500B41BA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				703B63CA1FB5B252007A8473 /* 9205.mp3 */,
 				701FC39E1E974A3000B863E0 /* nuoni.json */,
 				7042C8B11E5BEFA500B41BA4 /* Info.plist */,
 				7042C8D21E5C2A9900B41BA4 /* MXS-Prefix.pch */,
@@ -884,6 +892,7 @@
 			files = (
 				70510F7A1DAB3B9D0097E093 /* Info.plist in Resources */,
 				705B4A271D643701006273E7 /* Assets.xcassets in Resources */,
+				703B63CB1FB5B252007A8473 /* 9205.mp3 in Resources */,
 				70510F961DAB3B9D0097E093 /* MJRefresh.bundle in Resources */,
 				701FC39F1E974A3000B863E0 /* nuoni.json in Resources */,
 			);
@@ -909,6 +918,7 @@
 				70510F941DAB3B9D0097E093 /* MJRefreshNormalHeader.m in Sources */,
 				70510F7C1DAB3B9D0097E093 /* MASConstraint.m in Sources */,
 				70510FAB1DAB3B9D0097E093 /* UIButton+WebCache.m in Sources */,
+				703B63C91FB5566C007A8473 /* MXSHomeCell.m in Sources */,
 				70510F841DAB3B9D0097E093 /* ViewController+MASAdditions.m in Sources */,
 				703FF0751FAAF801007F2115 /* MXSDelegateBase.m in Sources */,
 				70510FA31DAB3B9D0097E093 /* NSData+ImageContentType.m in Sources */,

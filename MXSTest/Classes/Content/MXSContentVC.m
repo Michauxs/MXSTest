@@ -10,9 +10,19 @@
 #import <objc/runtime.h>
 #import "MXSWebDianpingHandle.h"
 
+#import<AudioToolbox/AudioToolbox.h>
+
+static void completionCallback(SystemSoundID mySSID)
+{
+	// Play again after sound play completion
+//	AudioServicesPlaySystemSound(mySSID);
+}
+
 @implementation MXSContentVC {
 	
 }
+
+SystemSoundID ditaVoice;
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
@@ -49,6 +59,16 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 	
 //	[self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+	
+	// 1. 定义要播放的音频文件的URL
+	NSURL *voiceURL = [[NSBundle mainBundle]URLForResource:@"9205" withExtension:@"mp3"];
+	// 2. 注册音频文件（第一个参数是音频文件的URL 第二个参数是音频文件的SystemSoundID）
+	AudioServicesCreateSystemSoundID((__bridge CFURLRef)(voiceURL),&ditaVoice);
+	// 3. 为crash播放完成绑定回调函数
+	AudioServicesAddSystemSoundCompletion(ditaVoice,NULL,NULL,(void*)completionCallback,NULL);
+	// 4. 播放 ditaVoice 注册的音频 并控制手机震动
+	AudioServicesPlayAlertSound(ditaVoice);
+	
 	
 	UITouch *touch = [[touches allObjects] firstObject];
 	
