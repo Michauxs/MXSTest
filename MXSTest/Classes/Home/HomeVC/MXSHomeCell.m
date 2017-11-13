@@ -38,7 +38,7 @@
 			make.bottom.equalTo(btmLine.mas_top);
 			make.left.equalTo(self);
 			make.right.equalTo(self);
-			make.height.mas_equalTo(1);
+			make.height.mas_equalTo(0.5);
 		}];
 		
 		titleLabel = [Tools creatUILabelWithText:@"Title" andTextColor:[Tools whiteColor] andFontSize:314.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];

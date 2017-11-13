@@ -20,22 +20,22 @@
 		702D252F1E81384F0068F025 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D252A1E81384F0068F025 /* TFHpple.m */; };
 		702D25301E81384F0068F025 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D252C1E81384F0068F025 /* TFHppleElement.m */; };
 		702D25311E81384F0068F025 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D252E1E81384F0068F025 /* XPathQuery.m */; };
+		7032EF4B1FB99C4000D652E0 /* MXSHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7032EF481FB99C4000D652E0 /* MXSHomeCell.m */; };
+		7032EF4C1FB99C4000D652E0 /* MXSHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7032EF4A1FB99C4000D652E0 /* MXSHomeVC.m */; };
+		7032EF501FB99C7400D652E0 /* MXSNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7032EF4F1FB99C7400D652E0 /* MXSNoteVC.m */; };
 		703932221E83F46400FAFF17 /* NodeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 703932211E83F46400FAFF17 /* NodeHandle.m */; };
-		703B63C91FB5566C007A8473 /* MXSHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 703B63C81FB5566C007A8473 /* MXSHomeCell.m */; };
 		703B63CB1FB5B252007A8473 /* 9205.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 703B63CA1FB5B252007A8473 /* 9205.mp3 */; };
 		703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703CC96F1E85229A005099D6 /* MXSProfileVC.m */; };
 		703FF0751FAAF801007F2115 /* MXSDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF06F1FAAF801007F2115 /* MXSDelegateBase.m */; };
 		703FF0761FAAF801007F2115 /* MXSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0721FAAF801007F2115 /* MXSTableView.m */; };
 		703FF0771FAAF801007F2115 /* MXSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0741FAAF801007F2115 /* MXSTableViewCell.m */; };
 		703FF0891FAB0397007F2115 /* MXSVCExchangeCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0881FAB0397007F2115 /* MXSVCExchangeCmd.m */; };
-		703FF08A1FAB160B007F2115 /* MXSVCExchangeCmd.h in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0871FAB0397007F2115 /* MXSVCExchangeCmd.h */; };
 		703FF08D1FAB171B007F2115 /* MXSAnimetionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF08C1FAB171B007F2115 /* MXSAnimetionVC.m */; };
 		7042C8AB1E5BEE8900B41BA4 /* MXSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8AA1E5BEE8900B41BA4 /* MXSTabBarController.m */; };
 		7042C8BC1E5BEFF700B41BA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8B81E5BEFF700B41BA4 /* AppDelegate.m */; };
 		7042C8BD1E5BEFF700B41BA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8B91E5BEFF700B41BA4 /* main.m */; };
 		7042C8BE1E5BEFF700B41BA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8BB1E5BEFF700B41BA4 /* ViewController.m */; };
 		7042C8C21E5BF09000B41BA4 /* MXSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8C11E5BF09000B41BA4 /* MXSViewController.m */; };
-		7042C8CB1E5BF16000B41BA4 /* MXSHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8CA1E5BF16000B41BA4 /* MXSHomeVC.m */; };
 		7042C8CE1E5BF21A00B41BA4 /* MXSContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8CD1E5BF21A00B41BA4 /* MXSContentVC.m */; };
 		7042C8D11E5BF23800B41BA4 /* MXSSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8D01E5BF23800B41BA4 /* MXSSettingVC.m */; };
 		704B25F51FB43E1500A6899B /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 704B25F31FB43E1500A6899B /* HistoryModel.xcdatamodeld */; };
@@ -45,9 +45,6 @@
 		704B26081FB45F6E00A6899B /* History+ContextOpt.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B26071FB45F6E00A6899B /* History+ContextOpt.m */; };
 		704B260B1FB462C800A6899B /* MXSModelCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B260A1FB462C800A6899B /* MXSModelCmd.m */; };
 		704B26121FB4703E00A6899B /* History+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B26101FB4703E00A6899B /* History+CoreDataProperties.m */; };
-		704B26131FB4785C00A6899B /* History+CoreDataProperties.h in Sources */ = {isa = PBXBuildFile; fileRef = 704B26111FB4703E00A6899B /* History+CoreDataProperties.h */; };
-		704B26141FB4785C00A6899B /* History+CoreDataClass.h in Sources */ = {isa = PBXBuildFile; fileRef = 704B25FA1FB4472E00A6899B /* History+CoreDataClass.h */; };
-		704B26151FB4785C00A6899B /* History+ContextOpt.h in Sources */ = {isa = PBXBuildFile; fileRef = 704B26061FB45F6E00A6899B /* History+ContextOpt.h */; };
 		70510F7A1DAB3B9D0097E093 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70510EE61DAB3B9D0097E093 /* Info.plist */; };
 		70510F7B1DAB3B9D0097E093 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510EE81DAB3B9D0097E093 /* MASCompositeConstraint.m */; };
 		70510F7C1DAB3B9D0097E093 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510EEB1DAB3B9D0097E093 /* MASConstraint.m */; };
@@ -135,10 +132,14 @@
 		702D252C1E81384F0068F025 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		702D252D1E81384F0068F025 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		702D252E1E81384F0068F025 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		7032EF471FB99C4000D652E0 /* MXSHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSHomeCell.h; sourceTree = "<group>"; };
+		7032EF481FB99C4000D652E0 /* MXSHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSHomeCell.m; sourceTree = "<group>"; };
+		7032EF491FB99C4000D652E0 /* MXSHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSHomeVC.h; sourceTree = "<group>"; };
+		7032EF4A1FB99C4000D652E0 /* MXSHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSHomeVC.m; sourceTree = "<group>"; };
+		7032EF4E1FB99C7400D652E0 /* MXSNoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSNoteVC.h; sourceTree = "<group>"; };
+		7032EF4F1FB99C7400D652E0 /* MXSNoteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSNoteVC.m; sourceTree = "<group>"; };
 		703932201E83F46400FAFF17 /* NodeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeHandle.h; sourceTree = "<group>"; };
 		703932211E83F46400FAFF17 /* NodeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeHandle.m; sourceTree = "<group>"; };
-		703B63C71FB5566C007A8473 /* MXSHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSHomeCell.h; sourceTree = "<group>"; };
-		703B63C81FB5566C007A8473 /* MXSHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSHomeCell.m; sourceTree = "<group>"; };
 		703B63CA1FB5B252007A8473 /* 9205.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 9205.mp3; sourceTree = "<group>"; };
 		703CC96E1E85229A005099D6 /* MXSProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSProfileVC.h; sourceTree = "<group>"; };
 		703CC96F1E85229A005099D6 /* MXSProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSProfileVC.m; sourceTree = "<group>"; };
@@ -162,8 +163,6 @@
 		7042C8BB1E5BEFF700B41BA4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7042C8C01E5BF08F00B41BA4 /* MXSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSViewController.h; sourceTree = "<group>"; };
 		7042C8C11E5BF09000B41BA4 /* MXSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSViewController.m; sourceTree = "<group>"; };
-		7042C8C91E5BF16000B41BA4 /* MXSHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSHomeVC.h; sourceTree = "<group>"; };
-		7042C8CA1E5BF16000B41BA4 /* MXSHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSHomeVC.m; sourceTree = "<group>"; };
 		7042C8CC1E5BF21A00B41BA4 /* MXSContentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSContentVC.h; sourceTree = "<group>"; };
 		7042C8CD1E5BF21A00B41BA4 /* MXSContentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSContentVC.m; sourceTree = "<group>"; };
 		7042C8CF1E5BF23800B41BA4 /* MXSSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSSettingVC.h; sourceTree = "<group>"; };
@@ -382,6 +381,26 @@
 			path = Hpple;
 			sourceTree = "<group>";
 		};
+		7032EF461FB99C4000D652E0 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				7032EF471FB99C4000D652E0 /* MXSHomeCell.h */,
+				7032EF481FB99C4000D652E0 /* MXSHomeCell.m */,
+				7032EF491FB99C4000D652E0 /* MXSHomeVC.h */,
+				7032EF4A1FB99C4000D652E0 /* MXSHomeVC.m */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		7032EF4D1FB99C5E00D652E0 /* NoteVC */ = {
+			isa = PBXGroup;
+			children = (
+				7032EF4E1FB99C7400D652E0 /* MXSNoteVC.h */,
+				7032EF4F1FB99C7400D652E0 /* MXSNoteVC.m */,
+			);
+			path = NoteVC;
+			sourceTree = "<group>";
+		};
 		7039321F1E83F44500FAFF17 /* NodeHandle */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,10 +531,8 @@
 		7042C8AE1E5BEEF300B41BA4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7042C8C91E5BF16000B41BA4 /* MXSHomeVC.h */,
-				7042C8CA1E5BF16000B41BA4 /* MXSHomeVC.m */,
-				703B63C71FB5566C007A8473 /* MXSHomeCell.h */,
-				703B63C81FB5566C007A8473 /* MXSHomeCell.m */,
+				7032EF4D1FB99C5E00D652E0 /* NoteVC */,
+				7032EF461FB99C4000D652E0 /* HomeVC */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -857,7 +874,7 @@
 		705B4A0C1D643701006273E7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Alfred Yang";
 				TargetAttributes = {
 					705B4A131D643701006273E7 = {
@@ -905,11 +922,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				704B26131FB4785C00A6899B /* History+CoreDataProperties.h in Sources */,
-				704B26141FB4785C00A6899B /* History+CoreDataClass.h in Sources */,
-				704B26151FB4785C00A6899B /* History+ContextOpt.h in Sources */,
-				703FF08A1FAB160B007F2115 /* MXSVCExchangeCmd.h in Sources */,
-				7042C8CB1E5BF16000B41BA4 /* MXSHomeVC.m in Sources */,
 				70510F8E1DAB3B9D0097E093 /* BSRefreshAnimationFooter.m in Sources */,
 				70510F7D1DAB3B9D0097E093 /* MASConstraintMaker.m in Sources */,
 				70510FB41DAB3B9D0097E093 /* UINavigationController+Retro.m in Sources */,
@@ -918,7 +930,6 @@
 				70510F941DAB3B9D0097E093 /* MJRefreshNormalHeader.m in Sources */,
 				70510F7C1DAB3B9D0097E093 /* MASConstraint.m in Sources */,
 				70510FAB1DAB3B9D0097E093 /* UIButton+WebCache.m in Sources */,
-				703B63C91FB5566C007A8473 /* MXSHomeCell.m in Sources */,
 				70510F841DAB3B9D0097E093 /* ViewController+MASAdditions.m in Sources */,
 				703FF0751FAAF801007F2115 /* MXSDelegateBase.m in Sources */,
 				70510FA31DAB3B9D0097E093 /* NSData+ImageContentType.m in Sources */,
@@ -936,6 +947,7 @@
 				70510FA91DAB3B9D0097E093 /* SDWebImageManager.m in Sources */,
 				704B25F51FB43E1500A6899B /* HistoryModel.xcdatamodeld in Sources */,
 				70510FA21DAB3B9D0097E093 /* MKAnnotationView+WebCache.m in Sources */,
+				7032EF4B1FB99C4000D652E0 /* MXSHomeCell.m in Sources */,
 				702D25301E81384F0068F025 /* TFHppleElement.m in Sources */,
 				7042C8BD1E5BEFF700B41BA4 /* main.m in Sources */,
 				70510F901DAB3B9D0097E093 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -963,6 +975,7 @@
 				704B26081FB45F6E00A6899B /* History+ContextOpt.m in Sources */,
 				70510F7F1DAB3B9D0097E093 /* MASViewAttribute.m in Sources */,
 				701A91AA1E88B9E3008EC8E8 /* MXSCity58Handle.m in Sources */,
+				7032EF501FB99C7400D652E0 /* MXSNoteVC.m in Sources */,
 				704B260B1FB462C800A6899B /* MXSModelCmd.m in Sources */,
 				70510F8C1DAB3B9D0097E093 /* MJRefreshAutoNormalFooter.m in Sources */,
 				70510F831DAB3B9D0097E093 /* View+MASAdditions.m in Sources */,
@@ -990,6 +1003,7 @@
 				70DCB3431E8F904500E4B0D0 /* MXSNuomiHandle.m in Sources */,
 				70510F861DAB3B9D0097E093 /* MJRefreshAutoFooter.m in Sources */,
 				70510FA71DAB3B9D0097E093 /* SDWebImageDownloader.m in Sources */,
+				7032EF4C1FB99C4000D652E0 /* MXSHomeVC.m in Sources */,
 				70E1FB441E95E637003D86BE /* MXSBaseHandle.m in Sources */,
 				70510F821DAB3B9D0097E093 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				70510F9A1DAB3B9D0097E093 /* UIView+MJExtension.m in Sources */,
@@ -1012,14 +1026,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1058,14 +1078,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

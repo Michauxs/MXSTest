@@ -16,17 +16,20 @@
 	
 	MXSTableView *showTableView;
 	MXSDelegateBase *showDlg;
+	
+	UIScrollView *showView;
+	UILabel *graduallyLabel;
+	UIView *btmLine;
+	
+	NSTimer *timer;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-//	UIView *BG = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-//	BG.layer.
-	//	[self.view addSubview:BG];
 	self.view.layer.contents = (id)IMGRESOURE(@"circute").CGImage;
 	
-	titleArr = @[@"NOTIFY", @"APPEND", @"ENUM", @"REMOVE", @"SEARCH"];
+	titleArr = @[@"NOTIFY", @"APPEND", @"ENUM", @"REMOVE", @"SEARCH", @"NEXT", @"NOTEBOOK"];
 	
 	actTableView = [[MXSTableView alloc] initWithFrame:CGRectMake(0, 0, TABLE_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain andDelegate:nil];
 	[self.view addSubview:actTableView];
@@ -34,9 +37,35 @@
 	actTableView.dlg.dlgData = titleArr;
 	actTableView.backgroundColor = [UIColor clearColor];
 	
+	graduallyLabel = [Tools creatUILabelWithText:@"" andTextColor:[Tools themeColor] andFontSize:315 andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+	[self.view addSubview:graduallyLabel];
+//	graduallyLabel.frame = CGRectMake(TABLE_WIDTH+30, 0, SCREEN_WIDTH-(TABLE_WIDTH+30), SCREEN_HEIGHT);
+	[graduallyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.top.equalTo(self.view).offset(50);
+		make.left.equalTo(actTableView.mas_right).offset(30);
+	}];
+	btmLine = [[UIView alloc] init];
+	btmLine.backgroundColor = [Tools themeColor];
+	[self.view addSubview:btmLine];
+	[btmLine mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.top.equalTo(graduallyLabel.mas_bottom).offset(10);
+		make.left.equalTo(graduallyLabel);
+		make.right.equalTo(self.view);
+		make.height.mas_equalTo(0.5);
+	}];
+	btmLine.hidden = YES;
 }
 
 #pragma mark - actions
+- (id)NOTEBOOKClick {
+	[[MXSVCExchangeCmd shared] fromVC:self pushVC:@"MXSNoteVC" withArgs:nil];
+	return nil;
+}
+- (id)NEXTClick {
+	
+	return nil;
+}
+
 - (id)APPENDClick {
 	NSDictionary *data = @{kMXSHistoryModelArgsSender:@"zhagsan",
 						   kMXSHistoryModelArgsReceiver:@"lisi",
@@ -52,7 +81,26 @@
 - (id)ENUMClick {
 	NSArray *arr = [[MXSModelCmd shared] enumAllData:@""];
 	NSLog(@"data : %@", arr);
+	if (arr.count == 0) {
+		return nil;
+	}
+	NSDictionary *info_m = [arr firstObject];
+	NSString *m = [NSString stringWithFormat:@"发送者：%@\n接受者：%@\n消息内容：%@",[info_m objectForKey:kMXSHistoryModelArgsSender],[info_m objectForKey:kMXSHistoryModelArgsReceiver],[info_m objectForKey:kMXSHistoryModelArgsMessageText]];
+	graduallyLabel.text = @"";
+	btmLine.hidden = NO;
+	timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerRun:) userInfo:m repeats:YES];
+	[timer fire];
+	
 	return nil;
+}
+
+- (void)timerRun:(NSTimer*)time {
+	NSString *msg = [time userInfo];
+	if (graduallyLabel.text.length == msg.length) {
+		[timer invalidate];
+		return;
+	}
+	graduallyLabel.text = [msg substringToIndex:graduallyLabel.text.length + 1];
 }
 
 - (id)REMOVEClick {
@@ -120,22 +168,5 @@
 	
 	return nil;
 }
-
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//	
-//	[self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-//	
-//	UITouch *touch = [[touches allObjects] firstObject];
-//	CGPoint centerP = [touch locationInView:[touch view]];
-//	
-//	NSString *title = @"You have a new message 002";
-//	UILabel *tipsLabel = [Tools creatUILabelWithText:title andTextColor:[Tools themeColor] andFontSize:18.f andBackgroundColor:nil andTextAlignment:1];
-//	[self.view addSubview:tipsLabel];
-//	tipsLabel.bounds = CGRectMake(0, 0, 300, 30);
-//	tipsLabel.center = centerP;
-//	
-//	MXSViewController *actVC = [self.tabBarController.viewControllers objectAtIndex:1];
-//	actVC.tabBarItem.badgeValue = @"2";
-//}
 
 @end

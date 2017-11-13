@@ -14,6 +14,14 @@
 
 @implementation MXSViewController
 
+- (instancetype)init {
+	self = [super init];
+	if (self) {
+		
+	}
+	return self;
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.automaticallyAdjustsScrollViewInsets = NO;
