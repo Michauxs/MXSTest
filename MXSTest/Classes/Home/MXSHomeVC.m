@@ -37,34 +37,35 @@
 }
 
 #pragma mark - actions
-- (void)APPENDClick {
+- (id)APPENDClick {
 	NSDictionary *data = @{kMXSHistoryModelArgsSender:@"zhagsan",
 						   kMXSHistoryModelArgsReceiver:@"lisi",
 						   kMXSHistoryModelArgsMessageText:@"hello,world",
 						   kMXSHistoryModelArgsIsRead:[NSNumber numberWithBool:NO],
 						   kMXSHistoryModelArgsDateSend:[NSNumber numberWithDouble:[NSDate date].timeIntervalSince1970]
 						   };
-	MXSHistoryModel *his = [MXSHistoryModel shared];
-	[History appendDataInContext:his.doc.managedObjectContext withData:data];
+	
+	[[MXSModelCmd shared] appendData:@"" withData:data];
+	return nil;
 }
 
-- (void)ENUMClick {
-	MXSHistoryModel *his = [MXSHistoryModel shared];
-	NSArray *arr = [History enumAllDataInContext:his.doc.managedObjectContext];
+- (id)ENUMClick {
+	NSArray *arr = [[MXSModelCmd shared] enumAllData:@""];
 	NSLog(@"data : %@", arr);
+	return nil;
 }
 
-- (void)REMOVEClick {
-	MXSHistoryModel *his = [MXSHistoryModel shared];
-	[History removeAllDataInContext:his.doc.managedObjectContext];
+- (id)REMOVEClick {
+	[[MXSModelCmd shared] removeAllData:@""];
+	return nil;
 }
 
-- (void)SEARCHClick {
-	MXSHistoryModel *his = [MXSHistoryModel shared];
-	[History removeAllDataInContext:his.doc.managedObjectContext];
+- (id)SEARCHClick {
+	[[MXSModelCmd shared] searchData:@"" withKV:@{}];
+	return nil;
 }
 
-- (void)NOTIFYClick {
+- (id)NOTIFYClick {
 	UILocalNotification *l_n = [[UILocalNotification alloc] init];
 	l_n.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
 	l_n.soundName = UILocalNotificationDefaultSoundName;
@@ -73,6 +74,7 @@
 	l_n.alertAction = @"Action";
 	l_n.userInfo = @{@"key":@"mxs_notify_demo"};
 	[[UIApplication sharedApplication] scheduleLocalNotification:l_n];
+	return nil;
 }
 
 - (void)cancelTheOneNotify {
@@ -89,11 +91,9 @@
 			break;
 		}
 	}
-	
 }
 
 - (void)cancelAllLocalNotifies {
-	
 	//取消所有的本地通知
 	[[UIApplication sharedApplication] cancelAllLocalNotifications];
 }
@@ -104,14 +104,14 @@
 	Method m = class_getInstanceMethod([self class], sel);
 
 	IMP imp = method_getImplementation(m);
-	id (*func)(id, SEL) = (id (*)(id, SEL))imp;
-	func(self, sel);
+	id (*func)(id, SEL, ...) = (id (*)(id, SEL, ...))imp;
+	func(self, sel, nil);
 }
 
 #pragma mark - dlg notify
 - (id)tableViewDidSelectRowAtIndexPath:(id)args {
 	NSNumber *row = [args objectForKey:@"row"];
-	NSLog(@"%ld", row.integerValue);
+	
 	[self didSelectedFunc:[[titleArr objectAtIndex:row.intValue] stringByAppendingString:@"Click"]];
 	return nil;
 }

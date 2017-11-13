@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface MXSModel : NSObject
+@interface MXSModelFacade : NSObject
 
 @property (nonatomic, strong) UIManagedDocument *doc;
 

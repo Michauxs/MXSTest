@@ -73,10 +73,10 @@
 		NSLog(@"Badge Nofitication type is allowed");
 	}
 	if (notificationSettings.types & UIUserNotificationTypeAlert) {
-		NSLog(@"Alert Notfication type is allowed");
+		NSLog(@"Alert Notification type is allowed");
 	}
 	if (notificationSettings.types & UIUserNotificationTypeSound) {
-		NSLog(@"Sound Notfication type is allowed");
+		NSLog(@"Sound Notification type is allowed");
 	}
 }
 

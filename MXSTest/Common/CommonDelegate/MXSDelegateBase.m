@@ -56,8 +56,9 @@
 	return @"删除";
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	id args = [NSNumber numberWithInteger:indexPath.row];
+	id args = @{@"row":[NSNumber numberWithInteger:indexPath.row],
+				@"dlg":self
+				};
 	
 	SEL sel = NSSelectorFromString(@"cellDeleteFromTable:");
 	Method m = class_getInstanceMethod([_controller class], sel);

@@ -1,15 +1,13 @@
 //
-//  MXSHistoryModel.h
+//  MXSModel.m
 //  MXSTest
 //
 //  Created by Alfred Yang on 9/11/17.
 //  Copyright © 2017年 Alfred Yang. All rights reserved.
 //
 
-#import "MXSModel.h"
+#import "MXSModelFacade.h"
 
-@interface MXSHistoryModel : MXSModel
-
-+ (instancetype)shared;
+@implementation MXSModelFacade
 
 @end

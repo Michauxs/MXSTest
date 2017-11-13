@@ -38,9 +38,12 @@ static NSString *const ENTITY_NAME = @"History";
 		return nil;
 }
 
-+ (NSArray*)searchDataInContext:(NSManagedObjectContext*)context withSender:(id)sender {
++ (NSArray*)searchDataInContext:(NSManagedObjectContext*)context withKV:(NSDictionary*)args {
+	NSString *k = [args objectForKey:@"key"];
+	NSString *v = [args objectForKey:@"value"];
+	
 	NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:ENTITY_NAME];
-	request.predicate = [NSPredicate predicateWithFormat:@"sender = %@", sender];
+	request.predicate = [NSPredicate predicateWithFormat:@"%@ = %@", k, v];
 	
 	NSError* err = nil;
 	NSArray* matches = [context executeFetchRequest:request error:&err];
@@ -50,9 +53,12 @@ static NSString *const ENTITY_NAME = @"History";
 		return nil;
 }
 
-+ (void)removeDataInContext:(NSManagedObjectContext*)context withMate:(id)mate {
-	NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:ENTITY_NAME];
-	request.predicate = [NSPredicate predicateWithFormat:@"sender = %@", mate];
++ (void)removeDataInContext:(NSManagedObjectContext*)context withKV:(NSDictionary*)args {
+	NSString *k = [args objectForKey:@"key"];
+	NSString *v = [args objectForKey:@"value"];
+	
+	NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:ENTITY_NAME];
+	request.predicate = [NSPredicate predicateWithFormat:@"%@ = %@", k, v];
 	
 	NSError *err = nil;
 	NSArray *matches = [context executeFetchRequest:request error:&err];

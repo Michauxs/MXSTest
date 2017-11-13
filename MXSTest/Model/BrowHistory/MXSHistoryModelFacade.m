@@ -6,28 +6,17 @@
 //  Copyright © 2017年 Alfred Yang. All rights reserved.
 //
 
-#import "MXSHistoryModel.h"
+#import "MXSHistoryModelFacade.h"
 
 static NSString *const LOCALDB_HISTORY_DATA = @"history_data.sqlite";
 
-@implementation MXSHistoryModel
+@implementation MXSHistoryModelFacade
 
 @synthesize doc = _doc;
 
-+ (instancetype)shared {
-	static MXSHistoryModel* instance = nil;
-	if (instance == nil) {
-		static dispatch_once_t onceToken;
-		dispatch_once(&onceToken, ^{
-			instance = [[self alloc] init];
-		});
-	}
-	return instance;
-}
-
-- (UIManagedDocument*)doc {
-	
-	if (!_doc) {
+- (instancetype)init {
+	self = [super init];
+	if (self) {
 		NSString *docStr = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
 		NSURL *url = [NSURL fileURLWithPath:[docStr stringByAppendingPathComponent:LOCALDB_HISTORY_DATA]];
 		_doc = [[UIManagedDocument alloc] initWithFileURL:url];
@@ -52,12 +41,9 @@ static NSString *const LOCALDB_HISTORY_DATA = @"history_data.sqlite";
 		} else {
 			
 		}
-		
 	}
-	return _doc;
+	return self;
 }
-
-
 
 - (void)enumDataFromLocalDB:(UIManagedDocument*)document {
 	
@@ -65,7 +51,7 @@ static NSString *const LOCALDB_HISTORY_DATA = @"history_data.sqlite";
 		
 		dispatch_async(dispatch_get_main_queue(), ^(void){
 			[document.managedObjectContext performBlock: ^(void){
-				NSLog(@"iCloud save complete");
+				NSLog(@"exception complete");
 				
 //				NSMutableDictionary* notify = [[NSMutableDictionary alloc] init];
 //				[notify setValue:kAYNotifyActionKeyNotify forKey:kAYNotifyActionKey];
