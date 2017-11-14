@@ -26,6 +26,7 @@
 		703932221E83F46400FAFF17 /* NodeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 703932211E83F46400FAFF17 /* NodeHandle.m */; };
 		703B63CB1FB5B252007A8473 /* 9205.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 703B63CA1FB5B252007A8473 /* 9205.mp3 */; };
 		703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703CC96F1E85229A005099D6 /* MXSProfileVC.m */; };
+		703DA8BF1FBA99A90059A632 /* MXSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DA8BE1FBA99A90059A632 /* MXSNavigationBar.m */; };
 		703FF0751FAAF801007F2115 /* MXSDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF06F1FAAF801007F2115 /* MXSDelegateBase.m */; };
 		703FF0761FAAF801007F2115 /* MXSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0721FAAF801007F2115 /* MXSTableView.m */; };
 		703FF0771FAAF801007F2115 /* MXSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0741FAAF801007F2115 /* MXSTableViewCell.m */; };
@@ -143,6 +144,8 @@
 		703B63CA1FB5B252007A8473 /* 9205.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 9205.mp3; sourceTree = "<group>"; };
 		703CC96E1E85229A005099D6 /* MXSProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSProfileVC.h; sourceTree = "<group>"; };
 		703CC96F1E85229A005099D6 /* MXSProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSProfileVC.m; sourceTree = "<group>"; };
+		703DA8BD1FBA99A90059A632 /* MXSNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSNavigationBar.h; sourceTree = "<group>"; };
+		703DA8BE1FBA99A90059A632 /* MXSNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSNavigationBar.m; sourceTree = "<group>"; };
 		703FF06E1FAAF801007F2115 /* MXSDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSDelegateBase.h; sourceTree = "<group>"; };
 		703FF06F1FAAF801007F2115 /* MXSDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSDelegateBase.m; sourceTree = "<group>"; };
 		703FF0711FAAF801007F2115 /* MXSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTableView.h; sourceTree = "<group>"; };
@@ -460,6 +463,8 @@
 				703FF0721FAAF801007F2115 /* MXSTableView.m */,
 				703FF0731FAAF801007F2115 /* MXSTableViewCell.h */,
 				703FF0741FAAF801007F2115 /* MXSTableViewCell.m */,
+				703DA8BD1FBA99A90059A632 /* MXSNavigationBar.h */,
+				703DA8BE1FBA99A90059A632 /* MXSNavigationBar.m */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -982,6 +987,7 @@
 				703FF0761FAAF801007F2115 /* MXSTableView.m in Sources */,
 				70510FAE1DAB3B9D0097E093 /* UIImage+WebP.m in Sources */,
 				70510F871DAB3B9D0097E093 /* MJRefreshBackFooter.m in Sources */,
+				703DA8BF1FBA99A90059A632 /* MXSNavigationBar.m in Sources */,
 				70510FAD1DAB3B9D0097E093 /* UIImage+MultiFormat.m in Sources */,
 				701FC39D1E973C9100B863E0 /* MXSWebCityAroundHandle.m in Sources */,
 				704B26051FB4508700A6899B /* MXSHistoryModelFacade.m in Sources */,
