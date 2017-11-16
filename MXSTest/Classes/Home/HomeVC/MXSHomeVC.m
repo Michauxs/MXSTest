@@ -36,6 +36,11 @@
 	[actTableView registerClsaaWithCellName:@"MXSHomeCell" RowHeight:64 andController:self];
 	actTableView.dlg.dlgData = titleArr;
 	actTableView.backgroundColor = [UIColor clearColor];
+	[actTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.left.equalTo(self.view);
+		make.top.equalTo(self.view);
+		make.size.mas_equalTo(CGSizeMake(TABLE_WIDTH, SCREEN_HEIGHT));
+	}];
 	
 	graduallyLabel = [Tools creatUILabelWithText:@"" andTextColor:[Tools themeColor] andFontSize:315 andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
 	[self.view addSubview:graduallyLabel];
