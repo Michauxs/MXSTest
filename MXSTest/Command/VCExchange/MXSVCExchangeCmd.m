@@ -76,6 +76,7 @@ static MXSVCExchangeCmd *_instance;
 	for (MXSViewController *iter in ((MXSViewController*)f_vc).navigationController.viewControllers) {
 		if ([iter isKindOfClass:[d_vc class]]) {
 			des = iter;
+			break;
 		}
 	}
 	[[(MXSViewController*)f_vc navigationController] popToViewController:des animated:YES];
