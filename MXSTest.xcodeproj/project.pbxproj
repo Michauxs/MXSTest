@@ -96,8 +96,15 @@
 		70510FB01DAB3B9D0097E093 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F631DAB3B9D0097E093 /* UIImageView+WebCache.m */; };
 		70510FB11DAB3B9D0097E093 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F651DAB3B9D0097E093 /* UIView+WebCacheOperation.m */; };
 		70510FB21DAB3B9D0097E093 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F691DAB3B9D0097E093 /* Tools.m */; };
-		70510FB31DAB3B9D0097E093 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F6B1DAB3B9D0097E093 /* UIImage+fixOrientation.m */; };
-		70510FB41DAB3B9D0097E093 /* UINavigationController+Retro.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F6D1DAB3B9D0097E093 /* UINavigationController+Retro.m */; };
+		705AE9F21FDA914000447C0E /* MXShowTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AE9F11FDA914000447C0E /* MXShowTableCell.m */; };
+		705AEA001FDA91D700447C0E /* UIButton+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AE9F51FDA91D600447C0E /* UIButton+Factory.m */; };
+		705AEA011FDA91D700447C0E /* UIColor+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AE9F71FDA91D600447C0E /* UIColor+Custom.m */; };
+		705AEA021FDA91D700447C0E /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AE9F91FDA91D600447C0E /* UIImage+fixOrientation.m */; };
+		705AEA031FDA91D700447C0E /* UILabel+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AE9FB1FDA91D600447C0E /* UILabel+Factory.m */; };
+		705AEA041FDA91D700447C0E /* UINavigationController+Retro.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AE9FD1FDA91D600447C0E /* UINavigationController+Retro.m */; };
+		705AEA051FDA91D700447C0E /* UIView+RunTimeCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AE9FF1FDA91D600447C0E /* UIView+RunTimeCmd.m */; };
+		705AEA081FDA97BE00447C0E /* MXSShowImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AEA071FDA97BE00447C0E /* MXSShowImageVC.m */; };
+		705AEA0B1FDA9B2600447C0E /* MXSProfileTDlg.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AEA0A1FDA9B2600447C0E /* MXSProfileTDlg.m */; };
 		705B4A271D643701006273E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705B4A261D643701006273E7 /* Assets.xcassets */; };
 		70DCB3431E8F904500E4B0D0 /* MXSNuomiHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DCB3421E8F904500E4B0D0 /* MXSNuomiHandle.m */; };
 		70E1FB411E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1FB401E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m */; };
@@ -291,10 +298,24 @@
 		70510F671DAB3B9D0097E093 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		70510F681DAB3B9D0097E093 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		70510F691DAB3B9D0097E093 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
-		70510F6A1DAB3B9D0097E093 /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
-		70510F6B1DAB3B9D0097E093 /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
-		70510F6C1DAB3B9D0097E093 /* UINavigationController+Retro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Retro.h"; sourceTree = "<group>"; };
-		70510F6D1DAB3B9D0097E093 /* UINavigationController+Retro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Retro.m"; sourceTree = "<group>"; };
+		705AE9F01FDA914000447C0E /* MXShowTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXShowTableCell.h; sourceTree = "<group>"; };
+		705AE9F11FDA914000447C0E /* MXShowTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXShowTableCell.m; sourceTree = "<group>"; };
+		705AE9F41FDA91D600447C0E /* UIButton+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Factory.h"; sourceTree = "<group>"; };
+		705AE9F51FDA91D600447C0E /* UIButton+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Factory.m"; sourceTree = "<group>"; };
+		705AE9F61FDA91D600447C0E /* UIColor+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Custom.h"; sourceTree = "<group>"; };
+		705AE9F71FDA91D600447C0E /* UIColor+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Custom.m"; sourceTree = "<group>"; };
+		705AE9F81FDA91D600447C0E /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
+		705AE9F91FDA91D600447C0E /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
+		705AE9FA1FDA91D600447C0E /* UILabel+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Factory.h"; sourceTree = "<group>"; };
+		705AE9FB1FDA91D600447C0E /* UILabel+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Factory.m"; sourceTree = "<group>"; };
+		705AE9FC1FDA91D600447C0E /* UINavigationController+Retro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Retro.h"; sourceTree = "<group>"; };
+		705AE9FD1FDA91D600447C0E /* UINavigationController+Retro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Retro.m"; sourceTree = "<group>"; };
+		705AE9FE1FDA91D600447C0E /* UIView+RunTimeCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RunTimeCmd.h"; sourceTree = "<group>"; };
+		705AE9FF1FDA91D600447C0E /* UIView+RunTimeCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RunTimeCmd.m"; sourceTree = "<group>"; };
+		705AEA061FDA97BE00447C0E /* MXSShowImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSShowImageVC.h; sourceTree = "<group>"; };
+		705AEA071FDA97BE00447C0E /* MXSShowImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSShowImageVC.m; sourceTree = "<group>"; };
+		705AEA091FDA9B2600447C0E /* MXSProfileTDlg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSProfileTDlg.h; sourceTree = "<group>"; };
+		705AEA0A1FDA9B2600447C0E /* MXSProfileTDlg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSProfileTDlg.m; sourceTree = "<group>"; };
 		705B4A141D643701006273E7 /* MXSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705B4A261D643701006273E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70DCB3411E8F904500E4B0D0 /* MXSNuomiHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSNuomiHandle.h; sourceTree = "<group>"; };
@@ -434,6 +455,12 @@
 			children = (
 				703CC96E1E85229A005099D6 /* MXSProfileVC.h */,
 				703CC96F1E85229A005099D6 /* MXSProfileVC.m */,
+				705AE9F01FDA914000447C0E /* MXShowTableCell.h */,
+				705AE9F11FDA914000447C0E /* MXShowTableCell.m */,
+				705AEA061FDA97BE00447C0E /* MXSShowImageVC.h */,
+				705AEA071FDA97BE00447C0E /* MXSShowImageVC.m */,
+				705AEA091FDA9B2600447C0E /* MXSProfileTDlg.h */,
+				705AEA0A1FDA9B2600447C0E /* MXSProfileTDlg.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -604,6 +631,7 @@
 		70510EE41DAB3B9D0097E093 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				705AE9F31FDA91D600447C0E /* Extension */,
 				70F229B41E8CA7A600065B5F /* MXSFileHandle */,
 				7039321F1E83F44500FAFF17 /* NodeHandle */,
 				702D25281E81384F0068F025 /* Hpple */,
@@ -802,12 +830,27 @@
 				70510F671DAB3B9D0097E093 /* Define.h */,
 				70510F681DAB3B9D0097E093 /* Tools.h */,
 				70510F691DAB3B9D0097E093 /* Tools.m */,
-				70510F6A1DAB3B9D0097E093 /* UIImage+fixOrientation.h */,
-				70510F6B1DAB3B9D0097E093 /* UIImage+fixOrientation.m */,
-				70510F6C1DAB3B9D0097E093 /* UINavigationController+Retro.h */,
-				70510F6D1DAB3B9D0097E093 /* UINavigationController+Retro.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		705AE9F31FDA91D600447C0E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				705AE9F41FDA91D600447C0E /* UIButton+Factory.h */,
+				705AE9F51FDA91D600447C0E /* UIButton+Factory.m */,
+				705AE9F61FDA91D600447C0E /* UIColor+Custom.h */,
+				705AE9F71FDA91D600447C0E /* UIColor+Custom.m */,
+				705AE9F81FDA91D600447C0E /* UIImage+fixOrientation.h */,
+				705AE9F91FDA91D600447C0E /* UIImage+fixOrientation.m */,
+				705AE9FA1FDA91D600447C0E /* UILabel+Factory.h */,
+				705AE9FB1FDA91D600447C0E /* UILabel+Factory.m */,
+				705AE9FC1FDA91D600447C0E /* UINavigationController+Retro.h */,
+				705AE9FD1FDA91D600447C0E /* UINavigationController+Retro.m */,
+				705AE9FE1FDA91D600447C0E /* UIView+RunTimeCmd.h */,
+				705AE9FF1FDA91D600447C0E /* UIView+RunTimeCmd.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		705B4A0B1D643701006273E7 = {
@@ -927,9 +970,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705AEA081FDA97BE00447C0E /* MXSShowImageVC.m in Sources */,
 				70510F8E1DAB3B9D0097E093 /* BSRefreshAnimationFooter.m in Sources */,
+				705AEA0B1FDA9B2600447C0E /* MXSProfileTDlg.m in Sources */,
 				70510F7D1DAB3B9D0097E093 /* MASConstraintMaker.m in Sources */,
-				70510FB41DAB3B9D0097E093 /* UINavigationController+Retro.m in Sources */,
 				70510F8B1DAB3B9D0097E093 /* MJRefreshAutoGifFooter.m in Sources */,
 				70510F8F1DAB3B9D0097E093 /* MJRefreshBackGifFooter.m in Sources */,
 				70510F941DAB3B9D0097E093 /* MJRefreshNormalHeader.m in Sources */,
@@ -938,6 +982,7 @@
 				70510F841DAB3B9D0097E093 /* ViewController+MASAdditions.m in Sources */,
 				703FF0751FAAF801007F2115 /* MXSDelegateBase.m in Sources */,
 				70510FA31DAB3B9D0097E093 /* NSData+ImageContentType.m in Sources */,
+				705AE9F21FDA914000447C0E /* MXShowTableCell.m in Sources */,
 				703FF08D1FAB171B007F2115 /* MXSAnimetionVC.m in Sources */,
 				70510FA61DAB3B9D0097E093 /* SDWebImageDecoder.m in Sources */,
 				70510F7E1DAB3B9D0097E093 /* MASLayoutConstraint.m in Sources */,
@@ -961,6 +1006,7 @@
 				70510FA41DAB3B9D0097E093 /* SDImageCache.m in Sources */,
 				7042C8D11E5BF23800B41BA4 /* MXSSettingVC.m in Sources */,
 				70510F851DAB3B9D0097E093 /* MBProgressHUD.m in Sources */,
+				705AEA031FDA91D700447C0E /* UILabel+Factory.m in Sources */,
 				7042C8CE1E5BF21A00B41BA4 /* MXSContentVC.m in Sources */,
 				703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */,
 				7042C8C21E5BF09000B41BA4 /* MXSViewController.m in Sources */,
@@ -971,10 +1017,11 @@
 				70510FAF1DAB3B9D0097E093 /* UIImageView+HighlightedWebCache.m in Sources */,
 				700FB0581E9B403C00FAB5DA /* MXSHuiLongGuanHandle.m in Sources */,
 				70510F801DAB3B9D0097E093 /* MASViewConstraint.m in Sources */,
+				705AEA001FDA91D700447C0E /* UIButton+Factory.m in Sources */,
 				70F229B71E8CA7D100065B5F /* MXSFileHandle.m in Sources */,
 				70510F921DAB3B9D0097E093 /* BSRefreshAnimationHeader.m in Sources */,
 				70510FB01DAB3B9D0097E093 /* UIImageView+WebCache.m in Sources */,
-				70510FB31DAB3B9D0097E093 /* UIImage+fixOrientation.m in Sources */,
+				705AEA051FDA91D700447C0E /* UIView+RunTimeCmd.m in Sources */,
 				7042C8BE1E5BEFF700B41BA4 /* ViewController.m in Sources */,
 				70E1FB411E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m in Sources */,
 				704B26081FB45F6E00A6899B /* History+ContextOpt.m in Sources */,
@@ -985,6 +1032,7 @@
 				70510F8C1DAB3B9D0097E093 /* MJRefreshAutoNormalFooter.m in Sources */,
 				70510F831DAB3B9D0097E093 /* View+MASAdditions.m in Sources */,
 				703FF0761FAAF801007F2115 /* MXSTableView.m in Sources */,
+				705AEA021FDA91D700447C0E /* UIImage+fixOrientation.m in Sources */,
 				70510FAE1DAB3B9D0097E093 /* UIImage+WebP.m in Sources */,
 				70510F871DAB3B9D0097E093 /* MJRefreshBackFooter.m in Sources */,
 				703DA8BF1FBA99A90059A632 /* MXSNavigationBar.m in Sources */,
@@ -996,6 +1044,7 @@
 				702D25271E8118430068F025 /* HTMLParser.m in Sources */,
 				702D25311E81384F0068F025 /* XPathQuery.m in Sources */,
 				7042C8BC1E5BEFF700B41BA4 /* AppDelegate.m in Sources */,
+				705AEA011FDA91D700447C0E /* UIColor+Custom.m in Sources */,
 				704B25FE1FB4472E00A6899B /* History+CoreDataClass.m in Sources */,
 				703FF0891FAB0397007F2115 /* MXSVCExchangeCmd.m in Sources */,
 				70510F931DAB3B9D0097E093 /* MJRefreshGifHeader.m in Sources */,
@@ -1006,6 +1055,7 @@
 				70510FB21DAB3B9D0097E093 /* Tools.m in Sources */,
 				70510F7B1DAB3B9D0097E093 /* MASCompositeConstraint.m in Sources */,
 				70510FA81DAB3B9D0097E093 /* SDWebImageDownloaderOperation.m in Sources */,
+				705AEA041FDA91D700447C0E /* UINavigationController+Retro.m in Sources */,
 				70DCB3431E8F904500E4B0D0 /* MXSNuomiHandle.m in Sources */,
 				70510F861DAB3B9D0097E093 /* MJRefreshAutoFooter.m in Sources */,
 				70510FA71DAB3B9D0097E093 /* SDWebImageDownloader.m in Sources */,

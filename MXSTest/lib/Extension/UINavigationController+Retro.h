@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UINavigationController (Retro)
+
 - (void)pushViewControllerRetro:(UIViewController *)viewController;
 - (void)popViewControllerRetro;
 @end

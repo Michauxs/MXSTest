@@ -18,6 +18,9 @@
 	
 	UITableView *ListTableView;
 	NSArray *titleArr;
+	
+	
+	
 }
 
 - (void)viewDidLoad {
@@ -26,11 +29,23 @@
 	self.view.backgroundColor = [Tools whiteColor];
 	
 	titleArr = @[@"City58", @"WebVictory", @"Nuomi", @"WebPekingPeople", @"WebCityAround", @"HuiLongGuan", @"WebScoialPeking", @"TogetherBar", @"DoArt", @"WebDianping"];
+//
+//	ListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 49 - 20) style:UITableViewStylePlain];
+//	[self.view addSubview:ListTableView];
+//	ListTableView.delegate = self;
+//	ListTableView.dataSource = self;
 	
-	ListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 49 - 20) style:UITableViewStylePlain];
-	[self.view addSubview:ListTableView];
-	ListTableView.delegate = self;
-	ListTableView.dataSource = self;
+	
+	_showTable = [[MXSTableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain andDelegate:[MXSProfileTDlg new]];
+	[self.view addSubview:_showTable];
+	[_showTable registerClsaaWithCellName:@"MXShowTableCell" RowHeight:90 andController:self];
+	_showTable.dlg.dlgData = titleArr;
+	_showTable.backgroundColor = [UIColor clearColor];
+	[_showTable mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.left.equalTo(self.view);
+		make.top.equalTo(self.view);
+		make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT));
+	}];
 	
 }
 
@@ -43,6 +58,22 @@
 	[super viewWillDisappear:animated];
 	[self.navigationController setNavigationBarHidden:YES animated:NO];
 }
+
+
+#pragma mark - dlg notify
+- (id)tableViewDidSelectRowAtIndexPath:(id)args {
+	NSIndexPath *row = [args objectForKey:@"index_path"];
+	NSLog(@"%@", row);
+	
+	[[MXSVCExchangeCmd shared] pushAnimatVCFrom:self to:@"MXSShowImageVC" withArgs:row];
+	return nil;
+}
+
+- (id)cellDeleteFromTable:(id)args {
+	
+	return nil;
+}
+
 
 #pragma mark --  Stringactions From Array
 - (void)didSelectedWeb:(NSString *)webName {

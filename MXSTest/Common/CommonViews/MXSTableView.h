@@ -16,5 +16,6 @@
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style andDelegate:(MXSDelegateBase*)dlg;
 
 - (void)registerClsaaWithCellName:(NSString *)class_name RowHeight:(CGFloat)height andController:(id)controller;
+//- (void)registerClsaaWithCellName:(NSString *)class_name RowHeight:(CGFloat)height andController:(id)controller;
 
 @end

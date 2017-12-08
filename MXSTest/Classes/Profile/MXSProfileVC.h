@@ -7,7 +7,10 @@
 //
 
 #import "MXSViewController.h"
+#import "MXSProfileTDlg.h"
 
 @interface MXSProfileVC : MXSViewController
+
+@property (nonatomic, strong) MXSTableView *showTable;
 
 @end

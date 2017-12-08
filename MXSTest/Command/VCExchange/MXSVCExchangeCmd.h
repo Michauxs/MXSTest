@@ -10,6 +10,10 @@
 #import "MXSViewController.h"
 #import <objc/runtime.h>
 
+#import "MXShowTableCell.h"
+#import "MXSProfileVC.h"
+#import "MXSShowImageVC.h"
+
 static NSString *const MethodReceiveArgsTypePost =		@"ReceiveCmdArgsActionPost:";
 static NSString *const MethodReceiveArgsTypeBack =		@"ReceiveCmdArgsActionBack:";
 
@@ -19,6 +23,7 @@ static NSString *const MethodReceiveArgsTypeBack =		@"ReceiveCmdArgsActionBack:"
 
 #pragma mark - Push
 - (void)fromVC:(id)f_vc pushVC:(id)t_vc withArgs:(id)args;
+- (void)pushAnimatVCFrom:(id)f_vc to:(id)t_vc withArgs:(id)args;
 
 #pragma mark - Pop
 - (void)fromVC:(id)f_vc popOneStepWithArgs:(id)args;
@@ -28,6 +33,9 @@ static NSString *const MethodReceiveArgsTypeBack =		@"ReceiveCmdArgsActionBack:"
 #pragma mark - Module
 - (void)fromVC:(id)f_vc moduleVC:(id)t_vc withArgs:(id)args;
 - (void)fromVC:(id)f_vc dismissWithArgs:(id)args;
+
+
+
 
 #pragma mark - Exchange Keywindow
 

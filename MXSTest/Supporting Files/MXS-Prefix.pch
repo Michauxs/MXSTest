@@ -23,6 +23,8 @@
 #import "MXSTableView.h"
 #import "MXSVCExchangeCmd.h"
 
+#import "UIColor+Custom.h"
+
 #define IMGRESOURE(NAME)				[UIImage imageNamed:NAME]
 #define SCREEN_WIDTH 					[UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT 					[UIScreen mainScreen].bounds.size.height
@@ -34,6 +36,9 @@
 #define BAR_TAB_HEIGHT 					49
 #define BTM_CONT_HEIGHT 				49
 
+
+#define kAYFontLight(FONTSIZE)					[UIFont fontWithName:@"STHeitiSC-Light" size:FONTSIZE]
+#define kAYFontMedium(FONTSIZE)					[UIFont fontWithName:@"STHeitiSC-Medium" size:FONTSIZE]
 
 #import "NodeAttrArgsDefines.h"
 

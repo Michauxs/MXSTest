@@ -59,6 +59,36 @@ static MXSVCExchangeCmd *_instance;
 	
 }
 
+- (void)pushAnimatVCFrom:(id)f_vc to:(id)t_vc withArgs:(id)args {
+	t_vc = [self getClassFromClassName:t_vc];
+	
+	MXSProfileVC *firstVC = f_vc;
+	MXSShowImageVC *secondVC = t_vc;
+	
+	MXShowTableCell *cell = [firstVC.showTable cellForRowAtIndexPath:args];
+	
+	UIView *snapShotView = [cell.img snapshotViewAfterScreenUpdates:NO];
+	CGRect firstFrame  = [firstVC.view convertRect:cell.img.frame fromView:cell];
+	CGRect secondFrame = [secondVC.view convertRect:secondVC.showImg.frame fromView:secondVC.view];
+	
+	secondVC.popFrame = firstFrame;
+	
+	((MXSViewController*)t_vc).hidesBottomBarWhenPushed = YES;
+	[[(MXSViewController*)f_vc navigationController] pushViewController:t_vc animated:NO];
+	
+	secondVC.showImg.hidden = YES;
+	
+	snapShotView.frame = firstFrame;
+	[secondVC.view addSubview:snapShotView];
+	
+	[UIView animateWithDuration:0.5 animations:^{
+		snapShotView.frame = secondFrame;
+	} completion:^(BOOL finished) {
+		[snapShotView removeFromSuperview];
+		secondVC.showImg.hidden = NO;
+	}];
+}
+
 #pragma mark - Pop
 - (void)fromVC:(id)f_vc popOneStepWithArgs:(id)args {
 	
