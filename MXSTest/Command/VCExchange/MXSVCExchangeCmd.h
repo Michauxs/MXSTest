@@ -23,12 +23,15 @@ static NSString *const MethodReceiveArgsTypeBack =		@"ReceiveCmdArgsActionBack:"
 
 #pragma mark - Push
 - (void)fromVC:(id)f_vc pushVC:(id)t_vc withArgs:(id)args;
-- (void)pushAnimatVCFrom:(id)f_vc to:(id)t_vc withArgs:(id)args;
 
 #pragma mark - Pop
 - (void)fromVC:(id)f_vc popOneStepWithArgs:(id)args;
 - (void)fromVC:(id)f_vc popToDestVC:(id)d_vc withArgs:(id)args;
 - (void)fromVC:(id)f_vc popToRootWithArgs:(id)args;
+
+#pragma mark - Push/Pop Animat
+- (void)pushAnimatVCFrom:(id)f_vc to:(id)t_vc withArgs:(id)args;
+- (void)popAnimatVCFrom:(id)f_vc withArgs:(id)args;
 
 #pragma mark - Module
 - (void)fromVC:(id)f_vc moduleVC:(id)t_vc withArgs:(id)args;

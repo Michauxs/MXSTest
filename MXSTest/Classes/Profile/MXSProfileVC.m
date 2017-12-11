@@ -19,8 +19,6 @@
 	UITableView *ListTableView;
 	NSArray *titleArr;
 	
-	
-	
 }
 
 - (void)viewDidLoad {
@@ -44,7 +42,7 @@
 	[_showTable mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.left.equalTo(self.view);
 		make.top.equalTo(self.view);
-		make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT));
+		make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT - BAR_TAB_HEIGHT));
 	}];
 	
 }
@@ -70,10 +68,23 @@
 }
 
 - (id)cellDeleteFromTable:(id)args {
-	
 	return nil;
 }
 
+- (id)respondPopAnimat {
+	
+	_animatImgView.alpha = 1;
+	[self.view addSubview: _animatImgView];
+	
+	[UIView animateWithDuration:0.5 animations:^{
+		_animatImgView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT- BAR_TAB_HEIGHT);;
+		_animatImgView.alpha = 0;
+	} completion:^(BOOL finished) {
+		[_animatImgView removeFromSuperview];
+		_animatImgView = nil;
+	}];
+	return nil;
+}
 
 #pragma mark --  Stringactions From Array
 - (void)didSelectedWeb:(NSString *)webName {

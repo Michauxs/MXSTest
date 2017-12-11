@@ -67,26 +67,53 @@ static MXSVCExchangeCmd *_instance;
 	
 	MXShowTableCell *cell = [firstVC.showTable cellForRowAtIndexPath:args];
 	
-	UIView *snapShotView = [cell.img snapshotViewAfterScreenUpdates:NO];
+	UIView *snapShotView = [firstVC.tabBarController.view snapshotViewAfterScreenUpdates:NO];
 	CGRect firstFrame  = [firstVC.view convertRect:cell.img.frame fromView:cell];
-	CGRect secondFrame = [secondVC.view convertRect:secondVC.showImg.frame fromView:secondVC.view];
+//	CGRect secondFrame = [secondVC.view convertRect:secondVC.showImg.frame fromView:secondVC.view];
 	
 	secondVC.popFrame = firstFrame;
 	
 	((MXSViewController*)t_vc).hidesBottomBarWhenPushed = YES;
 	[[(MXSViewController*)f_vc navigationController] pushViewController:t_vc animated:NO];
 	
-	secondVC.showImg.hidden = YES;
+//	secondVC.showImg.hidden = YES;
 	
-	snapShotView.frame = firstFrame;
+	CGRect secondFrame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+	snapShotView.frame = secondFrame;
+	firstVC.animatImgView = snapShotView;
 	[secondVC.view addSubview:snapShotView];
 	
+	CGFloat scala_w = SCREEN_WIDTH/firstFrame.size.width;
+	CGFloat scala_h = 160/firstFrame.size.height;
+	
+	CGRect retFrame = CGRectMake(- firstFrame.origin.x * scala_w, - firstFrame.origin.y * scala_h + 60, SCREEN_WIDTH*scala_w, secondFrame.size.height * scala_h);
+	
+	
 	[UIView animateWithDuration:0.5 animations:^{
-		snapShotView.frame = secondFrame;
+		snapShotView.frame = retFrame;
+		snapShotView.alpha = 0;
 	} completion:^(BOOL finished) {
-		[snapShotView removeFromSuperview];
 		secondVC.showImg.hidden = NO;
 	}];
+}
+
+- (void)popAnimatVCFrom:(id)f_vc withArgs:(id)args {
+	UINavigationController * nav = ((MXSViewController*)f_vc).navigationController;
+	[nav popViewControllerAnimated:NO];
+	MXSViewController* recev = nav.viewControllers.lastObject;
+	
+	if (args) {
+		[self vc:recev performSelector:MethodReceiveArgsTypeBack args:args];
+	}
+	
+	SEL sel = NSSelectorFromString(@"respondPopAnimat");
+	Method m = class_getInstanceMethod([recev class], sel);
+	if (m) {
+		IMP imp = method_getImplementation(m);
+		id (*func)(id, SEL) = (id (*)(id, SEL))imp;
+		func(recev, sel);
+	}
+	
 }
 
 #pragma mark - Pop

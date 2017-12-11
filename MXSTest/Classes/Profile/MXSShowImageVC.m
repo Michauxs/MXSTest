@@ -33,7 +33,8 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-	[MXSVCExchangeCmd.shared fromVC:self popOneStepWithArgs:nil];
+//	[MXSVCExchangeCmd.shared fromVC:self popOneStepWithArgs:nil];
+	[MXSVCExchangeCmd.shared popAnimatVCFrom:self withArgs:nil];
 }
 
 @end

@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) MXSTableView *showTable;
 
+@property (nonatomic ,strong) UIView *animatImgView;
+
 @end
