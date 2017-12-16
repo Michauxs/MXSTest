@@ -88,7 +88,6 @@ static MXSVCExchangeCmd *_instance;
 	
 	CGRect retFrame = CGRectMake(- firstFrame.origin.x * scala_w, - firstFrame.origin.y * scala_h + 60, SCREEN_WIDTH*scala_w, secondFrame.size.height * scala_h);
 	
-	
 	[UIView animateWithDuration:0.5 animations:^{
 		snapShotView.frame = retFrame;
 		snapShotView.alpha = 0;

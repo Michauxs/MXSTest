@@ -31,19 +31,23 @@
 			make.height.mas_equalTo(1);
 		}];
 		
-		_img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"weiwei"]];
-		[self addSubview:_img];
-		[_img mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.left.equalTo(self).offset(15);
-			make.top.equalTo(self).offset(5);
-			make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH*0.5 - 30, 80));
-		}];
-		
 		titleLabel = [Tools creatUILabelWithText:@"Title" andTextColor:[UIColor random] andFontSize:314.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
 		[self addSubview:titleLabel];
 		[titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.left.equalTo(_img.mas_right).offset(10);
-			make.centerY.equalTo(self);
+			make.left.equalTo(self).offset(15);
+			make.top.equalTo(self).offset(5);
+//			make.left.equalTo(_img.mas_right).offset(10);
+//			make.centerY.equalTo(self);
+		}];
+		
+		_img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"weiwei"]];
+		[self addSubview:_img];
+		[_img mas_makeConstraints:^(MASConstraintMaker *make) {
+//			make.left.equalTo(self).offset(15);
+//			make.top.equalTo(self).offset(5);
+			make.right.equalTo(self).offset(-15);
+			make.top.equalTo(self).offset(5);
+			make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH*0.5 - 30, 80));
 		}];
 	}
 	return self;
