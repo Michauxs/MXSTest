@@ -16,6 +16,9 @@
 		self.dlg = dlg ? dlg : [[MXSDelegateBase alloc] init];
 		self.delegate = self.dlg;
 		self.dataSource = self.dlg;
+		self.estimatedRowHeight = 0;
+		self.estimatedSectionHeaderHeight = 0;
+		self.estimatedSectionFooterHeight = 0;
 		
 		self.separatorStyle = UITableViewCellSeparatorStyleNone;
 	}

@@ -9,6 +9,7 @@
 #import "MXSContentVC.h"
 #import <objc/runtime.h>
 #import "MXSWebDianpingHandle.h"
+#import "MXSWebSiteHandle.h"
 
 #import<AudioToolbox/AudioToolbox.h>
 
@@ -57,6 +58,10 @@ SystemSoundID ditaVoice;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+	/*
+	NSArray *list = [MXSWebSiteHandle handNodeWithSimple];
+	[MXSFileHandle writeToJsonFile:list withFileName:@"webSiteComplete"];
+	*/
 	
 //	[self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 	

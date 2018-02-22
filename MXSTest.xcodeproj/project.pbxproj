@@ -106,6 +106,7 @@
 		705AEA081FDA97BE00447C0E /* MXSShowImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AEA071FDA97BE00447C0E /* MXSShowImageVC.m */; };
 		705AEA0B1FDA9B2600447C0E /* MXSProfileTDlg.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AEA0A1FDA9B2600447C0E /* MXSProfileTDlg.m */; };
 		705B4A271D643701006273E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705B4A261D643701006273E7 /* Assets.xcassets */; };
+		70BF4D19201AD7BE00A89EA6 /* MXSWebSiteHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF4D18201AD7BE00A89EA6 /* MXSWebSiteHandle.m */; };
 		70DCB3431E8F904500E4B0D0 /* MXSNuomiHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DCB3421E8F904500E4B0D0 /* MXSNuomiHandle.m */; };
 		70E1FB411E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1FB401E95E5D7003D86BE /* MXSWebPekingPeopleHandle.m */; };
 		70E1FB441E95E637003D86BE /* MXSBaseHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1FB431E95E637003D86BE /* MXSBaseHandle.m */; };
@@ -318,6 +319,8 @@
 		705AEA0A1FDA9B2600447C0E /* MXSProfileTDlg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSProfileTDlg.m; sourceTree = "<group>"; };
 		705B4A141D643701006273E7 /* MXSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705B4A261D643701006273E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70BF4D17201AD7BE00A89EA6 /* MXSWebSiteHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSWebSiteHandle.h; sourceTree = "<group>"; };
+		70BF4D18201AD7BE00A89EA6 /* MXSWebSiteHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSWebSiteHandle.m; sourceTree = "<group>"; };
 		70DCB3411E8F904500E4B0D0 /* MXSNuomiHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSNuomiHandle.h; sourceTree = "<group>"; };
 		70DCB3421E8F904500E4B0D0 /* MXSNuomiHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSNuomiHandle.m; sourceTree = "<group>"; };
 		70DCB3441E8F9EDD00E4B0D0 /* NodeAttrArgsDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeAttrArgsDefines.h; sourceTree = "<group>"; };
@@ -446,6 +449,8 @@
 				700FB0571E9B403C00FAB5DA /* MXSHuiLongGuanHandle.m */,
 				700FB0591E9B8E0F00FAB5DA /* MXSTogetherBarHandle.h */,
 				700FB05A1E9B8E0F00FAB5DA /* MXSTogetherBarHandle.m */,
+				70BF4D17201AD7BE00A89EA6 /* MXSWebSiteHandle.h */,
+				70BF4D18201AD7BE00A89EA6 /* MXSWebSiteHandle.m */,
 			);
 			path = NodeHandle;
 			sourceTree = "<group>";
@@ -1036,6 +1041,7 @@
 				70510FAE1DAB3B9D0097E093 /* UIImage+WebP.m in Sources */,
 				70510F871DAB3B9D0097E093 /* MJRefreshBackFooter.m in Sources */,
 				703DA8BF1FBA99A90059A632 /* MXSNavigationBar.m in Sources */,
+				70BF4D19201AD7BE00A89EA6 /* MXSWebSiteHandle.m in Sources */,
 				70510FAD1DAB3B9D0097E093 /* UIImage+MultiFormat.m in Sources */,
 				701FC39D1E973C9100B863E0 /* MXSWebCityAroundHandle.m in Sources */,
 				704B26051FB4508700A6899B /* MXSHistoryModelFacade.m in Sources */,

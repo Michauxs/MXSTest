@@ -273,7 +273,7 @@ NSError *error =nil;
 
 NSArray *array = [contextexecuteFetchRequest:requesterror:&error];
 
-for (People *pin array) {
+for (People *p in array) {
 
 NSLog(@"name %@ age %@",p.name,p.age);
 

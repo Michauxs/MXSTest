@@ -17,8 +17,9 @@
 @implementation MXSProfileVC {
 	
 	UITableView *ListTableView;
-	NSArray *titleArr;
+	NSMutableArray *divArr;
 	
+	NSArray *titleArr;
 }
 
 - (void)viewDidLoad {
@@ -26,6 +27,7 @@
 	
 	self.view.backgroundColor = [Tools whiteColor];
 	
+	divArr  = [NSMutableArray array];
 	titleArr = @[@"City58", @"WebVictory", @"Nuomi", @"WebPekingPeople", @"WebCityAround", @"HuiLongGuan", @"WebScoialPeking", @"TogetherBar", @"DoArt", @"WebDianping"];
 //
 //	ListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 49 - 20) style:UITableViewStylePlain];
@@ -45,6 +47,20 @@
 		make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT - BAR_TAB_HEIGHT));
 	}];
 	
+	UIButton *testBtn = [[UIButton alloc] init];
+	[testBtn setTitle:@"More" forState:UIControlStateNormal];
+	[testBtn setTitleColor:[UIColor white] forState:UIControlStateNormal];
+	testBtn.backgroundColor = [UIColor theme];
+	testBtn.layer.cornerRadius = 4.f;
+	testBtn.clipsToBounds = YES;
+	[self.view addSubview:testBtn];
+	[testBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.left.equalTo(self.view).offset(20);
+		make.bottom.equalTo(self.view).offset(-80);
+		make.size.mas_equalTo(CGSizeMake(80, 40));
+	}];
+	[testBtn addTarget:self action:@selector(textBtnClick) forControlEvents:UIControlEventTouchUpInside];
+	[self.view bringSubviewToFront:testBtn];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -57,6 +73,12 @@
 	[self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
+- (void)textBtnClick {
+	NSArray *tmp = [NSArray arrayWithArray:titleArr];
+	[divArr addObjectsFromArray:tmp];
+	_showTable.dlg.dlgData = [divArr copy];
+	[_showTable reloadData];
+}
 
 #pragma mark - dlg notify
 - (id)tableViewDidSelectRowAtIndexPath:(id)args {
