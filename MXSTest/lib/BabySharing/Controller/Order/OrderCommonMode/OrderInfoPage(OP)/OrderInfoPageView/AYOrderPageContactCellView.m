@@ -32,9 +32,9 @@
 		
 		//		self.backgroundColor = [UIColor clearColor];
 		self.selectionStyle = UITableViewCellSelectionStyleNone;
-		[Tools creatCALayerWithFrame:CGRectMake(0, 109.5f, SCREEN_WIDTH, 0.5) andColor:[Tools garyLineColor] inSuperView:self];
+//		[Tools creatCALayerWithFrame:CGRectMake(0, 109.5f, SCREEN_WIDTH, 0.5) andColor:[Tools garyLineColor] inSuperView:self];
 		
-		titleLabel = [Tools creatLabelWithText:@"联系人" textColor:[Tools black] fontSize:314.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
+		titleLabel = [UILabel creatLabelWithText:@"联系人" textColor:[UIColor black] fontSize:314.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
 		[self addSubview:titleLabel];
 		[titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.left.equalTo(self).offset(15);
@@ -45,7 +45,7 @@
 		photoIcon.image = IMGRESOURCE(@"default_user");
 		photoIcon.contentMode = UIViewContentModeScaleAspectFill;
 		photoIcon.layer.cornerRadius = 22.5;
-		photoIcon.layer.borderColor = [Tools borderAlphaColor].CGColor;
+//		photoIcon.layer.borderColor = [Tools borderAlphaColor].CGColor;
 		photoIcon.layer.borderWidth = 2.f;
 		photoIcon.clipsToBounds = YES;
 		photoIcon.layer.rasterizationScale = [UIScreen mainScreen].scale;
@@ -58,7 +58,7 @@
 		photoIcon.userInteractionEnabled = YES;
 		[photoIcon addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userPhotoTap)]];
 		
-		nameLabel = [Tools creatLabelWithText:@"User Name" textColor:[Tools black] fontSize:14.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
+		nameLabel = [UILabel creatLabelWithText:@"User Name" textColor:[UIColor black] fontSize:14.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
 		[self addSubview:nameLabel];
 		[nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.left.equalTo(photoIcon.mas_right).offset(15);

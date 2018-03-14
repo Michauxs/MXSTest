@@ -15,9 +15,9 @@
 - (instancetype)initWithFrame:(CGRect)frame andTitle:(NSString *)title {
 	self = [super initWithFrame:frame];
 	if (self) {
-		[Tools setViewBorder:self withRadius:4.f andBorderWidth:1 andBorderColor:[Tools garyLineColor] andBackground:[Tools whiteColor]];
 		
-		titleLabel = [Tools creatLabelWithText:title textColor:[Tools garyColor] fontSize:315 backgroundColor:nil textAlignment:NSTextAlignmentCenter];
+		[self setRadius:4 borderWidth:1 borderColor:[UIColor gary] background:[UIColor white]];
+		titleLabel = [UILabel creatLabelWithText:title textColor:[UIColor gary] fontSize:315 backgroundColor:nil textAlignment:NSTextAlignmentCenter];
 		[self addSubview:titleLabel];
 		[titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.center.equalTo(self);
@@ -33,12 +33,12 @@
 }
 
 - (void)setSelectStatus {
-	[Tools setViewBorder:self withRadius:4.f andBorderWidth:0 andBorderColor:nil andBackground:[Tools theme]];
+	[self setRadius:4 borderWidth:0 borderColor:nil background:[UIColor theme]];
 	titleLabel.textColor = [Tools whiteColor];
 }
 
 - (void)setUnselectStatus {
-	[Tools setViewBorder:self withRadius:4.f andBorderWidth:1 andBorderColor:[Tools garyLineColor] andBackground:[Tools whiteColor]];
+	[self setRadius:4 borderWidth:1 borderColor:[UIColor gary] background:[UIColor white]];
 	titleLabel.textColor = [Tools garyColor];
 }
 

@@ -55,7 +55,7 @@
         inputTitleTextView.text = setedTitleString;
     }
     inputTitleTextView.font = [UIFont systemFontOfSize:14.f];
-    inputTitleTextView.textColor = [Tools black];
+    inputTitleTextView.textColor = [UIColor black];
     inputTitleTextView.delegate = self;
     [inputTitleTextView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).offset(kStatusAndNavBarH+20);
@@ -63,7 +63,7 @@
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 40, 200));
     }];
     
-    countlabel = [Tools creatLabelWithText:[NSString stringWithFormat:@"还可以输入%lu个字符",LIMITNUMB - setedTitleString.length] textColor:[Tools garyColor] fontSize:12.f backgroundColor:nil textAlignment:0];
+    countlabel = [UILabel creatLabelWithText:[NSString stringWithFormat:@"还可以输入%lu个字符",LIMITNUMB - setedTitleString.length] textColor:[Tools garyColor] fontSize:12.f backgroundColor:nil textAlignment:0];
     [self.view addSubview:countlabel];
     [countlabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(inputTitleTextView.mas_bottom).offset(-10);
@@ -104,7 +104,7 @@
 #pragma mark -- UITextDelegate
 - (void)textViewDidChange:(UITextView *)textView {
     
-    UIButton* bar_right_btn = [Tools creatBtnWithTitle:@"保存" titleColor:[Tools theme] fontSize:16.f backgroundColor:nil];
+    UIButton* bar_right_btn = [UIButton creatBtnWithTitle:@"保存" titleColor:[UIColor theme] fontSize:16.f backgroundColor:nil];
     kAYViewsSendMessage(kAYFakeNavBarView, kAYNavBarSetRightBtnWithBtnMessage, &bar_right_btn)
     
     NSInteger count = textView.text.length;

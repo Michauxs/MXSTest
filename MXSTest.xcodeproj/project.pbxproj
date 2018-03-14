@@ -145,9 +145,7 @@
 		7034FD4E205929F6004894EE /* AYServiceCalendarCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F548205929F3004894EE /* AYServiceCalendarCellView.m */; };
 		7034FD4F205929F6004894EE /* AYCapacityUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F54B205929F3004894EE /* AYCapacityUnitView.m */; };
 		7034FD50205929F6004894EE /* AYServiceCapacityCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F54D205929F3004894EE /* AYServiceCapacityCellView.m */; };
-		7034FD51205929F6004894EE /* AYServiceCostCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F550205929F3004894EE /* AYServiceCostCellView.m */; };
 		7034FD52205929F6004894EE /* AYServiceDescCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F553205929F3004894EE /* AYServiceDescCellView.m */; };
-		7034FD53205929F6004894EE /* AYServiceDescCellView的副本.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F555205929F3004894EE /* AYServiceDescCellView的副本.m */; };
 		7034FD54205929F6004894EE /* AYPlayItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F558205929F3004894EE /* AYPlayItemsView.m */; };
 		7034FD55205929F6004894EE /* AYServiceFacilityCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F55A205929F3004894EE /* AYServiceFacilityCellView.m */; };
 		7034FD56205929F6004894EE /* AYServiceMapCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F55D205929F3004894EE /* AYServiceMapCellView.m */; };
@@ -249,11 +247,6 @@
 		7034FDB6205929F7004894EE /* AYOrderServantController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F672205929F3004894EE /* AYOrderServantController.m */; };
 		7034FDB7205929F7004894EE /* AYOrderServantDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F675205929F3004894EE /* AYOrderServantDelegate.m */; };
 		7034FDB8205929F7004894EE /* AYDayRemindCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F678205929F3004894EE /* AYDayRemindCellView.m */; };
-		7034FDB9205929F7004894EE /* AYOrderServantController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F67B205929F3004894EE /* AYOrderServantController.m */; };
-		7034FDBA205929F7004894EE /* AYOrderServantDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F67E205929F3004894EE /* AYOrderServantDelegate.m */; };
-		7034FDBB205929F7004894EE /* AYDayRemindCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F681205929F3004894EE /* AYDayRemindCellView.m */; };
-		7034FDBC205929F7004894EE /* AYHistoryEnterCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F683205929F3004894EE /* AYHistoryEnterCellView.m */; };
-		7034FDBD205929F7004894EE /* AYTodoApplyCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F685205929F3004894EE /* AYTodoApplyCellView.m */; };
 		7034FDBE205929F7004894EE /* AYServantHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F688205929F3004894EE /* AYServantHistoryController.m */; };
 		7034FDBF205929F7004894EE /* AYServantHistoryDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F68B205929F3004894EE /* AYServantHistoryDelegate.m */; };
 		7034FDC0205929F7004894EE /* AYServantHistoryCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034F68E205929F3004894EE /* AYServantHistoryCellView.m */; };
@@ -582,55 +575,8 @@
 		7034FF03205929F8004894EE /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7034FA7E205929F4004894EE /* libWeiboSDK.a */; };
 		7034FF04205929F8004894EE /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7034FA88205929F4004894EE /* WeiboSDK.bundle */; };
 		7034FF05205929F8004894EE /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7034FA8B205929F4004894EE /* MAMapKit.framework */; };
-		7034FF06205929F8004894EE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7034FA8D205929F4004894EE /* Info.plist */; };
-		7034FF07205929F8004894EE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FA8F205929F4004894EE /* MASCompositeConstraint.m */; };
-		7034FF08205929F8004894EE /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FA92205929F4004894EE /* MASConstraint.m */; };
-		7034FF09205929F8004894EE /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FA94205929F4004894EE /* MASConstraintMaker.m */; };
-		7034FF0A205929F8004894EE /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FA96205929F4004894EE /* MASLayoutConstraint.m */; };
-		7034FF0B205929F8004894EE /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FA9A205929F4004894EE /* MASViewAttribute.m */; };
-		7034FF0C205929F8004894EE /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FA9C205929F4004894EE /* MASViewConstraint.m */; };
-		7034FF0D205929F8004894EE /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FA9E205929F4004894EE /* NSArray+MASAdditions.m */; };
-		7034FF0E205929F8004894EE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAA1205929F4004894EE /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		7034FF0F205929F8004894EE /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAA3205929F5004894EE /* View+MASAdditions.m */; };
-		7034FF10205929F8004894EE /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAA6205929F5004894EE /* ViewController+MASAdditions.m */; };
 		7034FF11205929F8004894EE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAA9205929F5004894EE /* MBProgressHUD.m */; };
-		7034FF12205929F8004894EE /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAAD205929F5004894EE /* MJRefreshAutoFooter.m */; };
-		7034FF13205929F8004894EE /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAAF205929F5004894EE /* MJRefreshBackFooter.m */; };
-		7034FF14205929F8004894EE /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAB1205929F5004894EE /* MJRefreshComponent.m */; };
-		7034FF15205929F8004894EE /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAB3205929F5004894EE /* MJRefreshFooter.m */; };
-		7034FF16205929F8004894EE /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAB5205929F5004894EE /* MJRefreshHeader.m */; };
-		7034FF17205929F8004894EE /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FABA205929F5004894EE /* MJRefreshAutoGifFooter.m */; };
-		7034FF18205929F8004894EE /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FABC205929F5004894EE /* MJRefreshAutoNormalFooter.m */; };
-		7034FF19205929F8004894EE /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FABE205929F5004894EE /* MJRefreshAutoStateFooter.m */; };
-		7034FF1A205929F8004894EE /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAC1205929F5004894EE /* MJRefreshBackGifFooter.m */; };
-		7034FF1B205929F8004894EE /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAC3205929F5004894EE /* MJRefreshBackNormalFooter.m */; };
-		7034FF1C205929F8004894EE /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAC5205929F5004894EE /* MJRefreshBackStateFooter.m */; };
-		7034FF1D205929F8004894EE /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAC8205929F5004894EE /* MJRefreshGifHeader.m */; };
-		7034FF1E205929F8004894EE /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FACA205929F5004894EE /* MJRefreshNormalHeader.m */; };
-		7034FF1F205929F8004894EE /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FACC205929F5004894EE /* MJRefreshStateHeader.m */; };
-		7034FF20205929F8004894EE /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7034FACD205929F5004894EE /* MJRefresh.bundle */; };
-		7034FF21205929F8004894EE /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAD0205929F5004894EE /* MJRefreshConst.m */; };
-		7034FF22205929F8004894EE /* NSBundle+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAD2205929F5004894EE /* NSBundle+MJRefresh.m */; };
-		7034FF23205929F8004894EE /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAD4205929F5004894EE /* UIScrollView+MJExtension.m */; };
-		7034FF24205929F8004894EE /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAD6205929F5004894EE /* UIScrollView+MJRefresh.m */; };
-		7034FF25205929F8004894EE /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAD8205929F5004894EE /* UIView+MJExtension.m */; };
 		7034FF26205929F8004894EE /* MoviePlayTrait.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FADB205929F5004894EE /* MoviePlayTrait.m */; };
-		7034FF27205929F8004894EE /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FADE205929F5004894EE /* MKAnnotationView+WebCache.m */; };
-		7034FF28205929F8004894EE /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAE0205929F5004894EE /* NSData+ImageContentType.m */; };
-		7034FF29205929F8004894EE /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAE2205929F5004894EE /* SDImageCache.m */; };
-		7034FF2A205929F8004894EE /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAE4205929F5004894EE /* SDWebImageCompat.m */; };
-		7034FF2B205929F8004894EE /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAE6205929F5004894EE /* SDWebImageDecoder.m */; };
-		7034FF2C205929F8004894EE /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAE8205929F5004894EE /* SDWebImageDownloader.m */; };
-		7034FF2D205929F8004894EE /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAEA205929F5004894EE /* SDWebImageDownloaderOperation.m */; };
-		7034FF2E205929F8004894EE /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAEC205929F5004894EE /* SDWebImageManager.m */; };
-		7034FF2F205929F8004894EE /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAEF205929F5004894EE /* SDWebImagePrefetcher.m */; };
-		7034FF30205929F8004894EE /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAF1205929F5004894EE /* UIButton+WebCache.m */; };
-		7034FF31205929F8004894EE /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAF3205929F5004894EE /* UIImage+GIF.m */; };
-		7034FF32205929F8004894EE /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAF5205929F5004894EE /* UIImage+MultiFormat.m */; };
-		7034FF33205929F8004894EE /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAF7205929F5004894EE /* UIImage+WebP.m */; };
-		7034FF34205929F8004894EE /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAF9205929F5004894EE /* UIImageView+HighlightedWebCache.m */; };
-		7034FF35205929F8004894EE /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAFB205929F5004894EE /* UIImageView+WebCache.m */; };
-		7034FF36205929F8004894EE /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FAFD205929F5004894EE /* UIView+WebCacheOperation.m */; };
 		7034FF37205929F8004894EE /* UIGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FB00205929F5004894EE /* UIGifView.m */; };
 		7034FF38205929F8004894EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FB03205929F5004894EE /* AppDelegate.m */; };
 		7034FF39205929F8004894EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7034FB0B205929F5004894EE /* LaunchScreen.storyboard */; };
@@ -730,11 +676,7 @@
 		7034FF97205929F8004894EE /* UINavigationController+Retro.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FBF7205929F6004894EE /* UINavigationController+Retro.m */; };
 		7034FF98205929F8004894EE /* UIView+RunTimeCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FBF9205929F6004894EE /* UIView+RunTimeCmd.m */; };
 		7034FF99205929F8004894EE /* RemoteInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FBFC205929F6004894EE /* RemoteInstance.m */; };
-		7034FF9A205929F8004894EE /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC00205929F6004894EE /* OBShapedButton.m */; };
-		7034FF9B205929F8004894EE /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC03205929F6004894EE /* UIImage+ColorAtPixel.m */; };
 		7034FF9C205929F8004894EE /* TmpFileStorageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC06205929F6004894EE /* TmpFileStorageModel.m */; };
-		7034FF9D205929F8004894EE /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC0A205929F6004894EE /* Tools.m */; };
-		7034FF9E205929F8004894EE /* InsetsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC0D205929F6004894EE /* InsetsLabel.m */; };
 		7034FF9F205929F8004894EE /* AYBtmTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC11205929F6004894EE /* AYBtmTipView.m */; };
 		7034FFA0205929F8004894EE /* AlbumGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC15205929F6004894EE /* AlbumGridCell.m */; };
 		7034FFA1205929F8004894EE /* AYAlbumTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC18205929F6004894EE /* AYAlbumTableCellView.m */; };
@@ -780,14 +722,6 @@
 		7034FFC9205929F8004894EE /* PhotoTagRoundPointLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC8C205929F6004894EE /* PhotoTagRoundPointLayer.m */; };
 		7034FFCA205929F8004894EE /* PhotoTagTariangleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC8E205929F6004894EE /* PhotoTagTariangleLayer.m */; };
 		7034FFCB205929F8004894EE /* WKFRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC90205929F6004894EE /* WKFRadarView.m */; };
-		7034FFCC205929F9004894EE /* AYRelationshipBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC94205929F6004894EE /* AYRelationshipBtnView.m */; };
-		7034FFCD205929F9004894EE /* AYFollowedBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC97205929F6004894EE /* AYFollowedBtnView.m */; };
-		7034FFCE205929F9004894EE /* AYFollowingBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC9A205929F6004894EE /* AYFollowingBtnView.m */; };
-		7034FFCF205929F9004894EE /* AYFriendsBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FC9D205929F6004894EE /* AYFriendsBtnView.m */; };
-		7034FFD0205929F9004894EE /* AYInvitationBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FCA0205929F6004894EE /* AYInvitationBtnView.m */; };
-		7034FFD1205929F9004894EE /* AYNoneRelationBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FCA3205929F6004894EE /* AYNoneRelationBtnView.m */; };
-		7034FFD2205929F9004894EE /* AYRelationshipBtnInitCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FCA6205929F6004894EE /* AYRelationshipBtnInitCommand.m */; };
-		7034FFD3205929F9004894EE /* AYSamePersonBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FCA9205929F6004894EE /* AYSamePersonBtnView.m */; };
 		7034FFD4205929F9004894EE /* AYScheduleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FCAC205929F6004894EE /* AYScheduleView.m */; };
 		7034FFD5205929F9004894EE /* AYCalendarCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FCAF205929F6004894EE /* AYCalendarCellView.m */; };
 		7034FFD6205929F9004894EE /* AYCalendarDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FCB1205929F6004894EE /* AYCalendarDate.m */; };
@@ -804,6 +738,8 @@
 		7034FFE1205929F9004894EE /* AYThumbsUpBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FCD0205929F6004894EE /* AYThumbsUpBtnView.m */; };
 		7034FFE2205929F9004894EE /* AYUserDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FCD4205929F6004894EE /* AYUserDisplayView.m */; };
 		7034FFE3205929F9004894EE /* AYUserDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7034FCD5205929F6004894EE /* AYUserDisplayView.xib */; };
+		7034FFE82059352F004894EE /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7034FFE72059352F004894EE /* Tools.m */; };
+		7034FFEA2059373D004894EE /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7034FFE92059373D004894EE /* OpenAL.framework */; };
 		703932221E83F46400FAFF17 /* NodeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 703932211E83F46400FAFF17 /* NodeHandle.m */; };
 		703B63CB1FB5B252007A8473 /* 9205.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 703B63CA1FB5B252007A8473 /* 9205.mp3 */; };
 		703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703CC96F1E85229A005099D6 /* MXSProfileVC.m */; };
@@ -876,7 +812,6 @@
 		70510FAF1DAB3B9D0097E093 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F611DAB3B9D0097E093 /* UIImageView+HighlightedWebCache.m */; };
 		70510FB01DAB3B9D0097E093 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F631DAB3B9D0097E093 /* UIImageView+WebCache.m */; };
 		70510FB11DAB3B9D0097E093 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F651DAB3B9D0097E093 /* UIView+WebCacheOperation.m */; };
-		70510FB21DAB3B9D0097E093 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 70510F691DAB3B9D0097E093 /* Tools.m */; };
 		705AE9F21FDA914000447C0E /* MXShowTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AE9F11FDA914000447C0E /* MXShowTableCell.m */; };
 		705AEA001FDA91D700447C0E /* UIButton+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AE9F51FDA91D600447C0E /* UIButton+Factory.m */; };
 		705AEA011FDA91D700447C0E /* UIColor+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AE9F71FDA91D600447C0E /* UIColor+Custom.m */; };
@@ -1168,12 +1103,8 @@
 		7034F54B205929F3004894EE /* AYCapacityUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYCapacityUnitView.m; sourceTree = "<group>"; };
 		7034F54C205929F3004894EE /* AYServiceCapacityCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYServiceCapacityCellView.h; sourceTree = "<group>"; };
 		7034F54D205929F3004894EE /* AYServiceCapacityCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYServiceCapacityCellView.m; sourceTree = "<group>"; };
-		7034F54F205929F3004894EE /* AYServiceCostCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYServiceCostCellView.h; sourceTree = "<group>"; };
-		7034F550205929F3004894EE /* AYServiceCostCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYServiceCostCellView.m; sourceTree = "<group>"; };
 		7034F552205929F3004894EE /* AYServiceDescCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYServiceDescCellView.h; sourceTree = "<group>"; };
 		7034F553205929F3004894EE /* AYServiceDescCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYServiceDescCellView.m; sourceTree = "<group>"; };
-		7034F554205929F3004894EE /* AYServiceDescCellView的副本.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AYServiceDescCellView的副本.h"; sourceTree = "<group>"; };
-		7034F555205929F3004894EE /* AYServiceDescCellView的副本.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AYServiceDescCellView的副本.m"; sourceTree = "<group>"; };
 		7034F557205929F3004894EE /* AYPlayItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYPlayItemsView.h; sourceTree = "<group>"; };
 		7034F558205929F3004894EE /* AYPlayItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYPlayItemsView.m; sourceTree = "<group>"; };
 		7034F559205929F3004894EE /* AYServiceFacilityCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYServiceFacilityCellView.h; sourceTree = "<group>"; };
@@ -1373,16 +1304,6 @@
 		7034F675205929F3004894EE /* AYOrderServantDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYOrderServantDelegate.m; sourceTree = "<group>"; };
 		7034F677205929F3004894EE /* AYDayRemindCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYDayRemindCellView.h; sourceTree = "<group>"; };
 		7034F678205929F3004894EE /* AYDayRemindCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYDayRemindCellView.m; sourceTree = "<group>"; };
-		7034F67A205929F3004894EE /* AYOrderServantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYOrderServantController.h; sourceTree = "<group>"; };
-		7034F67B205929F3004894EE /* AYOrderServantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYOrderServantController.m; sourceTree = "<group>"; };
-		7034F67D205929F3004894EE /* AYOrderServantDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYOrderServantDelegate.h; sourceTree = "<group>"; };
-		7034F67E205929F3004894EE /* AYOrderServantDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYOrderServantDelegate.m; sourceTree = "<group>"; };
-		7034F680205929F3004894EE /* AYDayRemindCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYDayRemindCellView.h; sourceTree = "<group>"; };
-		7034F681205929F3004894EE /* AYDayRemindCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYDayRemindCellView.m; sourceTree = "<group>"; };
-		7034F682205929F3004894EE /* AYHistoryEnterCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYHistoryEnterCellView.h; sourceTree = "<group>"; };
-		7034F683205929F3004894EE /* AYHistoryEnterCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYHistoryEnterCellView.m; sourceTree = "<group>"; };
-		7034F684205929F3004894EE /* AYTodoApplyCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYTodoApplyCellView.h; sourceTree = "<group>"; };
-		7034F685205929F3004894EE /* AYTodoApplyCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYTodoApplyCellView.m; sourceTree = "<group>"; };
 		7034F687205929F3004894EE /* AYServantHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYServantHistoryController.h; sourceTree = "<group>"; };
 		7034F688205929F3004894EE /* AYServantHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYServantHistoryController.m; sourceTree = "<group>"; };
 		7034F68A205929F3004894EE /* AYServantHistoryDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYServantHistoryDelegate.h; sourceTree = "<group>"; };
@@ -2123,109 +2044,10 @@
 		7034FA89205929F4004894EE /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		7034FA8A205929F4004894EE /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
 		7034FA8B205929F4004894EE /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
-		7034FA8D205929F4004894EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7034FA8E205929F4004894EE /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
-		7034FA8F205929F4004894EE /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
-		7034FA90205929F4004894EE /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
-		7034FA91205929F4004894EE /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
-		7034FA92205929F4004894EE /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
-		7034FA93205929F4004894EE /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
-		7034FA94205929F4004894EE /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
-		7034FA95205929F4004894EE /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
-		7034FA96205929F4004894EE /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
-		7034FA97205929F4004894EE /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
-		7034FA98205929F4004894EE /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
-		7034FA99205929F4004894EE /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
-		7034FA9A205929F4004894EE /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
-		7034FA9B205929F4004894EE /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
-		7034FA9C205929F4004894EE /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
-		7034FA9D205929F4004894EE /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		7034FA9E205929F4004894EE /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		7034FA9F205929F4004894EE /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		7034FAA0205929F4004894EE /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		7034FAA1205929F4004894EE /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		7034FAA2205929F4004894EE /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
-		7034FAA3205929F5004894EE /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
-		7034FAA4205929F5004894EE /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		7034FAA5205929F5004894EE /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		7034FAA6205929F5004894EE /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		7034FAA8205929F5004894EE /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		7034FAA9205929F5004894EE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		7034FAAC205929F5004894EE /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
-		7034FAAD205929F5004894EE /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
-		7034FAAE205929F5004894EE /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
-		7034FAAF205929F5004894EE /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackFooter.m; sourceTree = "<group>"; };
-		7034FAB0205929F5004894EE /* MJRefreshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshComponent.h; sourceTree = "<group>"; };
-		7034FAB1205929F5004894EE /* MJRefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
-		7034FAB2205929F5004894EE /* MJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooter.h; sourceTree = "<group>"; };
-		7034FAB3205929F5004894EE /* MJRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooter.m; sourceTree = "<group>"; };
-		7034FAB4205929F5004894EE /* MJRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeader.h; sourceTree = "<group>"; };
-		7034FAB5205929F5004894EE /* MJRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeader.m; sourceTree = "<group>"; };
-		7034FAB9205929F5004894EE /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
-		7034FABA205929F5004894EE /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
-		7034FABB205929F5004894EE /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
-		7034FABC205929F5004894EE /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
-		7034FABD205929F5004894EE /* MJRefreshAutoStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoStateFooter.h; sourceTree = "<group>"; };
-		7034FABE205929F5004894EE /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
-		7034FAC0205929F5004894EE /* MJRefreshBackGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackGifFooter.h; sourceTree = "<group>"; };
-		7034FAC1205929F5004894EE /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
-		7034FAC2205929F5004894EE /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
-		7034FAC3205929F5004894EE /* MJRefreshBackNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackNormalFooter.m; sourceTree = "<group>"; };
-		7034FAC4205929F5004894EE /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
-		7034FAC5205929F5004894EE /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
-		7034FAC7205929F5004894EE /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshGifHeader.h; sourceTree = "<group>"; };
-		7034FAC8205929F5004894EE /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshGifHeader.m; sourceTree = "<group>"; };
-		7034FAC9205929F5004894EE /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshNormalHeader.h; sourceTree = "<group>"; };
-		7034FACA205929F5004894EE /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshNormalHeader.m; sourceTree = "<group>"; };
-		7034FACB205929F5004894EE /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshStateHeader.h; sourceTree = "<group>"; };
-		7034FACC205929F5004894EE /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshStateHeader.m; sourceTree = "<group>"; };
-		7034FACD205929F5004894EE /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
-		7034FACE205929F5004894EE /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
-		7034FACF205929F5004894EE /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
-		7034FAD0205929F5004894EE /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
-		7034FAD1205929F5004894EE /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
-		7034FAD2205929F5004894EE /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
-		7034FAD3205929F5004894EE /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
-		7034FAD4205929F5004894EE /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
-		7034FAD5205929F5004894EE /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
-		7034FAD6205929F5004894EE /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
-		7034FAD7205929F5004894EE /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
-		7034FAD8205929F5004894EE /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		7034FADA205929F5004894EE /* MoviePlayTrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayTrait.h; sourceTree = "<group>"; };
 		7034FADB205929F5004894EE /* MoviePlayTrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayTrait.m; sourceTree = "<group>"; };
-		7034FADD205929F5004894EE /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
-		7034FADE205929F5004894EE /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
-		7034FADF205929F5004894EE /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
-		7034FAE0205929F5004894EE /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
-		7034FAE1205929F5004894EE /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
-		7034FAE2205929F5004894EE /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
-		7034FAE3205929F5004894EE /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
-		7034FAE4205929F5004894EE /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
-		7034FAE5205929F5004894EE /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
-		7034FAE6205929F5004894EE /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
-		7034FAE7205929F5004894EE /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
-		7034FAE8205929F5004894EE /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
-		7034FAE9205929F5004894EE /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
-		7034FAEA205929F5004894EE /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
-		7034FAEB205929F5004894EE /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
-		7034FAEC205929F5004894EE /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
-		7034FAED205929F5004894EE /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
-		7034FAEE205929F5004894EE /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
-		7034FAEF205929F5004894EE /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
-		7034FAF0205929F5004894EE /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
-		7034FAF1205929F5004894EE /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
-		7034FAF2205929F5004894EE /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
-		7034FAF3205929F5004894EE /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
-		7034FAF4205929F5004894EE /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
-		7034FAF5205929F5004894EE /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
-		7034FAF6205929F5004894EE /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
-		7034FAF7205929F5004894EE /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
-		7034FAF8205929F5004894EE /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
-		7034FAF9205929F5004894EE /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
-		7034FAFA205929F5004894EE /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
-		7034FAFB205929F5004894EE /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		7034FAFC205929F5004894EE /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
-		7034FAFD205929F5004894EE /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		7034FAFF205929F5004894EE /* UIGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGifView.h; sourceTree = "<group>"; };
 		7034FB00205929F5004894EE /* UIGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGifView.m; sourceTree = "<group>"; };
 		7034FB02205929F5004894EE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -2432,17 +2254,8 @@
 		7034FBF9205929F6004894EE /* UIView+RunTimeCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RunTimeCmd.m"; sourceTree = "<group>"; };
 		7034FBFB205929F6004894EE /* RemoteInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteInstance.h; sourceTree = "<group>"; };
 		7034FBFC205929F6004894EE /* RemoteInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteInstance.m; sourceTree = "<group>"; };
-		7034FBFF205929F6004894EE /* OBShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBShapedButton.h; sourceTree = "<group>"; };
-		7034FC00205929F6004894EE /* OBShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBShapedButton.m; sourceTree = "<group>"; };
-		7034FC02205929F6004894EE /* UIImage+ColorAtPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorAtPixel.h"; sourceTree = "<group>"; };
-		7034FC03205929F6004894EE /* UIImage+ColorAtPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorAtPixel.m"; sourceTree = "<group>"; };
 		7034FC05205929F6004894EE /* TmpFileStorageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmpFileStorageModel.h; sourceTree = "<group>"; };
 		7034FC06205929F6004894EE /* TmpFileStorageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmpFileStorageModel.m; sourceTree = "<group>"; };
-		7034FC08205929F6004894EE /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
-		7034FC09205929F6004894EE /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
-		7034FC0A205929F6004894EE /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
-		7034FC0C205929F6004894EE /* InsetsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsetsLabel.h; sourceTree = "<group>"; };
-		7034FC0D205929F6004894EE /* InsetsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsetsLabel.m; sourceTree = "<group>"; };
 		7034FC10205929F6004894EE /* AYBtmTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYBtmTipView.h; sourceTree = "<group>"; };
 		7034FC11205929F6004894EE /* AYBtmTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYBtmTipView.m; sourceTree = "<group>"; };
 		7034FC14205929F6004894EE /* AlbumGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumGridCell.h; sourceTree = "<group>"; };
@@ -2538,22 +2351,6 @@
 		7034FC8E205929F6004894EE /* PhotoTagTariangleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTagTariangleLayer.m; sourceTree = "<group>"; };
 		7034FC8F205929F6004894EE /* WKFRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKFRadarView.h; sourceTree = "<group>"; };
 		7034FC90205929F6004894EE /* WKFRadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKFRadarView.m; sourceTree = "<group>"; };
-		7034FC93205929F6004894EE /* AYRelationshipBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYRelationshipBtnView.h; sourceTree = "<group>"; };
-		7034FC94205929F6004894EE /* AYRelationshipBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYRelationshipBtnView.m; sourceTree = "<group>"; };
-		7034FC96205929F6004894EE /* AYFollowedBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYFollowedBtnView.h; sourceTree = "<group>"; };
-		7034FC97205929F6004894EE /* AYFollowedBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYFollowedBtnView.m; sourceTree = "<group>"; };
-		7034FC99205929F6004894EE /* AYFollowingBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYFollowingBtnView.h; sourceTree = "<group>"; };
-		7034FC9A205929F6004894EE /* AYFollowingBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYFollowingBtnView.m; sourceTree = "<group>"; };
-		7034FC9C205929F6004894EE /* AYFriendsBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYFriendsBtnView.h; sourceTree = "<group>"; };
-		7034FC9D205929F6004894EE /* AYFriendsBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYFriendsBtnView.m; sourceTree = "<group>"; };
-		7034FC9F205929F6004894EE /* AYInvitationBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYInvitationBtnView.h; sourceTree = "<group>"; };
-		7034FCA0205929F6004894EE /* AYInvitationBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYInvitationBtnView.m; sourceTree = "<group>"; };
-		7034FCA2205929F6004894EE /* AYNoneRelationBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYNoneRelationBtnView.h; sourceTree = "<group>"; };
-		7034FCA3205929F6004894EE /* AYNoneRelationBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYNoneRelationBtnView.m; sourceTree = "<group>"; };
-		7034FCA5205929F6004894EE /* AYRelationshipBtnInitCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYRelationshipBtnInitCommand.h; sourceTree = "<group>"; };
-		7034FCA6205929F6004894EE /* AYRelationshipBtnInitCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYRelationshipBtnInitCommand.m; sourceTree = "<group>"; };
-		7034FCA8205929F6004894EE /* AYSamePersonBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYSamePersonBtnView.h; sourceTree = "<group>"; };
-		7034FCA9205929F6004894EE /* AYSamePersonBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYSamePersonBtnView.m; sourceTree = "<group>"; };
 		7034FCAB205929F6004894EE /* AYScheduleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYScheduleView.h; sourceTree = "<group>"; };
 		7034FCAC205929F6004894EE /* AYScheduleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYScheduleView.m; sourceTree = "<group>"; };
 		7034FCAE205929F6004894EE /* AYCalendarCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYCalendarCellView.h; sourceTree = "<group>"; };
@@ -2587,6 +2384,10 @@
 		7034FCD4205929F6004894EE /* AYUserDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYUserDisplayView.m; sourceTree = "<group>"; };
 		7034FCD5205929F6004894EE /* AYUserDisplayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AYUserDisplayView.xib; sourceTree = "<group>"; };
 		7034FCD7205929F6004894EE /* AYViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYViewBase.h; sourceTree = "<group>"; };
+		7034FFE52059352F004894EE /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		7034FFE62059352F004894EE /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		7034FFE72059352F004894EE /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		7034FFE92059373D004894EE /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		703932201E83F46400FAFF17 /* NodeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeHandle.h; sourceTree = "<group>"; };
 		703932211E83F46400FAFF17 /* NodeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeHandle.m; sourceTree = "<group>"; };
 		703B63CA1FB5B252007A8473 /* 9205.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 9205.mp3; sourceTree = "<group>"; };
@@ -2736,9 +2537,6 @@
 		70510F631DAB3B9D0097E093 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		70510F641DAB3B9D0097E093 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		70510F651DAB3B9D0097E093 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		70510F671DAB3B9D0097E093 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
-		70510F681DAB3B9D0097E093 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
-		70510F691DAB3B9D0097E093 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		705AE9F01FDA914000447C0E /* MXShowTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXShowTableCell.h; sourceTree = "<group>"; };
 		705AE9F11FDA914000447C0E /* MXShowTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXShowTableCell.m; sourceTree = "<group>"; };
 		705AE9F41FDA91D600447C0E /* UIButton+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Factory.h"; sourceTree = "<group>"; };
@@ -2777,6 +2575,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7034FFEA2059373D004894EE /* OpenAL.framework in Frameworks */,
 				7034FEFF205929F8004894EE /* TencentOpenAPI.framework in Frameworks */,
 				7034FEF4205929F8004894EE /* AliyunOSSiOS.framework in Frameworks */,
 				7034FF05205929F8004894EE /* MAMapKit.framework in Frameworks */,
@@ -2836,6 +2635,7 @@
 		702D251C1E810BFC0068F025 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7034FFE92059373D004894EE /* OpenAL.framework */,
 				702D251F1E8111410068F025 /* libxml2.2.tbd */,
 				702D251D1E810BFC0068F025 /* libxml2.tbd */,
 			);
@@ -3848,7 +3648,6 @@
 				7034F545205929F3004894EE /* AYServicePageCellView.xib */,
 				7034F546205929F3004894EE /* ServiceCalendarCell */,
 				7034F549205929F3004894EE /* ServiceCapacityCell */,
-				7034F54E205929F3004894EE /* ServiceCostCell */,
 				7034F551205929F3004894EE /* ServiceDescCell */,
 				7034F556205929F3004894EE /* ServiceFacilityCell */,
 				7034F55B205929F3004894EE /* ServiceMapCell */,
@@ -3881,22 +3680,11 @@
 			path = ServiceCapacityCell;
 			sourceTree = "<group>";
 		};
-		7034F54E205929F3004894EE /* ServiceCostCell */ = {
-			isa = PBXGroup;
-			children = (
-				7034F54F205929F3004894EE /* AYServiceCostCellView.h */,
-				7034F550205929F3004894EE /* AYServiceCostCellView.m */,
-			);
-			path = ServiceCostCell;
-			sourceTree = "<group>";
-		};
 		7034F551205929F3004894EE /* ServiceDescCell */ = {
 			isa = PBXGroup;
 			children = (
 				7034F552205929F3004894EE /* AYServiceDescCellView.h */,
 				7034F553205929F3004894EE /* AYServiceDescCellView.m */,
-				7034F554205929F3004894EE /* AYServiceDescCellView的副本.h */,
-				7034F555205929F3004894EE /* AYServiceDescCellView的副本.m */,
 			);
 			path = ServiceDescCell;
 			sourceTree = "<group>";
@@ -4726,7 +4514,6 @@
 				7034F65C205929F3004894EE /* MoreApplication */,
 				7034F665205929F3004894EE /* OrderListPending */,
 				7034F670205929F3004894EE /* OrderServant */,
-				7034F679205929F3004894EE /* OrderServant的副本 */,
 				7034F686205929F3004894EE /* ServantHistory */,
 			);
 			path = OrderServantMode;
@@ -4817,39 +4604,6 @@
 			children = (
 				7034F677205929F3004894EE /* AYDayRemindCellView.h */,
 				7034F678205929F3004894EE /* AYDayRemindCellView.m */,
-			);
-			path = OrderServantView;
-			sourceTree = "<group>";
-		};
-		7034F679205929F3004894EE /* OrderServant的副本 */ = {
-			isa = PBXGroup;
-			children = (
-				7034F67A205929F3004894EE /* AYOrderServantController.h */,
-				7034F67B205929F3004894EE /* AYOrderServantController.m */,
-				7034F67C205929F3004894EE /* OrderServantDelegate */,
-				7034F67F205929F3004894EE /* OrderServantView */,
-			);
-			path = "OrderServant的副本";
-			sourceTree = "<group>";
-		};
-		7034F67C205929F3004894EE /* OrderServantDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				7034F67D205929F3004894EE /* AYOrderServantDelegate.h */,
-				7034F67E205929F3004894EE /* AYOrderServantDelegate.m */,
-			);
-			path = OrderServantDelegate;
-			sourceTree = "<group>";
-		};
-		7034F67F205929F3004894EE /* OrderServantView */ = {
-			isa = PBXGroup;
-			children = (
-				7034F680205929F3004894EE /* AYDayRemindCellView.h */,
-				7034F681205929F3004894EE /* AYDayRemindCellView.m */,
-				7034F682205929F3004894EE /* AYHistoryEnterCellView.h */,
-				7034F683205929F3004894EE /* AYHistoryEnterCellView.m */,
-				7034F684205929F3004894EE /* AYTodoApplyCellView.h */,
-				7034F685205929F3004894EE /* AYTodoApplyCellView.m */,
 			);
 			path = OrderServantView;
 			sourceTree = "<group>";
@@ -7744,11 +7498,8 @@
 				7034FA77205929F4004894EE /* libWeChatSDK */,
 				7034FA7D205929F4004894EE /* libWeiboSDK */,
 				7034FA8B205929F4004894EE /* MAMapKit.framework */,
-				7034FA8C205929F4004894EE /* Masonry */,
 				7034FAA7205929F5004894EE /* MBProgressHUD */,
-				7034FAAA205929F5004894EE /* MJRefresh */,
 				7034FAD9205929F5004894EE /* MoviePlayTrait */,
-				7034FADC205929F5004894EE /* SDWebImage */,
 				7034FAFE205929F5004894EE /* UIGifVIew */,
 			);
 			path = lib;
@@ -7910,39 +7661,6 @@
 			path = libWeiboSDK;
 			sourceTree = "<group>";
 		};
-		7034FA8C205929F4004894EE /* Masonry */ = {
-			isa = PBXGroup;
-			children = (
-				7034FA8D205929F4004894EE /* Info.plist */,
-				7034FA8E205929F4004894EE /* MASCompositeConstraint.h */,
-				7034FA8F205929F4004894EE /* MASCompositeConstraint.m */,
-				7034FA90205929F4004894EE /* MASConstraint+Private.h */,
-				7034FA91205929F4004894EE /* MASConstraint.h */,
-				7034FA92205929F4004894EE /* MASConstraint.m */,
-				7034FA93205929F4004894EE /* MASConstraintMaker.h */,
-				7034FA94205929F4004894EE /* MASConstraintMaker.m */,
-				7034FA95205929F4004894EE /* MASLayoutConstraint.h */,
-				7034FA96205929F4004894EE /* MASLayoutConstraint.m */,
-				7034FA97205929F4004894EE /* Masonry.h */,
-				7034FA98205929F4004894EE /* MASUtilities.h */,
-				7034FA99205929F4004894EE /* MASViewAttribute.h */,
-				7034FA9A205929F4004894EE /* MASViewAttribute.m */,
-				7034FA9B205929F4004894EE /* MASViewConstraint.h */,
-				7034FA9C205929F4004894EE /* MASViewConstraint.m */,
-				7034FA9D205929F4004894EE /* NSArray+MASAdditions.h */,
-				7034FA9E205929F4004894EE /* NSArray+MASAdditions.m */,
-				7034FA9F205929F4004894EE /* NSArray+MASShorthandAdditions.h */,
-				7034FAA0205929F4004894EE /* NSLayoutConstraint+MASDebugAdditions.h */,
-				7034FAA1205929F4004894EE /* NSLayoutConstraint+MASDebugAdditions.m */,
-				7034FAA2205929F4004894EE /* View+MASAdditions.h */,
-				7034FAA3205929F5004894EE /* View+MASAdditions.m */,
-				7034FAA4205929F5004894EE /* View+MASShorthandAdditions.h */,
-				7034FAA5205929F5004894EE /* ViewController+MASAdditions.h */,
-				7034FAA6205929F5004894EE /* ViewController+MASAdditions.m */,
-			);
-			path = Masonry;
-			sourceTree = "<group>";
-		};
 		7034FAA7205929F5004894EE /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -7952,101 +7670,6 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		7034FAAA205929F5004894EE /* MJRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				7034FAAB205929F5004894EE /* Base */,
-				7034FAB6205929F5004894EE /* Custom */,
-				7034FACD205929F5004894EE /* MJRefresh.bundle */,
-				7034FACE205929F5004894EE /* MJRefresh.h */,
-				7034FACF205929F5004894EE /* MJRefreshConst.h */,
-				7034FAD0205929F5004894EE /* MJRefreshConst.m */,
-				7034FAD1205929F5004894EE /* NSBundle+MJRefresh.h */,
-				7034FAD2205929F5004894EE /* NSBundle+MJRefresh.m */,
-				7034FAD3205929F5004894EE /* UIScrollView+MJExtension.h */,
-				7034FAD4205929F5004894EE /* UIScrollView+MJExtension.m */,
-				7034FAD5205929F5004894EE /* UIScrollView+MJRefresh.h */,
-				7034FAD6205929F5004894EE /* UIScrollView+MJRefresh.m */,
-				7034FAD7205929F5004894EE /* UIView+MJExtension.h */,
-				7034FAD8205929F5004894EE /* UIView+MJExtension.m */,
-			);
-			path = MJRefresh;
-			sourceTree = "<group>";
-		};
-		7034FAAB205929F5004894EE /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				7034FAAC205929F5004894EE /* MJRefreshAutoFooter.h */,
-				7034FAAD205929F5004894EE /* MJRefreshAutoFooter.m */,
-				7034FAAE205929F5004894EE /* MJRefreshBackFooter.h */,
-				7034FAAF205929F5004894EE /* MJRefreshBackFooter.m */,
-				7034FAB0205929F5004894EE /* MJRefreshComponent.h */,
-				7034FAB1205929F5004894EE /* MJRefreshComponent.m */,
-				7034FAB2205929F5004894EE /* MJRefreshFooter.h */,
-				7034FAB3205929F5004894EE /* MJRefreshFooter.m */,
-				7034FAB4205929F5004894EE /* MJRefreshHeader.h */,
-				7034FAB5205929F5004894EE /* MJRefreshHeader.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		7034FAB6205929F5004894EE /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				7034FAB7205929F5004894EE /* Footer */,
-				7034FAC6205929F5004894EE /* Header */,
-			);
-			path = Custom;
-			sourceTree = "<group>";
-		};
-		7034FAB7205929F5004894EE /* Footer */ = {
-			isa = PBXGroup;
-			children = (
-				7034FAB8205929F5004894EE /* Auto */,
-				7034FABF205929F5004894EE /* Back */,
-			);
-			path = Footer;
-			sourceTree = "<group>";
-		};
-		7034FAB8205929F5004894EE /* Auto */ = {
-			isa = PBXGroup;
-			children = (
-				7034FAB9205929F5004894EE /* MJRefreshAutoGifFooter.h */,
-				7034FABA205929F5004894EE /* MJRefreshAutoGifFooter.m */,
-				7034FABB205929F5004894EE /* MJRefreshAutoNormalFooter.h */,
-				7034FABC205929F5004894EE /* MJRefreshAutoNormalFooter.m */,
-				7034FABD205929F5004894EE /* MJRefreshAutoStateFooter.h */,
-				7034FABE205929F5004894EE /* MJRefreshAutoStateFooter.m */,
-			);
-			path = Auto;
-			sourceTree = "<group>";
-		};
-		7034FABF205929F5004894EE /* Back */ = {
-			isa = PBXGroup;
-			children = (
-				7034FAC0205929F5004894EE /* MJRefreshBackGifFooter.h */,
-				7034FAC1205929F5004894EE /* MJRefreshBackGifFooter.m */,
-				7034FAC2205929F5004894EE /* MJRefreshBackNormalFooter.h */,
-				7034FAC3205929F5004894EE /* MJRefreshBackNormalFooter.m */,
-				7034FAC4205929F5004894EE /* MJRefreshBackStateFooter.h */,
-				7034FAC5205929F5004894EE /* MJRefreshBackStateFooter.m */,
-			);
-			path = Back;
-			sourceTree = "<group>";
-		};
-		7034FAC6205929F5004894EE /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				7034FAC7205929F5004894EE /* MJRefreshGifHeader.h */,
-				7034FAC8205929F5004894EE /* MJRefreshGifHeader.m */,
-				7034FAC9205929F5004894EE /* MJRefreshNormalHeader.h */,
-				7034FACA205929F5004894EE /* MJRefreshNormalHeader.m */,
-				7034FACB205929F5004894EE /* MJRefreshStateHeader.h */,
-				7034FACC205929F5004894EE /* MJRefreshStateHeader.m */,
-			);
-			path = Header;
-			sourceTree = "<group>";
-		};
 		7034FAD9205929F5004894EE /* MoviePlayTrait */ = {
 			isa = PBXGroup;
 			children = (
@@ -8054,46 +7677,6 @@
 				7034FADB205929F5004894EE /* MoviePlayTrait.m */,
 			);
 			path = MoviePlayTrait;
-			sourceTree = "<group>";
-		};
-		7034FADC205929F5004894EE /* SDWebImage */ = {
-			isa = PBXGroup;
-			children = (
-				7034FADD205929F5004894EE /* MKAnnotationView+WebCache.h */,
-				7034FADE205929F5004894EE /* MKAnnotationView+WebCache.m */,
-				7034FADF205929F5004894EE /* NSData+ImageContentType.h */,
-				7034FAE0205929F5004894EE /* NSData+ImageContentType.m */,
-				7034FAE1205929F5004894EE /* SDImageCache.h */,
-				7034FAE2205929F5004894EE /* SDImageCache.m */,
-				7034FAE3205929F5004894EE /* SDWebImageCompat.h */,
-				7034FAE4205929F5004894EE /* SDWebImageCompat.m */,
-				7034FAE5205929F5004894EE /* SDWebImageDecoder.h */,
-				7034FAE6205929F5004894EE /* SDWebImageDecoder.m */,
-				7034FAE7205929F5004894EE /* SDWebImageDownloader.h */,
-				7034FAE8205929F5004894EE /* SDWebImageDownloader.m */,
-				7034FAE9205929F5004894EE /* SDWebImageDownloaderOperation.h */,
-				7034FAEA205929F5004894EE /* SDWebImageDownloaderOperation.m */,
-				7034FAEB205929F5004894EE /* SDWebImageManager.h */,
-				7034FAEC205929F5004894EE /* SDWebImageManager.m */,
-				7034FAED205929F5004894EE /* SDWebImageOperation.h */,
-				7034FAEE205929F5004894EE /* SDWebImagePrefetcher.h */,
-				7034FAEF205929F5004894EE /* SDWebImagePrefetcher.m */,
-				7034FAF0205929F5004894EE /* UIButton+WebCache.h */,
-				7034FAF1205929F5004894EE /* UIButton+WebCache.m */,
-				7034FAF2205929F5004894EE /* UIImage+GIF.h */,
-				7034FAF3205929F5004894EE /* UIImage+GIF.m */,
-				7034FAF4205929F5004894EE /* UIImage+MultiFormat.h */,
-				7034FAF5205929F5004894EE /* UIImage+MultiFormat.m */,
-				7034FAF6205929F5004894EE /* UIImage+WebP.h */,
-				7034FAF7205929F5004894EE /* UIImage+WebP.m */,
-				7034FAF8205929F5004894EE /* UIImageView+HighlightedWebCache.h */,
-				7034FAF9205929F5004894EE /* UIImageView+HighlightedWebCache.m */,
-				7034FAFA205929F5004894EE /* UIImageView+WebCache.h */,
-				7034FAFB205929F5004894EE /* UIImageView+WebCache.m */,
-				7034FAFC205929F5004894EE /* UIView+WebCacheOperation.h */,
-				7034FAFD205929F5004894EE /* UIView+WebCacheOperation.m */,
-			);
-			path = SDWebImage;
 			sourceTree = "<group>";
 		};
 		7034FAFE205929F5004894EE /* UIGifVIew */ = {
@@ -8622,10 +8205,7 @@
 			children = (
 				7034FBEB205929F6004894EE /* Extension */,
 				7034FBFA205929F6004894EE /* RemoteInstance */,
-				7034FBFD205929F6004894EE /* ShapedButton */,
 				7034FC04205929F6004894EE /* TmpFileStorageModel */,
-				7034FC07205929F6004894EE /* Tools */,
-				7034FC0B205929F6004894EE /* UILabel_Inset */,
 			);
 			path = Toolset;
 			sourceTree = "<group>";
@@ -8660,33 +8240,6 @@
 			path = RemoteInstance;
 			sourceTree = "<group>";
 		};
-		7034FBFD205929F6004894EE /* ShapedButton */ = {
-			isa = PBXGroup;
-			children = (
-				7034FBFE205929F6004894EE /* OBShapedButton */,
-				7034FC01205929F6004894EE /* UIImage+ColorAtPixel */,
-			);
-			path = ShapedButton;
-			sourceTree = "<group>";
-		};
-		7034FBFE205929F6004894EE /* OBShapedButton */ = {
-			isa = PBXGroup;
-			children = (
-				7034FBFF205929F6004894EE /* OBShapedButton.h */,
-				7034FC00205929F6004894EE /* OBShapedButton.m */,
-			);
-			path = OBShapedButton;
-			sourceTree = "<group>";
-		};
-		7034FC01205929F6004894EE /* UIImage+ColorAtPixel */ = {
-			isa = PBXGroup;
-			children = (
-				7034FC02205929F6004894EE /* UIImage+ColorAtPixel.h */,
-				7034FC03205929F6004894EE /* UIImage+ColorAtPixel.m */,
-			);
-			path = "UIImage+ColorAtPixel";
-			sourceTree = "<group>";
-		};
 		7034FC04205929F6004894EE /* TmpFileStorageModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -8694,25 +8247,6 @@
 				7034FC06205929F6004894EE /* TmpFileStorageModel.m */,
 			);
 			path = TmpFileStorageModel;
-			sourceTree = "<group>";
-		};
-		7034FC07205929F6004894EE /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				7034FC08205929F6004894EE /* Define.h */,
-				7034FC09205929F6004894EE /* Tools.h */,
-				7034FC0A205929F6004894EE /* Tools.m */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		7034FC0B205929F6004894EE /* UILabel_Inset */ = {
-			isa = PBXGroup;
-			children = (
-				7034FC0C205929F6004894EE /* InsetsLabel.h */,
-				7034FC0D205929F6004894EE /* InsetsLabel.m */,
-			);
-			path = UILabel_Inset;
 			sourceTree = "<group>";
 		};
 		7034FC0E205929F6004894EE /* View */ = {
@@ -8729,7 +8263,6 @@
 				7034FC7C205929F6004894EE /* OnceTip */,
 				7034FC7F205929F6004894EE /* PhotoTagView */,
 				7034FC91205929F6004894EE /* PushResetBtn */,
-				7034FC92205929F6004894EE /* RelationshipBtn */,
 				7034FCAA205929F6004894EE /* ScheduleView */,
 				7034FCB6205929F6004894EE /* ShadowView */,
 				7034FCB9205929F6004894EE /* ThirdView+Extension */,
@@ -9112,85 +8645,6 @@
 			path = PushResetBtn;
 			sourceTree = "<group>";
 		};
-		7034FC92205929F6004894EE /* RelationshipBtn */ = {
-			isa = PBXGroup;
-			children = (
-				7034FC93205929F6004894EE /* AYRelationshipBtnView.h */,
-				7034FC94205929F6004894EE /* AYRelationshipBtnView.m */,
-				7034FC95205929F6004894EE /* FollowedBtn */,
-				7034FC98205929F6004894EE /* FollowingBtn */,
-				7034FC9B205929F6004894EE /* FriendsBtn */,
-				7034FC9E205929F6004894EE /* InvitationBtn */,
-				7034FCA1205929F6004894EE /* NoneRelationBtn */,
-				7034FCA4205929F6004894EE /* RelationshipBtnInit */,
-				7034FCA7205929F6004894EE /* SamePersonBtn */,
-			);
-			path = RelationshipBtn;
-			sourceTree = "<group>";
-		};
-		7034FC95205929F6004894EE /* FollowedBtn */ = {
-			isa = PBXGroup;
-			children = (
-				7034FC96205929F6004894EE /* AYFollowedBtnView.h */,
-				7034FC97205929F6004894EE /* AYFollowedBtnView.m */,
-			);
-			path = FollowedBtn;
-			sourceTree = "<group>";
-		};
-		7034FC98205929F6004894EE /* FollowingBtn */ = {
-			isa = PBXGroup;
-			children = (
-				7034FC99205929F6004894EE /* AYFollowingBtnView.h */,
-				7034FC9A205929F6004894EE /* AYFollowingBtnView.m */,
-			);
-			path = FollowingBtn;
-			sourceTree = "<group>";
-		};
-		7034FC9B205929F6004894EE /* FriendsBtn */ = {
-			isa = PBXGroup;
-			children = (
-				7034FC9C205929F6004894EE /* AYFriendsBtnView.h */,
-				7034FC9D205929F6004894EE /* AYFriendsBtnView.m */,
-			);
-			path = FriendsBtn;
-			sourceTree = "<group>";
-		};
-		7034FC9E205929F6004894EE /* InvitationBtn */ = {
-			isa = PBXGroup;
-			children = (
-				7034FC9F205929F6004894EE /* AYInvitationBtnView.h */,
-				7034FCA0205929F6004894EE /* AYInvitationBtnView.m */,
-			);
-			path = InvitationBtn;
-			sourceTree = "<group>";
-		};
-		7034FCA1205929F6004894EE /* NoneRelationBtn */ = {
-			isa = PBXGroup;
-			children = (
-				7034FCA2205929F6004894EE /* AYNoneRelationBtnView.h */,
-				7034FCA3205929F6004894EE /* AYNoneRelationBtnView.m */,
-			);
-			path = NoneRelationBtn;
-			sourceTree = "<group>";
-		};
-		7034FCA4205929F6004894EE /* RelationshipBtnInit */ = {
-			isa = PBXGroup;
-			children = (
-				7034FCA5205929F6004894EE /* AYRelationshipBtnInitCommand.h */,
-				7034FCA6205929F6004894EE /* AYRelationshipBtnInitCommand.m */,
-			);
-			path = RelationshipBtnInit;
-			sourceTree = "<group>";
-		};
-		7034FCA7205929F6004894EE /* SamePersonBtn */ = {
-			isa = PBXGroup;
-			children = (
-				7034FCA8205929F6004894EE /* AYSamePersonBtnView.h */,
-				7034FCA9205929F6004894EE /* AYSamePersonBtnView.m */,
-			);
-			path = SamePersonBtn;
-			sourceTree = "<group>";
-		};
 		7034FCAA205929F6004894EE /* ScheduleView */ = {
 			isa = PBXGroup;
 			children = (
@@ -9320,6 +8774,17 @@
 				7034FCD7205929F6004894EE /* AYViewBase.h */,
 			);
 			path = ViewBase;
+			sourceTree = "<group>";
+		};
+		7034FFE42059352F004894EE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				7034FFE52059352F004894EE /* Define.h */,
+				7034FFE62059352F004894EE /* Tools.h */,
+				7034FFE72059352F004894EE /* Tools.m */,
+			);
+			name = Tools;
+			path = ../Tools;
 			sourceTree = "<group>";
 		};
 		7039321F1E83F44500FAFF17 /* NodeHandle */ = {
@@ -9534,6 +8999,7 @@
 			isa = PBXGroup;
 			children = (
 				7034F404205929F3004894EE /* BabySharing */,
+				7034FFE42059352F004894EE /* Tools */,
 				705AE9F31FDA91D600447C0E /* Extension */,
 				70F229B41E8CA7A600065B5F /* MXSFileHandle */,
 				7039321F1E83F44500FAFF17 /* NodeHandle */,
@@ -9543,7 +9009,6 @@
 				70510F001DAB3B9D0097E093 /* MBProgressHUD */,
 				70510F031DAB3B9D0097E093 /* MJRefresh */,
 				70510F441DAB3B9D0097E093 /* SDWebImage */,
-				70510F661DAB3B9D0097E093 /* Tools */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -9727,16 +9192,6 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		70510F661DAB3B9D0097E093 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				70510F671DAB3B9D0097E093 /* Define.h */,
-				70510F681DAB3B9D0097E093 /* Tools.h */,
-				70510F691DAB3B9D0097E093 /* Tools.m */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
 		705AE9F31FDA91D600447C0E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -9883,7 +9338,6 @@
 				7034FFE3205929F9004894EE /* AYUserDisplayView.xib in Resources */,
 				703B63CB1FB5B252007A8473 /* 9205.mp3 in Resources */,
 				7034FCF3205929F6004894EE /* color.xml in Resources */,
-				7034FF06205929F8004894EE /* Info.plist in Resources */,
 				7034FF90205929F8004894EE /* privacy.html in Resources */,
 				7034FEF6205929F8004894EE /* AlipaySDK.bundle in Resources */,
 				7034FCF6205929F6004894EE /* delegate.xml in Resources */,
@@ -9891,7 +9345,6 @@
 				7034FFD8205929F9004894EE /* AYDayCollectionCellView.xib in Resources */,
 				7034FF8D205929F8004894EE /* Info.plist in Resources */,
 				7034FCFA205929F6004894EE /* remote.xml in Resources */,
-				7034FF20205929F8004894EE /* MJRefresh.bundle in Resources */,
 				7034FF8E205929F8004894EE /* InfoPlist.strings in Resources */,
 				7034FD4D205929F6004894EE /* AYServicePageCellView.xib in Resources */,
 				7034FCF8205929F6004894EE /* font.xml in Resources */,
@@ -9919,7 +9372,6 @@
 				705AEA081FDA97BE00447C0E /* MXSShowImageVC.m in Sources */,
 				7034FDCE205929F7004894EE /* AYPersonalDescController.m in Sources */,
 				7034FEA3205929F7004894EE /* AYPushRealNameCommand.m in Sources */,
-				7034FD53205929F6004894EE /* AYServiceDescCellView的副本.m in Sources */,
 				7034FE38205929F7004894EE /* PGIndexBannerSubiew.m in Sources */,
 				7034FFC6205929F8004894EE /* AYPhotoTagInitCommand.m in Sources */,
 				7034FD66205929F6004894EE /* AYTopicContentCellView.m in Sources */,
@@ -9930,18 +9382,14 @@
 				7034FF8B205929F8004894EE /* AYEnumTagContentTimeSpanCommand.m in Sources */,
 				705AEA0B1FDA9B2600447C0E /* MXSProfileTDlg.m in Sources */,
 				7034FE71205929F7004894EE /* AYRemoteManagerCommand.m in Sources */,
-				7034FF1E205929F8004894EE /* MJRefreshNormalHeader.m in Sources */,
 				7034FDCF205929F7004894EE /* AYPersonalInfoController.m in Sources */,
 				7034FEBF205929F7004894EE /* AYQueryServiceDetailCommand.m in Sources */,
 				7034FF49205929F8004894EE /* AYQueryNotificationsCommand.m in Sources */,
-				7034FF0A205929F8004894EE /* MASLayoutConstraint.m in Sources */,
 				7034FF4D205929F8004894EE /* CurrentToken+CoreDataProperties.m in Sources */,
 				7034FE87205929F7004894EE /* AYAuthRemoteFacade.m in Sources */,
 				7034FF6F205929F8004894EE /* QueryComments.m in Sources */,
 				7034FF60205929F8004894EE /* RegTmpToken+ContextOpt.m in Sources */,
 				7034FDFA205929F7004894EE /* UIView+Layout.m in Sources */,
-				7034FFD1205929F9004894EE /* AYNoneRelationBtnView.m in Sources */,
-				7034FF34205929F8004894EE /* UIImageView+HighlightedWebCache.m in Sources */,
 				7034FD9E205929F7004894EE /* AYOrderInfoPageController.m in Sources */,
 				7034FD7B205929F7004894EE /* AYCommentServiceController.m in Sources */,
 				7034FE27205929F7004894EE /* AYSetServiceCapacityDelegate.m in Sources */,
@@ -9955,7 +9403,6 @@
 				7034FD46205929F6004894EE /* AYSearchSKUController.m in Sources */,
 				7034FE72205929F7004894EE /* AYRemoteManagerFacade.m in Sources */,
 				7034FD21205929F6004894EE /* AYFilterThemeController.m in Sources */,
-				7034FF25205929F8004894EE /* UIView+MJExtension.m in Sources */,
 				70510F7D1DAB3B9D0097E093 /* MASConstraintMaker.m in Sources */,
 				7034FD13205929F6004894EE /* AYAssortmentDelegate.m in Sources */,
 				70510F8B1DAB3B9D0097E093 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -9975,9 +9422,7 @@
 				7034FF70205929F8004894EE /* QueryContent+ContextOpt.m in Sources */,
 				7034FE11205929F7004894EE /* AYServiceTimesCellView.m in Sources */,
 				7034FD5D205929F6004894EE /* AYImageTagView.m in Sources */,
-				7034FFCD205929F9004894EE /* AYFollowedBtnView.m in Sources */,
 				7034FF5B205929F8004894EE /* UserKids.m in Sources */,
-				7034FFD3205929F9004894EE /* AYSamePersonBtnView.m in Sources */,
 				7034FED3205929F8004894EE /* AYRejectOrderCommand.m in Sources */,
 				7034FFB6205929F8004894EE /* DropDownItem.m in Sources */,
 				7034FE96205929F7004894EE /* AYSearchRemoteFacade.m in Sources */,
@@ -9995,10 +9440,8 @@
 				7034FF51205929F8004894EE /* LoginLocalModel.xcdatamodeld in Sources */,
 				70510F941DAB3B9D0097E093 /* MJRefreshNormalHeader.m in Sources */,
 				7034FF83205929F8004894EE /* AYRefrashOwnerQueryDataCommand.m in Sources */,
-				7034FD51205929F6004894EE /* AYServiceCostCellView.m in Sources */,
 				7034FEBD205929F7004894EE /* AYPushServiceInfoCommand.m in Sources */,
 				7034FDEB205929F7004894EE /* AYNapEditInfoCellView.m in Sources */,
-				7034FFD0205929F9004894EE /* AYInvitationBtnView.m in Sources */,
 				70510F7C1DAB3B9D0097E093 /* MASConstraint.m in Sources */,
 				7034FDEC205929F7004894EE /* AYOptionalInfoCellView.m in Sources */,
 				7034FD50205929F6004894EE /* AYServiceCapacityCellView.m in Sources */,
@@ -10015,7 +9458,6 @@
 				7034FE0D205929F7004894EE /* AYServiceTimesShowDelegate.m in Sources */,
 				7034FD60205929F6004894EE /* AYSortServiceListController.m in Sources */,
 				7034FFA1205929F8004894EE /* AYAlbumTableCellView.m in Sources */,
-				7034FDBB205929F7004894EE /* AYDayRemindCellView.m in Sources */,
 				7034FDAF205929F7004894EE /* AYMoreAppliController.m in Sources */,
 				7034FEDB205929F8004894EE /* AYQueryMultipleUsersCommand.m in Sources */,
 				7034FEB1205929F7004894EE /* AYExposeUserCommand.m in Sources */,
@@ -10024,14 +9466,12 @@
 				7034FD90205929F7004894EE /* AYOrderPriceCellView.m in Sources */,
 				7034FDD3205929F7004894EE /* AYPersonalValidateCellView.m in Sources */,
 				7034FCE1205929F6004894EE /* AYPopToRootCommand.m in Sources */,
-				7034FF2B205929F8004894EE /* SDWebImageDecoder.m in Sources */,
 				7034FCEB205929F6004894EE /* AYGernarateImgUUIDCommand.m in Sources */,
 				7034FE91205929F7004894EE /* AYOrderRemoteFacade.m in Sources */,
 				7034FD57205929F6004894EE /* AYServiceNotiCellView.m in Sources */,
 				7034FD0C205929F6004894EE /* AYOrderTimesDelegate.m in Sources */,
 				7034FE0C205929F7004894EE /* AYServiceTimesPickDelegate.m in Sources */,
 				7034FD3B205929F6004894EE /* AYLocationCellView.m in Sources */,
-				7034FF28205929F8004894EE /* NSData+ImageContentType.m in Sources */,
 				7034FDF0205929F7004894EE /* AYTipsCollectionView.m in Sources */,
 				7034FEB8205929F7004894EE /* AYCollectServiceCommand.m in Sources */,
 				7034FEFC205929F8004894EE /* openssl_wrapper.m in Sources */,
@@ -10047,13 +9487,11 @@
 				7034FD49205929F6004894EE /* AYServiceMapController.m in Sources */,
 				7034FFD5205929F9004894EE /* AYCalendarCellView.m in Sources */,
 				7034FDB4205929F7004894EE /* AYOrderListPendingCellView.m in Sources */,
-				7034FF24205929F8004894EE /* UIScrollView+MJRefresh.m in Sources */,
 				7034FDF6205929F7004894EE /* TZPhotoPickerController.m in Sources */,
 				7034FD8E205929F7004894EE /* AYOrderPayCellView.m in Sources */,
 				7034FE76205929F7004894EE /* AYSNSWechatFacade.m in Sources */,
 				7034FEDD205929F8004894EE /* AYUpdateUserDetailCommand.m in Sources */,
 				7034FE20205929F7004894EE /* AYRestDayTableDelegate.m in Sources */,
-				7034FF9D205929F8004894EE /* Tools.m in Sources */,
 				7034FD07205929F6004894EE /* AYOTMCourseCellView.m in Sources */,
 				7034FECB205929F7004894EE /* AYQueryOwnOrdersCommand.m in Sources */,
 				703FF08D1FAB171B007F2115 /* MXSAnimetionVC.m in Sources */,
@@ -10064,8 +9502,6 @@
 				7034FE02205929F7004894EE /* AYSetServiceCharactCellView.m in Sources */,
 				7034FFD7205929F9004894EE /* AYDayCollectionCellView.m in Sources */,
 				7034FFBC205929F8004894EE /* WETouchableView.m in Sources */,
-				7034FDBC205929F7004894EE /* AYHistoryEnterCellView.m in Sources */,
-				7034FF15205929F8004894EE /* MJRefreshFooter.m in Sources */,
 				70510FA61DAB3B9D0097E093 /* SDWebImageDecoder.m in Sources */,
 				7034FF66205929F8004894EE /* AYUpdateLocalCurrentUserProfileCommand.m in Sources */,
 				7034FD0A205929F6004894EE /* AYConfirmOrderController.m in Sources */,
@@ -10080,7 +9516,6 @@
 				700FB05B1E9B8E0F00FAB5DA /* MXSTogetherBarHandle.m in Sources */,
 				7034FDF1205929F7004894EE /* TZAssetCell.m in Sources */,
 				70510F991DAB3B9D0097E093 /* UIScrollView+MJRefresh.m in Sources */,
-				7034FF31205929F8004894EE /* UIImage+GIF.m in Sources */,
 				7034FDE3205929F7004894EE /* AYAdvanceOptView.m in Sources */,
 				7034FE49205929F7004894EE /* AYOrderCommonInitCommand.m in Sources */,
 				7034FD01205929F6004894EE /* AYBOrderMainDelegate.m in Sources */,
@@ -10090,7 +9525,6 @@
 				7034FE22205929F7004894EE /* AYSetAgeBoundaryDelegate.m in Sources */,
 				7034FD8D205929F7004894EE /* AYOrderMapCellView.m in Sources */,
 				7034FD75205929F6004894EE /* AYMyServiceCellView.m in Sources */,
-				7034FDBA205929F7004894EE /* AYOrderServantDelegate.m in Sources */,
 				7034FD78205929F7004894EE /* AYNewVersionNavDelegate.m in Sources */,
 				7034FE2C205929F7004894EE /* AYSetLocationInfoDelegate.m in Sources */,
 				7034FD0E205929F6004894EE /* AYRemoteBackController.m in Sources */,
@@ -10156,7 +9590,6 @@
 				7034FF6E205929F8004894EE /* AYQueryTmpUserCommand.m in Sources */,
 				7034FEFB205929F8004894EE /* NSDataEx.m in Sources */,
 				7034FFB8205929F8004894EE /* UIBarButtonItem+WEPopover.m in Sources */,
-				7034FF27205929F8004894EE /* MKAnnotationView+WebCache.m in Sources */,
 				7034FF43205929F8004894EE /* Notifications+CoreDataProperties.m in Sources */,
 				7034FFC0205929F8004894EE /* AYNoContentCell.m in Sources */,
 				704B25F51FB43E1500A6899B /* HistoryModel.xcdatamodeld in Sources */,
@@ -10187,17 +9620,13 @@
 				7034FD65205929F6004894EE /* AYListEndSignCellView.m in Sources */,
 				7034FFDF205929F9004894EE /* AYThumbsAndPushInitCommand.m in Sources */,
 				7034FD7D205929F7004894EE /* AYServQualityCellView.m in Sources */,
-				7034FF33205929F8004894EE /* UIImage+WebP.m in Sources */,
 				7034FF74205929F8004894EE /* QueryContentItem.m in Sources */,
 				7034FE73205929F7004894EE /* AYSNSQQFacade.m in Sources */,
 				7034FD4A205929F6004894EE /* AYServiceMapView.m in Sources */,
-				7034FF2E205929F8004894EE /* SDWebImageManager.m in Sources */,
-				7034FF9B205929F8004894EE /* UIImage+ColorAtPixel.m in Sources */,
 				7034FEFE205929F8004894EE /* RSADataVerifier.m in Sources */,
 				7034FF72205929F8004894EE /* QueryContentChaters+CoreDataProperties.m in Sources */,
 				7034FFBD205929F8004894EE /* AYInsetLabel.m in Sources */,
 				7034FD56205929F6004894EE /* AYServiceMapCellView.m in Sources */,
-				7034FF1F205929F8004894EE /* MJRefreshStateHeader.m in Sources */,
 				7034FCDE205929F6004894EE /* AYHomePushCommand.m in Sources */,
 				7034FD98205929F7004894EE /* AYAppliFBListController.m in Sources */,
 				7034FEA1205929F7004894EE /* AYLandingAuthConfirmCommand.m in Sources */,
@@ -10222,7 +9651,6 @@
 				7034FD67205929F6004894EE /* AYTopicDescCellView.m in Sources */,
 				70510FA51DAB3B9D0097E093 /* SDWebImageCompat.m in Sources */,
 				70510FA41DAB3B9D0097E093 /* SDImageCache.m in Sources */,
-				7034FF2C205929F8004894EE /* SDWebImageDownloader.m in Sources */,
 				7034FDD5205929F7004894EE /* AYSelfSettingCellView.m in Sources */,
 				7034FF3D205929F8004894EE /* AYChatSessionModelFacade.m in Sources */,
 				7042C8D11E5BF23800B41BA4 /* MXSSettingVC.m in Sources */,
@@ -10230,15 +9658,12 @@
 				7034FD86205929F7004894EE /* AYSerOrderCellView.m in Sources */,
 				7034FE0F205929F7004894EE /* AYScheduleWeekDaysView.m in Sources */,
 				7034FF69205929F8004894EE /* AYUpdateRegUserProfileCommand.m in Sources */,
-				7034FF2A205929F8004894EE /* SDWebImageCompat.m in Sources */,
 				7034FE6A205929F7004894EE /* AYGetAllPhonesCommand.m in Sources */,
 				7034FF81205929F8004894EE /* AYOwnerQueryModelFacade.m in Sources */,
 				7034FCFD205929F6004894EE /* AYBOrderMainDateCellView.m in Sources */,
-				7034FF1A205929F8004894EE /* MJRefreshBackGifFooter.m in Sources */,
 				7034FEC4205929F7004894EE /* AYUpdateMyServiceTMCommand.m in Sources */,
 				7034FD1D205929F6004894EE /* AYFacilityDelegate.m in Sources */,
 				70510F851DAB3B9D0097E093 /* MBProgressHUD.m in Sources */,
-				7034FFD2205929F9004894EE /* AYRelationshipBtnInitCommand.m in Sources */,
 				7034FE0A205929F7004894EE /* AYSetNapCostController.m in Sources */,
 				7034FDB3205929F7004894EE /* AYOrderListPendingDelegate.m in Sources */,
 				705AEA031FDA91D700447C0E /* UILabel+Factory.m in Sources */,
@@ -10264,21 +9689,17 @@
 				7034FD9B205929F7004894EE /* AYOrderNewsreelCellView.m in Sources */,
 				7034FCE3205929F6004894EE /* AYExchangeWindowsCommand.m in Sources */,
 				7034FCD9205929F6004894EE /* AYAppInitCommand.m in Sources */,
-				7034FF23205929F8004894EE /* UIScrollView+MJExtension.m in Sources */,
 				703932221E83F46400FAFF17 /* NodeHandle.m in Sources */,
 				7034FD83205929F7004894EE /* AYNoOrderCellView.m in Sources */,
 				7034FD5B205929F6004894EE /* AYServiceTitleCellView.m in Sources */,
 				7034FCDB205929F6004894EE /* AYPopSplitAnimationCommand.m in Sources */,
 				7034FDE9205929F7004894EE /* AYNapPhotosCellView.m in Sources */,
 				7034FE84205929F7004894EE /* AYPushServiceTMProtocolCommand.m in Sources */,
-				7034FF14205929F8004894EE /* MJRefreshComponent.m in Sources */,
 				7034FE52205929F7004894EE /* AYPhoneCheckInputView.m in Sources */,
-				7034FF1B205929F8004894EE /* MJRefreshBackNormalFooter.m in Sources */,
 				70510FAF1DAB3B9D0097E093 /* UIImageView+HighlightedWebCache.m in Sources */,
 				7034FD36205929F6004894EE /* AYFilterCansCellView.m in Sources */,
 				7034FD0B205929F6004894EE /* AYOrderTimesController.m in Sources */,
 				7034FDE2205929F7004894EE /* AYNapAreaMapView.m in Sources */,
-				7034FF13205929F8004894EE /* MJRefreshBackFooter.m in Sources */,
 				7034FF78205929F8004894EE /* QueryTimeSpan.m in Sources */,
 				7034FE79205929F7004894EE /* AYPayWithWechatCommand.m in Sources */,
 				700FB0581E9B403C00FAB5DA /* MXSHuiLongGuanHandle.m in Sources */,
@@ -10287,19 +9708,16 @@
 				7034FE07205929F7004894EE /* AYSetCourseSignDelegate.m in Sources */,
 				7034FE44205929F7004894EE /* AYSetServiceTypeController.m in Sources */,
 				7034FF48205929F8004894EE /* AYQueryChatSessionCommand.m in Sources */,
-				7034FF09205929F8004894EE /* MASConstraintMaker.m in Sources */,
 				7034FEA2205929F7004894EE /* AYLandingReqConfirmCodeCommand.m in Sources */,
 				7034FEA0205929F7004894EE /* AYIsTokenExpiredCommand.m in Sources */,
 				7034FE63205929F7004894EE /* AYOSSGetCommand.m in Sources */,
 				70510F801DAB3B9D0097E093 /* MASViewConstraint.m in Sources */,
 				7034FE35205929F7004894EE /* AYSetServiceFacilityDelegate.m in Sources */,
 				7034FE7A205929F7004894EE /* AYShareWithWechatCommand.m in Sources */,
-				7034FF19205929F8004894EE /* MJRefreshAutoStateFooter.m in Sources */,
 				7034FD6F205929F6004894EE /* AYLandingSNSView.m in Sources */,
 				7034FE4B205929F7004894EE /* AYProfileInitCommand.m in Sources */,
 				7034FD14205929F6004894EE /* AYAssortmentReviseDelegate.m in Sources */,
 				7034FE6C205929F7004894EE /* AYPHAssetFacade.m in Sources */,
-				7034FF30205929F8004894EE /* UIButton+WebCache.m in Sources */,
 				7034FDEE205929F7004894EE /* AYEditPhotosController.m in Sources */,
 				7034FEDE205929F8004894EE /* AYEmailSendCommand.m in Sources */,
 				705AEA001FDA91D700447C0E /* UIButton+Factory.m in Sources */,
@@ -10318,8 +9736,6 @@
 				7034FDDF205929F7004894EE /* AYAppSettingDelegate.m in Sources */,
 				7034FD9A205929F7004894EE /* AYOrderCommonDelegate.m in Sources */,
 				7034FF64205929F8004894EE /* AYQueryCurrentUserProfileCommand.m in Sources */,
-				7034FF9A205929F8004894EE /* OBShapedButton.m in Sources */,
-				7034FF2D205929F8004894EE /* SDWebImageDownloaderOperation.m in Sources */,
 				7034FD04205929F6004894EE /* AYBOTimeTableDelegate.m in Sources */,
 				7034FD9C205929F7004894EE /* AYOrderTOPView.m in Sources */,
 				7034FFC3205929F8004894EE /* AYNotifyFollowedBtnView.m in Sources */,
@@ -10347,7 +9763,6 @@
 				7034FEC3205929F7004894EE /* AYUpdateMyServiceCommand.m in Sources */,
 				7034FF26205929F8004894EE /* MoviePlayTrait.m in Sources */,
 				7034FCDC205929F6004894EE /* AYPushFromBotCommand.m in Sources */,
-				7034FF36205929F8004894EE /* UIView+WebCacheOperation.m in Sources */,
 				7034FD69205929F6004894EE /* AYInputCoderController.m in Sources */,
 				7034FEE3205929F8004894EE /* AYAppInitCommandFactory.m in Sources */,
 				7034FEEC205929F8004894EE /* GDataXMLNode.m in Sources */,
@@ -10370,7 +9785,6 @@
 				7034FFB9205929F8004894EE /* WEBlockingGestureRecognizer.m in Sources */,
 				7034FF5F205929F8004894EE /* RegCurrentToken+ContextOpt.m in Sources */,
 				7034FE54205929F7004894EE /* AYConfirmPhoneNoConsumerController.m in Sources */,
-				7034FF18205929F8004894EE /* MJRefreshAutoNormalFooter.m in Sources */,
 				7034FEE8205929F8004894EE /* AYDefaultFacadeFactory.m in Sources */,
 				7034FE77205929F7004894EE /* AYIsInstalledWechatCommand.m in Sources */,
 				7034FE3E205929F7004894EE /* AYSetPriceInputView.m in Sources */,
@@ -10405,15 +9819,12 @@
 				7034FF58205929F8004894EE /* RegTmpToken+CoreDataProperties.m in Sources */,
 				7034FCE4205929F6004894EE /* AYReversModuleCommand.m in Sources */,
 				7034FEE7205929F8004894EE /* AYDefaultDelegateFactory.m in Sources */,
-				7034FF07205929F8004894EE /* MASCompositeConstraint.m in Sources */,
 				70510F871DAB3B9D0097E093 /* MJRefreshBackFooter.m in Sources */,
 				7034FF8C205929F8004894EE /* AYRefrashTagContentDataCommand.m in Sources */,
 				7034FE06205929F7004894EE /* AYInputCoustomController.m in Sources */,
 				7034FD82205929F7004894EE /* AYPastOrderSerDelegate.m in Sources */,
 				7034FE1F205929F7004894EE /* AYRestDayScheduleController.m in Sources */,
-				7034FF2F205929F8004894EE /* SDWebImagePrefetcher.m in Sources */,
 				7034FE2F205929F7004894EE /* AYSetServiceFacilityCellView.m in Sources */,
-				7034FF0D205929F8004894EE /* NSArray+MASAdditions.m in Sources */,
 				703DA8BF1FBA99A90059A632 /* MXSNavigationBar.m in Sources */,
 				7034FFA3205929F8004894EE /* AYButtonView.m in Sources */,
 				7034FDDA205929F7004894EE /* AYProfileHeadCellView.m in Sources */,
@@ -10424,9 +9835,7 @@
 				70BF4D19201AD7BE00A89EA6 /* MXSWebSiteHandle.m in Sources */,
 				7034FD71205929F6004894EE /* AYUserScreenPhoteView.m in Sources */,
 				7034FF87205929F8004894EE /* AYRefrashOwnerQueryPushDataCommand.m in Sources */,
-				7034FFCF205929F9004894EE /* AYFriendsBtnView.m in Sources */,
 				7034FE46205929F7004894EE /* AYHomeInitCommand.m in Sources */,
-				7034FF0B205929F8004894EE /* MASViewAttribute.m in Sources */,
 				7034FE55205929F7004894EE /* AYConfirmPhoneNoController.m in Sources */,
 				7034FFAF205929F8004894EE /* AYLabelView.m in Sources */,
 				7034FFD6205929F9004894EE /* AYCalendarDate.m in Sources */,
@@ -10434,7 +9843,6 @@
 				7034FF8A205929F8004894EE /* AYEnumTagContentDataCommand.m in Sources */,
 				7034FE0B205929F7004894EE /* AYSetNapScheduleController.m in Sources */,
 				7034FFC7205929F8004894EE /* AYPhotoTagView.m in Sources */,
-				7034FF35205929F8004894EE /* UIImageView+WebCache.m in Sources */,
 				70510FAD1DAB3B9D0097E093 /* UIImage+MultiFormat.m in Sources */,
 				7034FD23205929F6004894EE /* AYFilterThemeCellView.m in Sources */,
 				7034FE5E205929F7004894EE /* AYOtherBtnClickCommand.m in Sources */,
@@ -10443,7 +9851,6 @@
 				7034FE01205929F7004894EE /* AYImageItemCellView.m in Sources */,
 				7034FDD7205929F7004894EE /* AYSelfSettingDelegate.m in Sources */,
 				7034FFA0205929F8004894EE /* AlbumGridCell.m in Sources */,
-				7034FF08205929F8004894EE /* MASConstraint.m in Sources */,
 				7034FD20205929F6004894EE /* AYFilterLocationCellView.m in Sources */,
 				7034FDA4205929F7004894EE /* AYUnSubsCellView.m in Sources */,
 				7034FEE4205929F8004894EE /* AYControllerExchangFactory.m in Sources */,
@@ -10485,7 +9892,6 @@
 				7034FE98205929F7004894EE /* AYTimeManagerRemoteFacade.m in Sources */,
 				7034FE42205929F7004894EE /* AYInputNapTitleController.m in Sources */,
 				7034FCDA205929F6004894EE /* AYPopFromBotCommand.m in Sources */,
-				7034FFCE205929F9004894EE /* AYFollowingBtnView.m in Sources */,
 				7034FD39205929F6004894EE /* AYHomeCellView.m in Sources */,
 				7034FF54205929F8004894EE /* Providers+CoreDataProperties.m in Sources */,
 				7034FF7E205929F8004894EE /* AYRefreshLikeDataCommand.m in Sources */,
@@ -10501,7 +9907,6 @@
 				7034FD28205929F6004894EE /* AYHomeBannerCellView.m in Sources */,
 				7034FDED205929F7004894EE /* AYMainInfoDelegate.m in Sources */,
 				7034FFB7205929F8004894EE /* DropDownMenu.m in Sources */,
-				7034FF9E205929F8004894EE /* InsetsLabel.m in Sources */,
 				7034FD2C205929F6004894EE /* AYNurseryItem.m in Sources */,
 				7034FF9F205929F8004894EE /* AYBtmTipView.m in Sources */,
 				7034FD68205929F6004894EE /* AYTopicImageCellView.m in Sources */,
@@ -10528,7 +9933,6 @@
 				705AEA011FDA91D700447C0E /* UIColor+Custom.m in Sources */,
 				7034FE19205929F7004894EE /* AYNurseCalendarController.m in Sources */,
 				7034FEAD205929F7004894EE /* AYPushCommentsCommand.m in Sources */,
-				7034FF1C205929F8004894EE /* MJRefreshBackStateFooter.m in Sources */,
 				7034FE41205929F7004894EE /* AYSetServiceThemeCellView.m in Sources */,
 				7034FF59205929F8004894EE /* RegTmpToken.m in Sources */,
 				7034FD70205929F6004894EE /* AYWelcomeController.m in Sources */,
@@ -10554,7 +9958,6 @@
 				7034FF95205929F8004894EE /* UIImage+fixOrientation.m in Sources */,
 				7034FD12205929F6004894EE /* AYViewController.m in Sources */,
 				7034FE3D205929F7004894EE /* AYServicePriceCatBtn.m in Sources */,
-				7034FF12205929F8004894EE /* MJRefreshAutoFooter.m in Sources */,
 				7034FEC1205929F7004894EE /* AYSearchFiltServiceCommand.m in Sources */,
 				7034FF5D205929F8004894EE /* LoginToken+ContextOpt.m in Sources */,
 				7034FF5C205929F8004894EE /* CurrentToken+ContextOpt.m in Sources */,
@@ -10582,7 +9985,6 @@
 				7034FD00205929F6004894EE /* AYPayWayCellView的副本.m in Sources */,
 				7034FD06205929F6004894EE /* AYBOrderTimeItemView.m in Sources */,
 				7034FE24205929F7004894EE /* AYSetCapacityOptView.m in Sources */,
-				7034FDB9205929F7004894EE /* AYOrderServantController.m in Sources */,
 				7034FFDB205929F9004894EE /* MXSRefreshHeader.m in Sources */,
 				7034FD94205929F7004894EE /* AYScanQRCodeController.m in Sources */,
 				7034FFA4205929F8004894EE /* AYCollectionView.m in Sources */,
@@ -10627,12 +10029,9 @@
 				70510F881DAB3B9D0097E093 /* MJRefreshComponent.m in Sources */,
 				7034FD63205929F6004894EE /* AYTopicContentController.m in Sources */,
 				7034FDC0205929F7004894EE /* AYServantHistoryCellView.m in Sources */,
-				7034FF0C205929F8004894EE /* MASViewConstraint.m in Sources */,
 				7034FF94205929F8004894EE /* UIColor+Custom.m in Sources */,
 				7034FE45205929F7004894EE /* AYCalendarServiceInitCommand.m in Sources */,
-				7034FFCC205929F9004894EE /* AYRelationshipBtnView.m in Sources */,
 				7034FF61205929F8004894EE /* AYChangeCurrentLoginUserCommand.m in Sources */,
-				7034FF10205929F8004894EE /* ViewController+MASAdditions.m in Sources */,
 				7034FEF3205929F8004894EE /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				7034FE00205929F7004894EE /* AYSetBasicInfoDelegate.m in Sources */,
 				7034FF6C205929F8004894EE /* AYQuerySNSProvidersCommand.m in Sources */,
@@ -10646,7 +10045,6 @@
 				7034FFD4205929F9004894EE /* AYScheduleView.m in Sources */,
 				7034FD7C205929F7004894EE /* AYCommentServiceDelegate.m in Sources */,
 				7034FF37205929F8004894EE /* UIGifView.m in Sources */,
-				70510FB21DAB3B9D0097E093 /* Tools.m in Sources */,
 				7034FD48205929F6004894EE /* AYSearchSKUResultCellView.m in Sources */,
 				7034FE37205929F7004894EE /* NewPagedFlowView.m in Sources */,
 				7034FE5B205929F7004894EE /* AYFacade.m in Sources */,
@@ -10672,21 +10070,19 @@
 				7034FFBF205929F8004894EE /* AYMAMapView.m in Sources */,
 				7034FE6F205929F7004894EE /* AYQueryAlbumNameWithAlbumCommand.m in Sources */,
 				705AEA041FDA91D700447C0E /* UINavigationController+Retro.m in Sources */,
+				7034FFE82059352F004894EE /* Tools.m in Sources */,
 				7034FDEA205929F7004894EE /* AYNapBabyAgeCellView.m in Sources */,
 				7034FCF1205929F6004894EE /* AYViewCommand.m in Sources */,
 				7034FDD8205929F7004894EE /* AYSelfSettingView.m in Sources */,
 				7034FD97205929F7004894EE /* AYAppliFBCellView.m in Sources */,
 				70DCB3431E8F904500E4B0D0 /* MXSNuomiHandle.m in Sources */,
-				7034FF1D205929F8004894EE /* MJRefreshGifHeader.m in Sources */,
 				7034FD73205929F6004894EE /* AYMyServiceController.m in Sources */,
 				7034FEDF205929F8004894EE /* AYSMSSendCommand.m in Sources */,
 				7034FF47205929F8004894EE /* AYPushNotificationCommand.m in Sources */,
 				70510F861DAB3B9D0097E093 /* MJRefreshAutoFooter.m in Sources */,
-				7034FF0E205929F8004894EE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				7034FE3F205929F7004894EE /* AYSetServiceThemeController.m in Sources */,
 				7034FDCB205929F7004894EE /* AYOneProfileAboutCellView.m in Sources */,
 				70510FA71DAB3B9D0097E093 /* SDWebImageDownloader.m in Sources */,
-				7034FF29205929F8004894EE /* SDImageCache.m in Sources */,
 				7034FCEC205929F6004894EE /* AYLocalImageWithNameCommand.m in Sources */,
 				7034FDB8205929F7004894EE /* AYDayRemindCellView.m in Sources */,
 				7034FF68205929F8004894EE /* AYQueryRegUserCommand.m in Sources */,
@@ -10695,8 +10091,6 @@
 				7034FE2A205929F7004894EE /* AYNapLocationController.m in Sources */,
 				7034FD45205929F6004894EE /* AYNursaryListCellView.m in Sources */,
 				7034FFA6205929F8004894EE /* AYDongDaSegView.m in Sources */,
-				7034FDBD205929F7004894EE /* AYTodoApplyCellView.m in Sources */,
-				7034FF0F205929F8004894EE /* View+MASAdditions.m in Sources */,
 				7034FD7A205929F7004894EE /* AYAcceptOrRejectController.m in Sources */,
 				7034FE36205929F7004894EE /* AYSetYardImagesTagController.m in Sources */,
 				7034FDDC205929F7004894EE /* AYProfileServCellView.m in Sources */,
@@ -10705,15 +10099,12 @@
 				7034FE92205929F7004894EE /* AYOSSSTSRemoteFacade.m in Sources */,
 				7034FD24205929F6004894EE /* AYHomeAssortmentCellView.m in Sources */,
 				7034FCDF205929F6004894EE /* AYPopCommand.m in Sources */,
-				7034FF21205929F8004894EE /* MJRefreshConst.m in Sources */,
-				7034FF17205929F8004894EE /* MJRefreshAutoGifFooter.m in Sources */,
 				7034FEAF205929F7004894EE /* AYQueryCommentsCommand.m in Sources */,
 				7034FD4B205929F6004894EE /* AYServicePageController.m in Sources */,
 				7034FFAC205929F8004894EE /* AYFakeStatusBarView.m in Sources */,
 				7034FEEA205929F8004894EE /* AYFactoryParaNode.m in Sources */,
 				7034FF4C205929F8004894EE /* AYLoginModelFacade.m in Sources */,
 				7034FD8A205929F7004894EE /* AYOrderDateCellView.m in Sources */,
-				7034FF22205929F8004894EE /* NSBundle+MJRefresh.m in Sources */,
 				7034FF99205929F8004894EE /* RemoteInstance.m in Sources */,
 				7034FD6B205929F6004894EE /* AYLandingInputCoderView.m in Sources */,
 				7034FEF8205929F8004894EE /* APAuthV2Info.m in Sources */,
@@ -10727,7 +10118,6 @@
 				7034FD03205929F6004894EE /* AYBOrderTimeDelegate.m in Sources */,
 				7034FF82205929F8004894EE /* AYEnumOwnerQueryDataCommand.m in Sources */,
 				7034FECD205929F7004894EE /* AYUpdateOrderInfoCommand.m in Sources */,
-				7034FF16205929F8004894EE /* MJRefreshHeader.m in Sources */,
 				70510F9A1DAB3B9D0097E093 /* UIView+MJExtension.m in Sources */,
 				7034FECA205929F7004894EE /* AYQueryOrdersCommand.m in Sources */,
 				7034FEA4205929F7004894EE /* AYRejectRealNameCommand.m in Sources */,
@@ -10738,7 +10128,6 @@
 				7034FF4A205929F8004894EE /* AYRemoveNotificationCommand.m in Sources */,
 				70510F911DAB3B9D0097E093 /* MJRefreshBackStateFooter.m in Sources */,
 				7034FD91205929F7004894EE /* AYOrderStateCellView.m in Sources */,
-				7034FF32205929F8004894EE /* UIImage+MultiFormat.m in Sources */,
 				7034FFD9205929F9004894EE /* AYShadowRadiusView.m in Sources */,
 				7034FCDD205929F6004894EE /* AYPushSplitAnimationCommand.m in Sources */,
 				7034FD43205929F6004894EE /* AYNursaryListController.m in Sources */,

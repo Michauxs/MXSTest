@@ -86,7 +86,7 @@
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 	UIView *head = [[UIView alloc]init];
 	head.backgroundColor = [Tools whiteColor];
-	UILabel *titleLabel = [Tools creatUILabelWithText:@"更多信息" andTextColor:[Tools themeColor] andFontSize:624.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentCenter];
+	UILabel *titleLabel = [UILabel creatLabelWithText:@"更多信息" textColor:[Tools theme] fontSize:624.f backgroundColor:nil textAlignment:NSTextAlignmentCenter];
 	[head addSubview:titleLabel];
 	[titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.centerX.equalTo(head);

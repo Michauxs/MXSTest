@@ -71,7 +71,7 @@
 			make.height.mas_equalTo(210);
 		}];
 		
-		themeLabel = [Tools creatLabelWithText:@"Theme" textColor:[UIColor black13] fontSize:618.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
+		themeLabel = [UILabel creatLabelWithText:@"Theme" textColor:[UIColor black13] fontSize:618.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
 		[self addSubview:themeLabel];
 		[themeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.top.equalTo(coverImage.mas_bottom).offset(14);
