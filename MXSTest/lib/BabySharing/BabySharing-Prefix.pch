@@ -1,0 +1,162 @@
+//
+//  BabySharing-Prefix.pch
+//  BabySharing
+//
+//  Created by Alfred Yang on 5/9/16.
+//  Copyright © 2016年 Alfred Yang. All rights reserved.
+//
+
+#ifndef BabySharing_Prefix_pch
+#define BabySharing_Prefix_pch
+
+#import "Tools.h"
+#import "Masonry.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "SDImageCache.h"
+#import "SDWebImageManager.h"
+#import "AYCommandsCommand.h"
+#import "AYServiceArgsDefines.h"
+
+#import "AYRemoteCallManager.h"
+
+#import "UIView+RunTimeCmd.h"
+#import "UIColor+Custom.h"
+#import "UILabel+Factory.h"
+#import "UIButton+Factory.h"
+#import "AYViewController+RunTimeCmd.h"
+
+static NSString* const kAMapApiKey =					@"7d5d988618fd8a707018941f8cd52931";
+static NSString* const kAYEMIDDongDaMaster =			@"dongda_master";
+static NSString* const kAYNetworkSlowTip =				@"网络不通畅，换个地方试试";
+
+static NSString* const kAYDongDaAppMode =				@"dongda_app_mode";
+static NSString* const kAYDongDaAppVersion =			@"dongda_app_version";
+static NSString* const kAYDongDaOSSSTSTokenAuth =		@"dongda_app_aliyunosssts_token_auth";
+
+// 判断是否是iPhone X
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define SCREEN_WIDTH                                    [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT                                   [UIScreen mainScreen].bounds.size.height
+#define SCREEN_SCALE									[UIScreen mainScreen].scale
+#define SCREEN_MARGIN_LR								15
+#define kStatusBarH										(iPhoneX ? 44.f : 20.f)
+#define kNavBarH										44
+#define kStatusAndNavBarH								(iPhoneX ? 88.f : 64.f)
+#define kTabBarH										(iPhoneX ? (49.f+34.f) : 49.f)
+#define BOTTOM_HEIGHT									49
+#define HOME_IND_HEIGHT									(iPhoneX ? 34.f : 0.f)
+
+#define NavBarRightBtnFontSize							616
+#define OneDayTimeInterval								86400
+#define HOMECOMMONCELLHEIGHT							390
+#define SERVICEPAGE_MARGIN_LR							24
+
+#define HOME_NURSERY_CELL_HEIGHT						376
+#define HOME_COURSE_CELL_HEIGHT							297
+
+
+#define kAYStringCourse							@"课程"
+#define kAYStringNursery						@"看顾"
+#define kAYStringNull							@""
+#define kAYStringLineFeed						@"\n"
+
+#define kAY_service_options_title_course		@[@"艺术", @"运动", @"科学"]
+#define kAY_service_options_title_nursery		@[@"看顾", @"课后看顾"]
+
+#define kAY_service_course_title_0				@[@"美术", @"音乐", @"舞蹈", @"舞台艺术"]
+#define kAY_service_course_title_1              @[@"球类运动", @"武术", @"竞技运动", @"形体"]
+#define kAY_service_course_title_2              @[@"STEAM", @"自然科学", @"潜能开发"]
+#define kAY_service_course_title_ofall			@{@"艺术":kAY_service_course_title_0, @"运动":kAY_service_course_title_1, @"科学":kAY_service_course_title_2}
+
+#define kAY_service_options_title_facilities	@[@"新风系统", @"实时监控", @"空气净化器", @"安全护栏", @"安全插座", @"安全桌角", @"防摔地板", @"加湿器", @"无线WI-FI", @"急救包"]
+#define kAY_home_album_titles					@[@"蒙特梭利", @"浸入式双语", @"极限运动", @"修身养性", @"STEAM"]
+#define kAY_home_album_titles_sub				@[@"准备好爱与耐心,自律才能自由", @"语言,是一种思考方式", @"跳出温室,体验非凡的张力", @"触摸与众不同的感受", @"身临其境,体验科学的力量"]
+#define kAY_home_album_desc_dic					@{@"蒙特梭利":@"「妈妈，帮帮我，让我可以自己做」\n「孩子能做，就别插手」\n追随孩子，Aid to life。蒙特梭利教育(Montessori)，是意大利心理学家玛丽亚 · 蒙特梭利发展的教育方法。强调独立，有限度的自由和对孩子天然的心理、生理及社会性发展的尊重。", @"浸入式双语":@"Water 就是 Water，不是水。Apple就是圆圆的果子，咬一口。习得语言，而非学习语言，是对孩子至关重要的概念。ESL（English as a second language）,给孩子们创造时时刻刻应用的契机，无论是学科中还是生活里。", @"极限运动":@"惊喜，孩子们无时无刻不在创造惊喜给我们。在这里，突破的不仅仅是身体，还有心理。更重要的是在注视和保护下，用科学的训练方法，探索能力的界限，进行体能的尝试。", @"修身养性":@"善琴者通达从容，善棋者筹谋睿智，善书者至情至性，善画者至善至美，善诗者韵至心声，善酒者情逢知己，善茶者陶冶情操，善花者品性怡然。琴棋书画，诗酒花茶。心灵中充满的情趣，将伴随孩子始终，让他们成为生活的欣赏者和创造者。", @"STEAM":@"科学Science，技术Technology，工程Engineering，艺术Arts，数学Math。以Project-based learning的学习方式，帮助孩子们将知识与兴趣连接。了解世界上正在发生的事儿，自然而然地共同面对和动手解决实际的问题。"}
+
+
+#define kAY_home_assortment_subtitle			@{@"看顾":@"有温度的0-6岁Daycare", @"艺术":@"在感受中学会欣赏和表达", @"运动":@"成长，激励，汗水和Teamwork", @"科学":@"未来，在这里由宝贝们搭建"}
+
+#define kAY_operation_fileters_tag_course		@[@"明星", @"冠军", @"艺术家", @"名校团队", @"自主教研"]
+#define kAY_operation_fileters_title_nursery	@[@"低龄"]
+#define kAY_operation_fileters_title_course		@[@"幼小衔接", @"早教"]
+
+
+#define kAY_service_options_yard_images_tag		@[@"家长休息区", @"阅读区", @"教学区", @"生活区", @"寄存区", @"户外区"]
+#define kAY_service_options_characters			@[@"浸入式双语", @"资深外教", @"营养师配餐", @"进口教具", @"主题看顾", @"实时监控"]
+
+#define kAYFontLight(FONTSIZE)					[UIFont fontWithName:@"STHeitiSC-Light" size:FONTSIZE]
+#define kAYFontMedium(FONTSIZE)					[UIFont fontWithName:@"STHeitiSC-Medium" size:FONTSIZE]
+
+
+
+//PayWayOption
+typedef enum : int {
+	PayWayOptionWechat = 0,
+	PayWayOptionAlipay = 1,
+} PayWayOption;
+
+//TMPatternType
+typedef enum : int {
+	TMPatternTypeDaily = 0,
+	TMPatternTypeWeekly = 1,
+	TMPatternTypeMonthly = 2,
+	TMPatternTypeOnce = 3,
+	TMPatternTypeOpenDay = 4,
+} TMPatternType;
+
+//ServiceType
+typedef enum : int {
+	//ServiceTypeNone = -1,
+	ServiceTypeCourse = 0,
+	ServiceTypeNursery = 1,
+} ServiceType;
+
+//orderStatus
+typedef enum : int {
+	OrderStatusExpired = -1,
+	OrderStatusPosted = 1,
+	OrderStatusReject = 2,
+	OrderStatusAccepted = 3,
+	OrderStatusPaid = 4,
+	OrderStatusCancel = -2,
+	OrderStatusDone = 9,
+	OrderStatusReady = 10,
+	OrderStatusConfirm = 11,
+} OrderStatus;
+
+//priceType
+typedef enum : int {
+	AYPriceTypeHours = 0,
+	AYPriceTypeDay = 1,
+	AYPriceTypeMonth = 2,
+	AYPriceTypeTimes = 4,
+	AYPriceTypeStage = 5,
+} AYPriceType;
+
+//DongDaAppMode
+typedef enum : int {
+	DongDaAppModeUnLogin = 0,
+	DongDaAppModeCommon = 1,
+	DongDaAppModeServant = 2,
+	DongDaAppModeNapFamily,
+} DongDaAppMode;
+
+//ModeExchangeType
+typedef enum : int {
+	ModeExchangeTypeDissVC = 0,
+	ModeExchangeTypeUnloginToAllModel = 1,
+	ModeExchangeTypeCommonToServant = 2,
+	ModeExchangeTypeCommonToNapFamily = 3,
+	ModeExchangeTypeServantToCommon = 4,
+} ModeExchangeType;
+
+
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
+
+#endif /* BabySharing_Prefix_pch */

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="170" id="KGk-i7-Jjw" customClass="AYOrderDateCellView">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="395" height="169"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKD-XY-Ddj">
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyF-JB-XUG">
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="3BD-pn-mIZ"/>
+                            <constraint firstAttribute="width" id="zdW-h9-81r"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Teo-Ng-QNu">
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结束时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdP-dW-xzA">
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mm-zQ-iJp">
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7J-gn-wQI">
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="P7J-gn-wQI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1j4-Kr-9oZ"/>
+                    <constraint firstItem="PKD-XY-Ddj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="69C-D1-gOt"/>
+                    <constraint firstItem="kyF-JB-XUG" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="D7J-ci-EuK"/>
+                    <constraint firstItem="fdP-dW-xzA" firstAttribute="centerY" secondItem="Teo-Ng-QNu" secondAttribute="centerY" id="JTG-Aw-ThG"/>
+                    <constraint firstAttribute="trailing" secondItem="3Mm-zQ-iJp" secondAttribute="trailing" id="Jdv-Y6-Z6p"/>
+                    <constraint firstItem="fdP-dW-xzA" firstAttribute="centerX" secondItem="3Mm-zQ-iJp" secondAttribute="centerX" id="Lzb-x7-edh"/>
+                    <constraint firstItem="P7J-gn-wQI" firstAttribute="centerY" secondItem="kyF-JB-XUG" secondAttribute="centerY" id="OT4-Zh-Zoo"/>
+                    <constraint firstItem="kyF-JB-XUG" firstAttribute="top" secondItem="PKD-XY-Ddj" secondAttribute="bottom" constant="45" id="Sn2-RR-fgg"/>
+                    <constraint firstItem="PKD-XY-Ddj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="a1U-nr-wd8"/>
+                    <constraint firstItem="3Mm-zQ-iJp" firstAttribute="leading" secondItem="kyF-JB-XUG" secondAttribute="trailing" id="iXv-L2-npu"/>
+                    <constraint firstItem="Teo-Ng-QNu" firstAttribute="centerX" secondItem="P7J-gn-wQI" secondAttribute="centerX" id="kcg-6Z-By2"/>
+                    <constraint firstItem="Teo-Ng-QNu" firstAttribute="top" secondItem="PKD-XY-Ddj" secondAttribute="bottom" constant="20" id="mAh-yp-KwU"/>
+                    <constraint firstItem="3Mm-zQ-iJp" firstAttribute="centerY" secondItem="kyF-JB-XUG" secondAttribute="centerY" id="uVT-KO-OcP"/>
+                    <constraint firstItem="kyF-JB-XUG" firstAttribute="leading" secondItem="P7J-gn-wQI" secondAttribute="trailing" id="vMo-F2-NCs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="endLabel" destination="3Mm-zQ-iJp" id="oGU-gK-nFR"/>
+                <outlet property="orderDateLabel" destination="PKD-XY-Ddj" id="YHT-d9-Pcr"/>
+                <outlet property="startLabel" destination="P7J-gn-wQI" id="fhi-8k-lsW"/>
+            </connections>
+            <point key="canvasLocation" x="70" y="113"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,286 @@
+<facades>
+<!--    <facade type="DefaultFacade" name="PhoneLogin" factory="AYDefaultFacadeFactory" >-->
+<!--    </facade>-->
+    <facade type="DefaultFacade" name="SNSQQ" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="LoginSNSWithQQ" />
+        <command type="Remote" name="ShareWithQQ" />
+    </facade>
+    <facade type="DefaultFacade" name="SNSWechat" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="LoginSNSWithWechat" />
+        <command type="Module" name="IsInstalledWechat" />
+        <command type="Remote" name="ShareWithWechat" />
+        <command type="Module" name="PayWithWechat" />
+    </facade>
+    <facade type="DefaultFacade" name="SNSWeibo" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="LoginSNSWithWeibo" />
+        <command type="Remote" name="ShareWithWeibo" />
+    </facade>
+
+<!--    <facade type="DefaultFacade" name="StillImageCapture" factory="AYDefaultFacadeFactory" >-->
+<!--        <command type="Module" name="StillImageCaptureInit" />-->
+<!--        <command type="Module" name="StillImageCaptureStart" />-->
+<!--        <command type="Module" name="StillImageCaptureStop" />-->
+<!--        <command type="Module" name="StillImageCaptureView" />-->
+<!--        <command type="Module" name="StillImageCaptureChangeCamera" />-->
+<!--        <command type="Module" name="StillImageCaptureChangeFlash" />-->
+<!--        <command type="Remote" name="StillImageCaptureTake" />-->
+<!--        <command type="Module" name="StillImageCaptureRelease" />-->
+<!--    </facade>-->
+
+<!--    <facade type="DefaultFacade" name="MovieRecord" factory="AYDefaultFacadeFactory" >-->
+<!--        <command type="Module" name="MovieRecordInit" />-->
+<!--        <command type="Module" name="MovieRecordStartCapture" />-->
+<!--        <command type="Module" name="MovieRecordStopCapture" />-->
+<!--        <command type="Module" name="MovieRecordView" />-->
+<!--        <command type="Module" name="MovieRecordChangeCamera" />-->
+<!--        <command type="Module" name="MovieRecordRelease" />-->
+<!--        <command type="Module" name="MovieRecordStartRecord" />-->
+<!--        <command type="Remote" name="MovieRecordStopRecord" />-->
+<!--        <command type="Module" name="MovieRecordDeleteRecord" />-->
+<!--        <command type="Module" name="MovieRecordMultipleMerge" />-->
+<!--    </facade>-->
+
+<!--    <facade type="DefaultFacade" name="GPUFilter" factory="AYDefaultFacadeFactory" >-->
+<!--        <command type="Module" name="BlackAndWhiteFilter" />-->
+<!--        <command type="Module" name="SceneFilter" />-->
+<!--        <command type="Module" name="AvaterFilter" />-->
+<!--        <command type="Module" name="FoodFilter" />-->
+<!--        <command type="Module" name="QueryFilterWithName" />-->
+<!--    </facade>-->
+<!---->
+<!--    <facade type="DefaultFacade" name="MoviePlayer" factory="AYDefaultFacadeFactory" >-->
+<!--        <command type="Module" name="MovieCoverImages" />-->
+<!--        <command type="Module" name="PlayMovie" />-->
+<!--        <command type="Module" name="PauseMovie" />-->
+<!--        <command type="Module" name="ReleaseMovie" />-->
+<!--        <command type="Module" name="MovieDisplayView" />-->
+<!--        <command type="Module" name="MovieAddFilter" />-->
+<!--        <command type="Module" name="ReleaseAllMovies" />-->
+<!--        <command type="Remote" name="NewMovieCurrentFilter" />-->
+<!--    </facade>-->
+<!--    路径：DongDaiOS/BabySharing/Facade/LogicFacade/GUPImage-->
+
+    <facade type="DefaultFacade" name="PHAsset" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="EnumAlbumName" />
+        <command type="Module" name="QueryAlbumNameWithAlbum" />
+        <command type="Remote" name="EnumAllPhotoWithAlbum" />
+        <command type="Remote" name="QueryRealPhoto" />
+    </facade>
+    
+    <facade type="DefaultFacade" name="LoginModel" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="QueryTmpUser" />
+        <command type="Module" name="ChangeTmpUser" />
+        
+        <command type="Module" name="UpdateRegUserProfile" />
+        <command type="Module" name="ChangeRegUser" />
+        <command type="Module" name="QueryRegUser" />
+
+        <command type="Module" name="QueryCurrentLoginUser" />
+        <command type="Module" name="QueryCurrentUserProfile" />
+        <command type="Module" name="ChangeCurrentLoginUser" />
+        <command type="Module" name="UpdateLocalCurrentUserProfile" />
+
+        <command type="Module" name="QuerySNSProviders" />
+        <command type="Module" name="ChangeSNSProviders" />
+
+        <command type="Module" name="SignOutLocal" />
+        
+        <command type="Module" name="SaveScreenPhoto" />
+    </facade>
+
+    <facade type="DefaultFacade" name="OwnerQueryModel" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="RefrashOwnerQueryData" />
+        <command type="Module" name="AppendOwnerQueryData" />
+        <command type="Module" name="EnumOwnerQueryData" />
+    </facade>
+
+    <facade type="DefaultFacade" name="OwnerQueryPushModel" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="RefrashOwnerQueryPushData" />
+        <command type="Module" name="AppendOwnerQueryPushData" />
+        <command type="Module" name="EnumOwnerQueryPushData" />
+    </facade>
+    
+    <facade type="DefaultFacade" name="HomeQueryModel" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="RefrashHomeQueryData" />
+        <command type="Module" name="AppendHomeQueryData" />
+        <command type="Module" name="EnumHomeQueryData" />
+        <command type="Module" name="EnumHomeTimeSpan" />
+        <command type="Module" name="RefreshLikeData" />
+        <command type="Module" name="RefreshPushData" />
+    </facade>
+    
+    <facade type="DefaultFacade" name="ChatSessionModel" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="UpdataChatSession" />
+        <command type="Module" name="QueryChatSession" />
+        <command type="Module" name="PushNotification" />
+        <command type="Module" name="QueryNotifications" />
+        <command type="Module" name="RemoveNotification" />
+        <command type="Module" name="ClearNotifications" />
+    </facade>
+
+    <facade type="DefaultFacade" name="TagContentModel" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="RefrashTagContentData" />
+        <command type="Module" name="AppendTagContentData" />
+        <command type="Module" name="EnumTagContentData" />
+        <command type="Module" name="EnumTagContentTimeSpan" />
+    </facade>
+
+    <facade type="DefaultFacade" name="LandingRemote" factory="AYDefaultFacadeFactory" >
+        <command type="Remote" name="LandingReqConfirmCode" />
+        <command type="Remote" name="AuthWithSNS" />
+        <command type="Remote" name="AuthSignOut" />
+        <command type="Remote" name="AuthPhoneCode" />
+    </facade>
+
+    <facade type="DefaultFacade" name="ProfileRemote" factory="AYDefaultFacadeFactory" >
+        <command type="Remote" name="UpdateUserDetail" />
+        <command type="Remote" name="QueryUserProfile" />
+    </facade>
+    
+    <facade type="DefaultFacade" name="AuthRemote" factory="AYDefaultFacadeFactory" >
+        <command type="Remote" name="PushRealName" />
+        <command type="Remote" name="ApproveRealName" />
+        <command type="Remote" name="RejectRealName" />
+        <command type="Remote" name="RequireCode" />
+        <command type="Remote" name="CheckCode" />
+		<command type="Remote" name="IsTokenExpired" />
+    </facade>
+    
+    <facade type="DefaultFacade" name="FileRemote" factory="AYDefaultFacadeFactory" >
+        <command type="Remote" name="UploadUserImage" />
+        <command type="Remote" name="UploadFile" />
+        <command type="Remote" name="DownloadUserFiles" />
+        <command type="Remote" name="DownloadMovieFiles" />
+<!--		<command type="Remote" name="DownloadImage" />-->
+    </facade>
+	
+	<facade type="DefaultFacade" name="SendRemote" factory="AYDefaultFacadeFactory" >
+		<command type="Remote" name="EmailSend" />
+		<command type="Remote" name="SMSSend" />
+	</facade>
+
+    <facade type="DefaultFacade" name="ExposeRemote" factory="AYDefaultFacadeFactory" >
+        <command type="Remote" name="ExposeUser" />
+        <command type="Remote" name="ExposeContent" />
+    </facade>
+
+    <facade type="DefaultFacade" name="ChatSessionRemote" factory="AYDefaultFacadeFactory" >
+
+    </facade>
+
+<command type="Remote" name="PostPhotos" factory="AYDefaultModuleFactory" />
+<command type="Remote" name="PostMovie" factory="AYDefaultModuleFactory" />
+
+<!--    <facade type="DefaultFacade" name="EM" factory="AYDefaultFacadeFactory" >-->
+<!--        <command type="Module" name="LoginEM" />-->
+<!--        <command type="Module" name="LogoutEM" />-->
+<!--        <command type="Module" name="EMUnreadMessageCount" />-->
+<!--        <command type="Module" name="SendEMMessage" />-->
+<!--        <command type="Module" name="QueryEMMessages" />-->
+<!--        <command type="Module" name="QueryEMSations" />-->
+<!--        <command type="Module" name="JoinEMGroup" />-->
+<!--        <command type="Module" name="CreateEMChat" />-->
+<!--        <command type="Module" name="EMQueryGroupMemberLst" />-->
+<!--        <command type="Module" name="EMEnterBackground" />-->
+<!--        <command type="Module" name="EMEnterFront" />-->
+<!--        <command type="Module" name="EMClientInit" />-->
+<!--    </facade>-->
+
+    <facade type="DefaultFacade" name="ScreenNameAndPhotoCache" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="PushScreenNameAndPhoto" />
+        <command type="Remote" name="QueryScreenNameAndPhoto" />
+        <command type="Module" name="ReleaseScreenNameAndPhoto" />
+    </facade>
+    
+    <facade type="DefaultFacade" name="Contacter" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="GetAllPhones" />
+    </facade>
+    
+    <facade type ="DefaultFacade" name="Keyboard" factory="AYDefaultFacadeFactory" >
+    </facade>
+    
+    <facade type ="DefaultFacade" name="Alert" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="ShowAlert" />
+        <command type="Module" name="HideAlert" />
+        <command type="Module" name="OtherBtnClick" />
+    </facade>
+    
+    <facade type="DefaultFacade" name="KidNapRemote" factory="AYDefaultFacadeFactory" >
+        <command type="Remote" name="PushServiceInfo" />
+        <command type="Remote" name="SearchFiltService" />
+        <command type="Remote" name="QueryMyService" />
+        <command type="Remote" name="UpdateMyService" />
+        <command type="Remote" name="UpdateMyServiceTM" />
+        <command type="Remote" name="PopMyService" />
+        
+        <command type="Remote" name="CollectService" />
+        <command type="Remote" name="UnCollectService" />
+        <command type="Remote" name="AllCollectService" />
+		
+		<command type="Remote" name="QueryServiceDetail" />
+		
+		<command type="Remote" name="HomeQuery" />
+    </facade>
+    
+    <facade type="DefaultFacade" name="OrderRemote" factory="AYDefaultFacadeFactory" >
+        <command type="Remote" name="QueryOrders" />
+		<command type="Remote" name="QueryOrderDetail" />
+        <command type="Remote" name="QueryOwnOrders" />
+        <command type="Remote" name="QueryApplyOrders" />
+        <command type="Remote" name="UpdateOrderInfo" />
+        <command type="Remote" name="QueryRemind" />
+		
+		<command type="Remote" name="PushOrderAlipay" />
+        <command type="Remote" name="AccomplishOrder" />
+        <command type="Remote" name="PayOrder" />
+       
+        <command type="Remote" name="PushComments" />
+        <command type="Remote" name="QueryComment" />
+		<command type="Remote" name="QueryComments" />
+    </facade>
+	<facade type="DefaultFacade" name="Alipay" factory="AYDefaultFacadeFactory" >
+		<command type="Module" name="QueryAliCallBackHandler" />
+		<command type="Module" name="AlipayPay" />
+	</facade>
+	
+	<facade type="DefaultFacade" name="OrderNotification" factory="AYDefaultFacadeFactory" >
+		<command type="Remote" name="PushOrder" />
+		<command type="Remote" name="AcceptOrder" />
+		<command type="Remote" name="RejectOrder" />
+		<command type="Remote" name="CancelOrder" />
+		<command type="Remote" name="PrePayOrder" />
+		<command type="Remote" name="PostPayOrder" />
+	</facade>
+	
+    <facade type="DefaultFacade" name="Timemanagement" factory="AYDefaultFacadeFactory" >
+        <command type="Module" name="PushServiceTMProtocol" />
+		<command type="Module" name="PushServiceTMNurse" />
+        <command type="Module" name="ParseServiceTMProtocol" />
+		<command type="Module" name="ParseSTMForDayCourse" />
+		<command type="Module" name="ParseServiceTMNurse" />
+		
+		<command type="Module" name="ParseServiceTM" />
+		<command type="Module" name="PushServiceTM" />
+    </facade>
+	
+	<facade type="DefaultFacade" name="TimeManagerRemote" factory="AYDefaultFacadeFactory" >
+		<command type="Remote" name="TMsUpdate" />
+		<command type="Remote" name="TMsQuery" />
+	</facade>
+	
+	<facade type="DefaultFacade" name="ChoiceRemote" factory="AYDefaultFacadeFactory" >
+		<command type="Remote" name="ChoiceSearch" />
+		<command type="Remote" name="ChoicePush" />
+		<command type="Remote" name="ChoicePop" />
+		<command type="Remote" name="ChoiceMapSearch" />
+	</facade>
+	
+	<facade type="DefaultFacade" name="OSSSTSRemote" factory="AYDefaultFacadeFactory" >
+		<command type="Remote" name="OSSSTSQuery" />
+	</facade>
+	
+	<facade type="DefaultFacade" name="AliyunOSS" factory="AYDefaultFacadeFactory" >
+		<command type="Module" name="OSSPut" />
+		<command type="Module" name="OSSGet" />
+	</facade>
+</facades>

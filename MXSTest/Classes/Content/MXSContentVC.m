@@ -11,7 +11,7 @@
 #import "MXSWebDianpingHandle.h"
 #import "MXSWebSiteHandle.h"
 
-#import<AudioToolbox/AudioToolbox.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 static void completionCallback(SystemSoundID mySSID)
 {
@@ -28,7 +28,11 @@ SystemSoundID ditaVoice;
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"GO!" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools themeColor]];
+	_countNote = 0;
+	_ObArr = [NSMutableArray array];
+//	[_ObArr addObserver:self forKeyPath:@"count" options:NSKeyValueObservingOptionNew context:nil];
+	
+	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"Append" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools themeColor]];
 	ComeOnBtn.layer.cornerRadius = 20.f;
 	ComeOnBtn.clipsToBounds = YES;
 	
@@ -39,7 +43,7 @@ SystemSoundID ditaVoice;
 	}];
 	[ComeOnBtn addTarget:self action:@selector(didComeOnBtnClick) forControlEvents:UIControlEventTouchUpInside];
 	
-	ComeOnBtn.hidden = YES;
+//	ComeOnBtn.hidden = YES;
 	
 }
 
@@ -53,17 +57,38 @@ SystemSoundID ditaVoice;
 	[self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
-- (void)didComeOnBtnClick {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+	
+	if ([keyPath isEqualToString:@"count"]) {
+		NSLog(@"%d", (int)(_ObArr.count));
+	}
 	
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-	/*
-	NSArray *list = [MXSWebSiteHandle handNodeWithSimple];
-	[MXSFileHandle writeToJsonFile:list withFileName:@"webSiteComplete"];
-	*/
+- (void)didComeOnBtnClick {
+	[self demo01];
 	
-//	[self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
+- (void)demo01 {
+	
+	NSLock *lock = [[NSLock alloc] init];
+	
+	NSDate *node = [NSDate date];
+	for (int i = 0; i<10000; ++i) {
+		dispatch_async(dispatch_get_global_queue(0, 0), ^{
+			[lock lock];
+			_countNote++;
+			NSLog(@"count    : %d", _countNote);
+			
+			NSDate *now = [NSDate date];
+			NSLog(@"duration : %lf", now.timeIntervalSince1970-node.timeIntervalSince1970);
+			[lock unlock];
+		});
+	}
+}
+
+- (void)demoAudio {
 	
 	// 1. 定义要播放的音频文件的URL
 	NSURL *voiceURL = [[NSBundle mainBundle]URLForResource:@"9205" withExtension:@"mp3"];
@@ -73,6 +98,15 @@ SystemSoundID ditaVoice;
 	AudioServicesAddSystemSoundCompletion(ditaVoice,NULL,NULL,(void*)completionCallback,NULL);
 	// 4. 播放 ditaVoice 注册的音频 并控制手机震动
 	AudioServicesPlayAlertSound(ditaVoice);
+	
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+	/*
+	NSArray *list = [MXSWebSiteHandle handNodeWithSimple];
+	[MXSFileHandle writeToJsonFile:list withFileName:@"webSiteComplete"];
+	*/
+	
 	
 	
 	UITouch *touch = [[touches allObjects] firstObject];

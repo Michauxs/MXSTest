@@ -11,4 +11,6 @@
 
 @interface MXSContentVC : MXSViewController
 
+@property (nonatomic, strong) NSMutableArray *ObArr;
+@property (nonatomic, assign) int countNote;
 @end

@@ -1,0 +1,1057 @@
+<views>
+    <view type="InputInvateCode" name="InputInvateCode" factory="AYDefaultViewFactory" >
+        <command type="message" message="hideKeyboard" />
+        <command type="message" message="queryInvateCode:" />
+        <command type="notify"  message="invateCode" />
+    </view>
+    
+    <view type="LandingInputNo" name="LandingInputNo" factory="AYDefaultViewFactory" >
+        <command type="message" message="hideKeyboard" />
+        <command type="message" message="queryPhoneNo:" />
+    </view>
+    
+    <view type="LandingInputCoder" name="LandingInputCoder" factory="AYDefaultViewFactory" >
+        <command type="message" message="hideKeyboard" />
+        <command type="message" message="startConfirmCodeTimer" />
+        <command type="message" message="stopConfirmCodeTimer" />
+        <command type="message" message="queryCurCoder:" />
+        <command type="message" message="showNextBtnForNewUser" />
+        <command type="message" message="showEnterBtnForOldUser" />
+        <command type="message" message="showAYAlertVeiw:" />
+        <command type="notify"  message="reReqConfirmCode:" />
+        <command type="notify"  message="AuthWithPhoneNoAndCode:" />
+    </view>
+    
+    <view type="LandingInputName" name="LandingInputName" factory="AYDefaultViewFactory" >
+        <command type="message" message="hideKeyboard" />
+        <command type="message" message="queryInputName:" />
+        <command type="notify"  message="queryCurUserName:" />
+		<command type="notify"  message="rightBtnSelected" />
+    </view>
+    
+    <view type="LandingInputRole" name="LandingInputRole" factory="AYDefaultViewFactory" >
+        <command type="message" message="hideKeyboard" />
+        <command type="message" message="queryInputRole:" />
+        <command type="message" message="changeQueryData:" />
+        <command type="notify"  message="queryCurUserName:" />
+    </view>
+    
+    <view type="LandingTitle" name="LandingTitle" factory="AYDefaultViewFactory" />
+    <view type="LandingSNS" name="LandingSNS" factory="AYDefaultViewFactory" />
+    
+    <view type="Loading" name="Loading" factory="AYDefaultViewFactory" >
+        <command type="message" message="startGif" />
+        <command type="message" message="stopGif" />
+    </view>
+    <view type="AlertTip" name="AlertTip" factory="AYDefaultViewFactory" >
+        <command type="message" message="setAlertTipInfo:" />
+    </view>
+    <view type="UserScreenPhoteSelect" name="UserScreenPhoteSelect" factory="AYDefaultViewFactory" >
+        <command type="message" message="changeScreenPhoto:" />
+        <command type="message" message="canPhotoBtnClicked:" />
+        <command type="notify" message="tapGestureScreenPhoto" />
+    </view>
+    <view type="UserScreenPhote" name="UserScreenPhote" factory="AYDefaultViewFactory" >
+        <command type="message" message="changeScreenPhoto:" />
+        <command type="message" message="canPhotoBtnClicked:" />
+        <command type="message" message="albumBtnClicked" />
+        <command type="message" message="takePhotoBtnClicked" />
+        <command type="notify" message="tapGestureScreenPhoto" />
+    </view>
+    <view type="UserInfoInput" name="UserInfoInput" factory="AYDefaultViewFactory" >
+        <command type="message" message="changeScreenName:" />
+        <command type="message" message="changeRoleTag:" />
+        <command type="notify" message="updateUserProfile:" />
+        <command type="notify" message="beginEditTextFiled" />
+        <command type="message" message="hideKeyboard" />
+    </view>
+
+    <view type="SearchBar" name="SearchBar" factory="AYDefaultViewFactory" >
+        <command type="message" message="changeSearchBarPlaceHolder:" />
+        <command type="message" message="registerDelegate:" />
+        <command type="message" message="foundTitleSearchBar" />
+        <command type="message" message="roleTagSearchBar" />
+        <command type="message" message="foundSearchBar" />
+    </view>
+
+    <view type="Table" name="Table" factory="AYDefaultViewFactory" >
+        <command type="message" message="refresh" />
+        <command type="message" message="registerDatasource:" />
+        <command type="message" message="registerDelegate:" />
+		<command type="message" message="registerDatasourceDelegate:" />
+        <command type="message" message="registerCellWithClass:" />
+        <command type="message" message="registerCellWithNib:" />
+        <command type="message" message="registerHeaderAndFooterWithClass:" />
+        <command type="message" message="registerHeaderAndFooterWithNib:" />
+        <command type="message" message="scrollToPostion:" />
+    </view>
+	
+	<view type="Table2" name="Table2" factory="AYDefaultViewFactory" >
+		<command type="message" message="refresh" />
+		<command type="message" message="registerDatasource:" />
+		<command type="message" message="registerDelegate:" />
+		<command type="message" message="registerDatasourceDelegate:" />
+		<command type="message" message="registerCellWithClass:" />
+		<command type="message" message="registerCellWithNib:" />
+		<command type="message" message="registerHeaderAndFooterWithClass:" />
+		<command type="message" message="registerHeaderAndFooterWithNib:" />
+		<command type="message" message="scrollToPostion:" />
+	</view>
+	<view type="Table3" name="Table3" factory="AYDefaultViewFactory" >
+		<command type="message" message="refresh" />
+		<command type="message" message="registerDatasource:" />
+		<command type="message" message="registerDelegate:" />
+		<command type="message" message="registerDatasourceDelegate:" />
+		<command type="message" message="registerCellWithClass:" />
+		<command type="message" message="registerCellWithNib:" />
+		<command type="message" message="registerHeaderAndFooterWithClass:" />
+		<command type="message" message="registerHeaderAndFooterWithNib:" />
+		<command type="message" message="scrollToPostion:" />
+	</view>
+	
+    <view type="AddFriends" name="AddFriends" factory="AYDefaultViewFactory" >
+        <command type="notify" message="touchUpInside" />
+    </view>
+    
+    <view type="SetNevigationBarLeftBtn" name="SetNevigationBarLeftBtn" factory="AYDefaultViewFactory" >
+        <command type="notify" message="popToPreviousWithoutSave" />
+    </view>
+    <view type="SetNevigationBarRightBtn" name="SetNevigationBarRightBtn" factory="AYDefaultViewFactory" >
+        <command type="notify" message="rightItemBtnClick" />
+        <command type="message" message="changeTextBtn:" />
+    </view>
+    <view type="Web" name="Web" factory="AYDefaultViewFactory" >
+        <command type="message" message="registerDelegate:" />
+    </view>
+    
+    <view type="SetNevigationBarTitle" name="SetNevigationBarTitle" factory="AYDefaultViewFactory" >
+        <command type="message" message="changeNevigationBarTitle:" />
+    </view>
+	
+	<view type="Validating" name="Validating" factory="AYDefaultViewFactory" >
+		<command type="message" message="setTipContext:" />
+		<command type="message" message="showValidatingView" />
+		<command type="message" message="hideValidatingView" />
+		<command type="message" message="showValidatingViewWithAnimate" />
+		<command type="message" message="hideValidatingViewWithAnimate" />
+		<command type="message" message="changeStatusWithSuccessTip:" />
+	</view>
+	
+    <view type="FoundSearchHeader" name="FoundSearchHeader" factory="AYReuseViewFactory" >
+        <command type="message" message="changeHeaderTitle:" />
+        <command type="message" message="queryHeaderHeight" />
+        <command type="message" message="isLeftAlignment:" />
+    </view>
+    
+    <view type="FoundHotTagsCell" name="FoundHotTagsCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setHotTagsText:" />
+        <command type="message" message="setHotTags:" />
+        <command type="message" message="queryCellHeight" />
+        <command type="notify" message="TagSeleted:" />
+    </view>
+
+    <view type="ProfileHeader" name="ProfileHeader" factory="AYDefaultViewFactory" >
+        <command type="message" message="setUserInfo:" />
+        <command type="message" message="changeRelations:" />
+    </view>
+
+    <view type="Image" name="Image" factory="AYDefaultViewFactory" >
+        <command type="message" message="setBackgroundImage:" />
+    </view>
+
+    <view type="Label" name="Label" factory="AYDefaultViewFactory" >
+        <command type="message" message="changeLabelText:" />
+    </view>
+    
+    <view type="FakeStatusBar" name="FakeStatusBar" factory="AYDefaultViewFactory" >
+        <command type="message" message="setStatusBarColor:" />
+    </view>
+
+    <view type="FakeNavBar" name="FakeNavBar" factory="AYDefaultViewFactory" >
+        <command type="message" message="setTitleText:" />
+		<command type="message" message="setTitleTextColor:" />
+        <command type="message" message="setBackGroundColor:" />
+        <command type="message" message="setLeftBtnImg:" />
+        <command type="message" message="setRightBtnImg:" />
+        <command type="message" message="setLeftBtnWithBtn:" />
+        <command type="message" message="setRightBtnWithBtn:" />
+        <command type="message" message="setRightBtnWithBlackColorTitle:" />
+        <command type="message" message="setLeftBtnVisibility:" />
+        <command type="message" message="setRightBtnVisibility:" />
+        <command type="message" message="setBarBotLine" />
+		<command type="message" message="hideBarBotLine" />
+        <command type="notify" message="leftBtnSelected" />
+        <command type="notify" message="rightBtnSelected" />
+    </view>
+
+    <view type="DongDaSeg" name="DongDaSeg" factory="AYDefaultViewFactory" >
+        <command type="message" message="setSegInfo:" />
+        <command type="message" message="addItem:" />
+        <command type="message" message="removeItem:" />
+        <command type="message" message="queryPerferedHeight" />
+        <command type="message" message="queryPerferedHeightWithImage" />
+        <command type="message" message="queryCurrentSelectedIndex" />
+        <command type="message" message="resetItemInfo:" />
+        <command type="notify" message="segValueChanged:" />
+    </view>
+    
+    <view type="DongDaSeg2" name="DongDaSeg2" factory="AYDefaultViewFactory" >
+        <command type="message" message="setSegInfo:" />
+        <command type="message" message="addItem:" />
+        <command type="message" message="removeItem:" />
+        <command type="message" message="queryPerferedHeight" />
+        <command type="message" message="queryPerferedHeightWithImage" />
+        <command type="message" message="queryCurrentSelectedIndex" />
+        <command type="message" message="resetItemInfo:" />
+        <command type="notify" message="segValueChanged:" />
+    </view>
+
+    <view type="DropDownList" name="DropDownList" factory="AYDefaultViewFactory" >
+        <command type="message" message="setListInfo:" />
+        <command type="message" message="setTitle:" />
+        <command type="notify" message="showDropDownList:" />
+        <command type="notify" message="itemDidSelected:" />
+    </view>
+    
+    <view type="FunctionBar" name="FunctionBar" factory="AYDefaultViewFactory" >
+        <command type="notify" message="funcBtnSelected:" />
+    </view>
+    
+    <view type="TagPreview" name="TagPreview" factory="AYDefaultViewFactory" >
+    </view>
+
+    <view type="TagEntry" name="TagEntry" factory="AYDefaultViewFactory" >
+        <command type="message" message="startSubBtnAnimation" />
+        <command type="notify" message="didTagEntrySelected:" />
+        <command type="notify" message="entryViewTaped" />
+    </view>
+
+    <view type="FilterPreview" name="FilterPreview" factory="AYDefaultViewFactory" >
+        <command type="message" message="setOriginImage:" />
+        <command type="message" message="queryCurrentFilterName" />
+        <command type="notify" message="didSelectedFilterPhoto:" />
+        <command type="notify" message="didSelectedFilterMovie:" />
+    </view>
+
+    <view type="MovieCover" name="MovieCover" factory="AYDefaultViewFactory" >
+        <command type="message" message="setMovieUrl:" />
+        <command type="notify" message="didSelectedCover:" />
+    </view>
+
+    <view type="SharingSNS" name="SharingSNS" factory="AYDefaultViewFactory" >
+        <command type="notify" message="SharingSNSWithQQ:" />
+        <command type="notify" message="SharingSNSWithWechat:" />
+        <command type="notify" message="SharingSNSWithWeibo:" />
+    </view>
+
+    <view type="PublishContainer" name="PublishContainer" factory="AYDefaultViewFactory" >
+        <command type="message" message="resignFirstResponed" />
+        <command type="message" message="queryUserDescription" />
+        <command type="message" message="clearInputs" />
+        <command type="notify" message="canPublish:" />
+    </view>
+    
+    <view type="GroupChatHeader" name="GroupChatHeader" factory="AYDefaultViewFactory" >
+        <command type="message" message="setGroupChatViewInfo:" />
+        <command type="message" message="querGroupChatViewHeight" />
+        <command type="notify" message="didChatOrderDetailClick" />
+    </view>
+	
+	<view type="SingleChatHead" name="SingleChatHead" factory="AYDefaultViewFactory" >
+		<command type="message" message="setGroupChatViewInfo:" />
+		<command type="message" message="querGroupChatViewHeight" />
+		<command type="notify" message="didChatOrderDetailClick" />
+	</view>
+	
+    <view type="ChatInput" name="ChatInput" factory="AYDefaultViewFactory" >
+        <command type="notify" message="sendMessage:" />
+        <command type="notify" message="didSelectedBackBtn" />
+        <command type="notify" message="didSelectedUserInfoBtn" />
+        <command type="message" message="resignFocus" />
+        <command type="message" message="regInputDelegate:" />
+        <command type="message" message="setJoinerCount:" />
+        <command type="message" message="sendHeightNote:" />
+    </view>
+    
+    <view type="SamePersonBtn" name="SamePersonBtn" factory="AYDefaultViewFactory" >
+        <command type="notify" message="SamePersonBtnSelected" />
+    </view>
+
+    <view type="FollowingBtn" name="FollowingBtn" factory="AYDefaultViewFactory" >
+        <command type="notify" message="queryTargetID" />
+        <command type="notify" message="relationChanged:" />
+    </view>
+
+    <view type="FollowedBtn" name="FollowedBtn" factory="AYDefaultViewFactory" >
+        <command type="notify" message="queryTargetID" />
+        <command type="notify" message="relationChanged:" />
+    </view>
+
+    <view type="FriendsBtn" name="FriendsBtn" factory="AYDefaultViewFactory" >
+        <command type="notify" message="queryTargetID" />
+        <command type="notify" message="relationChanged:" />
+    </view>
+
+    <view type="InvitationBtn" name="InvitationBtn" factory="AYDefaultViewFactory" >
+    </view>
+    
+    <view type="NoneRelationBtn" name="NoneRelationBtn" factory="AYDefaultViewFactory" >
+        <command type="notify" message="queryTargetID" />
+        <command type="notify" message="relationChanged:" />
+    </view>
+    
+    <view type="ThumbsNormalBtn" name="ThumbsNormalBtn" factory="AYDefaultViewFactory" >
+        <command type="message" message="changeCount:" />
+        <command type="message" message="changeBtnConnectInfo:" />
+        <command type="notify" message="thumbsChanged:" />
+    </view>
+
+    <view type="ThumbsUpBtn" name="ThumbsUpBtn" factory="AYDefaultViewFactory" >
+        <command type="message" message="changeCount:" />
+        <command type="message" message="changeBtnConnectInfo:" />
+        <command type="notify" message="thumbsChanged:" />
+    </view>
+    
+    <view type="PushNormalBtn" name="PushNormalBtn" factory="AYDefaultViewFactory" >
+        <command type="message" message="changeCount:" />
+        <command type="message" message="changeBtnConnectInfo:" />
+        <command type="notify" message="pushChanged:" />
+        <command type="notify" message="thumbsChanged:" />
+    </view>
+
+    <view type="PushUpBtn" name="PushUpBtn" factory="AYDefaultViewFactory" >
+        <command type="message" message="changeCount:" />
+        <command type="message" message="changeBtnConnectInfo:" />
+        <command type="notify" message="pushChanged:" />
+    </view>
+    
+    <view type="NotifyUnFollowBtn" name="NotifyUnFollowBtn" factory="AYDefaultViewFactory" >
+        <command type="notify" message="queryTargetID" />
+        <command type="notify" message="relationChanged:" />
+    </view>
+    <view type="NotifyFollowedBtn" name="NotifyFollowedBtn" factory="AYDefaultViewFactory" >
+        <command type="notify" message="queryTargetID" />
+        <command type="notify" message="relationChanged:" />
+    </view>
+    
+    <view type="AlbumTableCell" name="AlbumTableCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="message" message="setUpItems:" />
+        <command type="message" message="selectAtIndex:" />
+        <command type="message" message="unSelectAtIndex:" />
+        <command type="message" message="queryPerferedHeight" />
+        <command type="message" message="queryCurrentGridViewByIndex:" />
+        <command type="notify" message="selectedValueChanged:" />
+        <command type="notify" message="queryIsGridSelected:" />
+    </view>
+
+    <view type="UserDisplay" name="UserDisplay" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="message" message="setDisplayUserInfo:" />
+        <command type="message" message="queryCellHeight" />
+        <command type="notify" message="SamePersonBtnSelected" />
+    </view>
+    
+    <view type="ProfilePushCell" name="ProfilePushCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="message" message="setUpItems:" />
+        <command type="message" message="selectAtIndex:" />
+        <command type="message" message="unSelectAtIndex:" />
+        <command type="message" message="queryCellHeight" />
+        <command type="message" message="queryCurrentGridViewByIndex:" />
+        <command type="notify" message="selectedValueChanged:" />
+        <command type="notify" message="queryIsGridSelected:" />
+    </view>
+    
+    <view type="CLResultCell" name="CLResultCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="message" message="setUpItems:" />
+        <command type="message" message="selectAtIndex:" />
+        <command type="message" message="unSelectAtIndex:" />
+        <command type="message" message="queryCellHeight" />
+        <command type="message" message="queryCurrentGridViewByIndex:" />
+        <command type="notify" message="ownerIconTap:" />
+        <command type="notify" message="queryIsGridSelected:" />
+    </view>
+    
+    <view type="MyServiceCell" name="MyServiceCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="notify" message="didManagerBtnClick:" />
+    </view>
+    
+    <view type="UserTableCell" name="UserTableCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="message" message="queryCellHeight" />
+    </view>
+    
+    <view type="SearchFriend" name="SearchFriend" factory="AYReuseViewFactory" >
+        <command type="notify" message="touchUpInside" />
+    </view>
+
+    <view type="HomeCell" name="HomeCell" factory="AYReuseViewFactory" >
+        <command type="message" message="willDisappear:" />
+        <command type="message" message="resetContent:" />
+        <command type="message" message="queryContentCellHeight" />
+        <command type="message" message="resetLike:" />
+        <command type="message" message="resetPush:" />
+       
+        <command type="notify" message="showUserInfo:" />
+        <command type="notify" message="likePostItem:" />
+        <command type="notify" message="unLikePostItem:" />
+        <command type="notify" message="pushPostItem:" />
+        <command type="notify" message="joinGroup:" />
+        <command type="notify" message="crimeReport:" />
+    </view>
+	
+	<view type="HomeServPerCell" name="HomeServPerCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didCellAction" />
+		<command type="notify"      message="willCollectWithRow:" />
+		<command type="notify"      message="willUnCollectWithRow:" />
+	</view>
+	
+	<view type="HomeBannerCell" name="HomeBannerCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didSomeOneChoiceClick:" />
+	</view>
+	<view type="HomeTopicsCell" name="HomeTopicsCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didTopicsMoreBtnClick" />
+	</view>
+	<view type="HomeAssortmentCell" name="HomeAssortmentCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didAssortmentMoreBtnClick:" />
+		<command type="notify"      message="didSelectAssortmentAtIndex:" />
+	</view>
+	<view type="HomeMoreTitleCell" name="HomeMoreTitleCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	
+	<view type="HomeAroundCell" name="HomeAroundCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="HomeSortCourseCell" name="HomeSortCourseCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didCourseSortTapAtIndex:" />
+	</view>
+	<view type="HomeSortNurseryCell" name="HomeSortNurseryCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didNursarySortTapAtIndex:" />
+	</view>
+	
+	<view type="AssortmentListCell" name="AssortmentListCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="AssortmentCell" name="AssortmentCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="TopicsListCell" name="TopicsListCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	
+    <view type="HomeTipCell" name="HomeTipCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="resetPush:" />
+        <command type="notify"      message="didPushInfo" />
+    </view>
+	
+	<view type="SearchSKUResultCell" name="SearchSKUResultCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	
+	<view type="FilterLocationCell" name="FilterLocationCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didCellAction" />
+	</view>
+	
+	<view type="FilterLocationCell" name="FilterThemeCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didSelectedOpt:" />
+	</view>
+	
+    <view type="HomeHistoryCell" name="HomeHistoryCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+    
+    <view type="HomeLikesCell" name="HomeLikesCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+	
+	<view type="ChatListCell" name="ChatListCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	
+    <view type="GroupListCell" name="GroupListCell" factory="AYReuseViewFactory" >
+        <command type="message" message="queryContentCellHeight" />
+        <command type="message" message="resetContent:" />
+    </view>
+    
+    <view type="FoundSearchResultCell" name="FoundSearchResultCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="message" message="queryCellHeight" />
+    </view>
+
+    <view type="NotificationCell" name="NotificationCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="message" message="queryCellHeight" />
+    </view>
+
+    <view type="ChatGroupInfoCell" name="ChatGroupInfoCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="message" message="queryCellHeight" />
+        <command type="notify" message="hiddenChatGroupInfoPane" />
+    </view>
+    
+    <view type="ChatMessageCell" name="ChatMessageCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="message" message="queryCellHeight:" />
+    </view>
+
+    <view type="SelfSettingCell" name="SelfSettingCell" factory="AYReuseViewFactory" >
+        <command type="message" message="setCellInfo:" />
+        <command type="message" message="queryCellHeight" />
+        <command type="notify" message="screenNameChanged:" />
+    </view>
+
+    <view type="PhotoTag" name="PhotoTag" factory="AYReuseViewFactory" >
+        <command type="message" message="changeTagDirection" />
+        <command type="message" message="queryTagType" />
+        <command type="message" message="queryContentInfo" />
+    </view>
+
+    <view type="TagEdit" name="TagEdit" factory="AYReuseViewFactory" >
+        <command type="notify" message="EditBtnSelected:" />
+    </view>
+    
+    <view type="LocationCell" name="LocationCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="resetContent:" />
+    </view>
+    
+    <view type="Calendar" name="Calendar" factory="AYReuseViewFactory" >
+        <command type="message"     message="hiddenBeShowing" />
+        <command type="notify"      message="hiddenCLResultTable" />
+        <command type="notify"      message="resetContentSize:" />
+    </view>
+    
+    <view type="TimeOption" name="TimeOption" factory="AYDefaultViewFactory" >
+        <command type="message"     message="sendFiterArgs:" />
+        <command type="message"     message="queryDateStartAndEnd:" />
+        <command type="notify"      message="hiddenBeShowing" />
+    </view>
+    
+    <view type="FiterScroll" name="FiterScroll" factory="AYReuseViewFactory" >
+        <command type="message"     message="queryFiterArgs:" />
+        <command type="message"     message="resetFiterArgs" />
+        <command type="message"     message="dateScrollToCenter:" />
+        <command type="notify"      message="hiddenCLResultTable" />
+        <command type="notify"      message="changeNavTitle:" />
+        <command type="notify"      message="queryDateString:" />
+    </view>
+    
+    <view type="ShowBoard" name="ShowBoard" factory="AYReuseViewFactory" >
+        <command type="message"     message="changeOffsetX:" />
+        <command type="message"     message="changeResultData:" />
+        <command type="notify"      message="sendChangeAnnoMessage:" />
+        <command type="notify"      message="queryResultDate:" />
+    </view>
+    <view type="MapView" name="MapView" factory="AYDefaultViewFactory" >
+        <command type="message"     message="changeAnnoView:" />
+        <command type="message"     message="changeResultData:" />
+        <command type="notify"      message="queryTheLoc:" />
+        <command type="notify"      message="sendChangeOffsetMessage:" />
+    </view>
+	
+	<view type="ServiceMap" name="ServiceMap" factory="AYDefaultViewFactory" >
+		<command type="message"     message="changePositionData:" />
+	</view>
+	
+    <view type="ServicePageCell" name="ServicePageCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="reLoad" />
+        <command type="notify"      message="showCansOrFacility" />
+        <command type="notify"      message="showServiceOfferDate" />
+    </view>
+    
+    <view type="ServiceTitleCell" name="ServiceTitleCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+	<view type="ServiceOwnerInfoCell" name="ServiceOwnerInfoCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="ServiceCapacityCell" name="ServiceCapacityCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="ServiceDescCell" name="ServiceDescCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="showHideDescDetail:" />
+	</view>
+    <view type="ServiceMapCell" name="ServiceMapCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="showCansOrFacility" />
+		<command type="notify"      message="showP2PMap" />
+    </view>
+	<view type="ServiceFacilityCell" name="ServiceFacilityCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="showServiceOfferDate" />
+	</view>
+<!--    <view type="ServiceCalendarCell" name="ServiceCalendarCell" factory="AYReuseViewFactory" >-->
+<!--        <command type="message"     message="setCellInfo:" />-->
+<!--        <command type="notify"      message="showServiceOfferDate" />-->
+<!--    </view>-->
+	<view type="ServiceNotiCell" name="ServiceNotiCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	
+    <view type="ContentListCell" name="ContentListCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="resetContent:" />
+    </view>
+    
+    <view type="ContentListCell" name="FacilityCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+    
+    
+    <view type="ProfileHeadCell" name="ProfileHeadCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message=":" />
+    </view>
+    
+    <view type="ProfileOrigCell" name="ProfileOrigCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message=":" />
+    </view>
+    
+    <view type="PersonalInfoHeadCell" name="PersonalInfoHeadCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message=":" />
+    </view>
+    <view type="PersonalDescCell" name="PersonalDescCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message=":" />
+    </view>
+    <view type="PersonalValidateCell" name="PersonalValidateCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message=":" />
+    </view>
+    
+    
+    
+    <view type="SelfSetting" name="SelfSetting" factory="AYReuseViewFactory" >
+        <command type="message"     message="setPersonalInfo:" />
+        <command type="message"     message="hideKeyboard" />
+        <command type="message"     message="changeAdrss:" />
+        <command type="notify"      message="screenNameChanged:" />
+        <command type="notify"      message="addressChanged:" />
+        <command type="notify"      message="showPickerView" />
+    </view>
+    
+    <view type="BabyInfoCell" name="BabyInfoCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="hideKeyboard" />
+        <command type="message"     message="setCellInfo:" />
+    </view>
+    
+    <view type="Picker" name="Picker" factory="AYDefaultViewFactory" >
+        <command type="message" message="refresh" />
+        <command type="message" message="registerDatasource:" />
+        <command type="message" message="registerDelegate:" />
+        <command type="message" message="showPickerView" />
+        <command type="message" message="hidePickerView" />
+        <command type="notify"      message="didSaveClick" />
+        <command type="notify"      message="didCancelClick" />
+    </view>
+    <view type="Picker2" name="Picker2" factory="AYDefaultViewFactory" >
+        <command type="message" message="refresh" />
+        <command type="message" message="registerDatasource:" />
+        <command type="message" message="registerDelegate:" />
+        <command type="message" message="showPickerView" />
+        <command type="message" message="hidePickerView" />
+        <command type="notify"      message="didSaveClick" />
+        <command type="notify"      message="didCancelClick" />
+    </view>
+    
+    <view type="SetServiceThemeCell" name="SetServiceThemeCell" factory="AYReuseViewFactory" >
+        <command type="message"      message="setCellInfo:" />
+        <command type="notify"       message="didOptionBtnClick:" />
+    </view>
+    
+    <view type="SetServiceCapacityCell" name="SetServiceCapacityCell" factory="AYReuseViewFactory" >
+        <command type="message"      message="setCellInfo:" />
+        <command type="notify"       message="resetCapacityNumb:" />
+    </view>
+    
+    <view type="NapAreaMap" name="NapAreaMap" factory="AYDefaultViewFactory" >
+        <command type="message"     message="refresh" />
+        <command type="message"     message="queryOnesLocal:" />
+        <command type="notify"      message="didCancelClick" />
+    </view>
+    
+    <view type="NapPhotosCell" name="NapPhotosCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="refresh" />
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="addPhotosAction" />
+        <command type="notify"      message="editPhotosAction" />
+    </view>
+    
+    <view type="TipsCollection" name="TipsCollection" factory="AYDefaultViewFactory" >
+        <command type="message"     message="showTipsView" />
+        <command type="notify"      message="hideTipsView" />
+    </view>
+    
+    <view type="NapTitleCell" name="NapTitleCell" factory="AYDefaultViewFactory" >
+        <command type="message"     message="refresh" />
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="inputNapTitleAction:" />
+    </view>
+    
+    <view type="NapDescCell" name="NapDescCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="refresh" />
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="inputNapDescAction:" />
+    </view>
+    
+    <view type="NapBabyAgeCell" name="NapBabyAgeCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+    <view type="NapEditInfoCell" name="NapEditInfoCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+    <view type="OptionalInfoCell" name="OptionalInfoCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+	
+	<view type="SetServiceImagesCell" name="SetServiceImagesCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="beginImagePicker" />
+		<command type="notify"      message="deletedImageWithIndex:" />
+	</view>
+	<view type="SetServiceDescCell" name="SetServiceDescCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="SetServiceCharactCell" name="SetServiceCharactCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didCharactViewTap:" />
+	</view>
+	
+	<view type="SetServiceYardTypeCell" name="SetServiceYardTypeCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="SetServiceAddressCell" name="SetServiceAddressCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="sendTransHeight:" />
+		<command type="notify"      message="didAddressLabelTap" />
+		<command type="notify"      message="adjustTextDidChange:" />
+	</view>
+	<view type="SetServiceFacilityCell" name="SetServiceFacilityCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="SetServiceYardImagesCell" name="SetServiceYardImagesCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="beginImagePicker" />
+		<command type="notify"      message="deletedImageWithIndex:" />
+		<command type="notify"      message="editYardImagesTag:" />
+		<command type="notify"     message="checkYardImageTag:" />
+	</view>
+	
+    <view type="SetCourseSignCell" name="SetCourseSignCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didCourseSignViewTap:" />
+    </view>
+    
+    <view type="NapCostCell" name="NapCostCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="refresh" />
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didCancelClick" />
+    </view>
+    <view type="NapLocationCell" name="NapLocationCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didCancelClick" />
+    </view>
+    <view type="NapDeviceCell" name="NapDeviceCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didCancelClick" />
+    </view>
+    
+    <view type="NapAdressMap" name="NapAdressMap" factory="AYDefaultViewFactory" >
+        <command type="message"     message="queryOnesLocal:" />
+        <command type="notify"      message="didCancelClick" />
+    </view>
+    
+    <view type="SetNapOptionsCell" name="SetNapOptionsCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didOptionBtnClick:" />
+        <command type="notify"      message="didSetNoteBtn:" />
+        <command type="notify"      message="textChange:" />
+		<command type="notify"      message="didFacilityOptViewTap:" />
+    </view>
+    
+    <view type="ServiceTimesCell" name="ServiceTimesCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didWeekDayBtnClick:" />
+    </view>
+    
+    <view type="ServiceAddTimesCell" name="ServiceAddTimesCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didWeekDayBtnClick:" />
+    </view>
+    
+    <view type="ScheduleWeekDays" name="ScheduleWeekDays" factory="AYDefaultViewFactory" >
+        <command type="message"     message="setViewInfo:" />
+		<command type="message"     message="setViewState" />
+		<command type="message"     message="havenAddTM" />
+		<command type="message"     message="receiveScheduleState:" />
+        <command type="notify"      message="changeCurrentIndex:" />
+		<command type="notify"      message="firstTimeTouchWeekday:" />
+		<command type="notify"      message="swipeUpShrinkSchedule:" />
+		<command type="notify"      message="swipeDownExpandSchedule:" />
+		<command type="notify"      message="didSelectItemAtIndexPath:" />
+		<command type="notify"      message="queryTMS:" />
+    </view>
+	<view type="SpecialTMAndState" name="SpecialTMAndState" factory="AYDefaultViewFactory" >
+		<command type="message"     message="setViewInfo:" />
+		<command type="message"     message="setBasicTM:" />
+		<command type="message"     message="pushTMArgs:" />
+		<command type="message"     message="recodeTMHandle:" />
+		<command type="message"     message="callbackTMS:" />
+		<command type="message"     message="resetInitialState" />
+		<command type="notify"      message="changeCurrentIndex:" />
+		<command type="notify"      message="specialOrOpendayAddTM" />
+		<command type="notify"      message="sendScheduleState:" />
+		<command type="notify"      message="didSomeTMSChanged" />
+	</view>
+	
+    
+    <view type="OrderCell" name="OrderCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+    
+    <view type="SerOrderCell" name="SerOrderCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+    
+    <view type="NoOrderCell" name="NoOrderCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+	
+	<view type="OrderNewsreelCell" name="OrderNewsreelCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="OTMHistoryCell" name="OTMHistoryCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	
+	<view type="OSWaitCell" name="OSWaitCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="OSEstabCell" name="OSEstabCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	
+	
+	<view type="ServantHistoryCell" name="ServantHistoryCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	
+    <view type="OrderHeadCell" name="OrderHeadCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didServiceDetailClick" />
+    </view>
+    <view type="OrderContactCell" name="OrderContactCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didContactBtnClick" />
+    </view>
+    <view type="OrderDateCell" name="OrderDateCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message=":" />
+    </view>
+    <view type="OrderPriceCell" name="OrderPriceCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didShowDetailClick" />
+    </view>
+    <view type="OrderStateCell" name="OrderStateCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didQRCodeBtnClick" />
+    </view>
+    <view type="OrderPayCell" name="OrderPayCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="" />
+    </view>
+    <view type="OrderMapCell" name="OrderMapCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+    </view>
+	
+	<view type="OrderPageHeadCell" name="OrderPageHeadCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="OPPriceCell" name="OPPriceCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	<view type="OrderPageContactCell" name="OrderPageContactCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+		<command type="notify"      message="didContactBtnClick:" />
+	</view>
+	
+	<view type="OrderListPendingCell" name="OrderListPendingCell" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	
+    <view type="PayOption" name="PayOption" factory="AYDefaultViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didCancelClick" />
+    </view>
+	
+	<view type="BOrderTimeItem" name="BOrderTimeItem" factory="AYReuseViewFactory" >
+		<command type="message"     message="setCellInfo:" />
+	</view>
+	
+	<view type="AddOTimeCell" name="AddOTimeCell" factory="AYReuseViewFactory" >
+		<command type="message"      message="setCellInfo:" />
+	</view>
+	<view type="OTMNurseCell" name="OTMNurseCell" factory="AYReuseViewFactory" >
+		<command type="message"      message="setCellInfo:" />
+	</view>
+	<view type="OTMCourseCell" name="OTMCourseCell" factory="AYReuseViewFactory" >
+		<command type="message"      message="setCellInfo:" />
+	</view>
+	
+    <view type="BOrderMainHeadCell" name="BOrderMainHeadCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didCancelClick" />
+    </view>
+    
+    <view type="BOrderMainDateCell" name="BOrderMainDateCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didEditDate" />
+        <command type="notify"      message="didEditTimes" />
+    </view>
+    
+    <view type="BOrderMainPriceCell" name="BOrderMainPriceCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didShowDetailClick" />
+    </view>
+    
+    <view type="PayWayCell" name="PayWayCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didPayOptionClick:" />
+    </view>
+    
+    <view type="ServQualityCell" name="ServQualityCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didSetServiceRang:" />
+    </view>
+    
+    <view type="Schedule" name="Schedule" factory="AYDefaultViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="message"     message="dateScrollToCenter:" />
+        <command type="message"     message="queryUnavluableDate:" />
+        <command type="message"     message="changeQueryData:" />
+        <command type="notify"      message="didCancelClick" />
+        <command type="notify"      message="ChangeOfSchedule" />
+		<command type="notify"      message="didSelectItemAtIndexPath:" />
+		<command type="notify"      message="didDeselectItemAtIndexPath:" />
+    </view>
+    
+    <view type="OneProfileAboutCell" name="OneProfileAboutCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didAllContent" />
+    </view>
+    
+    <view type="OneProfileContentCell" name="OneProfileContentCell" factory="AYReuseViewFactory" >
+        <command type="message"     message="setCellInfo:" />
+        <command type="notify"      message="didAllContent" />
+    </view>
+   
+   <view type="SearchFilterCell" name="SearchFilterCell" factory="AYReuseViewFactory" >
+       <command type="message"    message="setCellInfo:" />
+       <command type="notify"     message="filterKidsAges:" />
+       <command type="notify"     message="filterDate:" />
+       <command type="notify"     message="filterType:" />
+       <command type="notify"     message="filterPriceRange:" />
+   </view>
+   
+   <view type="SearchFilterTypeCell" name="SearchFilterTypeCell" factory="AYReuseViewFactory" >
+       <command type="message"      message="setCellInfo:" />
+       <command type="notify"       message="didOptionBtnClick:" />
+   </view>
+   
+   <view type="PhoneCheckInput" name="PhoneCheckInput" factory="AYDefaultViewFactory" >
+       <command type="message"      message="invalidateTimer" />
+       <command type="message"      message="startTimer" />
+       <command type="message"      message="endTimer" />
+       <command type="message"      message="resignFocus" />
+       <command type="message"      message="queryPhoneInput:" />
+       <command type="message"      message="queryCodeInput:" />
+       <command type="message"      message="resetCodeInput" />
+       <command type="message"      message="setCodeBtnTitle" />
+       <command type="notify"       message="requeryForCode" />
+	   <command type="notify"       message="setRightBtnEnabled" />
+   </view>
+   
+   <view type="ServiceConsumerFace" name="ServiceConsumerFace" factory="AYDefaultViewFactory" >
+       <command type="message"      message="lhsImage:" />
+       <command type="message"      message="rhsImage:" />
+       <command type="message"      message="resetTitle:" />
+       <command type="message"      message="queryHintHight" />
+   </view>
+   
+   <view type="Collection" name="Collection" factory="AYCollectionViewFactory" >
+	   <command type="message" message="refresh" />
+	   <command type="message" message="registerDatasource:" />
+	   <command type="message" message="registerDelegate:" />
+	   <command type="message" message="registerCellWithClass:" />
+	   <command type="message" message="registerCellWithNib:" />
+	   <command type="message" message="registerHeaderWithClass:" />
+	   <command type="message" message="registerHeaderAndFooterWithNib:" />
+	   <command type="message" message="scrollToPostion:" />
+	   
+	   <command type="args"      direction="1" minspacingx = "0" minspacingy = "0"/>
+   </view>
+   
+   <view type="CollectionVer" name="CollectionVer" factory="AYCollectionViewFactory" >
+	   <command type="message" message="refresh" />
+	   <command type="message" message="registerDatasource:" />
+	   <command type="message" message="registerDelegate:" />
+	   <command type="message" message="registerCellWithClass:" />
+	   <command type="message" message="registerCellWithNib:" />
+	   <command type="message" message="registerHeaderWithClass:" />
+	   <command type="message" message="registerHeaderAndFooterWithNib:" />
+	   <command type="message" message="scrollToPostion:" />
+	   
+	   <command type="args"      direction="0" minspacingx = "0" minspacingy = "0"/>
+   </view>
+   
+   <view type="MapMatchCell" name="MapMatchCell" factory="AYReuseViewFactory" >
+	   <command type="message"      message="setCellInfo:" />
+   </view>
+   
+   <view type="NurseScheduleCellWhiter" name="NurseScheduleCellWhite" factory="AYReuseViewFactory" >
+	   <command type="message"      message="setCellInfo:" />
+	   <command type="notify" message="delTimeDuration:" />
+   </view>
+   <view type="NurseScheduleCellTheme" name="NurseScheduleCellTheme" factory="AYReuseViewFactory" >
+	   <command type="message"      message="setCellInfo:" />
+	   <command type="notify" message="delTimeDuration:" />
+   </view>
+   
+   <view type="RemoteBack" name="RemoteBack" factory="AYDefaultViewFactory" >
+	   <command type="message"      message="setCellInfo:" />
+   </view>
+   
+   <view type="TodoApplyCell" name="TodoApplyCell" factory="AYReuseViewFactory" >
+	   <command type="message"      message="setCellInfo:" />
+   </view>
+   <view type="UnSubsCell" name="UnSubsCell" factory="AYReuseViewFactory" >
+	   <command type="message"      message="setCellInfo:" />
+   </view>
+   <view type="DayRemindCell" name="DayRemindCell" factory="AYReuseViewFactory" >
+	   <command type="message"      message="setCellInfo:" />
+   </view>
+   
+   <view type="AppliFBCell" name="AppliFBCell" factory="AYReuseViewFactory" >
+	   <command type="message"      message="setCellInfo:" />
+   </view>
+   
+   <view type="TitleOptCell" name="TitleOptCell" factory="AYReuseViewFactory" >
+	   <command type="message"      message="setCellInfo:" />
+	   <command type="notify" message="didOptionClick:" />
+   </view>
+   
+</views>

@@ -1,0 +1,12 @@
+<Models>
+    <model name="model" factory="AYModelFactory" >
+        <facade type="DefaultFacade" name="LoginModel" />
+        <facade type="DefaultFacade" name="OwnerQueryModel" />
+        <facade type="DefaultFacade" name="OwnerQueryPushModel" />
+        <facade type="DefaultFacade" name="HomeQueryModel" />
+        <facade type="DefaultFacade" name="ChatSessionModel" />
+        <facade type="DefaultFacade" name="TagContentModel" />
+        
+        <notify message="AppReady" controller="Landing" />
+    </model>
+</Models>

@@ -1,0 +1,533 @@
+<delegates>
+    <delegate type="SearchBarDelegate" name="SearchBar" factory="AYDefaultDelegateFactory" >
+        <command type="notify" message="searchTextChanged:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="TagRecommend" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="TagSeleted:" />
+        <command type="notify" message="queryHeaderTitle" />
+        <command type="notify" message="queryHandleCommand" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="TagAdd" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="changeSearchText:" />
+        <command type="notify" message="TagSeleted:" />
+        <command type="notify" message="TagAdded:" />
+        <command type="notify" message="queryNoResultTitle" />
+        <command type="notify" message="handleResultToString:" />
+    </delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="ProfilePublish" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="Picker" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="ProfilePush" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="didSelectPushRow:" />
+    </delegate>
+   
+    <delegate type="TableViewDelegateAndDatasource" name="AppSetting" factory="AYDefaultDelegateFactory" >
+    </delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="AboutDongda" factory="AYDefaultDelegateFactory" >
+    </delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="UserRelations" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="isFriendsDataReady" />
+        <command type="message" message="isFollowingDataReady" />
+        <command type="message" message="isFollowedDataReady" />
+        <command type="message" message="changeFriendsData:" />
+        <command type="message" message="changeFollowingData:" />
+        <command type="message" message="changeFollowedData:" />
+        <command type="message" message="resetCurrentShowingIndex:" />
+        <command type="notify" message="scrollToHideKeyBoard" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="ContacterList" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeFriendsData:" />
+        <command type="message" message="getAllPhones" />
+        <command type="message" message="splitWithFriends:" />
+        <command type="notify" message="sendInvateSMS:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="HomeContent" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="setCallBackTableView:" />
+        <command type="message" message="likePostItemResult:" />
+        <command type="message" message="pushPostItemResult:" />
+    </delegate>
+    <delegate type="TableViewDelegateAndDatasource" name="Home" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+		<command type="notify"  message="scrollToShowHideTop:" />
+        <command type="notify"  message="scrollToShowTop:" />
+		<command type="notify"  message="scrollToHideTop:" />
+		<command type="notify"  message="didSelectedRow:" />
+		<command type="notify"  message="scrollViewWillBeginDrag" />
+		<command type="notify"  message="scrollViewWillEndDrag" />
+		<command type="notify"  message="willOpenMapMatch" />
+    </delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="NursaryList" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="SearchSKU" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="ChoiceContent" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify"  message="scrollOffsetYNoyify:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="HomeSort" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify"  message="scrollToShowHideTop:" />
+		<command type="notify"  message="scrollToShowTop:" />
+		<command type="notify"  message="scrollToHideTop:" />
+		<command type="notify"  message="didSelectedRow:" />
+		<command type="notify"  message="didNursarySortTapAtIndex:" />
+		<command type="notify"  message="scrollViewWillBeginDrag" />
+		<command type="notify"  message="scrollViewWillEndDrag" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="AssortmentList" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	<delegate type="TableViewDelegateAndDatasource" name="Assortment" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	<delegate type="TableViewDelegateAndDatasource" name="TopicContent" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="message" message="TransfromExpend:" />
+		<command type="notify"  message="scrollViewDidScroll:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="SortServiceList" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="HomeAround" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="message"  message="changeLocationAuthData:" />
+	</delegate>
+	
+	
+	
+	<delegate type="CollectionViewDelegateAndDatasource" name="HomeCollect" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify" message="didSelectedRow:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="FilterLocation" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify"  message="reLocationAction" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="FilterTheme" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify"  message="didCellAction" />
+	</delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="JoinedGroupList" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="scrollToRefresh" />
+    </delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="FoundGrid" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="FoundRoleTag" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="changePreviewData:" />
+        <command type="notify" message="scrollToHideKeyBoard" />
+    </delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="FoundTags" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="changePreviewData:" />
+        <command type="notify" message="scrollToHideKeyBoard" />
+    </delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="Album" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="scrollForMoreSize" />
+    </delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="Notification" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="GroupChatUserInfo" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+
+    <delegate type="TableViewDelegateAndDatasource" name="GroupChatMessages" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="sendHeightNote:" />
+    </delegate>
+	
+    <delegate type="TextViewDelegate" name="ChatInput" factory="AYDefaultDelegateFactory" >
+        <command type="notify" message="sendMessage:" />
+    </delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="SingleChatMessage" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="message" message="sendHeightNote:" />
+	</delegate>
+	
+    <delegate type="TableViewDelegateAndDatasource" name="SelfSetting" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="changeScreenPhoto:" />
+        <command type="notify" message="scrollToHideKeyBoard" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="UserTablePreview" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    
+    <delegate type="CollectionViewDelegateAndDatasource" name="Calendar" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="Location" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="autoLocationData:" />
+        <command type="message" message="changeLocationResultData:" />
+        <command type="notify" message="scrollToHideKeyBoard" />
+        <command type="notify" message="startLocation" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="LocationResult" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="Facility" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="ContentList" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="QueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="ServicePage" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="changeDescription:" />
+        <command type="message" message="TransfromExpend:" />
+        <command type="notify" message="sendPopMessage" />
+        <command type="notify" message="scrollOffsetY:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="Profile" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="changeModel:" />
+        <command type="notify" message="sendRegMessage:" />
+        <command type="notify" message="scrollOffsetY:" />
+        <command type="notify" message="queryModel:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="PersonalInfo" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="changeModel:" />
+        <command type="notify" message="sendRegMessage:" />
+        <command type="notify" message="scrollOffsetY:" />
+        <command type="notify" message="queryModel:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="OneProfile" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="sendRegMessage" />
+        <command type="notify" message="scrollOffsetY:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="ProfileService" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="sendRegMessage" />
+        <command type="notify" message="scrollOffsetY:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="CollectServ" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="MyService" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="BabyInfo" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="sendDelMessage:" />
+        <command type="message" message="queryCurrentSelected:" />
+        <command type="notify" message="showPicker:" />
+        <command type="notify" message="showPicker2:" />
+    </delegate>
+	
+    <delegate type="PickerViewDelegateAndDatasource" name="BabyInfoPicker" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="queryBabyBirthday:" />
+        <command type="notify" message="scrollOffsetY:" />
+    </delegate>
+    <delegate type="PickerViewDelegateAndDatasource" name="BabyInfoPicker2" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="queryBabySex:" />
+        <command type="notify" message="scrollOffsetY:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="SetServiceTheme" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="serviceThemeSeted:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="SetServiceCapacity" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="serviceThemeSeted:" />
+    </delegate>
+    
+    <delegate type="PickerViewDelegateAndDatasource" name="NapArea" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="queryCurrentSelected:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="MainInfo" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="queryCurrentSelected:" />
+        <command type="message" message="changeQueryInfo:" />
+        <command type="notify" message="addPhotosAction" />
+        <command type="notify" message="inputNapTitleAction" />
+        <command type="notify" message="setNapBabyAges" />
+        <command type="notify" message="setNapTheme" />
+        <command type="notify" message="setNapCost" />
+        <command type="notify" message="setNapAdress" />
+    </delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="SetBasicInfo" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="SetLocationInfo" factory="AYDefaultDelegateFactory" >
+		<command type="message"		message="changeQueryData:" />
+		<command type="message"		message="resetCellHeight:" />
+		<command type="notify"		message="pickYardType" />
+		<command type="notify"		message="setServiceFacility" />
+		<command type="notify"		message="didScrollHideKeyBroad" />
+	</delegate>
+	<delegate type="PickerViewDelegateAndDatasource" name="YardTypePick" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="message" message="queryCurrentSelected:" />
+	</delegate>
+	
+	<delegate type="PickerViewDelegateAndDatasource" name="SetAgeBoundary" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="message" message="queryCurrentSelected:" />
+	</delegate>
+	
+    <delegate type="PickerViewDelegateAndDatasource" name="SetNapAges" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="queryCurrentSelected:" />
+    </delegate>
+    
+    <delegate type="PickerViewDelegateAndDatasource" name="EditServiceCapacity" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="queryCurrentSelected:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="SetCourseSign" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+		<command type="notify" message="courseCansSeted:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="SetNapTheme" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="queryData:" />
+        <command type="message" message="changeEditMode:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="SetServiceFacility" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="SetServiceOptInfo" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="NurseScheduleTable" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify" message="addTimeDuration" />
+		<command type="notify" message="manageRestDaySchedule" />
+		<command type="notify" message="exchangeTimeDuration:" />
+	</delegate>
+	
+	<delegate type="PickerViewDelegateAndDatasource" name="NurseSchedulePick" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="queryCurrentSelected:" />
+		<command type="message" message="scrollToCenterWithOffset:" />
+	</delegate>
+	
+    <delegate type="TableViewDelegateAndDatasource" name="NapLocation" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="autoLocationData:" />
+        <command type="message" message="changeLocationResultData:" />
+        <command type="notify" message="hideKeyBoard" />
+        <command type="notify" message="sendLocation:" />
+    </delegate>
+    
+    <delegate type="PickerViewDelegateAndDatasource" name="ServiceTimesPick" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeOptionData:" />
+        <command type="message" message="queryCurrentSelected:" />
+        <command type="message" message="scrollToCenterWithOffset:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="ServiceTimesShow" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="cellShowPickerView:" />
+        <command type="notify" message="cellDeleteFromTable:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="FutureOrder" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="updateReadState:" />
+    </delegate>
+    <delegate type="TableViewDelegateAndDatasource" name="PastOrder" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="FutureOrderSer" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="notify" message="updateReadState:" />
+    </delegate>
+    <delegate type="TableViewDelegateAndDatasource" name="PastOrderSer" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="OrderCommon" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="message" message="changeQueryFBData:" />
+		<command type="notify" message="showFBListOrOne" />
+		<command type="notify" message="showOrderList" />
+		<command type="notify" message="didSelectedRow:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="OrderServant" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="message" message="changeQueryTodoData:" />
+		<command type="notify" message="showMoreAppli" />
+		<command type="notify" message="showAppliListOrOne" />
+		<command type="notify" message="showHistoryAppli" />
+		<command type="notify" message="showRemindMessage" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="AppliFBList" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="PAYPage" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	<delegate type="TableViewDelegateAndDatasource" name="UnSubsPage" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="OrderListNews" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="OrderListPending" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify" message="didSelectedRow:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="ServantHistory" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	<delegate type="TableViewDelegateAndDatasource" name="MoreAppli" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="OrderInfoPage" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify" message="unsubsOrder" />
+	</delegate>
+	
+    <delegate type="TableViewDelegateAndDatasource" name="ReadyOrder" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="TransfromExpend" />
+        <command type="notify" message="sendLocation:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="CommentService" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+<!--        <command type="notify" message="sendLocation:" />-->
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="BOrderMain" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="setOrderDate:" />
+        <command type="message" message="TransfromExpend" />
+		<command type="notify" message="setOrderTime:" />
+        <command type="notify" message="sendLocation:" />
+    </delegate>
+    
+    <delegate type="PickerViewDelegateAndDatasource" name="OrderTimes" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="queryCurrentSelected:" />
+        <command type="message" message="scrollToCenterWithOffset:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="ChatList" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+		<command type="notify" message="quickScrollHiddenKeyboard" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="SearchFilter" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+        <command type="message" message="resetQueryData:" />
+    </delegate>
+    
+    <delegate type="TableViewDelegateAndDatasource" name="SearchFilterType" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="changeQueryData:" />
+    </delegate>
+    <delegate type="PickerViewDelegateAndDatasource" name="SearchFilterKidsAges" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="queryCurrentSelected:" />
+    </delegate>
+    <delegate type="PickerViewDelegateAndDatasource" name="SearchFilterPriceRange" factory="AYDefaultDelegateFactory" >
+        <command type="message" message="queryCurrentSelected:" />
+    </delegate>
+	
+	<delegate type="CollectionViewDelegateAndDatasource" name="NewVersionNav" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify" message="scrollOffsetX:" />
+	</delegate>
+	
+	<delegate type="CollectionViewDelegateAndDatasource" name="MapMatch" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify" message="sendChangeAnnoMessage:" />
+	</delegate>
+	
+	<delegate type="CollectionViewDelegateAndDatasource" name="BOrderTime" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="message" message="setInitStatesData:" />
+		<command type="notify" message="scrollToShowMore" />
+		<command type="notify" message="scrollToCenter:" />
+		<command type="notify" message="didSelectItemAtIndexPath:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="BOTimeTable" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="message" message="setDelegateType:" />
+		<command type="notify" message="scrollOffsetY:" />
+		<command type="notify" message="cellShowPickerView:" />
+		<command type="notify" message="cellDeleteFromTable:" />
+		<command type="notify" message="didClickTheCellRow:" />
+	</delegate>
+	
+	<delegate type="CollectionViewDelegateAndDatasource" name="NurseCalendar" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify" message="scrollOffsetX:" />
+	</delegate>
+	
+	<delegate type="TableViewDelegateAndDatasource" name="RestDayTable" factory="AYDefaultDelegateFactory" >
+		<command type="message" message="changeQueryData:" />
+		<command type="notify" message="addTimeDuration" />
+		<command type="notify" message="exchangeTimeDuration:" />
+	</delegate>
+	
+</delegates>
