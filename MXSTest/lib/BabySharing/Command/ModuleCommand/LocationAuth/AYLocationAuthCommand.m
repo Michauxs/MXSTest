@@ -9,7 +9,7 @@
 #import "AYLocationAuthCommand.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "AYFacadeBase.h"
+
 #import "AYFactoryManager.h"
 
 @implementation AYLocationAuthCommand

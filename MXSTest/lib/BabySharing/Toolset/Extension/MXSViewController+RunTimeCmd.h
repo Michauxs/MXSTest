@@ -6,9 +6,9 @@
 //  Copyright © 2017年 Alfred Yang. All rights reserved.
 //
 
-#import "AYViewController.h"
+#import "MXSViewController.h"
 
-@interface AYViewController (RunTimeCmd)
+@interface MXSViewController (RunTimeCmd)
 
 - (void)performAYSel:(NSString*)selector withResult:(NSObject**)obj;
 

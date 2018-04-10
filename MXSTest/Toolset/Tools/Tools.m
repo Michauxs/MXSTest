@@ -9,9 +9,9 @@
 #import "Tools.h"
 #import <CommonCrypto/CommonDigest.h>
 
-#import "AYCommandDefines.h"
-#import "AYFacadeBase.h"
-#import "AYFactoryManager.h"
+//#import "AYCommandDefines.h"
+//#import "AYFacadeBase.h"
+//#import "AYFactoryManager.h"
 
 @implementation Tools
 
@@ -697,104 +697,10 @@
 	
 }
 
-+ (NSDictionary*)montageServiceInfoWithServiceData:(NSDictionary*)serviceData {
-	
-	NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
-	
-	NSDictionary *info_cat = [serviceData objectForKey:kAYServiceArgsCategoryInfo];
-	
-	NSString *ownerName = [[serviceData objectForKey:@"owner"] objectForKey:kAYProfileArgsScreenName];
-	
-	[data setValue:ownerName forKey:kAYProfileArgsScreenName];
-	NSString *motageName = @"SERVICE";
-	NSString *unitCat = @"UNIT";
-	NSString *service_cat = [info_cat objectForKey:kAYServiceArgsCat];
-	if ([service_cat containsString:@"看"]) {
-		unitCat = @"小时";
-		motageName = [info_cat objectForKey:kAYServiceArgsCatSecondary];
-	}
-	else if ([service_cat isEqualToString:kAYStringCourse]) {
-		unitCat = @"次";
-		
-		motageName = [info_cat objectForKey:kAYServiceArgsConcert];
-		if (!motageName || [motageName isEqualToString:@""]) {
-			motageName = [info_cat objectForKey:kAYServiceArgsCatThirdly];
-			if (!motageName || [motageName isEqualToString:@""]) {
-				motageName = [info_cat objectForKey:kAYServiceArgsCatSecondary];
-			}
-		}
-		motageName = [NSString stringWithFormat:@"%@%@", motageName, service_cat];
-
-	} else {
-		NSLog(@"---null---");
-	}
-	
-	NSDictionary *info_detail = [serviceData objectForKey:kAYServiceArgsDetailInfo];
-	NSNumber *price = [info_detail objectForKey:kAYServiceArgsPrice];
-	NSString *priceStr = [NSString stringWithFormat:@"%.f", price.intValue * 0.01];
-	
-	[data setValue:motageName forKey:@"montage"];
-	[data setValue:priceStr forKey:kAYServiceArgsPrice];
-	[data setValue:unitCat forKey:@"unit"];
-	
-	return [data copy];
-}
-
-+ (NSString*)serviceCompleteNameFromSKUWith:(NSDictionary *)service_info {
-	NSString *completeTheme;
-	NSArray *options_title_cans;
-	NSNumber *service_cat = [service_info objectForKey:kAYServiceArgsCat];
-	NSNumber *cans_cat = [service_info objectForKey:kAYServiceArgsCatSecondary];
-	
-	if (service_cat.intValue == ServiceTypeNursery) {
-		
-		options_title_cans = kAY_service_options_title_nursery;
-		//kangu 服务主题分类
-		if (cans_cat.intValue == -1 || cans_cat.integerValue >= options_title_cans.count) {
-			completeTheme = @"待调整主题服务";
-		} else {
-			completeTheme = options_title_cans[cans_cat.integerValue];
-		}
-		
-	}
-	else if (service_cat.intValue == ServiceTypeCourse) {
-		
-		NSString *servCatStr = @"课程";
-		options_title_cans = kAY_service_options_title_course;
-		NSNumber *cans = [service_info objectForKey:kAYServiceArgsCatThirdly];
-		//kecheng服务主题分类
-		if (cans_cat.intValue == -1 || cans_cat.integerValue >= options_title_cans.count) {
-			completeTheme = @"待调整主题服务";
-		}
-		else {
-			
-			NSString *costomStr = [service_info objectForKey:kAYServiceArgsCourseCoustom];
-			if (costomStr && ![costomStr isEqualToString:@""]) {
-				completeTheme = [NSString stringWithFormat:@"%@%@", costomStr, servCatStr];
-				
-			} else {
-				NSDictionary *courseTitleOfAll = kAY_service_course_title_ofall;
-				NSArray *signTitleArr = [courseTitleOfAll objectForKey:cans_cat];
-				if (cans.integerValue < signTitleArr.count) {
-					NSString *courseSignStr = [signTitleArr objectAtIndex:cans.integerValue];
-					completeTheme = [NSString stringWithFormat:@"%@%@", courseSignStr, servCatStr];
-				} else {
-					completeTheme = @"待调整主题服务";
-				}
-			}//是否自定义课程标签判断end
-		}
-	} else {
-		
-		NSLog(@"---null---");
-		completeTheme = @"待调整主题服务";
-	}
-	return completeTheme;
-}
-
 
 + (NSMutableDictionary*)getBaseRemoteData {
 	NSDictionary* user = nil;
-	CURRENUSER(user);
+//    CURRENUSER(user);
 	
 	NSMutableDictionary *dic_remote = [[NSMutableDictionary alloc] init];;
 	[dic_remote setValue:[user objectForKey:kAYCommArgsToken] forKey:kAYCommArgsToken];
@@ -816,5 +722,7 @@
 	
 	return dic_remote;
 }
-
++ (NSMutableArray*)creatMutableArray {
+    return [NSMutableArray array];
+}
 @end

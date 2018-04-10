@@ -11,7 +11,6 @@
 #import "AYFactoryManager.h"
 #import "AYResourceManager.h"
 #import "AYSelfSettingCellDefines.h"
-#import "SGActionView.h"
 #import "AYViewController.h"
 #import "AYSelfSettingCellView.h"
 

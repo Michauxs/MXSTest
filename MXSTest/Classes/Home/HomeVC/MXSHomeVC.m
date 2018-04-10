@@ -42,7 +42,8 @@
 		make.size.mas_equalTo(CGSizeMake(TABLE_WIDTH, SCREEN_HEIGHT));
 	}];
 	
-	graduallyLabel = [Tools creatLabelWithText:@"" textColor:[Tools theme] fontSize:315 backgroundColor:nil textAlignment:NSTextAlignmentLeft];
+    graduallyLabel = [UILabel creatLabelWithText:@"" andTextColor:[UIColor theme] andFontSize:315 andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+    graduallyLabel.numberOfLines = 0;
 	[self.view addSubview:graduallyLabel];
 //	graduallyLabel.frame = CGRectMake(TABLE_WIDTH+30, 0, SCREEN_WIDTH-(TABLE_WIDTH+30), SCREEN_HEIGHT);
 	[graduallyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -61,13 +62,26 @@
 	btmLine.hidden = YES;
 }
 
+#pragma mark - demo
+- (int)facatail:(int)n {
+    
+    int sum = 0;
+    if (n == 0) {   //回归条件
+        sum = 1;
+    } else {    //递推条件
+        sum = n * [self facatail:n-1];
+    }
+    return sum;
+}
+
 #pragma mark - actions
 - (id)NOTEBOOKClick {
 	[[MXSVCExchangeCmd shared] fromVC:self pushVC:@"MXSNoteVC" withArgs:nil];
 	return nil;
 }
 - (id)NEXTClick {
-	
+    int sum = [self facatail:5];
+    NSLog(@"%d", sum);
 	return nil;
 }
 

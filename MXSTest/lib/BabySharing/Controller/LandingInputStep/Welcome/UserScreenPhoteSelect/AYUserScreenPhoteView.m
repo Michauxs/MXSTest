@@ -9,7 +9,6 @@
 #import "AYUserScreenPhoteView.h"
 #import "AYCommandDefines.h"
 #import "AYResourceManager.h"
-#import "SGActionView.h"
 #import "AYViewController.h"
 #import "AYRemoteCallCommand.h"
 #import "AYFacadeBase.h"

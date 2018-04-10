@@ -11,7 +11,6 @@
 #import "AYCommandDefines.h"
 #import "AYFactoryManager.h"
 #import "AYResourceManager.h"
-#import "SGActionView.h"
 #import "AYModel.h"
 #import "AYRemoteCallCommand.h"
 #import "MBProgressHUD.h"

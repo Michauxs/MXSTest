@@ -12,11 +12,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import "TmpFileStorageModel.h"
 
-#import "AYCommand.h"
-#import "AYCommandDefines.h"
-#import "AYFactoryManager.h"
-#import "AYNotifyDefines.h"
-#import "AYFacadeBase.h"
+//#import "AYCommandDefines.h"
+//#import "AYFactoryManager.h"
+//#import "AYNotifyDefines.h"
+//#import "AYFacadeBase.h"
 
 @interface MoviePlayTrait ()
 @property (nonatomic, strong) NSMutableArray* players;
@@ -177,14 +176,14 @@
     [exporter exportAsynchronouslyWithCompletionHandler:^{
         dispatch_async(dispatch_get_main_queue(), ^{
 //            [self exportDidFinish:exporter];
-            id<AYFacadeBase> f = MOVIERECORD;
-            
-            NSMutableDictionary* notify = [[NSMutableDictionary alloc]init];
-            [notify setValue:kAYNotifyActionKeyNotify forKey:kAYNotifyActionKey];
-            [notify setValue:kAYNotifyDidMergeMovieRecord forKey:kAYNotifyFunctionKey];
-            
-            [notify setValue:url forKey:kAYNotifyArgsKey];
-            [f performWithResult:&notify];
+//            id<AYFacadeBase> f = MOVIERECORD;
+//            
+//            NSMutableDictionary* notify = [[NSMutableDictionary alloc]init];
+//            [notify setValue:kAYNotifyActionKeyNotify forKey:kAYNotifyActionKey];
+//            [notify setValue:kAYNotifyDidMergeMovieRecord forKey:kAYNotifyFunctionKey];
+//            
+//            [notify setValue:url forKey:kAYNotifyArgsKey];
+//            [f performWithResult:&notify];
         });
     }];
 }

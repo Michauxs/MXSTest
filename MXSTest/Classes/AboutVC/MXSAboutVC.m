@@ -16,7 +16,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
-	showInfoLabel = [Tools creatLabelWithText:nil textColor:[Tools blackColor] fontSize:313.f backgroundColor:nil textAlignment:0];
+	showInfoLabel = [Tools creatLabelWithText:nil textColor:[Tools black] fontSize:313.f backgroundColor:nil textAlignment:0];
 	[self.view addSubview:showInfoLabel];
 	[showInfoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.center.equalTo(self.view);
@@ -27,7 +27,7 @@
 	NSString *htmlStr = [self requestHtmlStringWith:url];
 	[self getElementWithString:htmlStr];
 	
-	UIButton *popBtn = [Tools creatUIButtonWithTitle:@"🔙返回" andTitleColor:[Tools whiteColor] andFontSize:313.f andBackgroundColor:[UIColor redColor]];
+	UIButton *popBtn = [Tools creatBtnWithTitle:@"🔙返回" titleColor:[UIColor white] fontSize:313.f backgroundColor:[UIColor redColor]];
 	[self.view addSubview:popBtn];
 	[popBtn mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.left.equalTo(self.view).offset(20);

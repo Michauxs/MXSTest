@@ -45,9 +45,9 @@
 	
     id<AYDelegateBase> cmd_notify = [self.delegates objectForKey:@"SetServiceCapacity"];
     id obj = (id)cmd_notify;
-	kAYViewsSendMessage(kAYTableView, kAYTableRegisterDelegateMessage, &obj)
+    kAYViewsSendMessage(kAYTableView, kAYTCViewRegisterDelegateMessage, &obj)
     obj = (id)cmd_notify;
-	kAYViewsSendMessage(kAYTableView, kAYTableRegisterDatasourceMessage, &obj)
+    kAYViewsSendMessage(kAYTableView, kAYTCViewRegisterDatasourceMessage, &obj)
     
     NSString* cell_name = [[kAYFactoryManagerControllerPrefix stringByAppendingString:@"SetServiceCapacityCell"] stringByAppendingString:kAYFactoryManagerViewsuffix];
     kAYViewsSendMessage(kAYTableView, kAYTableRegisterCellWithClassMessage, &cell_name)
@@ -55,7 +55,7 @@
     id tmp = [service_info copy];
     kAYDelegatesSendMessage(@"SetServiceCapacity", @"changeQueryData:", &tmp);
     
-    UIButton *nextBtn = [Tools creatUIButtonWithTitle:@"下一步" andTitleColor:[Tools whiteColor] andFontSize:17.f andBackgroundColor:[Tools theme]];
+    UIButton *nextBtn = [Tools creatBtnWithTitle:@"下一步" titleColor:[Tools whiteColor] fontSize:17.f backgroundColor:[Tools theme]];
     [self.view addSubview:nextBtn];
     [nextBtn addTarget:self action:@selector(didNextBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {

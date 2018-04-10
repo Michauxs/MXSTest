@@ -348,7 +348,7 @@
         currentAnno = [[AYAnnonation alloc]init];
         currentAnno.coordinate = location.coordinate;
         currentAnno.title = @"定位位置";
-        currentAnno.imageName = @"location_self";
+        currentAnno.imageName_normal = @"location_self";
         [maMapView addAnnotation:currentAnno];
         [maMapView showAnnotations:@[currentAnno] animated:NO];
 //        maMapView.region = MACoordinateRegionMake(CLLocationCoordinate2DMake(latitude.doubleValue, longitude.doubleValue), MACoordinateSpanMake(latitude.doubleValue, longitude.doubleValue));
@@ -418,7 +418,7 @@
         }
         //设置属性 指定图片
         AYAnnonation *anno = (AYAnnonation *) annotation;
-        annotationView.image = [UIImage imageNamed:anno.imageName];
+        annotationView.image = [UIImage imageNamed:anno.imageName_select];
         annotationView.tag = anno.index;
         //展示详情界面
         annotationView.canShowCallout = NO;

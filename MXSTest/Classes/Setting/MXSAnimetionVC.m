@@ -94,7 +94,7 @@
 	cirTopLayer.strokeEnd = 0;
 	cirBtmLayer.strokeEnd = 0;
 	
-	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"ATK" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools theme]];
+	UIButton *ComeOnBtn = [Tools creatBtnWithTitle:@"ATK" titleColor:[Tools whiteColor] fontSize:14.f backgroundColor:[Tools theme]];
 	[self.view addSubview:ComeOnBtn];
 	[ComeOnBtn mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.bottom.equalTo(self.view);
@@ -103,7 +103,7 @@
 	}];
 	[ComeOnBtn addTarget:self action:@selector(didComeOnBtnClick) forControlEvents:UIControlEventTouchUpInside];
 	
-	UIButton *otherBtn = [Tools creatUIButtonWithTitle:@"BAC" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools darkBackgroundColor]];
+	UIButton *otherBtn = [Tools creatBtnWithTitle:@"BAC" titleColor:[Tools whiteColor] fontSize:14.f backgroundColor:[Tools darkBackgroundColor]];
 	[self.view addSubview:otherBtn];
 	[otherBtn mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.bottom.equalTo(self.view);

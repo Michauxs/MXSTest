@@ -12,7 +12,6 @@
 #import "AYFactoryManager.h"
 #import "AYViewBase.h"
 #import "AYResourceManager.h"
-#import "AYFacadeBase.h"
 #import "AYFacade.h"
 #import "AYRemoteCallCommand.h"
 #import "AYRemoteCallDefines.h"

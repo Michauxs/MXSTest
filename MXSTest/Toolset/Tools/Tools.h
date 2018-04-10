@@ -57,8 +57,8 @@
 + (UILabel*)creatLabelWithText:(NSString*)text textColor:(UIColor*)color fontSize:(CGFloat)font backgroundColor:(UIColor*)backgroundColor textAlignment:(NSTextAlignment)align;
 + (UIButton*)creatBtnWithTitle:(NSString*)title titleColor:(UIColor*)TitleColor fontSize:(CGFloat)font backgroundColor:(UIColor*)backgroundColor;
 
-//+ (UILabel*)creatUILabelWithText:(NSString*)text andTextColor:(UIColor*)color andFontSize:(CGFloat)font andBackgroundColor:(UIColor*)backgroundColor andTextAlignment:(NSTextAlignment)align;
-//+ (UIButton*)creatUIButtonWithTitle:(NSString*)title andTitleColor:(UIColor*)TitleColor andFontSize:(CGFloat)font andBackgroundColor:(UIColor*)backgroundColor;
++ (UILabel*)creatUILabelWithText:(NSString*)text andTextColor:(UIColor*)color andFontSize:(CGFloat)font andBackgroundColor:(UIColor*)backgroundColor andTextAlignment:(NSTextAlignment)align;
++ (UIButton*)creatBtnWithTitle:(NSString*)title titleColor:(UIColor*)TitleColor fontSize:(CGFloat)font backgroundColor:(UIColor*)backgroundColor;
 
 + (void)setViewBorder:(UIView*)view withRadius:(CGFloat)radius andBorderWidth:(CGFloat)width andBorderColor:(UIColor*)color andBackground:(UIColor*)backColor;
 + (void)setShadowOfView:(UIView*)view withViewRadius:(CGFloat)radius_v andColor:(UIColor*)color andOffset:(CGSize)size andOpacity:(CGFloat)opacity andShadowRadius:(CGFloat)radius_s;
@@ -76,13 +76,10 @@
 #pragma mark -- NSTime
 + (NSDateFormatter*)creatDateFormatterWithString:(NSString*)formatter;
 
-#pragma mark -- service SKU -> complete name
-+ (NSString*)serviceCompleteNameFromSKUWith:(NSDictionary*)service_info;
-
-+ (NSDictionary*)montageServiceInfoWithServiceData:(NSDictionary*)serviceData;
-
+#pragma mark -- 
 + (NSString*)Bit64String:(NSString*)string;
 
++ (NSMutableArray*)creatMutableArray;
 + (NSMutableDictionary*)getBaseRemoteData;
 + (NSMutableDictionary*)getBaseRemoteData:(NSDictionary*)user;
 
