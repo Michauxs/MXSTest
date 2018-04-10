@@ -67,7 +67,7 @@
 	NSDictionary *attr_color_normal = @{NSFontAttributeName:[UIFont systemFontOfSize:10.f], NSForegroundColorAttributeName:[Tools garyLineColor]};
 	[controller.tabBarItem setTitleTextAttributes:attr_color_normal forState:UIControlStateNormal];
 	
-	NSDictionary *attr_color_select = @{NSFontAttributeName:[UIFont systemFontOfSize:10.f], NSForegroundColorAttributeName:[Tools themeColor]};
+	NSDictionary *attr_color_select = @{NSFontAttributeName:[UIFont systemFontOfSize:10.f], NSForegroundColorAttributeName:[Tools theme]};
 	[controller.tabBarItem setTitleTextAttributes:attr_color_select forState:UIControlStateSelected];
 	
 	UIImage *image = [UIImage imageNamed:imageName];

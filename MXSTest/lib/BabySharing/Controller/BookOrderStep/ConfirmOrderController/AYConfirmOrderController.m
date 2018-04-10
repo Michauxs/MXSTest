@@ -51,7 +51,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [Tools darkBackgroundColor];
     
-    UILabel *tipsLabel = [Tools creatUILabelWithText:@"确认您的订单" andTextColor:[UIColor whiteColor] andFontSize:16.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentCenter];
+    UILabel *tipsLabel = [Tools creatLabelWithText:@"确认您的订单" textColor:[UIColor whiteColor] fontSize:16.f backgroundColor:nil textAlignment:NSTextAlignmentCenter];
     [self.view addSubview:tipsLabel];
     [tipsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).offset(150);
@@ -67,7 +67,7 @@
         make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 20, 1));
     }];
     
-    UILabel *order_detail = [Tools creatUILabelWithText:nil andTextColor:[UIColor whiteColor] andFontSize:14.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentCenter];
+    UILabel *order_detail = [Tools creatLabelWithText:nil textColor:[UIColor whiteColor] fontSize:14.f backgroundColor:nil textAlignment:NSTextAlignmentCenter];
     order_detail.numberOfLines = 0;
     [self.view addSubview:order_detail];
     [order_detail mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -77,7 +77,7 @@
     
     UIButton *confirmBtn = [[UIButton alloc]init];
     [self.view addSubview:confirmBtn];
-    confirmBtn.backgroundColor = [Tools themeColor];
+    confirmBtn.backgroundColor = [Tools theme];
     [confirmBtn setTitle:@"去支付" forState:UIControlStateNormal];
     confirmBtn.titleLabel.font = [UIFont systemFontOfSize:16.f];
     [confirmBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

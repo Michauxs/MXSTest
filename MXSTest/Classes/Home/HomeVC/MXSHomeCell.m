@@ -41,7 +41,7 @@
 			make.height.mas_equalTo(0.5);
 		}];
 		
-		titleLabel = [Tools creatUILabelWithText:@"Title" andTextColor:[Tools whiteColor] andFontSize:314.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+		titleLabel = [Tools creatLabelWithText:@"Title" textColor:[Tools whiteColor] fontSize:314.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
 		[self addSubview:titleLabel];
 		[titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.left.equalTo(self).offset(20);

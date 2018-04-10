@@ -42,7 +42,7 @@
 		make.size.mas_equalTo(CGSizeMake(TABLE_WIDTH, SCREEN_HEIGHT));
 	}];
 	
-	graduallyLabel = [Tools creatUILabelWithText:@"" andTextColor:[Tools themeColor] andFontSize:315 andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+	graduallyLabel = [Tools creatLabelWithText:@"" textColor:[Tools theme] fontSize:315 backgroundColor:nil textAlignment:NSTextAlignmentLeft];
 	[self.view addSubview:graduallyLabel];
 //	graduallyLabel.frame = CGRectMake(TABLE_WIDTH+30, 0, SCREEN_WIDTH-(TABLE_WIDTH+30), SCREEN_HEIGHT);
 	[graduallyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -50,7 +50,7 @@
 		make.left.equalTo(actTableView.mas_right).offset(30);
 	}];
 	btmLine = [[UIView alloc] init];
-	btmLine.backgroundColor = [Tools themeColor];
+	btmLine.backgroundColor = [Tools theme];
 	[self.view addSubview:btmLine];
 	[btmLine mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.top.equalTo(graduallyLabel.mas_bottom).offset(10);

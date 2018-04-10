@@ -55,7 +55,7 @@
     id tmp = [service_info copy];
     kAYDelegatesSendMessage(@"SetServiceCapacity", @"changeQueryData:", &tmp);
     
-    UIButton *nextBtn = [Tools creatUIButtonWithTitle:@"下一步" andTitleColor:[Tools whiteColor] andFontSize:17.f andBackgroundColor:[Tools themeColor]];
+    UIButton *nextBtn = [Tools creatUIButtonWithTitle:@"下一步" andTitleColor:[Tools whiteColor] andFontSize:17.f andBackgroundColor:[Tools theme]];
     [self.view addSubview:nextBtn];
     [nextBtn addTarget:self action:@selector(didNextBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {

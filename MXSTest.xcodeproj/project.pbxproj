@@ -8881,17 +8881,9 @@
 			isa = PBXGroup;
 			children = (
 				7042C8BF1E5BF07600B41BA4 /* MXSViewController */,
-				7042C8A71E5BEE5D00B41BA4 /* NavigationController */,
 				7042C8A81E5BEE5D00B41BA4 /* TabBarController */,
 			);
 			path = BaseController;
-			sourceTree = "<group>";
-		};
-		7042C8A71E5BEE5D00B41BA4 /* NavigationController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NavigationController;
 			sourceTree = "<group>";
 		};
 		7042C8A81E5BEE5D00B41BA4 /* TabBarController */ = {
@@ -8949,7 +8941,6 @@
 		7042C8B01E5BEFA500B41BA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				708AB1E32043F15300FEFFFE /* New Group */,
 				703B63CA1FB5B252007A8473 /* 9205.mp3 */,
 				701FC39E1E974A3000B863E0 /* nuoni.json */,
 				7042C8B11E5BEFA500B41BA4 /* Info.plist */,
@@ -9243,13 +9234,6 @@
 				705B4A261D643701006273E7 /* Assets.xcassets */,
 			);
 			path = MXSTest;
-			sourceTree = "<group>";
-		};
-		708AB1E32043F15300FEFFFE /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		70F229B41E8CA7A600065B5F /* MXSFileHandle */ = {

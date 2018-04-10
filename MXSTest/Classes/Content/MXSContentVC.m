@@ -32,7 +32,7 @@ SystemSoundID ditaVoice;
 	_ObArr = [NSMutableArray array];
 //	[_ObArr addObserver:self forKeyPath:@"count" options:NSKeyValueObservingOptionNew context:nil];
 	
-	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"Append" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools themeColor]];
+	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"Append" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools theme]];
 	ComeOnBtn.layer.cornerRadius = 20.f;
 	ComeOnBtn.clipsToBounds = YES;
 	

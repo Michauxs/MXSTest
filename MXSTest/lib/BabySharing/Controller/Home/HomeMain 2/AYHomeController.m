@@ -261,7 +261,7 @@ typedef void(^queryContentFinish)(void);
 	id<AYViewBase> view_notify = [self.views objectForKey:@"Table"];
 	UITableView *tableView = (UITableView*)view_notify;
 	
-	UILabel *tipsLabel = [Tools creatUILabelWithText:@"没有匹配的结果" andTextColor:[Tools garyColor] andFontSize:16.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentCenter];
+	UILabel *tipsLabel = [Tools creatLabelWithText:@"没有匹配的结果" textColor:[Tools garyColor] fontSize:16.f backgroundColor:nil textAlignment:NSTextAlignmentCenter];
 	[tableView addSubview:tipsLabel];
 	[tipsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.top.equalTo(tableView).offset(180);
@@ -325,7 +325,7 @@ typedef void(^queryContentFinish)(void);
 	view.frame = CGRectMake(0, 20, SCREEN_WIDTH, 44);
 	view.backgroundColor = [Tools whiteColor];
 	
-	addressLabel = [Tools creatUILabelWithText:@"北京市" andTextColor:[Tools garyColor] andFontSize:315.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+	addressLabel = [Tools creatLabelWithText:@"北京市" textColor:[Tools garyColor] fontSize:315.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
 	[view addSubview:addressLabel];
 	[addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.left.equalTo(view).offset(20);

@@ -35,7 +35,7 @@
         separator.backgroundColor = [Tools whiteColor].CGColor;
         [self.layer addSublayer:separator];
         
-        titleLabel = [Tools creatUILabelWithText:@"" andTextColor:[Tools blackColor] andFontSize:16.f andBackgroundColor:nil andTextAlignment:0];
+        titleLabel = [Tools creatLabelWithText:@"" textColor:[Tools blackColor] fontSize:16.f backgroundColor:nil textAlignment:0];
         [self addSubview:titleLabel];
         [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);
@@ -58,7 +58,7 @@
         CALayer *minuslayer = [CALayer layer];
         minuslayer.frame = CGRectMake(0, 0, 15, 2);
         minuslayer.position = CGPointMake(25, 25);
-        minuslayer.backgroundColor = [Tools themeColor].CGColor;
+        minuslayer.backgroundColor = [Tools theme].CGColor;
         [minusBtn.layer addSublayer:minuslayer];
         [divView addSubview:minusBtn];
         [minusBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -74,7 +74,7 @@
         CALayer *addlayerY = [CALayer layer];
         addlayerY.frame = CGRectMake(0, 0, 2, 15);
         addlayerY.position = addlayerX.position = CGPointMake(25, 25);
-        addlayerY.backgroundColor = addlayerX.backgroundColor = [Tools themeColor].CGColor;
+        addlayerY.backgroundColor = addlayerX.backgroundColor = [Tools theme].CGColor;
         [addBtn.layer addSublayer:addlayerX];
         [addBtn.layer addSublayer:addlayerY];
         [divView addSubview:addBtn];
@@ -85,7 +85,7 @@
         }];
         [addBtn addTarget:self action:@selector(didAddBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         
-        countLabel = [Tools creatUILabelWithText:@"0" andTextColor:[Tools themeColor] andFontSize:618.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentCenter];
+        countLabel = [Tools creatLabelWithText:@"0" textColor:[Tools theme] fontSize:618.f backgroundColor:nil textAlignment:NSTextAlignmentCenter];
         [divView addSubview:countLabel];
         [countLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(divView);

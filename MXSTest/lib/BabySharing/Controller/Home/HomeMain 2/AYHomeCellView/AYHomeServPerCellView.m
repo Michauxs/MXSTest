@@ -70,7 +70,7 @@
 			make.edges.equalTo(coverImage);
 		}];
 		
-		titleLabel = [Tools creatUILabelWithText:@"Service Belong to Servant" andTextColor:[Tools blackColor] andFontSize:618.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+		titleLabel = [Tools creatLabelWithText:@"Service Belong to Servant" textColor:[Tools blackColor] fontSize:618.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
 		titleLabel.numberOfLines = 2;
 		[self addSubview:titleLabel];
 		[titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -96,7 +96,7 @@
 //		photoIcon.userInteractionEnabled = YES;
 //		[photoIcon addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ownerIconTap:)]];
 		
-		priceLabel = [Tools creatUILabelWithText:@"Servie Price" andTextColor:[Tools blackColor] andFontSize:313.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+		priceLabel = [Tools creatLabelWithText:@"Servie Price" textColor:[Tools blackColor] fontSize:313.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
 		[self addSubview:priceLabel];
 //		[priceLabel sizeToFit];
 //		[priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -118,7 +118,7 @@
 			make.size.mas_equalTo(CGSizeMake(10, 12));
 		}];
 		
-		addressLabel = [Tools creatUILabelWithText:@"Address Info" andTextColor:[Tools blackColor] andFontSize:312.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+		addressLabel = [Tools creatLabelWithText:@"Address Info" textColor:[Tools blackColor] fontSize:312.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
 		[self addSubview:addressLabel];
 		
 		likeBtn  = [[UIButton alloc] init];

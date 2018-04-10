@@ -16,7 +16,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
-	showInfoLabel = [Tools creatUILabelWithText:nil andTextColor:[Tools blackColor] andFontSize:313.f andBackgroundColor:nil andTextAlignment:0];
+	showInfoLabel = [Tools creatLabelWithText:nil textColor:[Tools blackColor] fontSize:313.f backgroundColor:nil textAlignment:0];
 	[self.view addSubview:showInfoLabel];
 	[showInfoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.center.equalTo(self.view);

@@ -31,7 +31,7 @@
 		
 //        CGFloat margin = 0;
         
-        themeLabel = [Tools creatUILabelWithText:@"service topic" andTextColor:[Tools blackColor] andFontSize:17.f andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+        themeLabel = [Tools creatLabelWithText:@"service topic" textColor:[Tools blackColor] fontSize:17.f backgroundColor:nil textAlignment:NSTextAlignmentLeft];
         [self addSubview:themeLabel];
         [themeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self);

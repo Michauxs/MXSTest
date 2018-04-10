@@ -46,7 +46,7 @@
 	[path addLineToPoint:CGPointMake(Width*0.2, Width*0.2)];
 	leftLayer.path = path.CGPath;
 	leftLayer.fillColor = [UIColor clearColor].CGColor;
-	leftLayer.strokeColor = [Tools themeColor].CGColor;
+	leftLayer.strokeColor = [Tools theme].CGColor;
 	leftLayer.lineWidth = 4;
 	leftLayer.lineCap = kCALineCapRound;
 	leftLayer.lineJoin = kCALineJoinRound;
@@ -59,7 +59,7 @@
 	[path_r addLineToPoint:CGPointMake(Width*0.8, Width*0.8)];
 	rightLayer.path = path_r.CGPath;
 	rightLayer.fillColor = [UIColor clearColor].CGColor;
-	rightLayer.strokeColor = [Tools themeColor].CGColor;
+	rightLayer.strokeColor = [Tools theme].CGColor;
 	rightLayer.lineWidth = 4;
 	rightLayer.lineCap = kCALineCapRound;
 	rightLayer.lineJoin = kCALineJoinRound;
@@ -72,7 +72,7 @@
 	[path_cir addArcWithCenter:CGPointMake(Width*0.5, Width*0.2) radius:Width*0.3 startAngle:M_PI endAngle:M_PI*2 clockwise:YES];
 	cirTopLayer.path = path_cir.CGPath;
 	cirTopLayer.fillColor = [UIColor clearColor].CGColor;
-	cirTopLayer.strokeColor = [Tools themeColor].CGColor;
+	cirTopLayer.strokeColor = [Tools theme].CGColor;
 	cirTopLayer.lineWidth = 4;
 	cirTopLayer.lineCap = kCALineCapRound;
 	cirTopLayer.lineJoin = kCALineJoinRound;
@@ -85,7 +85,7 @@
 	[path_cir_b addArcWithCenter:CGPointMake(Width*0.5, Width*0.8) radius:Width*0.3 startAngle:0 endAngle:M_PI clockwise:YES];
 	cirBtmLayer.path = path_cir_b.CGPath;
 	cirBtmLayer.fillColor = [UIColor clearColor].CGColor;
-	cirBtmLayer.strokeColor = [Tools themeColor].CGColor;
+	cirBtmLayer.strokeColor = [Tools theme].CGColor;
 	cirBtmLayer.lineWidth = 4;
 	cirBtmLayer.lineCap = kCALineCapRound;
 	cirBtmLayer.lineJoin = kCALineJoinRound;
@@ -94,7 +94,7 @@
 	cirTopLayer.strokeEnd = 0;
 	cirBtmLayer.strokeEnd = 0;
 	
-	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"ATK" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools themeColor]];
+	UIButton *ComeOnBtn = [Tools creatUIButtonWithTitle:@"ATK" andTitleColor:[Tools whiteColor] andFontSize:14.f andBackgroundColor:[Tools theme]];
 	[self.view addSubview:ComeOnBtn];
 	[ComeOnBtn mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.bottom.equalTo(self.view);

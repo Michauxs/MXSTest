@@ -30,8 +30,8 @@
 
 - (void)initialize {
 	
-	titleLabel = [Tools creatUILabelWithText:@"Title" andTextColor:[Tools themeColor] andFontSize:315.f andBackgroundColor:[Tools garyBackgroundColor] andTextAlignment:NSTextAlignmentCenter];
-	[Tools setViewBorder:titleLabel withRadius:20.f andBorderWidth:2.f andBorderColor:[Tools themeColor] andBackground:nil];
+	titleLabel = [Tools creatLabelWithText:@"Title" textColor:[Tools theme] fontSize:315.f backgroundColor:[Tools garyBackgroundColor] textAlignment:NSTextAlignmentCenter];
+	[Tools setViewBorder:titleLabel withRadius:20.f andBorderWidth:2.f andBorderColor:[Tools theme] andBackground:nil];
 	[self addSubview:titleLabel];
 	[titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 //		make.edges.equalTo(self).insets(UIEdgeInsetsMake(25, 20, 25, 0));
@@ -55,10 +55,10 @@
 - (void)setStatusWith:(BOOL)isSelected {
 	if (isSelected) {
 		titleLabel.textColor = [Tools whiteColor];
-		titleLabel.backgroundColor = [Tools themeColor];
+		titleLabel.backgroundColor = [Tools theme];
 		[Tools setViewBorder:titleLabel withRadius:20.f andBorderWidth:0.f andBorderColor:nil andBackground:nil];
 	} else {
-		titleLabel.textColor = [Tools themeColor];
+		titleLabel.textColor = [Tools theme];
 		titleLabel.backgroundColor = [Tools garyBackgroundColor];
 		[Tools setViewBorder:titleLabel withRadius:20.f andBorderWidth:2.f andBorderColor:[Tools themeBorderColor] andBackground:nil];
 	}
