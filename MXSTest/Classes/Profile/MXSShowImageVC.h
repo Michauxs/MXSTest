@@ -8,7 +8,7 @@
 
 #import "MXSViewController.h"
 
-@interface MXSShowImageVC : MXSViewController
+@interface MXSShowImageVC : MXSViewController <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIImageView *showImg;
 @property (nonatomic, assign) CGRect popFrame;

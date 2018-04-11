@@ -16,10 +16,13 @@
 	
 	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
 	if (self) {
-		self.selectionStyle = UITableViewCellSelectionStyleNone;
-		
+        [self setCellUI];
 	}
 	return self;
+}
+
+- (void)setCellUI {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setCellInfo:(id)cellInfo {

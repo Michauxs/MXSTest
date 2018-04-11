@@ -65,12 +65,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	[self.navigationController setNavigationBarHidden:YES animated:NO];
+	[self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
-	[self.navigationController setNavigationBarHidden:YES animated:NO];
+	[self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 - (void)textBtnClick {
@@ -132,32 +132,5 @@
 	
 }
 
-
-#pragma mark -- UItableViewDelagate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return titleArr.count;
-}
-
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	static NSString *cellID = @"listCell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-	if (!cell) {
-	 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-	}
-		
-	cell.textLabel.text = [titleArr objectAtIndex:indexPath.row];
-	return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	return 50.f;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	[self didSelectedWeb:[titleArr objectAtIndex:indexPath.row]];
-}
 
 @end

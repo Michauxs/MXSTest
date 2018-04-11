@@ -13,4 +13,6 @@
 @property (nonatomic, strong) id cellInfo;
 @property (nonatomic, strong) id controller;
 
+- (void)setCellUI;
+
 @end

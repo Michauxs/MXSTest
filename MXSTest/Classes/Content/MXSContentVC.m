@@ -79,10 +79,10 @@ SystemSoundID ditaVoice;
 		dispatch_async(dispatch_get_global_queue(0, 0), ^{
 			[lock lock];
 			_countNote++;
-			NSLog(@"count    : %d", _countNote);
+			NSLog(@"count\t\t: %d", _countNote);
 			
 			NSDate *now = [NSDate date];
-			NSLog(@"duration : %lf", now.timeIntervalSince1970-node.timeIntervalSince1970);
+			NSLog(@"duration\t: %lf", now.timeIntervalSince1970-node.timeIntervalSince1970);
 			[lock unlock];
 		});
 	}
