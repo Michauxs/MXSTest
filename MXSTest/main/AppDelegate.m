@@ -39,8 +39,16 @@
 	// 当应用安装后第一次调用该方法时，系统会弹窗提示用户是否允许接收通知
 	[[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
 	
-	
+    UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (localNotif) {
+        NSString *itemName = [localNotif.userInfo objectForKey:@"LocalNotification"];
+        NSLog(@"local notifition:%@", itemName);
+//        [self.windowRootController displayNotification:[NSString stringWithFormat:@"%@ receive from didFinishLaunch", itemName]];  // custom method
+        [UIApplication sharedApplication].applicationIconBadgeNumber = localNotif.applicationIconBadgeNumber-1;
+    }
+    
     return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -85,22 +93,30 @@
 //b、应用程序正在运行中，则设备不会收到提醒，但是会走应用程序delegate中的方法：
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
 //	如果你想实现程序在后台时候的那种提醒效果，可以添加代码👇
-	if ([[notification.userInfo objectForKey:@"id"] isEqualToString:@""]) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"test" message:notification.alertBody delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:notification.alertAction, nil, nil];
-		[alert show];
+    
+    NSLog(@"Notification did Received");
+    
+    if ([[notification.userInfo objectForKey:@"id"] isEqualToString:@"#123456"]) {
+        //判断应用程序当前的运行状态，如果是激活状态，则进行提醒，否则不提醒
+//        NSString *message = [notification.userInfo objectForKey:@"message"];
+        if (application.applicationState == UIApplicationStateActive) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:notification.alertBody delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:nil];
+            [alert show];
+        } else if (application.applicationState == UIApplicationStateBackground) {
+            [UIApplication sharedApplication].applicationIconBadgeNumber = 1;
+        }
 	}
 	
 //	需要注意的是，在情况a中，如果用户点击提醒进入应用程序，也会执行收到本地通知的回调方法，这种情况下如果你添加了上面那段代码，则会出现连续出现两次提示，为了解决这个问题，修改代码如下：
 	
-//	if ([[notification.userInfo objectForKey:@"id"] isEqualToString:@""]) {
-//		//判断应用程序当前的运行状态，如果是激活状态，则进行提醒，否则不提醒
-//		if (application.applicationState == UIApplicationStateActive) {
-//			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:notification.alertBody delegate:nil cancelButtonTitle:@"关闭" otherButtonTitles:nil, nil];
-//			[alert show];
-//		}
-//	}
 	
 }
 
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+}
 
 @end

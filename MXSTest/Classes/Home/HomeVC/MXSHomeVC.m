@@ -29,6 +29,8 @@
 	
 	self.view.layer.contents = (id)IMGRESOURE(@"circute").CGImage;
 	
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    
 	titleArr = @[@"NOTIFY", @"APPEND", @"ENUM", @"REMOVE", @"SEARCH", @"NEXT", @"NOTEBOOK"];
 	
 	actTableView = [[MXSTableView alloc] initWithFrame:CGRectMake(0, 0, TABLE_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain andDelegate:nil];
@@ -42,7 +44,7 @@
 		make.size.mas_equalTo(CGSizeMake(TABLE_WIDTH, SCREEN_HEIGHT));
 	}];
 	
-    graduallyLabel = [UILabel creatLabelWithText:@"" andTextColor:[UIColor theme] andFontSize:315 andBackgroundColor:nil andTextAlignment:NSTextAlignmentLeft];
+    graduallyLabel = [UILabel creatLabelWithText:@"" textColor:[UIColor theme] fontSize:315 backgroundColor:nil textAlignment:NSTextAlignmentLeft];
     graduallyLabel.numberOfLines = 0;
 	[self.view addSubview:graduallyLabel];
 //	graduallyLabel.frame = CGRectMake(TABLE_WIDTH+30, 0, SCREEN_WIDTH-(TABLE_WIDTH+30), SCREEN_HEIGHT);
@@ -133,13 +135,15 @@
 }
 
 - (id)NOTIFYClick {
+    NSLog(@"Waiting notification");
+    
 	UILocalNotification *l_n = [[UILocalNotification alloc] init];
 	l_n.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
 	l_n.soundName = UILocalNotificationDefaultSoundName;
 	l_n.alertBody = @"User Local Notification";
 	l_n.alertTitle = @"The Notify";
 	l_n.alertAction = @"Action";
-	l_n.userInfo = @{@"key":@"mxs_notify_demo"};
+    l_n.userInfo = @{@"key":@"mxs_notify_demo", @"id":@"#123456", @"message":@"Notification did Recevied"};
 	[[UIApplication sharedApplication] scheduleLocalNotification:l_n];
 	return nil;
 }

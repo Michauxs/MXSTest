@@ -13,6 +13,6 @@
 /**
  *  PS: fontSize.正常数值为细体/300+为正常/600+为粗体
  */
-+ (UILabel*)creatLabelWithText:(NSString*)text andTextColor:(UIColor*)color andFontSize:(CGFloat)font andBackgroundColor:(UIColor*)backgroundColor andTextAlignment:(NSTextAlignment)align;
++ (UILabel*)creatLabelWithText:(NSString*)text textColor:(UIColor*)color fontSize:(CGFloat)font backgroundColor:(UIColor*)background textAlignment:(NSTextAlignment)align;
 
 @end

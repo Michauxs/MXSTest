@@ -14,7 +14,7 @@
 /**
  *  PS: fontSize.正常数值为细体/300+为正常/600+为粗体
  */
-+ (UILabel*)creatLabelWithText:(NSString*)text andTextColor:(UIColor*)color andFontSize:(CGFloat)font andBackgroundColor:(UIColor*)backgroundColor andTextAlignment:(NSTextAlignment)align {
++ (UILabel*)creatLabelWithText:(NSString*)text textColor:(UIColor*)color fontSize:(CGFloat)font backgroundColor:(UIColor*)background textAlignment:(NSTextAlignment)align {
 	
 	UILabel *label = [UILabel new];
 	if (text){
@@ -22,7 +22,8 @@
 	}
 	label.textColor = color;
 	label.textAlignment = align;
-	
+    label.numberOfLines = 0;
+    
 	if (font > 600.f) {
 		label.font = kAYFontMedium(font - 600);
 	} else if (font < 600.f && font > 300.f) {
@@ -31,8 +32,8 @@
 		label.font = kAYFontLight(font);
 	}
 	
-	if (backgroundColor) {
-		label.backgroundColor = backgroundColor;
+	if (background) {
+		label.backgroundColor = background;
 	}
 	
 //	label.edgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);

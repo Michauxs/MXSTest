@@ -21,7 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-	graduallyLabel = [Tools creatLabelWithText:@"" textColor:[Tools theme] fontSize:315 backgroundColor:nil textAlignment:NSTextAlignmentLeft];
+    
+    
+	graduallyLabel = [UILabel creatLabelWithText:@"" textColor:[Tools theme] fontSize:315 backgroundColor:nil textAlignment:NSTextAlignmentLeft];
 	[self.view addSubview:graduallyLabel];
 	//	graduallyLabel.frame = CGRectMake(TABLE_WIDTH+30, 0, SCREEN_WIDTH-(TABLE_WIDTH+30), SCREEN_HEIGHT);
 	[graduallyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -45,6 +47,10 @@
 }
 
 #pragma mark - actions
+- (void)demoBtnClick {
+    [[MXSVCExchangeCmd shared] fromVC:self popOneStepWithArgs:nil];
+}
+
 - (void)timerRun {
 	if (graduallyLabel.text.length == graStr.length) {
 		[timer invalidate];
@@ -56,7 +62,16 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
-	[[MXSVCExchangeCmd shared] fromVC:self popOneStepWithArgs:nil];
+}
+
+#pragma mark - delegate
+- (void)didMoveToParentViewController:(UIViewController *)parent {
+    [super didMoveToParentViewController:parent];
+    
+    if (!parent) {
+        //todo: do something with pop act
+        NSLog(@"vc did move");
+    }
 }
 
 @end
