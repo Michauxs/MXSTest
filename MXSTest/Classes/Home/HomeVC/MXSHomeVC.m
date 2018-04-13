@@ -33,15 +33,16 @@
     
 	titleArr = @[@"NOTIFY", @"APPEND", @"ENUM", @"REMOVE", @"SEARCH", @"NEXT", @"NOTEBOOK"];
 	
-	actTableView = [[MXSTableView alloc] initWithFrame:CGRectMake(0, 0, TABLE_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain andDelegate:nil];
+	actTableView = [[MXSTableView alloc] initWithFrame:CGRectMake(0, kStatusAndNavBarH, TABLE_WIDTH, SCREEN_HEIGHT-kStatusAndNavBarH-kTabBarH) style:UITableViewStylePlain andDelegate:nil];
 	[self.view addSubview:actTableView];
 	[actTableView registerClsaaWithCellName:@"MXSHomeCell" RowHeight:64 andController:self];
 	actTableView.dlg.dlgData = titleArr;
 	actTableView.backgroundColor = [UIColor clearColor];
 	[actTableView mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.left.equalTo(self.view);
-		make.top.equalTo(self.view);
-		make.size.mas_equalTo(CGSizeMake(TABLE_WIDTH, SCREEN_HEIGHT));
+		make.top.equalTo(self.view).offset(kStatusAndNavBarH);
+		make.bottom.equalTo(self.view);
+        make.width.mas_equalTo(TABLE_WIDTH);
 	}];
 	
     graduallyLabel = [UILabel creatLabelWithText:@"" textColor:[UIColor theme] fontSize:315 backgroundColor:nil textAlignment:NSTextAlignmentLeft];

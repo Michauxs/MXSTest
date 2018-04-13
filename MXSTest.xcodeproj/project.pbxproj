@@ -92,6 +92,9 @@
 		705AEA081FDA97BE00447C0E /* MXSShowImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AEA071FDA97BE00447C0E /* MXSShowImageVC.m */; };
 		705AEA0B1FDA9B2600447C0E /* MXSProfileTDlg.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AEA0A1FDA9B2600447C0E /* MXSProfileTDlg.m */; };
 		705B4A271D643701006273E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705B4A261D643701006273E7 /* Assets.xcassets */; };
+		764DB0E42080971600311F2D /* Hyphenate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764DB0E32080971500311F2D /* Hyphenate.framework */; };
+		764DB0E5208097C500311F2D /* Hyphenate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764DB0E32080971500311F2D /* Hyphenate.framework */; };
+		764DB0E6208097C500311F2D /* Hyphenate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 764DB0E32080971500311F2D /* Hyphenate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76840346207DD11A0089A3A8 /* MXSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 76840340207DD1190089A3A8 /* MXSNavigationBar.m */; };
 		76840347207DD11A0089A3A8 /* MXSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76840343207DD11A0089A3A8 /* MXSTableView.m */; };
 		76840348207DD11A0089A3A8 /* MXSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76840345207DD11A0089A3A8 /* MXSTableViewCell.m */; };
@@ -124,6 +127,20 @@
 		76A0DEB2207C54F5005292E3 /* RemoteInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A0DEAE207C54F5005292E3 /* RemoteInstance.m */; };
 		76A0DEB5207C5573005292E3 /* MXSViewController+RunTimeCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A0DEB4207C5573005292E3 /* MXSViewController+RunTimeCmd.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		764DB0E7208097C500311F2D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				764DB0E6208097C500311F2D /* Hyphenate.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		700D89A81FB196C300FCCF1B /* MXSVCBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSVCBase.h; sourceTree = "<group>"; };
@@ -302,6 +319,7 @@
 		705B4A141D643701006273E7 /* MXSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705B4A261D643701006273E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70DCB3441E8F9EDD00E4B0D0 /* NodeAttrArgsDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeAttrArgsDefines.h; sourceTree = "<group>"; };
+		764DB0E32080971500311F2D /* Hyphenate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Hyphenate.framework; sourceTree = "<group>"; };
 		7684033F207DD1190089A3A8 /* MXSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSNavigationBar.h; sourceTree = "<group>"; };
 		76840340207DD1190089A3A8 /* MXSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSNavigationBar.m; sourceTree = "<group>"; };
 		76840342207DD11A0089A3A8 /* MXSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTableView.h; sourceTree = "<group>"; };
@@ -369,7 +387,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764DB0E42080971600311F2D /* Hyphenate.framework in Frameworks */,
 				7034FFEA2059373D004894EE /* OpenAL.framework in Frameworks */,
+				764DB0E5208097C500311F2D /* Hyphenate.framework in Frameworks */,
 				76A0DE5D207C4D80005292E3 /* MAMapKit.framework in Frameworks */,
 				76A0DE61207C4D80005292E3 /* AMapSearchKit.framework in Frameworks */,
 				702D25211E8114F90068F025 /* libxml2.tbd in Frameworks */,
@@ -650,6 +670,7 @@
 		70510EE41DAB3B9D0097E093 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				764DB0E32080971500311F2D /* Hyphenate.framework */,
 				76A0DE45207C4D7F005292E3 /* AliyunOSSiOS.framework */,
 				76A0DE46207C4D7F005292E3 /* AMapSearchKit.framework */,
 				76A0DE36207C4D7E005292E3 /* MAMapKit.framework */,
@@ -1039,6 +1060,7 @@
 				705B4A101D643701006273E7 /* Sources */,
 				705B4A111D643701006273E7 /* Frameworks */,
 				705B4A121D643701006273E7 /* Resources */,
+				764DB0E7208097C500311F2D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
