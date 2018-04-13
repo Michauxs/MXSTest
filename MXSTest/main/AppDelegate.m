@@ -10,6 +10,12 @@
 #import "MXSTabBarController.h"
 #import "MXSHomeVC.h"
 
+#import <HyphenateLite/HyphenateLite.h>
+
+
+//static NSString* const kMXSEMAppKey = @"1197180410146313#mxstest";
+static NSString* const kMXSEMAppKey = @"1197180410146313#michauxsdemo01";
+
 @interface AppDelegate ()
 
 @end
@@ -28,9 +34,12 @@
 	MXSTabBarController *tabVC = [[MXSTabBarController alloc]init];
 	self.window.rootViewController = tabVC;
 	
-//	MXSHomeVC *home = [[MXSHomeVC alloc]init];
-//	self.window.rootViewController = home;
-	
+    
+    //AppKey:注册的AppKey，详细见下面注释。
+    //apnsCertName:推送证书名（不需要加后缀），详细见下面注释。
+    EMOptions *options = [EMOptions optionsWithAppkey:kMXSEMAppKey];
+//    options.apnsCertName = @"istore_dev";
+    [[EMClient sharedClient] initializeSDKWithOptions:options];
 	
 	// 这里 types 可以自定义，如果 types 为 0，那么所有的用户通知均会静默的接收，系统不会给用户任何提示(当然，App 可以自己处理并给出提示)
 	UIUserNotificationType types = (UIUserNotificationType) (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert);
@@ -57,12 +66,11 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[EMClient sharedClient] applicationDidEnterBackground:application];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

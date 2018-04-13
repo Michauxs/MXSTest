@@ -31,7 +31,7 @@
 	
     self.navigationController.interactivePopGestureRecognizer.delegate = nil;
     
-	titleArr = @[@"NOTIFY", @"APPEND", @"ENUM", @"REMOVE", @"SEARCH", @"NEXT", @"NOTEBOOK"];
+	titleArr = @[@"NOTIFY", @"APPEND", @"ENUM", @"REMOVE", @"SEARCH", @"NEXT", @"NOTEBOOK", @"Login"];
 	
 	actTableView = [[MXSTableView alloc] initWithFrame:CGRectMake(0, kStatusAndNavBarH, TABLE_WIDTH, SCREEN_HEIGHT-kStatusAndNavBarH-kTabBarH) style:UITableViewStylePlain andDelegate:nil];
 	[self.view addSubview:actTableView];
@@ -50,7 +50,7 @@
 	[self.view addSubview:graduallyLabel];
 //	graduallyLabel.frame = CGRectMake(TABLE_WIDTH+30, 0, SCREEN_WIDTH-(TABLE_WIDTH+30), SCREEN_HEIGHT);
 	[graduallyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-		make.top.equalTo(self.view).offset(50);
+		make.top.equalTo(actTableView).offset(50);
 		make.left.equalTo(actTableView.mas_right).offset(30);
 	}];
 	btmLine = [[UIView alloc] init];
@@ -83,9 +83,17 @@
 	return nil;
 }
 - (id)NEXTClick {
-    int sum = [self facatail:5];
-    NSLog(@"%d", sum);
+    
+    [[MXSEMCmd shared] registerUserWithName:@"michauxs"];
+    
+//    int sum = [self facatail:5];
+//    NSLog(@"%d", sum);
 	return nil;
+}
+
+- (id)LoginClick {
+    [[MXSEMCmd shared] loginEMWithName:@"michauxs"];
+    return nil;
 }
 
 - (id)APPENDClick {

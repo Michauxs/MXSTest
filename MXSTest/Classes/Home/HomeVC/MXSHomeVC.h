@@ -11,6 +11,7 @@
 #import "NodeHandle.h"
 
 #import "MXSModelCmd.h"
+#import "MXSEMCmd.h"
 
 @interface MXSHomeVC : MXSViewController
 //<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>

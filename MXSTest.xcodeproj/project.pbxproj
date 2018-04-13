@@ -92,9 +92,9 @@
 		705AEA081FDA97BE00447C0E /* MXSShowImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AEA071FDA97BE00447C0E /* MXSShowImageVC.m */; };
 		705AEA0B1FDA9B2600447C0E /* MXSProfileTDlg.m in Sources */ = {isa = PBXBuildFile; fileRef = 705AEA0A1FDA9B2600447C0E /* MXSProfileTDlg.m */; };
 		705B4A271D643701006273E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705B4A261D643701006273E7 /* Assets.xcassets */; };
-		764DB0E42080971600311F2D /* Hyphenate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764DB0E32080971500311F2D /* Hyphenate.framework */; };
-		764DB0E5208097C500311F2D /* Hyphenate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764DB0E32080971500311F2D /* Hyphenate.framework */; };
-		764DB0E6208097C500311F2D /* Hyphenate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 764DB0E32080971500311F2D /* Hyphenate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		764DB0F020809E0D00311F2D /* HyphenateLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764DB0EF20809E0D00311F2D /* HyphenateLite.framework */; };
+		764DB0F220809E1D00311F2D /* HyphenateLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 764DB0EF20809E0D00311F2D /* HyphenateLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		764DB0F920809E7F00311F2D /* MXSEMCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 764DB0F820809E7F00311F2D /* MXSEMCmd.m */; };
 		76840346207DD11A0089A3A8 /* MXSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 76840340207DD1190089A3A8 /* MXSNavigationBar.m */; };
 		76840347207DD11A0089A3A8 /* MXSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76840343207DD11A0089A3A8 /* MXSTableView.m */; };
 		76840348207DD11A0089A3A8 /* MXSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76840345207DD11A0089A3A8 /* MXSTableViewCell.m */; };
@@ -135,7 +135,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				764DB0E6208097C500311F2D /* Hyphenate.framework in Embed Frameworks */,
+				764DB0F220809E1D00311F2D /* HyphenateLite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +319,9 @@
 		705B4A141D643701006273E7 /* MXSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705B4A261D643701006273E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70DCB3441E8F9EDD00E4B0D0 /* NodeAttrArgsDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeAttrArgsDefines.h; sourceTree = "<group>"; };
-		764DB0E32080971500311F2D /* Hyphenate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Hyphenate.framework; sourceTree = "<group>"; };
+		764DB0EF20809E0D00311F2D /* HyphenateLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HyphenateLite.framework; sourceTree = "<group>"; };
+		764DB0F720809E7F00311F2D /* MXSEMCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSEMCmd.h; sourceTree = "<group>"; };
+		764DB0F820809E7F00311F2D /* MXSEMCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSEMCmd.m; sourceTree = "<group>"; };
 		7684033F207DD1190089A3A8 /* MXSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSNavigationBar.h; sourceTree = "<group>"; };
 		76840340207DD1190089A3A8 /* MXSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSNavigationBar.m; sourceTree = "<group>"; };
 		76840342207DD11A0089A3A8 /* MXSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTableView.h; sourceTree = "<group>"; };
@@ -387,11 +389,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				764DB0E42080971600311F2D /* Hyphenate.framework in Frameworks */,
 				7034FFEA2059373D004894EE /* OpenAL.framework in Frameworks */,
-				764DB0E5208097C500311F2D /* Hyphenate.framework in Frameworks */,
 				76A0DE5D207C4D80005292E3 /* MAMapKit.framework in Frameworks */,
 				76A0DE61207C4D80005292E3 /* AMapSearchKit.framework in Frameworks */,
+				764DB0F020809E0D00311F2D /* HyphenateLite.framework in Frameworks */,
 				702D25211E8114F90068F025 /* libxml2.tbd in Frameworks */,
 				76A0DE60207C4D80005292E3 /* AliyunOSSiOS.framework in Frameworks */,
 			);
@@ -544,6 +545,7 @@
 		703FF0851FAB0344007F2115 /* Command */ = {
 			isa = PBXGroup;
 			children = (
+				764DB0F620809E7F00311F2D /* EM */,
 				703FF0861FAB0369007F2115 /* VCExchange */,
 			);
 			path = Command;
@@ -670,7 +672,7 @@
 		70510EE41DAB3B9D0097E093 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				764DB0E32080971500311F2D /* Hyphenate.framework */,
+				764DB0EF20809E0D00311F2D /* HyphenateLite.framework */,
 				76A0DE45207C4D7F005292E3 /* AliyunOSSiOS.framework */,
 				76A0DE46207C4D7F005292E3 /* AMapSearchKit.framework */,
 				76A0DE36207C4D7E005292E3 /* MAMapKit.framework */,
@@ -898,6 +900,15 @@
 				705B4A261D643701006273E7 /* Assets.xcassets */,
 			);
 			path = MXSTest;
+			sourceTree = "<group>";
+		};
+		764DB0F620809E7F00311F2D /* EM */ = {
+			isa = PBXGroup;
+			children = (
+				764DB0F720809E7F00311F2D /* MXSEMCmd.h */,
+				764DB0F820809E7F00311F2D /* MXSEMCmd.m */,
+			);
+			path = EM;
 			sourceTree = "<group>";
 		};
 		7684033E207DD1190089A3A8 /* NavBar */ = {
@@ -1206,6 +1217,7 @@
 				76A0DE98207C5474005292E3 /* MXSWebSiteHandle.m in Sources */,
 				76A0DE96207C5474005292E3 /* MXSWebDianpingHandle.m in Sources */,
 				76A0DEB5207C5573005292E3 /* MXSViewController+RunTimeCmd.m in Sources */,
+				764DB0F920809E7F00311F2D /* MXSEMCmd.m in Sources */,
 				70510FAE1DAB3B9D0097E093 /* UIImage+WebP.m in Sources */,
 				70510F871DAB3B9D0097E093 /* MJRefreshBackFooter.m in Sources */,
 				70510FAD1DAB3B9D0097E093 /* UIImage+MultiFormat.m in Sources */,
