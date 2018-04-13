@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MXSVCBase.h"
+#import "MXSNavigationBar.h"
 
 @interface MXSViewController : UIViewController <MXSVCBase>
 
-
+@property (nonatomic, strong) MXSNavigationBar *NavBar;
 
 @end

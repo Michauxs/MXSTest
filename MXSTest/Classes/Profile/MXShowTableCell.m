@@ -38,7 +38,7 @@
         //            make.centerY.equalTo(self);
     }];
     
-    _img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"weiwei"]];
+    _img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"is_read"]];
     [self addSubview:_img];
     [_img mas_makeConstraints:^(MASConstraintMaker *make) {
         //            make.left.equalTo(self).offset(15);

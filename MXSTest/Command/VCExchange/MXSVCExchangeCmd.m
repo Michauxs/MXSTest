@@ -118,6 +118,10 @@ static MXSVCExchangeCmd *_instance;
 #pragma mark - Pop
 - (void)fromVC:(id)f_vc popOneStepWithArgs:(id)args {
 	
+    if ([(MXSViewController*)f_vc navigationController].viewControllers.count == 1) {
+        return;
+    }
+    
 	[[(MXSViewController*)f_vc navigationController] popViewControllerAnimated:YES];
 	MXSViewController* recev = ((MXSViewController*)f_vc).navigationController.viewControllers.lastObject;
 	
@@ -126,6 +130,10 @@ static MXSVCExchangeCmd *_instance;
 	}
 }
 - (void)fromVC:(id)f_vc popToDestVC:(id)d_vc withArgs:(id)args {
+    if ([(MXSViewController*)f_vc navigationController].viewControllers.count == 1) {
+        return;
+    }
+    
 	d_vc = [self getClassFromClassName:d_vc];
 	
 	MXSViewController* des = nil;
@@ -142,6 +150,9 @@ static MXSVCExchangeCmd *_instance;
 }
 - (void)fromVC:(id)f_vc popToRootWithArgs:(id)args {
 	
+    if ([(MXSViewController*)f_vc navigationController].viewControllers.count == 1) {
+        return;
+    }
 	[[(MXSViewController*)f_vc navigationController] popToRootViewControllerAnimated:YES];
 	MXSViewController* recev = ((MXSViewController*)f_vc).navigationController.viewControllers.firstObject;
 	if (args) {

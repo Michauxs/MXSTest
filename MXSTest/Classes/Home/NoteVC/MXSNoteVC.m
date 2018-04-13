@@ -64,6 +64,12 @@
 
 }
 
+#pragma mark - notify
+- (id)navBarRightClick {
+    NSLog(@"subclass invoke");
+    return nil;
+}
+
 #pragma mark - delegate
 - (void)didMoveToParentViewController:(UIViewController *)parent {
     [super didMoveToParentViewController:parent];

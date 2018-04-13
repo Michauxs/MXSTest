@@ -27,7 +27,13 @@
 	self.automaticallyAdjustsScrollViewInsets = NO;
 	self.view.backgroundColor = [Tools garyBackgroundColor];
 	
+    [self initNavBar];
+    
     // Do any additional setup after loading the view.
+}
+
+- (void)initNavBar {
+    _NavBar = [[MXSNavigationBar alloc] initWithVC:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -38,10 +44,16 @@
 	[super viewWillDisappear:animated];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (id)navBarLeftClick {
+    NSLog(@"navBarLeftClick");
+    [MXSVCExchangeCmd.shared fromVC:self popOneStepWithArgs:nil];
+    return nil;
 }
 
+- (id)navBarRightClick {
+    NSLog(@"navBarRightClick");
+    return nil;
+}
 
 @end
