@@ -41,5 +41,24 @@
 //		result = func(self, sel);
 //	}
 //}
+#pragma mark - UI
+- (void)setRadius:(CGFloat)radius borderWidth:(CGFloat)width borderColor:(UIColor*)color background:(UIColor*)backColor {
+    self.layer.cornerRadius = radius;
+    self.layer.borderWidth = width;
+    
+    self.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    self.clipsToBounds = YES;
+    
+    if (color) {
+        self.layer.borderColor = color.CGColor;
+    }
+    if (backColor) {
+        self.backgroundColor = backColor;
+    }
+}
 
+- (void)setImageViewContentMode {
+    self.clipsToBounds = YES;
+    self.contentMode = UIViewContentModeScaleAspectFill;
+}
 @end
