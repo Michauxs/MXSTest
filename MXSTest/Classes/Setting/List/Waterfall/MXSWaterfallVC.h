@@ -8,6 +8,6 @@
 
 #import "MXSViewController.h"
 
-@interface MXSWaterfallVC : MXSViewController
+@interface MXSWaterfallVC : MXSViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end

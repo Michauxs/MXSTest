@@ -30,7 +30,6 @@
     self.navigationController.interactivePopGestureRecognizer.delegate = nil;
     [self initNavBar];
     
-    // Do any additional setup after loading the view.
 }
 
 - (void)initNavBar {
