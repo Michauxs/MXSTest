@@ -33,7 +33,7 @@
 		make.edges.equalTo(self.view);
 	}];
 	
-	itemArr = @[@"Animetion", @"Animetion", @"Animetion"];
+	itemArr = @[@"Animetion", @"Decoder", @"Waterfall"];
 	tableView.dlg.dlgData = itemArr;
 	
 	[tableView registerClsaaWithCellName:@"MXSTableViewCell" RowHeight:64 andController:self];
@@ -54,7 +54,7 @@
 - (id)tableViewDidSelectRowAtIndexPath:(id)args {
 	NSNumber *row = [args objectForKey:@"row"];
 	NSLog(@"%ld", row.integerValue);
-	[[MXSVCExchangeCmd shared] fromVC:self pushVC:[[@"MXS" stringByAppendingString:[itemArr objectAtIndex:row.intValue]] stringByAppendingString:@"VC"] withArgs:@1];
+	[[MXSVCExchangeCmd shared] fromVC:self pushVC:[[@"MXS" stringByAppendingString:[itemArr objectAtIndex:row.intValue]] stringByAppendingString:@"VC"] withArgs:nil];
 	
 	return nil;
 }

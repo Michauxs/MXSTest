@@ -29,7 +29,6 @@
 	
 	self.view.layer.contents = (id)IMGRESOURE(@"circute").CGImage;
 	
-    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
     
 	titleArr = @[@"NOTIFY", @"APPEND", @"ENUM", @"REMOVE", @"SEARCH", @"NEXT", @"NOTEBOOK", @"Login"];
 	

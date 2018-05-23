@@ -14,4 +14,8 @@
 
 @property (nonatomic, strong) MXSNavigationBar *NavBar;
 
+
+- (id)navBarLeftClick;
+- (id)navBarRightClick;
+
 @end

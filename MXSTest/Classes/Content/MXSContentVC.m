@@ -66,8 +66,15 @@ SystemSoundID ditaVoice;
 }
 
 - (void)didComeOnBtnClick {
-	[self demo01];
+	[self demo02];
 	
+}
+
+- (void)demo02 {
+    NSMutableArray *tmp = [NSMutableArray arrayWithObject:@{@"key":@"value"}];
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:@"value2" forKey:@"key2"];
+    [tmp replaceObjectAtIndex:0 withObject:dic];
 }
 
 - (void)demo01 {

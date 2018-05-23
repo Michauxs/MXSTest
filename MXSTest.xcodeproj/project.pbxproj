@@ -24,7 +24,6 @@
 		703CC9701E85229A005099D6 /* MXSProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703CC96F1E85229A005099D6 /* MXSProfileVC.m */; };
 		703FF0751FAAF801007F2115 /* MXSDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF06F1FAAF801007F2115 /* MXSDelegateBase.m */; };
 		703FF0891FAB0397007F2115 /* MXSVCExchangeCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF0881FAB0397007F2115 /* MXSVCExchangeCmd.m */; };
-		703FF08D1FAB171B007F2115 /* MXSAnimetionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 703FF08C1FAB171B007F2115 /* MXSAnimetionVC.m */; };
 		7042C8AB1E5BEE8900B41BA4 /* MXSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8AA1E5BEE8900B41BA4 /* MXSTabBarController.m */; };
 		7042C8BC1E5BEFF700B41BA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8B81E5BEFF700B41BA4 /* AppDelegate.m */; };
 		7042C8BD1E5BEFF700B41BA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8B91E5BEFF700B41BA4 /* main.m */; };
@@ -98,6 +97,7 @@
 		76840346207DD11A0089A3A8 /* MXSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 76840340207DD1190089A3A8 /* MXSNavigationBar.m */; };
 		76840347207DD11A0089A3A8 /* MXSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76840343207DD11A0089A3A8 /* MXSTableView.m */; };
 		76840348207DD11A0089A3A8 /* MXSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76840345207DD11A0089A3A8 /* MXSTableViewCell.m */; };
+		768F25BA20B4F293006125BE /* MXSWaterfallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 768F25B920B4F293006125BE /* MXSWaterfallVC.m */; };
 		76A0DE5C207C4D80005292E3 /* UIGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A0DE35207C4D7D005292E3 /* UIGifView.m */; };
 		76A0DE5D207C4D80005292E3 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A0DE36207C4D7E005292E3 /* MAMapKit.framework */; };
 		76A0DE60207C4D80005292E3 /* AliyunOSSiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A0DE45207C4D7F005292E3 /* AliyunOSSiOS.framework */; };
@@ -126,6 +126,10 @@
 		76A0DEB1207C54F5005292E3 /* TmpFileStorageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A0DEAB207C54F5005292E3 /* TmpFileStorageModel.m */; };
 		76A0DEB2207C54F5005292E3 /* RemoteInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A0DEAE207C54F5005292E3 /* RemoteInstance.m */; };
 		76A0DEB5207C5573005292E3 /* MXSViewController+RunTimeCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A0DEB4207C5573005292E3 /* MXSViewController+RunTimeCmd.m */; };
+		76A7509D20A92C2300651DD1 /* MXSAnimetionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A7509C20A92C2200651DD1 /* MXSAnimetionVC.m */; };
+		76A750A020A92C5900651DD1 /* MXSDecoderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A7509F20A92C5900651DD1 /* MXSDecoderVC.m */; };
+		76A750A420A92CD100651DD1 /* MXSStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A750A320A92CD100651DD1 /* MXSStudent.m */; };
+		76A750A720A961A600651DD1 /* MXSEnCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A750A620A961A600651DD1 /* MXSEnCoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -176,8 +180,6 @@
 		703FF06F1FAAF801007F2115 /* MXSDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSDelegateBase.m; sourceTree = "<group>"; };
 		703FF0871FAB0397007F2115 /* MXSVCExchangeCmd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSVCExchangeCmd.h; sourceTree = "<group>"; };
 		703FF0881FAB0397007F2115 /* MXSVCExchangeCmd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSVCExchangeCmd.m; sourceTree = "<group>"; };
-		703FF08B1FAB171B007F2115 /* MXSAnimetionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSAnimetionVC.h; sourceTree = "<group>"; };
-		703FF08C1FAB171B007F2115 /* MXSAnimetionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSAnimetionVC.m; sourceTree = "<group>"; };
 		7042C8A91E5BEE8900B41BA4 /* MXSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTabBarController.h; sourceTree = "<group>"; };
 		7042C8AA1E5BEE8900B41BA4 /* MXSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSTabBarController.m; sourceTree = "<group>"; };
 		7042C8B11E5BEFA500B41BA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -328,6 +330,8 @@
 		76840343207DD11A0089A3A8 /* MXSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSTableView.m; sourceTree = "<group>"; };
 		76840344207DD11A0089A3A8 /* MXSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSTableViewCell.h; sourceTree = "<group>"; };
 		76840345207DD11A0089A3A8 /* MXSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSTableViewCell.m; sourceTree = "<group>"; };
+		768F25B820B4F293006125BE /* MXSWaterfallVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSWaterfallVC.h; sourceTree = "<group>"; };
+		768F25B920B4F293006125BE /* MXSWaterfallVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSWaterfallVC.m; sourceTree = "<group>"; };
 		76A0DE34207C4D7D005292E3 /* UIGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGifView.h; sourceTree = "<group>"; };
 		76A0DE35207C4D7D005292E3 /* UIGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGifView.m; sourceTree = "<group>"; };
 		76A0DE36207C4D7E005292E3 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
@@ -382,6 +386,14 @@
 		76A0DEAE207C54F5005292E3 /* RemoteInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteInstance.m; sourceTree = "<group>"; };
 		76A0DEB3207C5573005292E3 /* MXSViewController+RunTimeCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MXSViewController+RunTimeCmd.h"; path = "MXSTest/lib/BabySharing/Toolset/Extension/MXSViewController+RunTimeCmd.h"; sourceTree = SOURCE_ROOT; };
 		76A0DEB4207C5573005292E3 /* MXSViewController+RunTimeCmd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MXSViewController+RunTimeCmd.m"; path = "MXSTest/lib/BabySharing/Toolset/Extension/MXSViewController+RunTimeCmd.m"; sourceTree = SOURCE_ROOT; };
+		76A7509B20A92C2200651DD1 /* MXSAnimetionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSAnimetionVC.h; sourceTree = "<group>"; };
+		76A7509C20A92C2200651DD1 /* MXSAnimetionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSAnimetionVC.m; sourceTree = "<group>"; };
+		76A7509E20A92C5900651DD1 /* MXSDecoderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSDecoderVC.h; sourceTree = "<group>"; };
+		76A7509F20A92C5900651DD1 /* MXSDecoderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSDecoderVC.m; sourceTree = "<group>"; };
+		76A750A220A92CD100651DD1 /* MXSStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSStudent.h; sourceTree = "<group>"; };
+		76A750A320A92CD100651DD1 /* MXSStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSStudent.m; sourceTree = "<group>"; };
+		76A750A520A961A600651DD1 /* MXSEnCoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSEnCoder.h; sourceTree = "<group>"; };
+		76A750A620A961A600651DD1 /* MXSEnCoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSEnCoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -613,10 +625,10 @@
 		7042C8AF1E5BEEF300B41BA4 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				76A750A120A92CB800651DD1 /* SupportClass */,
+				76A7509A20A92C2200651DD1 /* List */,
 				7042C8CF1E5BF23800B41BA4 /* MXSSettingVC.h */,
 				7042C8D01E5BF23800B41BA4 /* MXSSettingVC.m */,
-				703FF08B1FAB171B007F2115 /* MXSAnimetionVC.h */,
-				703FF08C1FAB171B007F2115 /* MXSAnimetionVC.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1061,6 +1073,30 @@
 			path = RemoteInstance;
 			sourceTree = "<group>";
 		};
+		76A7509A20A92C2200651DD1 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				76A7509B20A92C2200651DD1 /* MXSAnimetionVC.h */,
+				76A7509C20A92C2200651DD1 /* MXSAnimetionVC.m */,
+				76A7509E20A92C5900651DD1 /* MXSDecoderVC.h */,
+				76A7509F20A92C5900651DD1 /* MXSDecoderVC.m */,
+				768F25B820B4F293006125BE /* MXSWaterfallVC.h */,
+				768F25B920B4F293006125BE /* MXSWaterfallVC.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		76A750A120A92CB800651DD1 /* SupportClass */ = {
+			isa = PBXGroup;
+			children = (
+				76A750A220A92CD100651DD1 /* MXSStudent.h */,
+				76A750A320A92CD100651DD1 /* MXSStudent.m */,
+				76A750A520A961A600651DD1 /* MXSEnCoder.h */,
+				76A750A620A961A600651DD1 /* MXSEnCoder.m */,
+			);
+			path = SupportClass;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1146,6 +1182,7 @@
 				70510F8E1DAB3B9D0097E093 /* BSRefreshAnimationFooter.m in Sources */,
 				76A0DEA1207C5474005292E3 /* Tools.m in Sources */,
 				705AEA0B1FDA9B2600447C0E /* MXSProfileTDlg.m in Sources */,
+				76A7509D20A92C2300651DD1 /* MXSAnimetionVC.m in Sources */,
 				70510F7D1DAB3B9D0097E093 /* MASConstraintMaker.m in Sources */,
 				70510F8B1DAB3B9D0097E093 /* MJRefreshAutoGifFooter.m in Sources */,
 				76840347207DD11A0089A3A8 /* MXSTableView.m in Sources */,
@@ -1161,7 +1198,6 @@
 				70510FA31DAB3B9D0097E093 /* NSData+ImageContentType.m in Sources */,
 				76A0DEB1207C54F5005292E3 /* TmpFileStorageModel.m in Sources */,
 				705AE9F21FDA914000447C0E /* MXShowTableCell.m in Sources */,
-				703FF08D1FAB171B007F2115 /* MXSAnimetionVC.m in Sources */,
 				70510FA61DAB3B9D0097E093 /* SDWebImageDecoder.m in Sources */,
 				70510F7E1DAB3B9D0097E093 /* MASLayoutConstraint.m in Sources */,
 				70510F991DAB3B9D0097E093 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1169,6 +1205,7 @@
 				702D25261E8118430068F025 /* HTMLNode.m in Sources */,
 				704B26121FB4703E00A6899B /* History+CoreDataProperties.m in Sources */,
 				76A0DEB2207C54F5005292E3 /* RemoteInstance.m in Sources */,
+				768F25BA20B4F293006125BE /* MXSWaterfallVC.m in Sources */,
 				76A0DEB0207C54F5005292E3 /* MXSRefreshHeader.m in Sources */,
 				702D252F1E81384F0068F025 /* TFHpple.m in Sources */,
 				7034F40320591E28004894EE /* MXSAudioPlay.m in Sources */,
@@ -1225,6 +1262,7 @@
 				70510FAC1DAB3B9D0097E093 /* UIImage+GIF.m in Sources */,
 				70510F891DAB3B9D0097E093 /* MJRefreshFooter.m in Sources */,
 				76A0DEAF207C54F5005292E3 /* MXSRefreshFooter.m in Sources */,
+				76A750A420A92CD100651DD1 /* MXSStudent.m in Sources */,
 				702D25271E8118430068F025 /* HTMLParser.m in Sources */,
 				702D25311E81384F0068F025 /* XPathQuery.m in Sources */,
 				7042C8BC1E5BEFF700B41BA4 /* AppDelegate.m in Sources */,
@@ -1233,6 +1271,7 @@
 				70510F931DAB3B9D0097E093 /* MJRefreshGifHeader.m in Sources */,
 				70510F971DAB3B9D0097E093 /* MJRefreshConst.m in Sources */,
 				70510F8A1DAB3B9D0097E093 /* MJRefreshHeader.m in Sources */,
+				76A750A020A92C5900651DD1 /* MXSDecoderVC.m in Sources */,
 				7042C8AB1E5BEE8900B41BA4 /* MXSTabBarController.m in Sources */,
 				70510F881DAB3B9D0097E093 /* MJRefreshComponent.m in Sources */,
 				70510F7B1DAB3B9D0097E093 /* MASCompositeConstraint.m in Sources */,
@@ -1246,6 +1285,7 @@
 				70510F9A1DAB3B9D0097E093 /* UIView+MJExtension.m in Sources */,
 				70510F981DAB3B9D0097E093 /* UIScrollView+MJExtension.m in Sources */,
 				70510F911DAB3B9D0097E093 /* MJRefreshBackStateFooter.m in Sources */,
+				76A750A720A961A600651DD1 /* MXSEnCoder.m in Sources */,
 				70510FB11DAB3B9D0097E093 /* UIView+WebCacheOperation.m in Sources */,
 				70510F951DAB3B9D0097E093 /* MJRefreshStateHeader.m in Sources */,
 			);
