@@ -47,6 +47,7 @@ static NSString* const kMXSEMAppKey = @"1197180410146313#michauxsdemo01";
 	UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
 	// 当应用安装后第一次调用该方法时，系统会弹窗提示用户是否允许接收通知
 	[[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
 	
     UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (localNotif) {
@@ -83,6 +84,21 @@ static NSString* const kMXSEMAppKey = @"1197180410146313#michauxsdemo01";
 //    [self saveContext];
 }
 
+#pragma mark - Remote Notification
+//处理收到的消息推送
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    NSLog(@"Receive remote notification : %@",userInfo);
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString *token = [NSString stringWithFormat:@"%@", deviceToken];
+    //获取终端设备标识，这个标识需要通过接口发送到服务器端，服务器端推送消息到APNS时需要知道终端的标识，APNS通过注册的终端标识找到终端设备。
+    NSLog(@"My token is:%@", token);
+}
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+        NSString *error_str = [NSString stringWithFormat: @"%@", error];
+        NSLog(@"Failed to get token, error:%@", error_str);
+}
 
 - (void)application: (UIApplication*)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
 	if (notificationSettings.types & UIUserNotificationTypeBadge) {
@@ -118,13 +134,6 @@ static NSString* const kMXSEMAppKey = @"1197180410146313#michauxsdemo01";
 //	需要注意的是，在情况a中，如果用户点击提醒进入应用程序，也会执行收到本地通知的回调方法，这种情况下如果你添加了上面那段代码，则会出现连续出现两次提示，为了解决这个问题，修改代码如下：
 	
 	
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    
-}
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    
 }
 
 @end

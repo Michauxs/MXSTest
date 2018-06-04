@@ -46,6 +46,7 @@
             maxIndex = key;
         }
     }];
+    //
     //collectionView的contentSize.height就等于最长列的最大y值+下内边距
     return CGSizeMake(0, [self.maxYDic[maxIndex] floatValue] + self.sectionInset.bottom);
 }
@@ -82,4 +83,5 @@
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     return self.attributesArray;
 }
+
 @end

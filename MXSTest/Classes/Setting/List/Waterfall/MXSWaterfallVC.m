@@ -51,7 +51,6 @@
 
 - (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MXSItem" forIndexPath:indexPath];
-    
     cell.backgroundColor = [UIColor random];
     return  cell;
 }
