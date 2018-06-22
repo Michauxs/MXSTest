@@ -33,7 +33,7 @@
 		make.edges.equalTo(self.view);
 	}];
 	
-	itemArr = @[@"Animetion", @"Decoder", @"Waterfall"];
+	itemArr = @[@"Animetion", @"Decoder", @"Waterfall", @"Page", @"Closer"];
 	tableView.dlg.dlgData = itemArr;
 	
 	[tableView registerClsaaWithCellName:@"MXSTableViewCell" RowHeight:64 andController:self];

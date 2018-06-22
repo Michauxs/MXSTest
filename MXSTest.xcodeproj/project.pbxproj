@@ -103,6 +103,10 @@
 		768F25D320B4F3BE006125BE /* MXSWaterfallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 768F25CA20B4F3BE006125BE /* MXSWaterfallVC.m */; };
 		768F25D420B4F3BE006125BE /* MXSSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 768F25CE20B4F3BE006125BE /* MXSSettingVC.m */; };
 		768F25D720B4F421006125BE /* MXSWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 768F25D620B4F421006125BE /* MXSWaterfallLayout.m */; };
+		769208B020DB467D00F72301 /* MXSPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 769208AF20DB467D00F72301 /* MXSPageVC.m */; };
+		769208B320DB475B00F72301 /* MXSPageContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 769208B220DB475B00F72301 /* MXSPageContentVC.m */; };
+		769E493C20DCCB060037902D /* MXSCloserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 769E493B20DCCB060037902D /* MXSCloserVC.m */; };
+		769E493F20DCCB9A0037902D /* MXSSectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 769E493E20DCCB9A0037902D /* MXSSectorView.m */; };
 		76A0DE5C207C4D80005292E3 /* UIGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A0DE35207C4D7D005292E3 /* UIGifView.m */; };
 		76A0DE5D207C4D80005292E3 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A0DE36207C4D7E005292E3 /* MAMapKit.framework */; };
 		76A0DE60207C4D80005292E3 /* AliyunOSSiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A0DE45207C4D7F005292E3 /* AliyunOSSiOS.framework */; };
@@ -343,6 +347,14 @@
 		768F25CE20B4F3BE006125BE /* MXSSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSSettingVC.m; sourceTree = "<group>"; };
 		768F25D520B4F421006125BE /* MXSWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSWaterfallLayout.h; sourceTree = "<group>"; };
 		768F25D620B4F421006125BE /* MXSWaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSWaterfallLayout.m; sourceTree = "<group>"; };
+		769208AE20DB467D00F72301 /* MXSPageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSPageVC.h; sourceTree = "<group>"; };
+		769208AF20DB467D00F72301 /* MXSPageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSPageVC.m; sourceTree = "<group>"; };
+		769208B120DB475B00F72301 /* MXSPageContentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSPageContentVC.h; sourceTree = "<group>"; };
+		769208B220DB475B00F72301 /* MXSPageContentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSPageContentVC.m; sourceTree = "<group>"; };
+		769E493A20DCCB060037902D /* MXSCloserVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSCloserVC.h; sourceTree = "<group>"; };
+		769E493B20DCCB060037902D /* MXSCloserVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSCloserVC.m; sourceTree = "<group>"; };
+		769E493D20DCCB9A0037902D /* MXSSectorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSSectorView.h; sourceTree = "<group>"; };
+		769E493E20DCCB9A0037902D /* MXSSectorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSSectorView.m; sourceTree = "<group>"; };
 		76A0DE34207C4D7D005292E3 /* UIGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGifView.h; sourceTree = "<group>"; };
 		76A0DE35207C4D7D005292E3 /* UIGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGifView.m; sourceTree = "<group>"; };
 		76A0DE36207C4D7E005292E3 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
@@ -947,6 +959,7 @@
 		768F25BB20B4F3BE006125BE /* List */ = {
 			isa = PBXGroup;
 			children = (
+				769208AC20DB45F700F72301 /* PageVC */,
 				768F25BC20B4F3BE006125BE /* Animation */,
 				768F25C020B4F3BE006125BE /* Decoder */,
 				768F25C820B4F3BE006125BE /* Waterfall */,
@@ -957,6 +970,8 @@
 		768F25BC20B4F3BE006125BE /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				769E493A20DCCB060037902D /* MXSCloserVC.h */,
+				769E493B20DCCB060037902D /* MXSCloserVC.m */,
 				768F25BD20B4F3BE006125BE /* MXSAnimetionVC.h */,
 				768F25BE20B4F3BE006125BE /* MXSAnimetionVC.m */,
 				768F25BF20B4F3BE006125BE /* SupportClass */,
@@ -967,6 +982,8 @@
 		768F25BF20B4F3BE006125BE /* SupportClass */ = {
 			isa = PBXGroup;
 			children = (
+				769E493D20DCCB9A0037902D /* MXSSectorView.h */,
+				769E493E20DCCB9A0037902D /* MXSSectorView.m */,
 			);
 			path = SupportClass;
 			sourceTree = "<group>";
@@ -1018,6 +1035,25 @@
 				768F25CE20B4F3BE006125BE /* MXSSettingVC.m */,
 			);
 			path = SettingVC;
+			sourceTree = "<group>";
+		};
+		769208AC20DB45F700F72301 /* PageVC */ = {
+			isa = PBXGroup;
+			children = (
+				769208AD20DB45F700F72301 /* SupportClass */,
+				769208AE20DB467D00F72301 /* MXSPageVC.h */,
+				769208AF20DB467D00F72301 /* MXSPageVC.m */,
+			);
+			path = PageVC;
+			sourceTree = "<group>";
+		};
+		769208AD20DB45F700F72301 /* SupportClass */ = {
+			isa = PBXGroup;
+			children = (
+				769208B120DB475B00F72301 /* MXSPageContentVC.h */,
+				769208B220DB475B00F72301 /* MXSPageContentVC.m */,
+			);
+			path = SupportClass;
 			sourceTree = "<group>";
 		};
 		76A0DE33207C4D7D005292E3 /* UIGifVIew */ = {
@@ -1247,6 +1283,7 @@
 				70510FAB1DAB3B9D0097E093 /* UIButton+WebCache.m in Sources */,
 				70510F841DAB3B9D0097E093 /* ViewController+MASAdditions.m in Sources */,
 				703FF0751FAAF801007F2115 /* MXSDelegateBase.m in Sources */,
+				769E493F20DCCB9A0037902D /* MXSSectorView.m in Sources */,
 				76A0DE64207C4D81005292E3 /* MoviePlayTrait.m in Sources */,
 				70510FA31DAB3B9D0097E093 /* NSData+ImageContentType.m in Sources */,
 				76A0DEB1207C54F5005292E3 /* TmpFileStorageModel.m in Sources */,
@@ -1309,6 +1346,7 @@
 				76A0DEB5207C5573005292E3 /* MXSViewController+RunTimeCmd.m in Sources */,
 				764DB0F920809E7F00311F2D /* MXSEMCmd.m in Sources */,
 				70510FAE1DAB3B9D0097E093 /* UIImage+WebP.m in Sources */,
+				769208B020DB467D00F72301 /* MXSPageVC.m in Sources */,
 				70510F871DAB3B9D0097E093 /* MJRefreshBackFooter.m in Sources */,
 				70510FAD1DAB3B9D0097E093 /* UIImage+MultiFormat.m in Sources */,
 				704B26051FB4508700A6899B /* MXSHistoryModelFacade.m in Sources */,
@@ -1329,9 +1367,11 @@
 				70510F881DAB3B9D0097E093 /* MJRefreshComponent.m in Sources */,
 				70510F7B1DAB3B9D0097E093 /* MASCompositeConstraint.m in Sources */,
 				70510FA81DAB3B9D0097E093 /* SDWebImageDownloaderOperation.m in Sources */,
+				769208B320DB475B00F72301 /* MXSPageContentVC.m in Sources */,
 				76A0DEA0207C5474005292E3 /* UIView+RunTimeCmd.m in Sources */,
 				70510F861DAB3B9D0097E093 /* MJRefreshAutoFooter.m in Sources */,
 				76A0DE95207C5474005292E3 /* MXSWebCityAroundHandle.m in Sources */,
+				769E493C20DCCB060037902D /* MXSCloserVC.m in Sources */,
 				70510FA71DAB3B9D0097E093 /* SDWebImageDownloader.m in Sources */,
 				7032EF4C1FB99C4000D652E0 /* MXSHomeVC.m in Sources */,
 				70510F821DAB3B9D0097E093 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
