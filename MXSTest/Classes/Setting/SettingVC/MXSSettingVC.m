@@ -26,13 +26,16 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	
-	tableView = [[MXSTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain andDelegate:nil];
-	[self.view addSubview:tableView];
-	[tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-		make.edges.equalTo(self.view);
-	}];
-	
+    
+    tableView = [[MXSTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain andDelegate:nil];
+    [self.view addSubview:tableView];
+    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+//    tableView.backgroundColor = UIColorFromHex(0xdc8ddc);
+//    [UIColor colorWithRed:(((0xdc8ddc & 0xFF0000) >> 16 )) / 255.0 green:((( 0xdc8ddc & 0xFF00 ) >> 8 )) / 255.0 blue:(( 0xdc8ddc & 0xFF )) / 255.0 alpha:1.0];
+    
 	itemArr = @[@"Animetion", @"Decoder", @"Waterfall", @"Page", @"Closer"];
 	tableView.dlg.dlgData = itemArr;
 	

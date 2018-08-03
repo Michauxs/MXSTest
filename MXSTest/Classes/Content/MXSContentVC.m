@@ -66,8 +66,17 @@ SystemSoundID ditaVoice;
 }
 
 - (void)didComeOnBtnClick {
-	[self demo02];
+	[self demo03];
 	
+}
+- (void)demo03 {
+    NSMutableArray *tmp = [NSMutableArray new];
+    NSArray *a = nil;
+    for (NSString *name in a) {
+        NSLog(@"%@", name);
+    }
+    
+    [tmp addObjectsFromArray:a];
 }
 
 - (void)demo02 {
@@ -114,8 +123,16 @@ SystemSoundID ditaVoice;
 	[MXSFileHandle writeToJsonFile:list withFileName:@"webSiteComplete"];
 	*/
 	
-	
-	
+    /**
+    NSString *string = [NSString stringWithFormat:@"123 456"];
+    NSRange range = [string rangeOfString:@" "];
+    if (range.location != NSNotFound){
+        //有空格
+    } else{
+        //没有空格
+    }
+	*/
+    
 	UITouch *touch = [[touches allObjects] firstObject];
 	
 	UIImageView *readView = [[UIImageView alloc] init];

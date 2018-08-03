@@ -47,7 +47,8 @@
 
 #define kAYFontLight(FONTSIZE)					[UIFont fontWithName:@"STHeitiSC-Light" size:FONTSIZE]
 #define kAYFontMedium(FONTSIZE)					[UIFont fontWithName:@"STHeitiSC-Medium" size:FONTSIZE]
-
+/**16进制颜色*/
+#define UIColorFromHex(s) [UIColor colorWithRed:(((s & 0xFF0000) >> 16 )) / 255.0 green:((( s & 0xFF00 ) >> 8 )) / 255.0 blue:(( s & 0xFF )) / 255.0 alpha:1.0]
 
 static NSString* const kAMapApiKey =					@"7d5d988618fd8a707018941f8cd52931";
 static NSString* const kAYEMIDDongDaMaster =			@"dongda_master";
