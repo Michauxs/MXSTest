@@ -66,10 +66,45 @@ SystemSoundID ditaVoice;
 }
 
 - (void)didComeOnBtnClick {
-	[self demo03];
+	[self demo05];
 	
 }
-- (void)demo03 {
+
+- (void)demo05 {
+    NSMutableArray *tmp = [NSMutableArray array];
+    [tmp addObject:@0];
+    [tmp addObject:@1];
+    [tmp insertObject:@2 atIndex:2];
+    NSLog(@"cons: %@", tmp);
+}
+
+
+- (void)demo04 {    //++/-+的概率
+    NSArray *arr = @[[NSMutableArray new], [NSMutableArray new]];
+    NSMutableArray *div = [NSMutableArray new];
+    for (int i = 0; i < 10000; ++i) {
+        int tmp = arc4random()%2;
+        NSLog(@"row:\t%d, make: %d", i, tmp);
+        
+        if (i == 0) {
+            [div addObject:[NSNumber numberWithInt:tmp]];
+            continue;
+        }
+        
+        int last = [[div lastObject] intValue];
+        if (last == 1 && tmp == 1) {
+            [[arr objectAtIndex:0] addObject:@1];
+        } else if (last == 0 && tmp == 1) {
+            [[arr objectAtIndex:1] addObject:@1];
+        }
+        
+        [div addObject:[NSNumber numberWithInt:tmp]];
+    }
+    
+    NSLog(@"cons 0: %ld", [[arr objectAtIndex:0] count]);
+    NSLog(@"cons 1: %ld", [[arr objectAtIndex:1] count]);
+}
+- (void)demo03 {    //for空数组
     NSMutableArray *tmp = [NSMutableArray new];
     NSArray *a = nil;
     for (NSString *name in a) {
@@ -79,14 +114,14 @@ SystemSoundID ditaVoice;
     [tmp addObjectsFromArray:a];
 }
 
-- (void)demo02 {
+- (void)demo02 {    //数组中，可变字典与不可变子字典的替换
     NSMutableArray *tmp = [NSMutableArray arrayWithObject:@{@"key":@"value"}];
     NSMutableDictionary *dic = [NSMutableDictionary new];
     [dic setValue:@"value2" forKey:@"key2"];
     [tmp replaceObjectAtIndex:0 withObject:dic];
 }
 
-- (void)demo01 {
+- (void)demo01 {    //lock性能影响
 	
 	NSLock *lock = [[NSLock alloc] init];
 	

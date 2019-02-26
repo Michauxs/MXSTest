@@ -7,7 +7,10 @@
 //
 
 #import "MXSModelFacade.h"
+#import <CoreData/CoreData.h>
 
-@interface MXSHistoryModelFacade : MXSModelFacade
+@interface MXSHistoryModelFacade : NSObject
+
+@property (nonatomic, strong) UIManagedDocument *doc;
 
 @end

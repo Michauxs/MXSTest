@@ -12,8 +12,6 @@ static NSString *const LOCALDB_HISTORY_DATA = @"history_data.sqlite";
 
 @implementation MXSHistoryModelFacade
 
-@synthesize doc = _doc;
-
 - (instancetype)init {
 	self = [super init];
 	if (self) {

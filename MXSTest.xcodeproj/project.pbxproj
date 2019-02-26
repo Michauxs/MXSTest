@@ -32,7 +32,6 @@
 		7042C8CE1E5BF21A00B41BA4 /* MXSContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7042C8CD1E5BF21A00B41BA4 /* MXSContentVC.m */; };
 		704B25F51FB43E1500A6899B /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 704B25F31FB43E1500A6899B /* HistoryModel.xcdatamodeld */; };
 		704B25FE1FB4472E00A6899B /* History+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B25FB1FB4472E00A6899B /* History+CoreDataClass.m */; };
-		704B26021FB44FEC00A6899B /* MXSModelFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B26011FB44FEC00A6899B /* MXSModelFacade.m */; };
 		704B26051FB4508700A6899B /* MXSHistoryModelFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B26041FB4508700A6899B /* MXSHistoryModelFacade.m */; };
 		704B26081FB45F6E00A6899B /* History+ContextOpt.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B26071FB45F6E00A6899B /* History+ContextOpt.m */; };
 		704B260B1FB462C800A6899B /* MXSModelCmd.m in Sources */ = {isa = PBXBuildFile; fileRef = 704B260A1FB462C800A6899B /* MXSModelCmd.m */; };
@@ -201,8 +200,6 @@
 		704B25F41FB43E1500A6899B /* HistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HistoryModel.xcdatamodel; sourceTree = "<group>"; };
 		704B25FA1FB4472E00A6899B /* History+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "History+CoreDataClass.h"; sourceTree = "<group>"; };
 		704B25FB1FB4472E00A6899B /* History+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "History+CoreDataClass.m"; sourceTree = "<group>"; };
-		704B26001FB44FEC00A6899B /* MXSModelFacade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSModelFacade.h; sourceTree = "<group>"; };
-		704B26011FB44FEC00A6899B /* MXSModelFacade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSModelFacade.m; sourceTree = "<group>"; };
 		704B26031FB4508700A6899B /* MXSHistoryModelFacade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXSHistoryModelFacade.h; sourceTree = "<group>"; };
 		704B26041FB4508700A6899B /* MXSHistoryModelFacade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXSHistoryModelFacade.m; sourceTree = "<group>"; };
 		704B26061FB45F6E00A6899B /* History+ContextOpt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "History+ContextOpt.h"; sourceTree = "<group>"; };
@@ -432,8 +429,6 @@
 			isa = PBXGroup;
 			children = (
 				701F5FAA1E77C415006FBB0F /* BrowHistory */,
-				704B26001FB44FEC00A6899B /* MXSModelFacade.h */,
-				704B26011FB44FEC00A6899B /* MXSModelFacade.m */,
 				704B26091FB462C800A6899B /* MXSModelCmd.h */,
 				704B260A1FB462C800A6899B /* MXSModelCmd.m */,
 			);
@@ -1322,7 +1317,6 @@
 				76A0DE90207C5474005292E3 /* MXSBaseHandle.m in Sources */,
 				76A0DE93207C5474005292E3 /* MXSNuomiHandle.m in Sources */,
 				70510FAA1DAB3B9D0097E093 /* SDWebImagePrefetcher.m in Sources */,
-				704B26021FB44FEC00A6899B /* MXSModelFacade.m in Sources */,
 				76A0DE9C207C5474005292E3 /* UIColor+Custom.m in Sources */,
 				702B5E041FA870B800CFC3D0 /* MXSAboutVC.m in Sources */,
 				70510FAF1DAB3B9D0097E093 /* UIImageView+HighlightedWebCache.m in Sources */,
