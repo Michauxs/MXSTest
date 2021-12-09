@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Alfred Yang. All rights reserved.
 //
 
-#import "MXSModelFacade.h"
+//#import "MXSModelFacade.h"
 #import <CoreData/CoreData.h>
 
 @interface MXSHistoryModelFacade : NSObject

@@ -30,11 +30,11 @@
 	self.view.layer.contents = (id)IMGRESOURE(@"circute").CGImage;
 	
     
-	titleArr = @[@"NOTIFY", @"APPEND", @"ENUM", @"REMOVE", @"SEARCH", @"NEXT", @"NOTEBOOK", @"Login"];
+	titleArr = @[@"NOTIFY", @"APPEND", @"ENUM", @"REMOVE", @"SEARCH", @"NEXT", @"NOTEBOOK", @"Login", @"Block"];
 	
 	actTableView = [[MXSTableView alloc] initWithFrame:CGRectMake(0, kStatusAndNavBarH, TABLE_WIDTH, SCREEN_HEIGHT-kStatusAndNavBarH-kTabBarH) style:UITableViewStylePlain andDelegate:nil];
 	[self.view addSubview:actTableView];
-	[actTableView registerClsaaWithCellName:@"MXSHomeCell" RowHeight:64 andController:self];
+	[actTableView registerClsaaWithCellName:@"MXSHomeCell" RowHeight:44 andController:self];
 	actTableView.dlg.dlgData = titleArr;
 	actTableView.backgroundColor = [UIColor clearColor];
 	[actTableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -77,13 +77,33 @@
 }
 
 #pragma mark - actions
+- (id)BlockClick {
+    
+    MXSHero *hero = [MXSHero new];
+    for (int i = 0; i < 100; ++i) {
+        [hero throwSign:i];
+    }
+    
+    
+//    hero.drink(10).sleep(20).drink(30).sleep(40).fight(200);
+    
+//    NSArray *numbers = @[@2, @3, @5, @9, @12, @15, @25, @36];
+//    NSArray *result = numbers.filter(^BOOL(NSNumber* numb){
+//        NSLog(@"numb filter: %@", numb);
+//        return numb.floatValue > 10.0;
+//    }).motage(^NSString*(NSNumber* numb){
+//        NSLog(@"numb motage: %@", numb);
+//        return [NSString stringWithFormat:@"10+ %.f", numb.floatValue];
+//    });
+//    NSLog(@"numbers: %@", numbers);
+//    NSLog(@"result: %@", result);
+    return nil;
+}
 - (id)NOTEBOOKClick {
-	[[MXSVCExchangeCmd shared] fromVC:self pushVC:@"MXSNoteVC" withArgs:nil];
-	return nil;
+    [[MXSVCExchangeCmd shared] fromVC:self pushVC:@"MXSNoteVC" withArgs:nil];
+    return nil;
 }
 - (id)NEXTClick {
-    
-    [[MXSEMCmd shared] registerUserWithName:@"michauxs"];
     
 //    int sum = [self facatail:5];
 //    NSLog(@"%d", sum);
@@ -91,7 +111,7 @@
 }
 
 - (id)LoginClick {
-    [[MXSEMCmd shared] loginEMWithName:@"michauxs"];
+    
     return nil;
 }
 
@@ -148,7 +168,7 @@
 	UILocalNotification *l_n = [[UILocalNotification alloc] init];
 	l_n.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
 	l_n.soundName = UILocalNotificationDefaultSoundName;
-	l_n.alertBody = @"User Local Notification";
+	l_n.alertBody = @"User Local Notification 000";
 	l_n.alertTitle = @"The Notify";
 	l_n.alertAction = @"Action";
     l_n.userInfo = @{@"key":@"mxs_notify_demo", @"id":@"#123456", @"message":@"Notification did Recevied"};
